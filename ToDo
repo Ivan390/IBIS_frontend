@@ -1,0 +1,38 @@
+Mon Jun 20 15:50:43 2016 
+
+cleanup html, css, jscript
+have to standardize jscript to use jquery across all documents
+standardize httprequest object for ajax transfers
+do bounds and error checking on html form inputs
+
+IBIS_main2.html 
+	css	----
+			IBIS_maincss.css
+			IBIS_other-functions.css
+	js -----
+			jquery-2.1.1.min.js
+			main.js
+			dateshorts.js
+			picswap.js
+			DD_rondies.js
+	forms ----
+			categoryForm --post--> newIndexCreator.php3
+			loginForm --post--> login.php3
+	links ----
+			EcoLinks
+				/fbay/fbepfacts1.php.html
+				IBIS_other_functions.html ---<>
+			FindInfo
+				newIndexCreator.php3(animal)
+				newIndexCreator.php3(vegetable)
+				newIndexCreator.php3(mineral)
+			Guestbook
+				--get--> IBIS_Guestbook.php3 
+			Register 
+				IBIS_Registration.html ---<>
+			
+IBIS_other_functions.html
+	this page links out to some administrative functions like adding new data to the sets
+	but i want to add some more utility like functions here like lists of definitions, etc....				
+			
+			
