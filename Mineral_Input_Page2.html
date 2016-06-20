@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>
+            I B I S - Mineral Input Form
+        </title>
+        <script type="text/javascript" src="jquery-2.1.1.min.js"> </script>
+        <script type="text/javascript" src="DD_rondies.js"></script>
+	
+	<script type="text/javascript">
+
+	  DD_roundies.addRule('.littleDD', 35);
+	  DD_roundies.addRule('.bigDD', 25);
+
+	</script>
+
+        <link rel="stylesheet"
+              type="text/css"
+              href="./IBIS_maincss.css"
+             >
+        <link rel="stylesheet"
+              type="text/css"
+              href="veginputcss.css"
+             >
+        <link rel="stylesheet"
+              type="text/css"
+              href="./Input.css"
+             >
+        
+    </head>
+    <body name="VegInputBody" >
+      <div id="allContainer">
+       
+        <div name="Heading">
+	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
+            <p id="headingText">Mineral Input Form</p>
+        </div>
+        
+        <div id="pgButtons" class="littleDD">
+        	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
+         <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
+        </div>
+        
+        <div id="detail_fs_min" class="littleDD" >
+          <div id="headinglist" style="width:95%;" class="littleDD">
+            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Group</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Crystal_System</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habit</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Chemical_Formula</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Hardness</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Density</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Cleavage</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fracture</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Streak</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Lustre</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fluorescence</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Notes</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Origin</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Characteristics</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></p>
+        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distribution</label></p>        
+          </div> 
+          
+          <div id="outputBlock" class="bigDD outputblock">
+            <p id="inputHeading">Enter Information</p>
+            <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
+            <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()" style="font-size:23px;">Send</a>
+         <div>     
+         <form  name="MinForm" action="../../cgi-bin/IBISCollectDataMin.php3" method="POST" enctype="multipart/form-data" class="">
+	  <fieldset id="dataForm" class="">
+      <input type="text" name="Akingdom" value="Minerals" class="hiddentext">
+      <input type="text" id="Name" name="Mname" class="hiddentext">
+      <input type="text" id="Group" name="Mgroup" class="hiddentext">
+      <input type="text" id="Crystal_System" name="crystSys" class="hiddentext">
+      <input type="text" id="Habit" name="Mhabit" class="hiddentext">
+	    <input type="text" id="Chemical_Formula" name="Mchemical_Formula" class="hiddentext">
+	    <input type="text" id="Hardness" name="Mhardness" class="hiddentext">
+	    <input type="text" id="Density" name="Mdensity" class="hiddentext">
+	    <input type="text" id="Cleavage" name="Mcleavage" class="hiddentext">
+	    <input type="text" id="Fracture" name="Mfracture" class="hiddentext">
+	    <textarea id="Streak" name="Mstreak" class="hiddentext"></textarea>
+	    <textarea id="Lustre" name="Mlustre" class="hiddentext"></textarea>
+	    <textarea id="Fluorescence" name="Mfluorescense" class="hiddentext"></textarea>
+	    <textarea id="Notes" name="Mnotes" class="hiddentext"></textarea>
+	    <textarea id="Origin" name="Morigin" class="hiddentext"></textarea>
+	    <textarea id="Characteristics" name="Mcharacteristics" class="hiddentext"></textarea>
+	    <textarea id="Uses" name="Muses" class="hiddentext"></textarea>
+	    <textarea id="Distribution" name="Mdistrib" class="hiddentext"></textarea>	    
+	    <textarea id="Image_Tags" name = "Mimg_Tags" class="hiddentext"></textarea>
+			<input type="text" name="Macclvl" id="acclevel" class="hiddentext" value="">
+			<input type="text" name="Mcontributer_ID" id="contrib_ID" class="hiddentext" value="">
+			<div id="tagslist">	</div>
+			
+			<div id="images" class="littleDD">
+      	<p class="labelclass">Add Media</p>
+	    <input type="file" name="Minmedia[]" id="mediaPic" class="littleDD" style="border : 1px dashed rgb(16, 112, 197);" multiple />
+	      			
+	      		</div>
+	      		<div id="optionsDsplay" class="littleDD" style="display : none;">
+</div> 
+            </div>
+	  			</fieldset>
+	 			</form>
+  </div>
+       
+<div id="imgDisplay" class="littleDD">
+	 			
+	 			</div>
+        
+        </div>
+        
+        <script type="text/javascript">
+        var imgname = "";
+        var theHeading = "";
+	  		var theLabel ="";
+	  		checkStorage();
+				document.getElementById('mediaPic').addEventListener('change', handleFileSelect, false);
+	 
+        function addTag(){
+        var tagslist = $('#mediatagsinput').val();
+        var newtag = imgname +" : "+ tagslist;
+        var listitem = "<input type=\"text\"name=\"Mimgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
+        $('#tagslist').append(listitem);
+     
+        }
+        function showOps(that){
+		   	  imgname = that.title;
+		   	  $("#optionsDsplay").slideDown('slow');
+		   	  var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="mediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /\><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
+		  		$('#optionsDsplay').html(opttext);
+      }
+        
+	function checkStorage(){
+	  if (sessionStorage.userRef){
+	    var theRef = sessionStorage.userRef;
+	    theRefer = theRef.split(" : "); 
+	  	document.getElementById("contrib_ID").value = theRefer[1];
+	  	//document.getElementById("acclevel").value = theRefer[2];
+	  }else {
+	    alert("You should really not be on this page!")
+	    document.location = "IBIS_main2.html";
+	    }
+	  }
+
+	  function sendedit(){
+        document.getElementById(theHeading).value = document.getElementById("outputBox").value;
+        theLabel.style.backgroundColor = "pink";
+        document.getElementById("outputBox").value = "";
+     }
+     
+    function loadcontent(that){
+        theHeading = that.innerHTML;
+        theLabel = that;
+        $('.thisareaLabel').css("color" ,"black");
+        theLabel.style.color = "lightgreen";
+        //theLabel.color = "red";
+        var theContent = document.getElementById(theHeading).value;
+        var theBlock = document.getElementById("outputBox");
+        theBlock.value = theContent;
+     }
+        
+	function doSubmit(){
+		//cleanupData();
+		document.MinForm.submit();
+	}
+  
+  function handleFileSelect(evt) {
+		var files = evt.target.files; 
+		$("#optionsDsplay").slideUp('slow');
+		document.getElementById('imgDisplay').innerHTML = " ";
+		for (var i = 0, f; f = files[i]; i++) {
+	  	if (!f.type.match('image.*')) {
+	 	 	continue;
+	 	}
+	 	if (i > 5){
+	 	 alert("Select up to 6 media files");
+	 	 continue;
+	 	}
+		var reader = new FileReader();
+		reader.onload = (function(theFile) {
+	  return function(e) {
+	  	var span = document.createElement('span');
+	  	span.innerHTML = "";
+			span.innerHTML = ['<img class="thumbpic" src="', e.target.result, '" title="', escape(theFile.name), '"  onclick="showOps(this);" /\>'].join('');
+	   document.getElementById('imgDisplay').insertBefore(span, null);
+	  };
+	})(f);
+	reader.readAsDataURL(f);
+      }
+    }
+    
+   
+      
+      </script>
+    </body>
+</html>

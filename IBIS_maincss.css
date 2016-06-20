@@ -1,0 +1,219 @@
+#allContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px;
+  
+}
+
+#logo_image_holder{
+    position: relative;
+    text-align: center ;
+    margin-left: auto;
+    margin-right: auto;
+    width : 50%;
+    height : 25%;
+    z-index : 10;
+}
+
+#logo_image {
+  height : 60%;
+  width : 70%;
+  z-index : 6;
+}
+
+#detail_fs_main {
+  position : relative;
+  border-style: outset;
+  top : -15%;
+  width : 95%;
+  padding : 5px;
+  height : auto;
+  padding-left : 10px;
+  margin-left : 10px;
+   
+}
+
+#dateTime {
+  position: fixed;
+  top: 12px;
+  left: 20px;
+ /* text-align: left;*/ 
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:0px;
+  color: green;
+}
+.hiddentext {
+  display : none;
+}
+
+h1, h3, h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+h1 {
+    font-size : 22px;
+}
+h2 {
+    font-size : 20px;
+}
+h3 {
+    font-size : 18px;
+}
+.optImage {
+  position : relative;
+  width : 150px;
+  height : 150px;
+  float : left;
+  
+}
+#greetingDiv{
+position : relative;
+font-size : 28px;
+left : 10%;
+color : blue; 
+}
+
+#LinkList {
+    position: relative;
+    width: 30%;
+   height: auto;
+    margin-left: auto;
+    text-align: left;
+    color: black;
+    font-size : 13px;
+    border : green 2px dashed;
+    float:right;
+    top : 25px;
+}
+
+#DidYouKnow {
+    position: relative;
+    top: -65px;
+    height: auto;
+    width : 97%;
+    border: green 1px dashed;
+    text-align : center;
+    padding: 10px;
+    
+}
+#dykText{
+    text-align: center;
+    text-decoration: none;
+}
+
+#FindInfo {
+    position: relative;
+    width:65%;
+    height:270px;
+    text-decoration: underline;
+    border: red 1px dashed;
+    padding:2px;
+    padding-bottom : 5px;
+    padding-left : 20px;
+    top : -75px;
+}
+
+.findOption {
+    float: left;
+    padding : 5px;
+    }
+
+.findOption .contextHelp {
+    position: relative;
+    z-index: 6;
+    font-size: 13px;
+    color: green;
+    display: none;
+    height: 30px;
+    
+}
+
+.findOption:hover .contextHelp {
+    display: block;
+    position : relative;
+    width: 140px;
+   
+
+}
+ .findHeading {
+   position : relative;
+   width : 150px;  
+
+}
+.findOption:hover{
+       cursor: pointer; 
+}
+
+#guestBook {
+  position : relative;
+  font-size : 18px;
+  text-decoration: underline;
+  text-align : center;
+  border: blue 1px dashed;
+  padding:5px;
+  width : 195px;
+  height : 40px;
+  top : 15px;
+  z-index : 8;
+  left : 75%;
+  text-align : center;
+  
+  
+}
+#registerBlock {
+  position: relative;
+  /*  float:left; */
+  width : 190px;
+  height : 60px;
+  top : 10px;
+ z-index : 8;
+  left : 75%;
+  font-size: 18px;
+  text-decoration: underline;
+  text-align : center;
+  border: green 1px dashed;
+  padding:10px;
+  padding-bottom : 5px;
+  margin-bottom: 0px;
+}
+.buttonclass{
+     cursor : pointer;
+    
+}
+#logouthead{
+    cursor : pointer; 
+    
+}
+
+
+#loginLink {
+    position : absolute;
+    top : 80px;
+    left : 73%;
+    text-align : left;
+    font-size : 18px;
+    padding : 10px;
+    z-index : 18;
+}
+
+.loginshow {
+   color : blue;
+   width : 250px;
+   background-color : rgba(225,235, 12, 0.7);
+   border : 1px dashed orange;
+   display : block;
+}
+
+.logoutCstart {
+  display : none;
+  
+}
+.logoutCshow {
+  display : inline;
+  
+}

@@ -1,0 +1,127 @@
+#allContainer {
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px; 
+  
+}
+.italC {
+  
+  font-style: italic;
+}
+
+.cathead {
+position : relative;
+      font-size : 28px;
+      text-decoration : underline;
+  
+      left : 15%;
+      z-index : 4;
+      top : 0px;
+}
+
+.selectList {
+  position : relative;
+  font-size : 15px;
+  height : auto;
+  width : auto;
+  margin : 15px;
+  font-size : 16px;
+  padding : 5px;
+  }
+#selectBox {
+    position : relative;
+    border : 1px dashed red;
+    width : 75%;
+    
+}
+
+#pgButtons {
+    position : relative;
+    left : 2%;
+  
+}
+
+.buttonclass {
+  position : relative;
+   border-radius: 25px; 
+  border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 16px;
+  padding : 4px;
+  margin : 5px;
+  left : 0%;
+  
+}
+#theCategory {
+  position : relative;
+  padding : 10px;
+ width : 122px;
+   border-style : dashed;
+  border-width : 2px;
+  height : 170px;
+  margin-right: 10px;
+  float : right;
+   overflow-y : scroll;
+}
+
+
+#detail_fs{
+position : relative;
+  height : 70%;
+  padding : 20px;
+  width : 90%;
+  top : 5px;
+  border-radius : 22px;
+  
+}
+
+#infoSet {
+  position : absolute;
+  width : 500px;
+  padding : 12px;
+  top : 75px;
+  left : 220px
+  
+  
+}
+.headingC {
+  text-align : left;
+  text-decoration: underline;
+ font-size : 20px ;
+ 
+}
+
+.detailC {
+  text-align:  left;
+  
+}
+#specipicH {
+  position: relative;
+  width : 60%;   
+  
+}
+#speciePic {
+  width : 60%;
+  
+}
+#subContain {
+  position : relative;
+   width : 95%;
+    height : auto;
+  min-height: 200px;
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px; 
+
+}
+#catPicsList {
+  position : relative;
+ 
+  width : 115px;
+  height : auto;
+  top : 0%;
+}
+img {
+  cursor : pointer;
+}
