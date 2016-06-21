@@ -4,8 +4,6 @@
   height : 90%;
   padding : 20px;
   border-style: inset;
-  border-radius: 22px;
-  
 }
 
 #logo_image_holder{
@@ -37,36 +35,22 @@
 }
 
 #dateTime {
-  position: fixed;
-  top: 12px;
+  position: relative;
+  top: 15px;
   left: 20px;
- /* text-align: left;*/ 
   z-index:3;
   font-size: 18px;
   margin-left:auto;
-  padding-left:0px;
+  padding-left:10px;
   color: green;
 }
 .hiddentext {
   display : none;
 }
 
-h1, h3, h2 {
-  text-decoration: underline;
-  text-align: center;
-}
-h1 {
-    font-size : 22px;
-}
-h2 {
-    font-size : 20px;
-}
-h3 {
-    font-size : 18px;
-}
 .optImage {
   position : relative;
-  width : 150px;
+  width : 250px;
   height : 150px;
   float : left;
   
@@ -80,10 +64,10 @@ color : blue;
 
 #LinkList {
     position: relative;
-    width: 30%;
+    width: 25%;
    height: auto;
     margin-left: auto;
-    text-align: left;
+
     color: black;
     font-size : 13px;
     border : green 2px dashed;
@@ -93,7 +77,7 @@ color : blue;
 
 #DidYouKnow {
     position: relative;
-    top: -65px;
+    top: -165px;
     height: auto;
     width : 97%;
     border: green 1px dashed;
@@ -108,14 +92,15 @@ color : blue;
 
 #FindInfo {
     position: relative;
-    width:65%;
-    height:270px;
+    width:70%;
+    height:370px;
+    text-align: center;
     text-decoration: underline;
     border: red 1px dashed;
     padding:2px;
     padding-bottom : 5px;
     padding-left : 20px;
-    top : -75px;
+    top : -185px;
 }
 
 .findOption {
@@ -126,7 +111,7 @@ color : blue;
 .findOption .contextHelp {
     position: relative;
     z-index: 6;
-    font-size: 13px;
+    font-size: 18px;
     color: green;
     display: none;
     height: 30px;
@@ -136,7 +121,7 @@ color : blue;
 .findOption:hover .contextHelp {
     display: block;
     position : relative;
-    width: 140px;
+    width: 240px;
    
 
 }
@@ -151,16 +136,15 @@ color : blue;
 
 #guestBook {
   position : relative;
-  font-size : 18px;
+  font-size : 28px;
   text-decoration: underline;
   text-align : center;
   border: blue 1px dashed;
   padding:5px;
   width : 195px;
-  height : 40px;
+  height : 90px;
   top : 15px;
-  z-index : 8;
-  left : 75%;
+  left : 80%;
   text-align : center;
   
   
@@ -169,11 +153,11 @@ color : blue;
   position: relative;
   /*  float:left; */
   width : 190px;
-  height : 60px;
+  height : 90px;
   top : 10px;
  z-index : 8;
-  left : 75%;
-  font-size: 18px;
+  left : 80%;
+  font-size: 28px;
   text-decoration: underline;
   text-align : center;
   border: green 1px dashed;
@@ -189,14 +173,18 @@ color : blue;
     cursor : pointer; 
     
 }
-
-
+.H2 {
+  position : relative;
+  left : 30%;
+  font-size : 20px;
+  text-decoration : underline;
+}
 #loginLink {
     position : absolute;
     top : 80px;
     left : 73%;
     text-align : left;
-    font-size : 18px;
+    font-size : 25px;
     padding : 10px;
     z-index : 18;
 }
@@ -207,6 +195,7 @@ color : blue;
    background-color : rgba(225,235, 12, 0.7);
    border : 1px dashed orange;
    display : block;
+   
 }
 
 .logoutCstart {
