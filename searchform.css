@@ -77,11 +77,11 @@ position : relative;
 }
 
 #infoSet {
-  position : absolute;
+  position : relative;
   width : 500px;
   padding : 12px;
-  top : 75px;
-  left : 220px
+  top : -175px;
+  left : 200px
   
   
 }
@@ -102,7 +102,9 @@ position : relative;
   
 }
 #speciePic {
-  width : 60%;
+  position : relative;
+  top : 40px;
+  width : auto;
   
 }
 #subContain {
@@ -120,8 +122,8 @@ position : relative;
  
   width : 115px;
   height : auto;
-  top : 0%;
+  top : 10%;
 }
-img {
+.img {
   cursor : pointer;
 }

@@ -91,8 +91,8 @@ margin-top : 22px;
 #images {
     position : relative;
     border : dashed 1px blue;
-    top : 10px;
-    left : -225%;
+    top : 80px;
+    left : -75px;
     width : 95%;
     padding : 12px;
     margin : 1px;
@@ -155,13 +155,12 @@ margin-top : 22px;
 	position : absolute;
 	border : 1px black dashed;
   background-color : rgba(205,135, 12, 0.7);
-    padding: 22px;
-    padding-top: 3px;
-        padding-bottom: 3px;
-
-    width : auto;
-    top : 195%;
-    left : -180%
+  padding: 22px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  width : 320%;
+  top : 120%;
+  left : 0%;
         		
 }
 .thumbpic {
@@ -171,16 +170,16 @@ margin-top : 22px;
 }
 #images {
 position : relative;
-    left : -200%;
+    left : -250%;
 
 }
 #optionsDsplay {
-	position : relative;
+	position : absolute;
 	display : block;
 	width : 70%;
 	height : auto;
-    left : -245px;
-    top : -95px;
+    left : 345px;
+    top : -35px;
 	border : 1px black dashed;
 	background-color : rgba(205,135, 12, 0.7);
 	padding : 12px;
@@ -211,3 +210,4 @@ width : 170%;
 
         	
         	
+

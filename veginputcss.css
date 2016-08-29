@@ -1,62 +1,44 @@
+#allContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+  border-radius : 15px;
+}
+#logo_image_holder{
+    position: relative;
+    text-align: center ;
+    margin-left: auto;
+    margin-right: auto;
+    width : 50%;
+    height : 25%;
+    z-index : 10;
+}
 #headingText{
  position : relative;
  top : -30px;
- font-size : 20px;
+ font-size : 28px;
  text-align : center;
 }
-
 #logo_image {
   position : relative;
-  height : 80px;
-  width : 50%;
-  z-index : 6;
-  padding-left : 25%;
+  height : 20%;
 }
-
-
+.hiddentext {
+  display : none;
+}
 #detail_fs{
-position : relative;
-  
+  position : relative;
   padding : 20px;
   width : 95%;
   overflow : auto;
-  overflow-x : hidden;
-  white-space : nowrap;
-  
+  border : 1px black inset;
+  border-radius : 12px;
 }
 .inputclass {
-  /*  position: relative; 
-   f loat : left; */
   width : 90%;
   padding: 5px;
-}
-.area {
-  /*   float: left; */
-        width : 80%;
-        height: 70px;
-        padding : 10px;
-} 
-
-.oneliner {
-        width : 50%;
-       /*   position: relative; 
-	float : left; */
-}
-#animListFrm {
-	   position : absolute;
-	    height : 500px;
-	    z-index : 4;
-	    left : 600px;
-	    width : 40%;
-	    top : 40px;
-	    padding : 8px;
-        }
-        
-        
-
-.subLabel {
-    font-size : 14px;
-    padding-top : 1px;
 }
 .outputblock {
 		position : relative;

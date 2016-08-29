@@ -22,14 +22,12 @@ function initForm() {
  function show_oDD(that){
  var theValue = that.parentNode.lastChild.innerHTML;
 // alert(theValue);
-$(".oDHClass").css("color","black");
-if (document.getElementById("oDDOutput") === null){
-  document.getElementById("oDDOutputMin").innerHTML = theValue;
-}else{
-document.getElementById("oDDOutput").innerHTML = theValue;
-}
- 
-
+  $(".oDHClass").css("color","black");
+//if (document.getElementById("oDDOutput") === null){
+  //document.getElementById("oDDOutputMin").innerHTML = theValue;
+//}else{
+  document.getElementById("oDDOutput").innerHTML = theValue;
+//}
  that.style.color = "green";
   
  }

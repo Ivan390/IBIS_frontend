@@ -1,7 +1,7 @@
 #allContainer {
   position : relative;
   width : 95%;
-  height : 90%;
+  height : 80%;
   padding : 20px;
   border-style: inset;
 }
@@ -14,6 +14,7 @@
     width : 50%;
     height : 25%;
     z-index : 10;
+  top : -60px;
 }
 
 #logo_image {
@@ -25,7 +26,7 @@
 #detail_fs_main {
   position : relative;
   border-style: outset;
-  top : -15%;
+  top : -45%;
   width : 95%;
   padding : 5px;
   height : auto;
@@ -56,10 +57,12 @@
   
 }
 #greetingDiv{
-position : relative;
+position : absolute;
 font-size : 28px;
 left : 10%;
 color : blue; 
+  width : 30%;
+  top : 180px;
 }
 
 #LinkList {
@@ -92,7 +95,7 @@ color : blue;
 
 #FindInfo {
     position: relative;
-    width:70%;
+    width:60%;
     height:370px;
     text-align: center;
     text-decoration: underline;

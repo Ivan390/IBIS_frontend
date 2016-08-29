@@ -1,22 +1,45 @@
+#allContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+    border-radius: 22px;
+}
+#detail_fs {
+  position : relative;
+  border-style: outset;
+  top : -65px;
+  width : 95%;
+  padding : 5px;
+  height :400px;
+  padding-left : 10px;
+  margin-left : 10px;
+  border-radius: 12px;
+   
+}
+
 #logo_image_holder{
-   left : 25%;
+  position : relative;
+   left : 68%;
+  top : -40px;
  }
 
 #logo_image {
   height : 40%;
-  width : 50%;
-  z-index : 10;
+  width : 30%;
+
 }
 
 #fqnNameList{
   position : relative;
   width : 65%;
   height :auto;
-  max-height: 200px;
+  height: 200px;
   min-height: 200px;
   padding : 10px;
   border-style: inset;
-  border-radius: 22px; 
+  border-radius: 12px; 
   overflow: auto;
   margin-top :  10px;
 
@@ -29,15 +52,13 @@
 } 
 .itemC {
   position : relative;
-  min-width : 40%;
-  max-width : 40%;
+  width : 43%;
   border : 1px black dashed;
   float : left;
   margin : 10px;
   border-radius : 22px;
   padding : 10px;
   max-height : 95px;
-  overflow : auto;
 
 }
 #otherDetails {
@@ -51,18 +72,31 @@
   max-height : 100px;
   
 }
-.oDD {
+.oDD{
   display : none;
   
 }
+.hiddentext{
+  display : none;
+  
+}
+#catHeading {
+  position : relative;
+  left : 30%;
+  font-size : 32px;
+}
+.italC {
+  font-style : italic;
+}
+
 #oDDOutput {
-  position : absolute;
+  position : relative;
   border : 1px black dashed;
   border-radius : 12px;
   padding : 20px;
-  max-height : 100px;
+  max-height : 80px;
   max-width : 34%;
-  top : 0%;
+
   overflow : auto;
   left : 29%;
   padding-top : 10px;
@@ -74,7 +108,7 @@
 }
 #imgGrid {
   position : absolute;
-  max-width : 310px;
+  max-width : 340px;
   max-height : 310px;
 float : right;
 top : 10%;
@@ -84,8 +118,8 @@ top : 10%;
   margin-top : 15px;
 }
 .imgClass {
-  width : 100px;
-  height : 100px;
+  width : 150px;
+  height : 150px;
   
 }
 .longText {
@@ -94,20 +128,32 @@ top : 10%;
 }
 #suboD {
   position : relative;
-  width : 100%%;
+  width : 100%;
   max-height : 150px;
   
 }
-#oDDOutputMin {
-  position : absolute;
-  border : 1px black dashed;
-  border-radius : 12px;
-  padding : 20px;
-  max-height : 70px;
-  max-width : 34%;
-  top : 73%;
-  overflow : auto;
-  left : 29%;
-  padding-top : 10px;
-  
+.OutputAnim {
+
+  top : -80px;
+
 }
+.OutputMin {
+
+  top : -70px;
+
+}
+
+.OutputVeg {
+
+  top : -100px;
+
+}
+
+#pgButtons {
+position : relative;
+  top : -70px;
+}
+
+
+
+

@@ -1,4 +1,29 @@
 /* guestcss.css*/
+#allContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px;
+ 
+}
+#pgButtons{
+	position : relative;
+  top : 5px;
+}
+
+
+#logo_image {
+  position : relative;
+  width : 30%;
+  left :30%;
+  top : 20px;
+}
+.hiddentext {
+  display : none;
+  
+}
 
 #gTitle {
   position: relative;
@@ -40,17 +65,30 @@
   border-radius : 12px;
 }
 #GuestPic {
-  position : relative;
-  left : 70%;
+  position : absolute;
+  left : 173%;
+  top : -6px;
+  width : 200px;
+  height : 200px;
 }
+#detailcont{  position : relative;
+  width : 98%;
+  color : black;
+  top : -60px;
+   border : 1px black inset;
+  height : 320px;
+  border-radius : 12px;
+
+}
+
 #detail_fs {
   position : relative;
   width : 50%;
   color : black;
-  top : -30px;
   height : 500px;
-  border-style : inset;
+  border : 1px black inset;
   height : auto;
+  margin : 10px;
   
 }
 .multiliner {
@@ -114,13 +152,14 @@ top : -37px;
   
 }
 
-#allContainer {
-  position : relative;
-  border : 2px black inset;
-  padding : 10px;
-  width : 95%;
-  height : auto;
-  top : 0px;  
+#guestArea {
+position : absolute;
+  top : -5px;
+  left : 103%;
+  width : 500px;
 }
  
+
+
+
 
