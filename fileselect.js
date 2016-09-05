@@ -1,5 +1,4 @@
 
-document.getElementById('mediaPic').addEventListener('change', handleFileSelect, false);
 	var theSrc = "";
 	var theTag = "";
 	var imgDelList = "";
@@ -8,7 +7,7 @@ document.getElementById('mediaPic').addEventListener('change', handleFileSelect,
 function handleFileSelect(evt) {
 		var files = evt.target.files; 
 		$("#optionsDsplay").slideUp('fast');
-		document.getElementById('imgDisplay').innerHTML = " ";
+		$('#imgDisplay').html("");
 		for (var i = 0, f; f = files[i]; i++) {
 	  	if (!f.type.match('image.*')) {
 	 	 	continue;
@@ -20,16 +19,12 @@ function handleFileSelect(evt) {
 		var reader = new FileReader();
 		reader.onload = (function(theFile) {
 	  return function(e) {
-	  	var span = document.createElement('span');
-	  	span.innerHTML = "";
-			span.innerHTML = ['<img class="thumbpic" src="', e.target.result, '" title="', escape(theFile.name), '" onclick="showOps(this);" /\>'].join('');
-			
-	   document.getElementById('imgDisplay').insertBefore(span, null);
+		$('#imgDisplay').append('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');
 	  };
 	})(f);
 	reader.readAsDataURL(f);
       }
-      document.getElementById('newtagslist').innerHTML= "";
+      $('#newtagslist').html("");
     }
     
 function showImgOpts(that){
@@ -41,14 +36,14 @@ $('#oldTags').html(editImageDiv);
 }
 
 function markDel(){
- var thisFSrc = document.getElementById('srcVal').value;
- var chkBx = document.getElementById('chkbx1');
+ var thisFSrc = $('#srcVal').val();
+ var chkBx = $('#chkbx1');
  var messg = "";
  var filepart = 'http://127.0.0.1/IBIS_Files_new/Data/Images/';
  thisSrc = thisFSrc.replace(filepart, "");
  if (chkBx.checked == true){
   imgDelList += thisSrc + ":";
-  document.getElementById('imgDeletelist').innerHTML = imgDelList;
+  $('#imgDeletelist').html(imgDelList);
   var imgList = document.images;
   var imgCount = imgList.length;
   for (i = 0; i < imgCount; i++){
@@ -59,9 +54,9 @@ function markDel(){
   	}
   }
  }else {
- var thisTag = document.getElementById('editTag').value;
+ var thisTag = $('#editTag').val();
  tagList += thisSrc + ":" + thisTag + "::";
- document.getElementById('editedtagslist').innerHTML = tagList;
+ $('#editedtagslist').html(tagList);
   var imgList = document.images;
   var imgCount = imgList.length;
   for (i = 0; i < imgCount; i++){
@@ -77,7 +72,7 @@ function addTag(){
 	var tagslist = $('#mediatagsinput').val();
 	var newtag = imgname +" : "+ tagslist;
 	//var existingtags = " ";
-	var existingtags = document.getElementById('newtagslist').innerHTML;
+	var existingtags = $('#newtagslist').html();
 	if (existingtags.search(imgname) == -1){
 		var listitem = "<input type=\"text\"name=\"imgtag[]\" class=\"listitemC\" value=\""+newtag+"\" ></input><br />";
   $('#newtagslist').append(listitem);

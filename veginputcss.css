@@ -6,6 +6,10 @@
   border-style: inset;
   border-radius : 15px;
 }
+.littleDD {
+  border-radius : 15px;
+  
+}
 #logo_image_holder{
     position: relative;
     text-align: center ;

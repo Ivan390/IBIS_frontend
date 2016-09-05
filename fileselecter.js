@@ -3,23 +3,15 @@
 function handleFileSelect(evt) {
 		var files = evt.target.files; 
 		$("#optionsDsplay").slideUp('fast');
-		document.getElementById('GuestPic').innerHTML = " ";
+		$('#GuestPic').text('');
 		for (var i = 0, f; f = files[i]; i++) {
 	  	if (!f.type.match('image.*')) {
 	 	 	continue;
 	 	}
-	 	if (i > 5){
-	 	 alert("Select up to 6 media files");
-	 	 continue;
-	 	}
-		var reader = new FileReader();
+	 	var reader = new FileReader();
 		reader.onload = (function(theFile) {
 	  return function(e) {
-	  	var span = document.createElement('span');
-	  	span.innerHTML = "";
-			span.innerHTML = ['<img class="thumbpic" src="', e.target.result, '" title="', escape(theFile.name), '" onclick="showOps(this);" /\>'].join('');
-			
-	   document.getElementById('GuestPic').insertBefore(span, null);
+		$('#GuestPic').html('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');	
 	  };
 	})(f);
 	reader.readAsDataURL(f);
@@ -30,7 +22,7 @@ function addTag(){
 	var tagslist = $('#mediatagsinput').val();
 	var newtag = imgname +" : "+ tagslist;
 	//var existingtags = " ";
-	var listitem = "<input type=\"text\"name=\"imgtag\" class=\"listitemC\" value=\""+newtag+"\" ></input><br />";
+	var listitem = '<input type="text" name="imgtag" class="listitemC" value="'+newtag+'" ></input><br />';
   $('#newtagslist').append(listitem);
 }
 function showOps(that){
@@ -42,8 +34,8 @@ function showOps(that){
 }
 
 function submitThis(){
-	var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead");
-	var comment = document.getElementById('gcommnt').value;
+	var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead", "asscrack", "bullshit");
+	var comment = $('#gcommnt').val();
 	//alert(comment);
 	for (i = 0; i < swearList.length; i++){
 		var swearWrd = swearList[i];
@@ -57,7 +49,7 @@ function submitThis(){
 
 		}
 	}		
-	
-      	}
+	}
+    //$("#" + x)  	
       	
       	

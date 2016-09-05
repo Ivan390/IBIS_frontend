@@ -8,15 +8,15 @@ function do_logout(){
   $("#loginhead").css("display", "block");
   $("#logouthead").css("display", "none");
  // $("#registerBlock").removeClass("locked").addClass("adminC");
-  document.getElementById("registerBlock").innerHTML= "<a href=\"IBIS_Registration.html\" class=\"littleDD linksclass\">Register as a contributer</a>";
+  $("#registerBlock").html("<a href=\"IBIS_Registration.html\" class=\"littleDD linksclass\">Register as a contributer</a>");
   sessionStorage.userRef = "";
 }
 
 function submitDetails(){
     $("#login").css("display", "none");
     $("#loginhead").text("one moment please...");
-    var value1 = document.getElementById("uname").value;
-    var value2 = document.getElementById("uemail").value;
+    var value1 = $("#uname").val();
+    var value2 = $("#uemail").val();
     $.ajax({
 	    url : '../../cgi-bin/login.php3',
 	    type : "get",
@@ -52,8 +52,8 @@ function submitDetails(){
 
 function input_checker(){
     //check inputs for valid data
-    var userName = document.getElementById("uname").value;
-    var userEmail = document.getElementById("uemail").value;
+    var userName = $("#uname").val();
+    var userEmail = $("#uemail").val();
     if (userName == "" || userEmail == ""){
       alert("missing values");
       showLogin();

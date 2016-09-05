@@ -17,10 +17,9 @@ function starttime() {
   var s = today.getSeconds();
   m=checkTime(m);
   s=checkTime(s);
-  //document.getElementById("timeBlock").innerHTML = h + ":" + m + ":" + s;
+
   $('#timeBlock').text(h + ":" + m + ":" + s);
   t=setTimeout(function(){starttime()}, 500);
-  //document.getElementById("dateBlock").innerHTML = (new Date()).shortFormat();
   $('#dateBlock').text((new Date()).shortFormat());
 }
 

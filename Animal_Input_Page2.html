@@ -5,27 +5,21 @@
         <title>
             I B I S - Animal Input Form
         </title>
-        <script type="text/javascript" src="jquery-2.1.1.min.js"> </script>
-        <script type="text/javascript" src="DD_rondies.js"></script>
+        <script type="text/javascript" src="jquery-1.11.3.js"> </script>
+        <script type="text/javascript" src="http://127.0.0.1/ibis/fileselect.js"></script>
 	
 	<script type="text/javascript">
-
-	  DD_roundies.addRule('.littleDD', 35);
-	  DD_roundies.addRule('.bigDD', 25);
+		$(document).ready(function(){
+	 	 	$('#mediaPic').change(handleFileSelect);	
+	 		
+	 	})
 
 	</script>
+	
 
-        <link rel="stylesheet"
+            <link rel="stylesheet"
               type="text/css"
-              href="./IBIS_maincss.css"
-             >
-        <link rel="stylesheet"
-              type="text/css"
-              href="veginputcss.css"
-             >
-         <link rel="stylesheet"
-              type="text/css"
-              href="./AInput.css"
+              href="./AnimInput.css"
              >
         
     </head>
@@ -42,7 +36,7 @@
          <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
         </div>
         
-        <div id="detail_fs_anim" class="littleDD" style="height:580px;">
+        <div id="detail_fs_min" class="littleDD" ">
           <div id="headinglist" style="width:95%;" class="littleDD">
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></p>
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subPhylum</label></p>
@@ -63,8 +57,16 @@
           <div id="outputBlock" class="bigDD outputblock">
             <p id="inputHeading">Enter Information</p>
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
-            <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()" style="font-size:23px;">Send</a>
-         <div>     
+            <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()" >Send</a>
+         </div> 
+         <div id="images" class="littleDD">
+          		<p class="labelclass">Add Media</p>
+  	      		<input type="file" name="animMedia[]" id="mediaPic" class="littleDD" multiple />
+			     	</div>
+	      				<div id="imgDisplay" class="littleDD"></div>
+			      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div>
+			      		<div id="tagslist"></div>
+             
         <form  name="AnimForm" action="../../cgi-bin/IBISCollectDataAnim.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" name="Akingdom" value="Animalia" class="hiddentext"></input>
@@ -86,15 +88,10 @@
 					
 						<input type="text" name="acclvl" id="acclevel" class="hiddentext" value="">
 						<input type="text" name="Acontributer_ID" id="contrib_ID" class="hiddentext" value="">
-						<div id="tagslist"></div>
 						
-						<div id="images" class="littleDD">
-          		<p class="labelclass">Add Media</p>
-  	      		<input type="file" name="animMedia[]" id="mediaPic" class="littleDD" style="border : 1px dashed rgb(16, 112, 197);" multiple />
-  	      	<div id="imgDisplay" class="littleDD"></div>
-  	      	<div id="optionsDsplay" class="littleDD" style="display : none;"></div>
-  	      	</div>
-	      		
+						
+						
+			    	
 	      		 
 
 	  			</fieldset>
@@ -110,7 +107,6 @@
         var theHeading = "";
 	  		var theLabel ="";
 	  		checkStorage();
-				document.getElementById('mediaPic').addEventListener('change', handleFileSelect, false);
 	 
          function addTag(){
         var tagslist = $('#mediatagsinput').val();
@@ -121,7 +117,7 @@
         }
         function showOps(that){
 		   	  imgname = that.title;
-		   	  $("#optionsDsplay").slideDown('slow');
+		   	  $("#optionsDsplay").slideDown('fast');
 		   	  var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /\><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
 		  		$('#optionsDsplay').html(opttext);
       }
@@ -130,8 +126,8 @@
 	  if (sessionStorage.userRef){
 	    var theRef = sessionStorage.userRef;
 	    theRefer = theRef.split(" : "); 
-	  	document.getElementById("contrib_ID").value = theRefer[1];
-	  	//document.getElementById("acclevel").value = theRefer[2];
+	  	$("#contrib_ID").val(theRefer[1]);
+	  	
 	  }else {
 	    alert("You should really not be on this page!")
 	    document.location = "IBIS_main2.html";
@@ -139,20 +135,20 @@
 	  }
 
 	  function sendedit(){
-        document.getElementById(theHeading).value = document.getElementById("outputBox").value;
+	  var editval = $("#outputBox").val();
+        $('#'+theHeading).val(editval);
         theLabel.style.backgroundColor = "pink";
-        document.getElementById("outputBox").value = "";
+        $("#outputBox").val("");
      }
      
     function loadcontent(that){
-        theHeading = that.innerHTML;
+        theHeading = $(that).text();
         theLabel = that;
         $('.thisareaLabel').css("color" ,"black");
         theLabel.style.color = "lightgreen";
         //theLabel.color = "red";
-        var theContent = document.getElementById(theHeading).value;
-        var theBlock = document.getElementById("outputBox");
-        theBlock.value = theContent;
+        var theContent = $('#'+theHeading).val();
+        $("#outputBox").val(theContent);
      }
         
 	function doSubmit(){
@@ -160,33 +156,7 @@
 		document.AnimForm.submit();
 	}
   
-  function handleFileSelect(evt) {
-		var files = evt.target.files; 
-		$("#optionsDsplay").slideUp('slow');
-		document.getElementById('imgDisplay').innerHTML = " ";
-		for (var i = 0, f; f = files[i]; i++) {
-	  	if (!f.type.match('image.*')) {
-	 	 	continue;
-	 	}
-	 	if (i > 5){
-	 	 alert("Select up to 6 media files");
-	 	 continue;
-	 	}
-		var reader = new FileReader();
-		reader.onload = (function(theFile) {
-	  return function(e) {
-	  	var span = document.createElement('span');
-	  	span.innerHTML = "";
-			span.innerHTML = ['<img class="thumbpic" src="', e.target.result, '" title="', escape(theFile.name), '"  onclick="showOps(this);" /\>'].join('');
-	   document.getElementById('imgDisplay').insertBefore(span, null);
-	  };
-	})(f);
-	reader.readAsDataURL(f);
-      }
-    }
-    
-   
-      
+     
       </script>
     </body>
 </html>

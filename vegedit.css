@@ -6,32 +6,28 @@
   border-style: inset;
   border-radius: 22px;
  
-  
+}
+#pgButtons{
+	position : relative;
+  top : -55px;
 }
 
 
 #logo_image {
   position : relative;
-  width : 23%;
+  width : 30%;
   left : 70%;
-  top : 50px;
+  top : 20px;
 }
 .hiddentext {
   display : none;
   
 }
-#newtagslist{
-   position : absolute;
-   top : 295px;
-   left : 70%;
-   padding : 5px;
-   background-color : lightgrey;
-}
 
 #detail_fs_min {
   position : relative;
   border-style: outset;
-  top : -15%;
+  top : -45px;
   width : 95%;
   padding : 15px;
   height : auto;
@@ -52,7 +48,12 @@
   padding-left:0px;
   color: green;
 }
-
+.nothiddentext {
+  position : relative;
+  width : 100%;
+  font-size : 110%;
+  
+}
 .inputClass {
   position : relative;
   float : left;
@@ -65,16 +66,25 @@
   width : 95%;
  text-align: center;
   border-radius : 18px;
+  height :auto;
 }
-
+#editImageDiv {
+  position : relative;
+  left : 5%;
+  
+}
 .labelClass {
+  position : relative;
   width : auto;
+  float : left;
+  font-size : 120%;
+  text-decoration: underline;
 }
 #headingText {
   position : relative;
-  font-size: 22px;
+  font-size: 32px;
   left : 30%;
-  top : -30%;
+  top : -40px;
   
 }
 #imgDisplay {
@@ -91,10 +101,29 @@
 }
 .imgClass{
   	position : relative;
-	width : 100px;
-	height : 100px;
+	width : 50%;
+	height : 50%;
+  
+  	border-radius:  15px;
+}
+#newtagslist{
+   position : relative;
+   top : -228px;
+  width : auto;
+   left : 120%;
+   padding : 5px;
   
 }
+#newtagslist input {
+  width : 300px;
+  
+}
+.listitemC {
+  width : 170px;
+ padding-left : 2px; 
+  
+}
+
 
 .thumbpic {
 	position : relative;
@@ -112,39 +141,42 @@
   height : 200px;
   border : 1px black solid;
   overflow : auto;
-  top : 10px;
+  top : -30px;
   left : 3px;
   width : 98%;
+  overflow-x:  hidden;
   
 }
 #oldImages {
   position : relative;
   top : 8px;
   padding-left : 12px;
+  width:  170px;
 }
 
 #newImages {
   position :absolute;
   top : 5px;
-  left : 70% ;
-  width : auto;
-  background-color: lightgrey;
+  left : 55% ;
+  width : 200px;;
+  
   
 }
 #oldTags {
-  position : absolute;
+  position : relative;
   left : 140px; 
-  top : 50px;
+  top : -110px;
   
 }
 #optionsDsplay{
   position : absolute;
   top : 8px;
-  left : -130%;
-  width : 200px;
+  left : -190%;
+  width : 190px;
   overflow :hidden;
   padding-left : 28px;
   
     
 }
+
 

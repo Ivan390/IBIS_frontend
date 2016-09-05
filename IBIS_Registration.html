@@ -5,12 +5,18 @@
         <title>
           I B I S - Registration
         </title>
-        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="jquery-1.11.3.js"></script>
         <script type="text/javascript" src="Gmain.js"> </script>
         <script type="text/javascript" src="dateshorts.js"></script>
         <script type="text/javascript" src="IBIS_register.js"></script>
         <script type="text/javascript" src="DD_rondies.js"></script>
-        <script type="text/javascript">
+        <script type="text/javascript" src="http://127.0.0.1/ibis/fileselect.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+	 	 	$('#regPic').change(handleFileSelect);	
+	 		
+	 	})
 	  DD_roundies.addRule('.littleDD', 35);
 	  DD_roundies.addRule('.bigDD', 25);
 	</script>
@@ -55,7 +61,7 @@
              
 		    </div>
             <div>
-	      <div id=imageBlock class="bigDD"></div>
+	      <div id=imgDisplay class="bigDD"></div>
 	        <label class="labelClass">Add a picture of yourself</label>
             <input type="file" name="picture" id="regPic" class="littleDD" />
           </div>
@@ -80,26 +86,7 @@
 	</form>
 	
       </div>
-    <script type="text/javascript">
-      function handleFileSelect(evt) {
-	var files = evt.target.files; 
-	for (var i = 0, f; f = files[i]; i++) {
-	  if (!f.type.match('image.*')) {
-	  continue;
-	}
-	var reader = new FileReader();
-	reader.onload = (function(theFile) {
-	  return function(e) {
-	    var span = document.createElement('span');
-	    span.innerHTML = ['<img class="thumb" src="', e.target.result, '" title="', escape(theFile.name), '"/>'].join('');
-	    document.getElementById('imageBlock').insertBefore(span, null);
-	  };
-	})(f);
-	reader.readAsDataURL(f);
-      }
-    }
-    document.getElementById('regPic').addEventListener('change', handleFileSelect, false);
-    </script>     
+ 
       </div>
       
   </body>

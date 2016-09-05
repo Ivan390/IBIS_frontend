@@ -30,9 +30,9 @@ var dyklist = new Array(
 
 function picswaps(){
 
-  DYK = document.getElementById("dykText");
+  //DYK = $("#dykText");
   
-  setInterval("doDYK()", 15000);
+  setInterval("updateDYK()", 15000);
  
  // setInterval("dotoggle()", 2000);
   setInterval( "dotoggleText()", 7500);
@@ -59,5 +59,5 @@ function updateDYK(){
   if (dykframe >= dyklist.length-1){
     dykframe = 0;
   } // end if
-  DYK.innerHTML = dyklist[dykframe];
+  $('#dykText').html(dyklist[dykframe]);
 } // end updateImage

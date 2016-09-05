@@ -51,7 +51,7 @@
 .nothiddentext {
   position : relative;
   width : 100%;
-  font-size : 123%;
+  font-size : 110%;
   
 }
 .inputClass {
@@ -102,10 +102,14 @@
 }
 #newtagslist{
    position : relative;
-   top : -148px;
-  width : 10px;
-   left : 85%;
+   top : -258px;
+  width : auto;
+   left : 75%;
    padding : 5px;
+  
+}
+#newtagslist input {
+  width : 300px;
   
 }
 .listitemC {
@@ -146,22 +150,22 @@
 #newImages {
   position :absolute;
   top : 5px;
-  left : 70% ;
+  left : 55% ;
   width : 200px;;
   
   
 }
 #oldTags {
-  position : absolute;
+  position : relative;
   left : 140px; 
-  top : 50px;
+  top : -110px;
   
 }
 #optionsDsplay{
   position : absolute;
   top : 8px;
-  left : -180%;
-  width : 200px;
+  left : -190%;
+  width : 190px;
   overflow :hidden;
   padding-left : 28px;
   

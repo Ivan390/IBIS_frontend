@@ -16,7 +16,7 @@ function checkStorage(){
 	
 
 function initForm() {
-  document.getElementById("dateBlock").innerHTML = (new Date()).shortFormat();
+  $("#dateBlock").html(new Date().shortFormat());
   starttime();
   picswaps();
   checkStorage();

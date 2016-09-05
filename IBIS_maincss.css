@@ -4,6 +4,7 @@
   height : 80%;
   padding : 20px;
   border-style: inset;
+  border-radius : 15px;
 }
 
 #logo_image_holder{
@@ -32,7 +33,7 @@
   height : auto;
   padding-left : 10px;
   margin-left : 10px;
-   
+  border-radius : 25px;
 }
 
 #dateTime {
@@ -54,7 +55,7 @@
   width : 250px;
   height : 150px;
   float : left;
-  
+  border-radius : 15px;
 }
 #greetingDiv{
 position : absolute;
@@ -70,7 +71,7 @@ color : blue;
     width: 25%;
    height: auto;
     margin-left: auto;
-
+    border-radius : 15px;
     color: black;
     font-size : 13px;
     border : green 2px dashed;
@@ -86,6 +87,7 @@ color : blue;
     border: green 1px dashed;
     text-align : center;
     padding: 10px;
+   border-radius : 15px;
     
 }
 #dykText{
@@ -104,6 +106,7 @@ color : blue;
     padding-bottom : 5px;
     padding-left : 20px;
     top : -185px;
+   border-radius : 15px;
 }
 
 .findOption {
@@ -149,7 +152,7 @@ color : blue;
   top : 15px;
   left : 80%;
   text-align : center;
-  
+   border-radius : 15px;
   
 }
 #registerBlock {
@@ -167,6 +170,7 @@ color : blue;
   padding:10px;
   padding-bottom : 5px;
   margin-bottom: 0px;
+   border-radius : 15px;
 }
 .buttonclass{
      cursor : pointer;
@@ -198,6 +202,7 @@ color : blue;
    background-color : rgba(225,235, 12, 0.7);
    border : 1px dashed orange;
    display : block;
+   border-radius : 15px;
    
 }
 

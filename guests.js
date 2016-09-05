@@ -1,6 +1,6 @@
 var lastNum = 0;
 function showGuests(){
-	var guestList = document.getElementById('hiddencatPicsList').innerHTML;
+	var guestList = $('#hiddencatPicsList').html();
 	var guestArray = guestList.split("::");
 	var guestCount = guestArray.length - 1;
 	var dispLimit = 8;
@@ -27,9 +27,9 @@ function showGuests(){
 	lastNum = lastNum+dispLimit+1;
 	if (lastNum >= guestCount){
 		lastNum = 0;
-		document.getElementById('showguests').value = "<Show Guests>";
+		$('#showguests').val("<Show Guests>");
 	}else {
-		document.getElementById('showguests').value = "<Show More>";
+		$('#showguests').val("<Show More>");
 	}
-	document.getElementById('catPicsList').innerHTML = shortList;
+	$('#catPicsList').html(shortList);
 }
