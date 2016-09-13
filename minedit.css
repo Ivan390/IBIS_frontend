@@ -102,13 +102,13 @@
 }
 #newtagslist{
    position : relative;
-   top : -230px;
+   top : -170px;
   width : auto;
    left : 150%;
    padding : 5px;
   
 }
-#newtagslist input {
+#newtagslist {
   width : 300px;
   
 }

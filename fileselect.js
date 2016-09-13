@@ -8,6 +8,7 @@ function handleFileSelect(evt) {
 		var files = evt.target.files; 
 		$("#optionsDsplay").slideUp('fast');
 		$('#imgDisplay').html("");
+		  $('#newtagslist').val("");
 		for (var i = 0, f; f = files[i]; i++) {
 	  	if (!f.type.match('image.*')) {
 	 	 	continue;
@@ -39,11 +40,15 @@ function markDel(){
  var thisFSrc = $('#srcVal').val();
  var chkBx = $('#chkbx1');
  var messg = "";
- var filepart = 'http://127.0.0.1/IBIS_Files_new/Data/Images/';
+ var filepart = 'http://127.0.0.1/ibis/Data/Images/';
  thisSrc = thisFSrc.replace(filepart, "");
- if (chkBx.checked == true){
-  imgDelList += thisSrc + ":";
-  $('#imgDeletelist').html(imgDelList);
+ if ($('#chkbx1').prop('checked')) {
+
+ //if (chkBx.checked == true){
+ var imgDelList = thisSrc + ":";
+  var oldlist = $('#imgDeletelist').val();
+  var newList = oldlist + imgDelList;
+  $('#imgDeletelist').val(newList);
   var imgList = document.images;
   var imgCount = imgList.length;
   for (i = 0; i < imgCount; i++){
@@ -69,13 +74,15 @@ function markDel(){
 }
 
 function addTag(){
-	var tagslist = $('#mediatagsinput').val();
-	var newtag = imgname +" : "+ tagslist;
+	var tag = $('#mediatagsinput').val();
+	var tagpair = imgname +" : "+ tag + "::";
 	//var existingtags = " ";
-	var existingtags = $('#newtagslist').html();
+	var existingtags = $('#newtagslist').val();
 	if (existingtags.search(imgname) == -1){
-		var listitem = "<input type=\"text\" name=\"imgtag[]\" class=\"listitemC\" value=\""+newtag+"\" ></input><br />";
-  $('#newtagslist').append(listitem);
+	var pretags = $('#newtagslist').val();
+	var newlist = tagpair + pretags;
+	//	var listitem = "<input type=\"text\" name=\"imgtag\" class=\"listitemC\" value=\""+newtag+"\" ></input><br />";
+  $('#newtagslist').val(newlist);
 	}else{
 		alert("an entry for that allready exists" );
 			}
