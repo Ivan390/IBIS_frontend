@@ -74,7 +74,7 @@ function addTag(){
 	//var existingtags = " ";
 	var existingtags = $('#newtagslist').html();
 	if (existingtags.search(imgname) == -1){
-		var listitem = "<input type=\"text\"name=\"imgtag[]\" class=\"listitemC\" value=\""+newtag+"\" ></input><br />";
+		var listitem = "<input type=\"text\" name=\"imgtag[]\" class=\"listitemC\" value=\""+newtag+"\" ></input><br />";
   $('#newtagslist').append(listitem);
 	}else{
 		alert("an entry for that allready exists" );
