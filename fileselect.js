@@ -40,8 +40,11 @@ function markDel(){
  var thisFSrc = $('#srcVal').val();
  var chkBx = $('#chkbx1');
  var messg = "";
- var filepart = 'http://127.0.0.1/ibis/Data/Images/';
+ var filepart = 'http://127.0.0.1/ibis/Data/Images/';//http://localhost/ibis/Data/Images/
+ var localFpart = 'http://127.0.0.1/ibis/Data/Images/';//http://127.0.0.1/ibis/Data/Images/
  thisSrc = thisFSrc.replace(filepart, "");
+ thisSrc = thisFSrc.replace(localFpart, "");
+ alert(thisSrc);
  if ($('#chkbx1').prop('checked')) {
 
  //if (chkBx.checked == true){
