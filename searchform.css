@@ -10,13 +10,12 @@
 }
 
 .cathead {
-position : relative;
-      font-size : 28px;
+position : absolute;
+      font-size : 250%;
       text-decoration : underline;
-  
-      left : 15%;
+   top : 220px;
+      left : 35%;
       z-index : 4;
-      top : 0px;
 }
 
 .selectList {

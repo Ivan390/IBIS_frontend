@@ -59,13 +59,7 @@
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()" >Send</a>
          </div> 
-         <div id="images" class="littleDD">
-          		<p class="labelclass">Add Media</p>
-  	      		<input type="file" name="animMedia[]" id="mediaPic" class="littleDD" multiple />
-			     	</div>
-	      				<div id="imgDisplay" class="littleDD"></div>
-			      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div>
-			      		<div id="tagslist"></div>
+         
              
         <form  name="AnimForm" action="../../cgi-bin/IBISCollectDataAnim.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
@@ -89,7 +83,13 @@
 						<input type="text" name="acclvl" id="acclevel" class="hiddentext" value="">
 						<input type="text" name="Acontributer_ID" id="contrib_ID" class="hiddentext" value="">
 						
-						
+					<div id="images" class="littleDD">
+          		<p class="labelclass">Add Media</p>
+  	      		<input type="file" name="animMedia[]" id="mediaPic" class="littleDD" multiple />
+			     	</div>
+	      				<div id="imgDisplay" class="littleDD"></div>
+			      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div>
+			      		<div id="tagslist"></div>	
 						
 			    	
 	      		 

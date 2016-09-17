@@ -59,15 +59,7 @@
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
         	</div>  
-        	<div id="images" class="littleDD">
-          		<p class="labelclass">Add Media</p>
-	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
-	      		</div>
-	      		
-	      		<div id="tagslist"></div><div id="imgDisplay" class="littleDD"></div>
-	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
-	      		
-  		</div>   
+        	
         <form  name="VegForm" action="../../cgi-bin/IBISCollectVegData.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" name="Akingdom" value="Plantae" class="hiddentext">
@@ -92,7 +84,15 @@
 						<input type="text" name="acclvl" id="acclevel" class="hiddentext" value="">
 						<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" value="">
 						
-						
+						<div id="images" class="littleDD">
+          		<p class="labelclass">Add Media</p>
+	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
+	      		</div>
+	      		
+	      		<div id="tagslist"></div><div id="imgDisplay" class="littleDD"></div>
+	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
+	      		
+  		</div>   
 	      		
            </div>
 	  			</fieldset>

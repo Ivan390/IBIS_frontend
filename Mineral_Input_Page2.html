@@ -66,13 +66,7 @@
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
          </div>   
-        <div id="images" class="littleDD">
-      		<p class="labelclass">Add Media</p>
-	    		<input type="file" name="Minmedia[]" id="mediaPic" class="littleDD" multiple />
-	     	</div>
-	     	<div id="tagslist">	</div>
-	      <div id="imgDisplay" class="littleDD"></div>
-	      <div id="optionsDsplay" class="littleDD" style="display : none;">  
+        
          <form  name="MinForm" action="../../cgi-bin/IBISCollectDataMin.php3" method="POST" enctype="multipart/form-data" class="">
 	  <fieldset id="dataForm" class="">
       <input type="text" name="Akingdom" value="Minerals" class="hiddentext">
@@ -100,7 +94,15 @@
 			
 			
 </div> 
+<div id="images" class="littleDD">
+      		<p class="labelclass">Add Media</p>
+	    		<input type="file" name="Minmedia[]" id="mediaPic" class="littleDD" multiple />
+	     	</div>
+	     	<div id="tagslist">	</div>
+	      <div id="imgDisplay" class="littleDD"></div>
+	      <div id="optionsDsplay" class="littleDD" style="display : none;">  
             </div>
+            
 	  			</fieldset>
 	 			</form>
   </div>
