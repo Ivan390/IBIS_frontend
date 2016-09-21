@@ -11,19 +11,27 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 	 	 	$('#mediaPic').change(handleFileSelect);	
+	 	 	 if (sessionStorage.userRef){
+	 	 	 sessVar = sessionStorage.userRef;
+	 	 	 //alert(sessVar);
+	 	 	 sesA = sessVar.split(":");
+	 	 	 conID = sesA[1];
+	 	 	// alert(conID);
+	 	 	 $('#contrib_ID').val(conID);
+	 	 	 }else {
+	    alert("You should really not be on this page!")
+	    document.location = "IBIS_main2.html";
+	    }
 	 		
 	 	})
 
 	</script>
-	
-
-            <link rel="stylesheet"
-              type="text/css"
-              href="./AnimInput.css"
-             >
-        
+	<link rel="stylesheet"
+        type="text/css"
+         href="./AnimInput.css"
+  >
     </head>
-    <body name="AnimInputBody" onload="checkStorage()" >
+   <body name="AnimInputBody" onload="checkStorage()" >
       <div id="allContainer">
        
         <div name="Heading">
@@ -81,7 +89,7 @@
 					  <textarea id="Image_Tags" name = "Aimg_Tags" class="hiddentext"></textarea>
 					
 						<input type="text" name="acclvl" id="acclevel" class="hiddentext" value="">
-						<input type="text" name="Acontributer_ID" id="contrib_ID" class="hiddentext" value="">
+						<input type="text" name="Acontributer_ID" id="contrib_ID" class="hiddentext">
 						
 					<div id="images" class="littleDD">
           		<p class="labelclass">Add Media</p>
@@ -106,9 +114,8 @@
         var imgname = "";
         var theHeading = "";
 	  		var theLabel ="";
-	  		checkStorage();
-	 
-         function addTag(){
+	  		
+	  		function addTag(){
         var tagslist = $('#mediatagsinput').val();
         var newtag = imgname +" : "+ tagslist;
         var listitem = "<input type=\"text\"name=\"Aimgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
@@ -122,19 +129,7 @@
 		  		$('#optionsDsplay').html(opttext);
       }
         
-	function checkStorage(){
-	  if (sessionStorage.userRef){
-	    var theRef = sessionStorage.userRef;
-	    theRefer = theRef.split(" : "); 
-	  	$("#contrib_ID").val(theRefer[1]);
-	  	
-	  }else {
-	    alert("You should really not be on this page!")
-	    document.location = "IBIS_main2.html";
-	    }
-	  }
-
-	  function sendedit(){
+	 function sendedit(){
 	  var editval = $("#outputBox").val();
         $('#'+theHeading).val(editval);
         theLabel.style.backgroundColor = "pink";

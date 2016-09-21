@@ -13,7 +13,17 @@
 	<script type="text/javascript">
 		$(document).ready(function(){
 	 	 	$('#mediaPic').change(handleFileSelect);	
-	 		
+	 			 if (sessionStorage.userRef){
+	 	 	 sessVar = sessionStorage.userRef;
+	 	 	 //alert(sessVar);
+	 	 	 sesA = sessVar.split(":");
+	 	 	 conID = sesA[1];
+	 	 	// alert(conID);
+	 	 	 $('#contrib_ID').val(conID);
+	 	 	 }else {
+	    alert("You should really not be on this page!")
+	    document.location = "IBIS_main2.html";
+	    }
 	 	})
 
 	  DD_roundies.addRule('.littleDD', 35);
@@ -115,8 +125,7 @@
         var imgname = "";
         var theHeading = "";
 	  		var theLabel ="";
-	  		checkStorage();
-	 
+	  		
         function addTag(){
         var tagslist = $('#mediatagsinput').val();
         var newtag = imgname +" : "+ tagslist;
@@ -131,20 +140,7 @@
 		  		$('#optionsDsplay').html(opttext);
       }
         
-	function checkStorage(){
-	  if (sessionStorage.userRef){
-	    var theRef = sessionStorage.userRef;
-	    theRefer = theRef.split(" : "); 
-	  	$("#contrib_ID").val(theRefer[1]);
-	  	
-	  }else {
-	    alert("You should really not be on this page!")
-	    document.location = "IBIS_main2.html";
-	    }
-	  }
-
-
-	  function sendedit(){
+	 function sendedit(){
 	  var editval = $("#outputBox").val();
         $('#'+theHeading).val(editval);
         theLabel.style.backgroundColor = "pink";
