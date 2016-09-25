@@ -39,81 +39,76 @@
     </head>
     <body name="VegInputBody" >
       <div id="allContainer">
-       
-        <div name="Heading">
+      	<div name="Heading">
 	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Mineral Input Form</p>
         </div>
-        
         <div id="pgButtons" class="littleDD">
         	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
          <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
         </div>
-        
         <div id="detail_fs_min" class="littleDD" >
           <div id="headinglist" class="littleDD">
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Group</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Crystal_System</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habit</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Chemical_Formula</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Hardness</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Density</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Cleavage</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fracture</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Streak</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Lustre</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fluorescence</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Notes</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Origin</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Characteristics</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></p>
-        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distribution</label></p>        
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Group</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Crystal_System</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habit</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Chemical_Formula</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Hardness</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Density</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Cleavage</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fracture</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Streak</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Lustre</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fluorescence</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Notes</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Origin</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Characteristics</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distribution</label></p>        
           </div> 
-          
           <div id="outputBlock" class="bigDD outputblock">
             <p id="inputHeading">Enter Information</p>
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
-         </div>   
-        
-         <form  name="MinForm" action="../../cgi-bin/IBISCollectDataMin.php3" method="POST" enctype="multipart/form-data" class="">
-	  <fieldset id="dataForm" class="">
-      <input type="text" name="Akingdom" value="Minerals" class="hiddentext">
-      <input type="text" id="Name" name="Mname" class="hiddentext">
-      <input type="text" id="Group" name="Mgroup" class="hiddentext">
-      <input type="text" id="Crystal_System" name="crystSys" class="hiddentext">
-      <input type="text" id="Habit" name="Mhabit" class="hiddentext">
-	    <input type="text" id="Chemical_Formula" name="Mchemical_Formula" class="hiddentext">
-	    <input type="text" id="Hardness" name="Mhardness" class="hiddentext">
-	    <input type="text" id="Density" name="Mdensity" class="hiddentext">
-	    <input type="text" id="Cleavage" name="Mcleavage" class="hiddentext">
-	    <input type="text" id="Fracture" name="Mfracture" class="hiddentext">
-	    <textarea id="Streak" name="Mstreak" class="hiddentext"></textarea>
-	    <textarea id="Lustre" name="Mlustre" class="hiddentext"></textarea>
-	    <textarea id="Fluorescence" name="Mfluorescense" class="hiddentext"></textarea>
-	    <textarea id="Notes" name="Mnotes" class="hiddentext"></textarea>
-	    <textarea id="Origin" name="Morigin" class="hiddentext"></textarea>
-	    <textarea id="Characteristics" name="Mcharacteristics" class="hiddentext"></textarea>
-	    <textarea id="Uses" name="Muses" class="hiddentext"></textarea>
-	    <textarea id="Distribution" name="Mdistrib" class="hiddentext"></textarea>	    
-	    <textarea id="Image_Tags" name = "Mimg_Tags" class="hiddentext"></textarea>
-			<input type="text" name="Macclvl" id="acclevel" class="hiddentext" value="">
-			<input type="text" name="Mcontributer_ID" id="contrib_ID" class="hiddentext" value="">
-			
-			
-			
-</div> 
-<div id="images" class="littleDD">
-      		<p class="labelclass">Add Media</p>
-	    		<input type="file" name="Minmedia[]" id="mediaPic" class="littleDD" multiple />
-	     	</div>
-	     	<div id="tagslist">	</div>
-	      <div id="imgDisplay" class="littleDD"></div>
-	      <div id="optionsDsplay" class="littleDD" style="display : none;">  
-            </div>
-            
+         	</div>   
+         	<form  name="MinForm" action="../../cgi-bin/IBISCollectDataMin.php3" method="POST" enctype="multipart/form-data" class="">
+	  				<fieldset id="dataForm" class="">
+							<input type="text" name="Akingdom" value="Minerals" class="hiddentext">
+							<input type="text" id="Name" name="Mname" class="hiddentext">
+							<input type="text" id="Group" name="Mgroup" class="hiddentext">
+							<input type="text" id="Crystal_System" name="crystSys" class="hiddentext">
+							<input type="text" id="Habit" name="Mhabit" class="hiddentext">
+							<input type="text" id="Chemical_Formula" name="Mchemical_Formula" class="hiddentext">
+							<input type="text" id="Hardness" name="Mhardness" class="hiddentext">
+							<input type="text" id="Density" name="Mdensity" class="hiddentext">
+							<input type="text" id="Cleavage" name="Mcleavage" class="hiddentext">
+							<input type="text" id="Fracture" name="Mfracture" class="hiddentext">
+							<textarea id="Streak" name="Mstreak" class="hiddentext"></textarea>
+							<textarea id="Lustre" name="Mlustre" class="hiddentext"></textarea>
+							<textarea id="Fluorescence" name="Mfluorescense" class="hiddentext"></textarea>
+							<textarea id="Notes" name="Mnotes" class="hiddentext"></textarea>
+							<textarea id="Origin" name="Morigin" class="hiddentext"></textarea>
+							<textarea id="Characteristics" name="Mcharacteristics" class="hiddentext"></textarea>
+							<textarea id="Uses" name="Muses" class="hiddentext"></textarea>
+							<textarea id="Distribution" name="Mdistrib" class="hiddentext"></textarea>	    
+							<textarea id="Image_Tags" name = "Mimg_Tags" class="hiddentext"></textarea>
+							<input type="text" name="Macclvl" id="acclevel" class="hiddentext" value="">
+							<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" value="">
+							<div id="images" class="littleDD">
+          		<p class="labelclass">Add Media</p>
+	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
+	      		</div>
+	      		
+	      		<div id="tagslist"></div>
+	      		<div id="imgDisplay" class="littleDD"></div>
+	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
+	      		
+  		</div>   
+	      		
+           </div>
 	  			</fieldset>
+	 			
 	 			</form>
   </div>
        
@@ -129,7 +124,7 @@
         function addTag(){
         var tagslist = $('#mediatagsinput').val();
         var newtag = imgname +" : "+ tagslist;
-        var listitem = "<input type=\"text\"name=\"Mimgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
+        var listitem = "<input type=\"text\" name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
         $('#tagslist').append(listitem);
      
         }

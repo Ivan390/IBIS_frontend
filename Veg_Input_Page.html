@@ -107,7 +107,8 @@
 	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
 	      		</div>
 	      		
-	      		<div id="tagslist"></div><div id="imgDisplay" class="littleDD"></div>
+	      		<div id="tagslist"></div>
+	      		<div id="imgDisplay" class="littleDD"></div>
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
 	      		
   		</div>   
@@ -128,7 +129,7 @@
         function addTag(){
     	    var tagslist = $('#mediatagsinput').val();
    	     var newtag = imgname +" : "+ tagslist;
-    	    var listitem = "<input type=\"text\"name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
+    	    var listitem = "<input type=\"text\" name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
      	   $('#tagslist').append(listitem);
         }
         
