@@ -3,7 +3,7 @@ function showGuests(){
 	var guestList = $('#hiddencatPicsList').html();
 	var guestArray = guestList.split("::");
 	var guestCount = guestArray.length - 1;
-	var dispLimit = 8;
+	var dispLimit = 7;
 	var shortList ="";
 	var theList = "";
 	for (c = 0; c <= guestCount; c++){

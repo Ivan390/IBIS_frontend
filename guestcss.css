@@ -36,7 +36,7 @@
 }
 #optionsDsplay {
   position : absolute;
-  left : 104%;
+  left : 170%;
   top : 50%;
   
 }
@@ -44,25 +44,28 @@
   position : relative;
   top : 30px;
   
+  width:  150px;
+  height: auto;
 }
 #guestImages {
   position : absolute;
   top : 102%;
- 
-  width : 97%;
-  padding : 5px;
-  padding-left : 15px;
+ height : 220px;
+  width : 87%;
+  padding : 15px;
+  padding-bottom: 20px;
   overflow : auto; 
   
   border-style : dashed;
   border-width : 3px;
-  height : 125px;
+  /*! height : 125px; */
   font-size : 15px;
 }
 .thumbpic {
   width : 100px;
   height : 100px;
   border-radius : 12px;
+  padding: 1px;
 }
 #GuestPic {
   position : absolute;

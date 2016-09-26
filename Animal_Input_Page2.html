@@ -97,15 +97,16 @@
 						<textarea id="Habits" name="Ahabits" class="hiddentext"></textarea>
 						<textarea id="Distrib_Notes" name="Adistrib_Notes" class="hiddentext"></textarea>
 					  <textarea id="Image_Tags" name = "Aimg_Tags" class="hiddentext"></textarea>
-						<input type="text" name="Acontributer_ID" id="contrib_ID" class="hiddentext">
+						<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext">
 						
 					<div id="images" class="littleDD">
           		<p class="labelclass">Add Media</p>
-  	      		<input type="file" name="animMedia[]" id="mediaPic" class="littleDD" multiple />
-			     	</div>
-	      				<div id="imgDisplay" class="littleDD"></div>
-			      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div>
-			      		<div id="tagslist"></div>	
+	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
+	      		</div>
+	      		
+	      		<div id="tagslist"></div>
+	      		<div id="imgDisplay" class="littleDD"></div>
+	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
 						
 			    	
 	      		 
@@ -126,7 +127,7 @@
 	  		function addTag(){
         var tagslist = $('#mediatagsinput').val();
         var newtag = imgname +" : "+ tagslist;
-        var listitem = "<input type=\"text\"name=\"Aimgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
+        var listitem = "<input type=\"text\"name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
         $('#tagslist').append(listitem);
      
         }
