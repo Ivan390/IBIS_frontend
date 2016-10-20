@@ -50,7 +50,7 @@ function dotoggle(){
 }
 function dotoggleText(){
   
-  $("#dykText").slideToggle(5000);
+  $("#dykText").slideToggle(3000);
   
 }
 

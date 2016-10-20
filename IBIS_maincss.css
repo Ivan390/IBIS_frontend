@@ -14,8 +14,7 @@
     margin-right: auto;
     width : 50%;
     height : 25%;
-    z-index : 10;
-  top : -60px;
+    top : -60px;
 }
 
 #logo_image {
@@ -39,12 +38,13 @@
 #dateTime {
   position: relative;
   top: 15px;
-  left: 20px;
+  left: -70%;
   z-index:3;
   font-size: 18px;
   margin-left:auto;
   padding-left:10px;
   color: green;
+  width: 30%;
 }
 .hiddentext {
   display : none;
@@ -180,6 +180,10 @@ color : blue;
     cursor : pointer; 
     
 }
+#loginhead{
+    cursor : pointer; 
+    
+}
 .H2 {
   position : relative;
   left : 30%;
@@ -194,6 +198,8 @@ color : blue;
     font-size : 25px;
     padding : 10px;
     z-index : 18;
+    cursor-style: selection;
+    cursor: pointer;
 }
 
 .loginshow {

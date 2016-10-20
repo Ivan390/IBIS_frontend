@@ -22,13 +22,11 @@
 	    alert("You should really not be on this page!")
 	    document.location = "IBIS_main2.html";
 	    }
-	 		
 	 	})
-
 	</script>
 	<link rel="stylesheet"
         type="text/css"
-         href="./AnimInput.css"
+        href="./AnimInput.css"
   >
     </head>
    <body name="AnimInputBody" onload="checkStorage()" >
@@ -45,7 +43,7 @@
         </div>
         
         <div id="detail_fs_min" class="littleDD" ">
-          <div id="headinglist" style="width:95%;" class="littleDD">
+          <div id="headinglist" class="littleDD">
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></p>
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subPhylum</label></p>
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Class</label></p>
@@ -72,8 +70,7 @@
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()" >Send</a>
          </div> 
-         
-             
+                
         <form  name="AnimForm" action="../../cgi-bin/IBISCollectDataAnim.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" name="Akingdom" value="Animalia" class="hiddentext"></input>
@@ -99,26 +96,19 @@
 					  <textarea id="Image_Tags" name = "Aimg_Tags" class="hiddentext"></textarea>
 						<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext">
 						
-					<div id="images" class="littleDD">
+						<div id="images" class="littleDD">
           		<p class="labelclass">Add Media</p>
 	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
 	      		</div>
-	      		
 	      		<div id="tagslist"></div>
 	      		<div id="imgDisplay" class="littleDD"></div>
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
-						
-			    	
-	      		 
-
 	  			</fieldset>
 	 			</form>
+	 			<div id=infoDiv> <p>You have to add a tag for each picture<br>that you want to submit or weird things will happen.</p><p>Click on a picture to add a tag</p></div>  
 	 		</div>
-    </div>   
-
-        
-       
-        
+    </div> 
+    
         <script type="text/javascript">
         var imgname = "";
         var theHeading = "";
@@ -128,14 +118,16 @@
         var tagslist = $('#mediatagsinput').val();
         var newtag = imgname +" : "+ tagslist;
         var listitem = "<input type=\"text\"name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
+        $('#infoDiv').hide();
         $('#tagslist').append(listitem);
-     
         }
+  
         function showOps(that){
 		   	  imgname = that.title;
 		   	  $("#optionsDsplay").slideDown('fast');
 		   	  var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /\><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
 		  		$('#optionsDsplay').html(opttext);
+		  		
       }
         
 	 function sendedit(){

@@ -4,16 +4,40 @@
   border-radius: 22px; 
   
 }
+#logo_image_holder {
+    position: relative;
+    left: 38%;
+    top: -50px;
+}
 .italC {
   
   font-style: italic;
+}
+
+#dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+.hiddentext{
+  display: none;
+}
+#logo_image{
+height : 60%;
+  width : 50%;
 }
 
 .cathead {
 position : absolute;
       font-size : 250%;
       text-decoration : underline;
-   top : 220px;
+   top : 20%;
       left : 35%;
       z-index : 4;
 }

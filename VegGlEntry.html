@@ -1,0 +1,93 @@
+<! DOCTYPE html>
+<html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+<title>
+  Enter Vegetable LookUp Terms
+</title>
+<script type="text/javascript" src="jquery-1.11.3.js"> </script>
+<script type="text/javascript" src="Gmain.js"> </script>
+<script type="text/javascript" src="dateshorts.js"> </script>
+<script type="text/javascript" src="fileselecter.js"></script>	
+<link rel="stylesheet"
+  type="text/css"
+  href="./vegGloss.css"
+/>
+</head>
+<body id="TheBody" onload="initForm()">
+  <div id="dateTime">
+  <div id="dateBlock">The Date</div>
+  <div id="timeBlock">The Time</div>       
+  </div>
+  <div id="logo_image_holder">
+    <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
+  </div>
+  <div id=allContainer class="ac">
+    <input type="button" class="buttClass" value="Add another Item" onclick="addAnotherItem()"/>
+    <input type="button" class="buttClass" value="Send Entry To IBIS" onclick="submitForm()"/>
+    <form name="glossentry" id="glossEntry" method="POST" enctype="multipart/form-data" action="../../cgi-bin/vegGlEntry.php3">
+     <div id="vegGlosItem0" class="itemC">
+       <label class="labelText">Term</label>
+       <input type="text" name="item0" class="inputText shortText" />
+       <label class="labelText">Definition</label>
+       <textarea name="definition0" class="inputText longText"></textarea>
+     <div id="imageDiv0" >
+       <label class="labelC">Add a Diagram</label></br>
+       <input id="pictures0" type ="file" name="pictures0" class="clickme" onchange="showImage(this)" />
+       <img src="#" height="" width="" onclick="addCaption(this)" class="hidden" />
+       <label class="labelText">Add a Caption</label>
+       <input type="text" name="diagramCap0"  />
+     <div id="newtagslist0" class="nothiddentext"></div>
+   </div>
+ </div>
+   </form>
+   <div id=mesText> </div>
+  </div>
+ </body>
+  <script type="text/javascript">
+  var IC = 0;
+  function showImage(that){
+    var imgdiv = that.nextSibling.nextSibling.src;
+    alert(imgdiv);
+  //	imgdiv.innerHTML = '<img src="" alt="this is where the image will go" />';
+    if (that.files && that.files[0]){
+      var reader = new FileReader();
+      reader.onload = function (e) {
+      that.nextSibling.nextSibling.src = e.target.result;
+    }
+    reader.readAsDataURL(that.files[0]);
+  }
+  $(that)
+  /*	that.nextSibling.style.display = "none";
+  that.nextSibling.style.display = "block";	*/// I wanted to do something here..but i guess i need some sleep	
+  }
+
+  function addAnotherItem(){
+    IC++;
+  //alert("at least its running the functionand IC is " + IC);
+    var addItem ='<div id="vegGlosItem'+ IC +'" class="itemC">\
+      <label class="labelText">Term</label>\
+      <input type="text" name="item'+ IC +'" class="inputText shortText" />\
+      <label class="labelText">Definition</label>\
+      <textarea name="definition'+ IC +'" class="inputText longText"></textarea>\
+      <div id="imageDiv'+ IC +'">\
+	<label class="labelC">Add a Diagram</label>\
+	</br>\
+	<input id="pictures'+ IC +'" type ="file" name="pictures'+ IC +'" class="clickme" onchange="showImage(this)" />\
+        <div id="diagram0" class="hidden">\
+	  <img src="#" height="" width="" onclick="addCaption(this)"/><p></p>\
+	  <label class="labelText">Add a Caption</label>\
+	  <input type="text" name="diagramCap0"  />\
+	</div>\
+	<div id="newtagslist'+ IC +'" class="nothiddentext"></div>\
+      </div>\
+    </div>';
+    $('#glossEntry').append(addItem);
+    //	alert("and it finishes the function");
+  }
+
+  function submitForm(){
+    document.glossentry.submit();
+  }
+ </script> 
+</html>

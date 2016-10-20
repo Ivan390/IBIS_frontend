@@ -43,3 +43,13 @@ i will have each page have its own sheet at least for now to simplify this shit.
 2016-06-23 19:39:01 
 cleared up the php styles and worked out nice little function that sets 
 the subscript values on the chemical formulas for minerals...alas no one will ever know ;-) 			
+
+2016-10-14 19:05:50
+So I have the base functions working, now what?
+ I need a method of restoring edited data from the edits table.
+ There should be an option on the edits page that shows how many times
+ the page has been edited and visited.
+ There should be a gallery with pictures that have not been identified
+  with a facility that allows users to ID specimens
+ There should also be a users gallery where registered users can keep
+   track of their edits 

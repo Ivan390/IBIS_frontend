@@ -1,24 +1,20 @@
 <!DOCTYPE html>
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
-        <title>
-          I B I S - Other Functions
-        </title>
-        <script type="text/javascript" src="jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="Gmain.js"></script>
-        <script type="text/javascript" src="dateshorts.js"></script>
-        <script type="text/javascript" src="DD_rondies.js"></script>
-	
-	<script type="text/javascript">
-
-	  DD_roundies.addRule('.littleDD', 35);
-	  DD_roundies.addRule('.bigDD', 25);
-
-	</script>
-
-	<link rel="stylesheet"
-              type="text/css"
+ <head>
+  <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+  <title>
+   I B I S - Other Functions
+  </title>
+  <script type="text/javascript" src="jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="Gmain.js"></script>
+  <script type="text/javascript" src="dateshorts.js"></script>
+  <script type="text/javascript" src="DD_rondies.js"></script>
+  <script type="text/javascript">
+   DD_roundies.addRule('.littleDD', 35);
+   DD_roundies.addRule('.bigDD', 25);
+  </script>
+  <link rel="stylesheet"
+  type="text/css"
               href="IBIS_maincss.css"
               />
        <link rel="stylesheet"
@@ -33,52 +29,51 @@
         <div id="timeBlock">The Time</div>       
       </div>
       <div id="logo_image_holder">
-
         <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
-        
       </div>
       <div id="controlP">
         <a href="IBIS_main2.html" class="submitButton littleDD buttonclass"><img src="" alt="" />Back to Main Screen</a>
       </div>
       <div id="detail_fs" class="littleDD detail_fs">
-      
-				<div id="AdminList" class="linklist littleDD locked">
-					<h3>Add Information to the Database</h3>
-					<ul>
-							<li>
-						<a href="Veg_Input_Page.html">Add Vegetable Data</a>
-							</li>
-							<li>
-						<a href="Animal_Input_Page2.html">Add Animal Data</a>
-							</li>
-							<li>
-						<a href="Mineral_Input_Page2.html">Add Mineral Data</a>
-							</li>
-						</ul>
-				</div>
-				<div id="listsList" class="linklist littleDD">
-				<ul>
-						<li>
-							<a href="IBIS_animalia-table.html">Kingdom Animalia </a>
-						</li>
-					</ul>
-				</div>
+        <div id="AdminList" class="linklist littleDD locked">
+	  <h3>Add Information to the Database</h3>
+	  <ul>
+	    <li>
+  	      <a href="Veg_Input_Page.html">Add Vegetable Data</a>
+	    </li>
+	    <li>
+	      <a href="Animal_Input_Page2.html">Add Animal Data</a>
+	    </li>
+	    <li>
+	      <a href="Mineral_Input_Page2.html">Add Mineral Data</a>
+	    </li>
+	  </ul>
+	</div>
+	<div id="listsList" class="linklist littleDD">
+	  <ul>
+	    <li>
+	      <a href="IBIS_animalia-table.html">Kingdom Animalia </a>
+	    </li>
+	    <li>
+	      <a href="VegGlEntry.html">Add a Glossary item </a>
+	    </li>
+	    <li>
+              <a href="plantae.html">Plantae</a>
+	    </li>
+	  </ul>
+	</div>
       </div>
       <script type="text/javascript">
-	function checkStorage(){
-	  if (sessionStorage.userRef){
-	    $("#AdminList").removeClass("locked").addClass("adminC");
-	  }else {
-	    $("#AdminList").addClass("locked");
-	    $("#AdminList a").removeAttr("href");
-	  }
-	}
-	checkStorage();
-      
-      </script>
-                     
-        </div>
-
-    </body>
-    
+      function checkStorage(){
+       if (sessionStorage.userRef){
+         $("#AdminList").removeClass("locked").addClass("adminC");
+       }else {
+         $("#AdminList").addClass("locked");
+         $("#AdminList a").removeAttr("href");
+       }
+      }
+      checkStorage();
+    </script>
+   </div>
+ </body>
 </html>
