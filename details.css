@@ -30,7 +30,7 @@
   top : -65px;
   width : 95%;
   padding : 5px;
-  height :400px;
+  height :auto;
   padding-left : 10px;
   margin-left : 10px;
   border-radius: 12px;
@@ -51,9 +51,9 @@
 
 #fqnNameList{
   position : relative;
-  width : 65%;
-  height :auto;
-  height: 200px;
+  width : 75%;
+  /*height :auto;*/
+  height: 300px;
   min-height: 200px;
   padding : 10px;
   border-style: inset;
@@ -130,15 +130,17 @@
   max-height : 310px;
 float : right;
 top : 10%;
-  left : 68%;
+  left : 78%;
   overflow : auto;
   margin-right : 10px;
   margin-top : 15px;
 }
 .imgClass {
-  width : 150px;
-  height : 150px;
+  width : 120px;
+  height : 120px;
   
+  border-radius: 12px;
+  margin-left: 3px;
 }
 .longText {
   

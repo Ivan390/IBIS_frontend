@@ -33,8 +33,7 @@ IBIS_main2.html
 			
 IBIS_other_functions.html
 	this page links out to some administrative functions like adding new data to the sets
-	but i want to add some more utility like functions here like lists of definitions, etc....				
-			
+	but i want to add some more utility like functions here like lists of definitions, etc....
 			
 2016-06-23 07:55:46 
 cleaned up some of the style cruff but there are couple more pages to go.
@@ -53,3 +52,11 @@ So I have the base functions working, now what?
   with a facility that allows users to ID specimens
  There should also be a users gallery where registered users can keep
    track of their edits 
+
+2016-10-20 22:17:39
+The contribRef value is not being captured for inputs in the database, 
+I must check that shit.
+
+2016-11-01 13:22:08 
+the edit stuff page needs a link to the relevant glossary and lookup list.
+and the dates are still not being set properly.
