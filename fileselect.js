@@ -70,18 +70,46 @@ function addTag(){
 	var tagpair = imgname +" : "+ tag + "::";
 	var existingtags = $('#newtagslist').val();
 	if (existingtags.search(imgname) == -1){
-	var pretags = $('#newtagslist').val();
-	var newlist = tagpair + pretags;
-  $('#newtagslist').val(newlist);
+		var pretags = $('#newtagslist').val();
+		var newlist = tagpair + pretags;
+  	$('#newtagslist').val(newlist);
 	}else{
 		alert("an entry for that allready exists" );// should open dialog that allows edititing the tag
-	}
+	}	
 }
 function showOps(that){
+ imgname = "";
 	imgname = that.title;
-	$("#optionsDsplay").slideDown('fast');
-	var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
-	$('#optionsDsplay').html(opttext);
+	
+	if ($('#newtagslist').val() == "" ){
+		//alert("the newtagslist is empty");
+		var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
+		$('#optionsDsplay').html(opttext);
+		$("#optionsDsplay").slideDown('fast');
+	}
+	else{
+	//	alert('newtagslist is not empty');
+		var tsl = $('#newtagslist').val().split('::');	   //split("::", $('#newtagslist').val());
+		for (i=0; i<=tsl.length; i++){
+			if (!tsl[i]){continue;}
+			else if (tsl[i].search(imgname) == -1){
+				//alert('it is not empty but it does not have this imgname');
+				var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
+				$('#optionsDsplay').html(opttext);
+				$("#optionsDsplay").slideDown('fast');
+				//continue;
+			}else{
+				var theEntry = tsl[i].split(':');
+				var thetag = theEntry[1];
+				var tin = theEntry[0];
+				alert('it is not empty and it does have this imgname. ' + tin +'  '+ thetag );
+				var opttext = '<p class="labelclass">Add Media Tags for <br>' + tin + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" value="' + thetag + '"/><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" disabled />';
+			$('#optionsDsplay').html(opttext);
+			$("#optionsDsplay").slideDown('fast');
+				$('#mediatagsinput').val(theEntry[1]);
+			}
+		}
+	}
 }
 function doSubmit(){
 document.EditsForm.submit();// should validate and sanitize inputs here

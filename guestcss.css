@@ -8,6 +8,10 @@
   border-radius: 22px;
  
 }
+#dateTime {
+  color: green;
+  
+}
 #pgButtons{
 	position : relative;
   top : 45px;
@@ -37,7 +41,7 @@
 #optionsDsplay {
   position : absolute;
   left : 170%;
-  top : 50%;
+  top : 35%;
   
 }
 #mediatagsinput{
@@ -51,7 +55,7 @@
   position : absolute;
   top : 102%;
  height : 220px;
-  width : 140%;
+  width : 109%;
   padding : 15px;
   padding-bottom: 20px;
   overflow : auto; 
@@ -69,10 +73,10 @@
 }
 #GuestPic {
   position : absolute;
-  left : 173%;
+  left : 170%;
   top : -6px;
-  width : 200px;
-  height : 200px;
+  width : auto;
+  height : auto;
 }
 #detailcont{  position : relative;
   width : 98%;

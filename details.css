@@ -18,10 +18,14 @@
   width: 30%;
 }
 .buttonclass {
+  position: relative;
   border : 1px solid green;
   font-size: 16px;
   border-radius: 12px;
   padding : 5px;
+  margin-bottom: 20px;
+  top : 20px;
+  left : 160px;
   
 }
 #detail_fs {

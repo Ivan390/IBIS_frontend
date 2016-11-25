@@ -22,7 +22,9 @@
 	    alert("You should really not be on this page!")
 	    document.location = "IBIS_main2.html";
 	    }
-	 	})
+	 	}) 
+	 	
+
 	</script>
 	<link rel="stylesheet"
         type="text/css"
@@ -30,6 +32,7 @@
   >
     </head>
    <body name="AnimInputBody" onload="checkStorage()" >
+   <div id="lookupdiv" style="display:none;"></div>
       <div id="allContainer">
        
         <div name="Heading">
@@ -40,8 +43,10 @@
         <div id="pgButtons" class="littleDD">
         	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
          <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
+        <input type="button" id="lookupList" class="buttonclass littleDD" onclick="loadList()" value="Load Lookup List" />
+        <input type="button" id="lookupHide" class="buttonclass littleDD" onclick="hideList()" value="Hide Lookup List" style="display : none;" />
         </div>
-        
+  
         <div id="detail_fs_min" class="littleDD" ">
           <div id="headinglist" class="littleDD">
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></p>
@@ -84,7 +89,7 @@
 						<input type="text" id="subFamily" name="subFamily" class="hiddentext"></input>
 						<input type="text" id="Genus" name="Agenus" class="hiddentext"></input>
 						<input type="text" id="subGenus" name="subGenus" class="hiddentext"></input>
-						<input type="text" id="Species" name="Aspecies" class="hiddentext"></input>
+						<input type="text" id="Species" name="Aspecies" class="hiddentext" change="checkDuplicate()"></input>
 						<input type="text" id="subSpecies" name="subSpecies" class="hiddentext"></input>
 						<input type="text" id="Common_Names" name="Acommon_Names" class="hiddentext"></input>
 						<textarea id="Name_Notes" name="Aname_Notes" class="hiddentext"></textarea>
@@ -105,9 +110,24 @@
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
 	  			</fieldset>
 	 			</form>
-	 			<div id=infoDiv> <p>You have to add a tag for each picture<br>that you want to submit or weird things will happen.</p><p>Click on a picture to add a tag</p></div>  
+	 			<div id="messageDiv"></div>
+	 			<div id="infoDiv"> <p>You have to add a tag for each picture<br>that you want to submit or weird things will happen.</p><p>Click on a picture to add a tag</p></div>  
 	 		</div>
     </div> 
+    <script>
+    function loadList(){
+          $("#lookupdiv").load("IBIS_animalia-tablestripped.html");
+          $("#lookupdiv").css("display", "inline");
+          $("lookupdiv > #dateTime").css("display", "none");
+          $("#lookupList").css("display", "none");
+          $("#lookupHide").css("display", "inline");
+        }
+        function hideList(){
+        	$("#lookupdiv").css("display","none");
+        	$("#lookupHide").css("display", "none");
+          $("#lookupList").css("display", "inline");
+        }
+</script>
     
         <script type="text/javascript">
         var imgname = "";
@@ -129,12 +149,48 @@
 		  		$('#optionsDsplay').html(opttext);
 		  		
       }
+    function checkDuplicate(){ 
+    var matchList = "";
+    alert("it is running the script");
+	 	var speciesval= $('#Species').val();
+		$.ajax({
+			url : '../../cgi-bin/checkdup.php3',
+			type : "get",
+			async : "false",
+			data :{species : speciesval},
+			success : function(data){
+				var testregexp = /nomatch/;
+				if (testregexp.test(data)){
+					alert("no matching species found");
+				}else {
+					var dataList = data.split(":");
+					for (i=0; i<dataList.length; i++){
+						if (dataList[i]==""){
+							continue;
+							}
+						//	alert(dataList[i]);
+					var	 matchList = '<li>' + dataList[i] + '</li>';
+					}
+			
+				}
+			}
+		})
+		var matchedDiv = "<div id=\"matches\">\
+												<p>Possible duplicate species found.\
+												Maybe you want to edit this existing record instead</p>\
+												<ul>" + matchList + "</ul>\
+												</div>";
+		$('#messageDiv').html(matchedDiv);
+}
         
 	 function sendedit(){
 	  var editval = $("#outputBox").val();
         $('#'+theHeading).val(editval);
         theLabel.style.backgroundColor = "pink";
         $("#outputBox").val("");
+        if (theHeading == "Species"){
+        checkDuplicate();
+        }
      }
      
     function loadcontent(that){

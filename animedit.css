@@ -96,9 +96,10 @@
 }
 .imgClass{
   	position : relative;
-	width : 100px;
+	width : 150px;
 	height : 100px;
   
+  	border-radius: 12px;
 }
 #newtagslist{
    position : relative;
@@ -126,7 +127,7 @@
 }
 .imgHolder {
   position : relative;
-  width : 120px;
+  width : 200px;
   max-height : 150px;
   overflow : auto;
 }
@@ -137,9 +138,11 @@
   overflow : auto;
   top : -30px;
   left : 3px;
-  width : 98%;
+  width : 97%;
   overflow-x:  hidden;
   
+  border-radius: 15px;
+  padding-left: 15px;
 }
 #oldImages {
   position : relative;
@@ -157,9 +160,10 @@
 }
 #oldTags {
   position : relative;
-  left : 140px; 
+  left : 240px; 
   top : -110px;
   
+  max-width: 300px;
 }
 #optionsDsplay{
   position : absolute;

@@ -5,6 +5,7 @@
   padding : 20px;
   border-style: inset;
   border-radius : 15px;
+  left : 19px;
 }
 
 #logo_image_holder{
@@ -52,8 +53,8 @@
 
 .optImage {
   position : relative;
-  width : 290px;
-  height : 180px;
+  width : 280px;
+  height : 160px;
   float : left;
   border-radius : 15px;
   margin : 10px;
@@ -118,8 +119,8 @@ color : blue;
 .findOption .contextHelp {
     position: relative;
     z-index: 6;
-    font-size: 18px;
-    color: green;
+    font-size: 20px;
+    color: darkgreen;
     display: none;
     height: 30px;
     
@@ -201,7 +202,7 @@ color : blue;
     font-size : 25px;
     padding : 10px;
     z-index : 18;
-    cursor-style: selection;
+    
     cursor: pointer;
 }
 
