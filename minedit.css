@@ -7,11 +7,24 @@
   border-radius: 22px;
  
 }
-#pgButtons{
-	position : relative;
-  top : -55px;
+#pgButtons {
+    position : relative;
+  top : -40px;
+    width: 500px;
 }
 
+.buttonclass {
+  position : relative;
+   border-radius: 25px; 
+  border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 16px;
+  padding : 4px;
+  margin : 5px;
+  left : 0%;
+  
+}
 
 #logo_image {
   position : relative;

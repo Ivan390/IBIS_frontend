@@ -1,4 +1,7 @@
-#allContainer {
+/* This is IBISmaincss.css 
+It describes the main page*/
+
+#MainallContainer {
   position : relative;
   width : 95%;
   height : 80%;
@@ -7,10 +10,16 @@
   border-radius : 15px;
   left : 19px;
 }
+.littleDD {
+	border-radius:35px;
+}
+.bigDD {
+	border-radius:25px;
+}
 
-#logo_image_holder{
+#MainallContainer #logo_image_holder{
     position: relative;
-    text-align: center ;
+    left :0% ;
     margin-left: auto;
     margin-right: auto;
     width : 50%;
@@ -18,17 +27,17 @@
     top : -60px;
 }
 
-#logo_image {
+#MainallContainer #logo_image {
   height : 60%;
   width : 70%;
   z-index : 6;
 }
 
-#detail_fs_main {
+#MainallContainer #detail_fs_main {
   position : relative;
   border-style: outset;
   top : -45%;
-  width : 95%;
+  width : 94%;
   padding : 5px;
   height : auto;
   padding-left : 10px;
@@ -36,7 +45,7 @@
   border-radius : 25px;
 }
 
-#dateTime {
+#MainallContainer #dateTime {
   position: relative;
   top: 15px;
   left: -70%;
@@ -53,11 +62,11 @@
 
 .optImage {
   position : relative;
-  width : 280px;
-  height : 160px;
+  width : 150%;
+  max-height : 160px;
   float : left;
   border-radius : 15px;
-  margin : 10px;
+  padding-right : 20px;
 }
 #greetingDiv{
 position : absolute;
@@ -83,7 +92,7 @@ color : blue;
 
 #DidYouKnow {
     position: relative;
-    top: -165px;
+    top: -15px;
     height: auto;
     width : 97%;
     border: green 1px dashed;
@@ -107,13 +116,14 @@ color : blue;
     padding:2px;
     padding-bottom : 5px;
     padding-left : 20px;
-    top : -185px;
+    top : -120px;
    border-radius : 15px;
 }
 
 .findOption {
     float: left;
-    padding : 5px;
+    margin-right: 12%;
+    position: relative;
     }
 
 .findOption .contextHelp {
@@ -123,13 +133,15 @@ color : blue;
     color: darkgreen;
     display: none;
     height: 30px;
+  text-align : center;
     
 }
 
 .findOption:hover .contextHelp {
     display: block;
     position : relative;
-    width: 240px;
+    width: 200px;
+    
    
 
 }
@@ -146,13 +158,12 @@ color : blue;
 
 #guestBook {
   position : relative;
-  font-size : 28px;
+  font-size : 180%;
   text-decoration: underline;
   text-align : center;
   border: blue 1px dashed;
   padding:5px;
-  width : 195px;
-  height : 90px;
+  width : 18%;
   top : 15px;
   left : 80%;
   text-align : center;
@@ -162,12 +173,12 @@ color : blue;
 #registerBlock {
   position: relative;
   /*  float:left; */
-  width : 190px;
-  height : 90px;
+  width : 18%;
+  height : 12%;
   top : 10px;
  z-index : 8;
   left : 80%;
-  font-size: 28px;
+  font-size: 180%;
   text-decoration: underline;
   text-align : center;
   border: green 1px dashed;
@@ -223,4 +234,501 @@ color : blue;
 .logoutCshow {
   display : inline;
   
+}
+
+/*this is searchForm.css*/
+#SFallContainer {
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px; 
+  
+}
+#SFallContainer #logo_image_holder {
+    position: relative;
+    left: 70%;
+    top: -50px;
+  width : 60%;
+}
+.italC {
+  
+  font-style: italic;
+}
+
+#SFallContainer #dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+.hiddentext{
+  display: none;
+}
+#SFallContainer #logo_image{
+height : 60%;
+  width : 50%;
+  
+}
+
+#SFallContainer .cathead {
+position : absolute;
+      font-size : 250%;
+      text-decoration : underline;
+   top : 20%;
+      left : 35%;
+      z-index : 4;
+}
+
+#SFallContainer .selectList {
+  position : relative;
+  font-size : 15px;
+  height : auto;
+  width : auto;
+  margin : 15px;
+  font-size : 20px;
+  padding : 5px;
+  }
+#selectBox {
+    position : relative;
+    border : 1px dashed red;
+    width : 75%;
+    
+}
+
+#SFallContainer #pgButtons {
+    position : relative;
+    width: 500px;
+}
+
+.buttonclass {
+  position : relative;
+   border-radius: 25px; 
+  border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 16px;
+  padding : 4px;
+  margin : 5px;
+  left : 0%;
+  
+}
+#SFallContainer #theCategory {
+  position : relative;
+  padding : 10px;
+ width : 122px;
+   border-style : dashed;
+  border-width : 2px;
+  height : 170px;
+  margin-right: 10px;
+  float : right;
+   overflow-y : scroll;
+}
+
+
+#SFallContainer #detail_fs{
+position : relative;
+  height : 70%;
+  padding : 20px;
+  width : 90%;
+  top : 5px;
+  border-radius : 22px;
+  
+}
+
+#infoSet {
+  position : relative;
+  width : 500px;
+  padding : 12px;
+  top : -175px;
+  left : 200px
+  
+  
+}
+.headingC {
+  text-align : left;
+  text-decoration: underline;
+ font-size : 20px ;
+ 
+}
+
+.detailC {
+  text-align:  left;
+  
+}
+#specipicH {
+  position: relative;
+  width : 60%;   
+  
+}
+#speciePic {
+  position : relative;
+  top : 40px;
+  width : auto;
+  
+}
+#subContain {
+  position : relative;
+   width : 95%;
+    height : auto;
+  min-height: 200px;
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px; 
+
+}
+#SFallContainer #catPicsList {
+  position : relative;
+ 
+  width : 115px;
+  height : auto;
+  top : 10%;
+}
+#SFallContainer .img {
+  cursor : pointer;
+}
+/*this is details.css
+it describes the detailspage*/
+#DETallContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+    border-radius: 22px;
+}
+#DETallContainer #dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+#DETallContainer .buttonclass {
+  position: relative;
+  border : 1px solid green;
+  font-size: 16px;
+  border-radius: 12px;
+  padding : 5px;
+ 
+  
+}
+#DETallContainer #detail_fs {
+  position : relative;
+  border-style: outset;
+  top : -65px;
+  width : 95%;
+  padding : 5px;
+  height :auto;
+  padding-left : 10px;
+  margin-left : 10px;
+  border-radius: 12px;
+   
+}
+
+#DETallContainer #logo_image_holder{
+  position : relative;
+   left : 68%;
+  top : -40px;
+ }
+
+#DETallContainer #logo_image {
+  height : 40%;
+  width : 30%;
+
+}
+
+#DETallContainer #fqnNameList{
+  position : relative;
+  width : 75%;
+  /*height :auto;*/
+  height: 300px;
+  min-height: 200px;
+  padding : 10px;
+  border-style: inset;
+  border-radius: 12px; 
+  overflow: auto;
+  margin-top :  10px;
+
+}
+#DETallContainer .labelClass {
+ text-align : left;
+ text-decoration: underline;
+ font-size : 20px ;
+  
+} 
+.itemC {
+  position : relative;
+  width : 43%;
+  border : 1px black dashed;
+  float : left;
+  margin : 5px;
+  border-radius : 22px;
+  padding : 10px;
+  max-height : 95px;
+
+}
+#otherDetails {
+  position : relative;
+  width : 25%;
+  border : 1px black dashed;
+  border-radius : 5px;
+  padding : 10px;
+  margin-top : 10px;
+  overflow : auto;
+  max-height : 100px;
+  
+}
+.oDD{
+  display : none;
+  
+}
+.hiddentext{
+  display : none;
+  
+}
+#DETallContainer #catHeading {
+  position : relative;
+  left : 10%;
+  font-size : 330%;
+}
+.italC {
+  font-style : italic;
+}
+
+#oDDOutput {
+  position : relative;
+  border : 1px black dashed;
+  border-radius : 12px;
+  padding : 20px;
+  max-height : 80px;
+  max-width : 45%;
+
+  overflow : auto;
+  left : 29%;
+  padding-top : 10px;
+  
+}
+.oDHClass {
+  cursor: pointer;
+  
+}
+#DETallContainer #imgGrid {
+  position : absolute;
+  max-width : 340px;
+  max-height : 310px;
+float : right;
+top : 10%;
+  left : 78%;
+  overflow : auto;
+  margin-right : 10px;
+  margin-top : 15px;
+}
+#DETallContainer .imgClass {
+  width : 120px;
+  height : 120px;
+  
+  border-radius: 12px;
+  margin-left: 3px;
+}
+.longText {
+  
+  max-width : 85%;
+}
+#suboD {
+  position : relative;
+  width : 100%;
+  max-height : 150px;
+  
+}
+.OutputAnim {
+
+  top : -80px;
+
+}
+.OutputMin {
+
+  top : -70px;
+
+}
+
+.OutputVeg {
+
+  top : -100px;
+
+}
+
+#DETallContainer #pgButtons {
+position : relative;
+  top : -60px;
+left: 1%;
+}
+
+/*this is register.css
+it describes the registration form*/
+#REGallContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+    border-radius: 22px;
+}
+#REGallContainer #dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+#REGallContainer #logo_image_holder{
+  position : relative;
+   left : 68%;
+  top : -40px;
+ }
+
+#REGallContainer #logo_image {
+  height : 40%;
+  width : 30%;
+
+}
+#REGallContainer #pgButtons {
+position : relative;
+  
+
+}
+.inputClass {
+	position : relative;
+	float : right;
+	width : 50%;
+	font-size : 18px;
+	left : 0%;
+	margin : 2px;
+	top : -30px;
+	padding : 3px;
+	
+	}
+#personalDetails {
+	 width : 60%;
+	 border: green 1px dashed;
+	padding : 10px;
+}
+
+#imgDisplay{
+position : absolute;
+top : 15px;
+left : 65%;
+width : 30%;
+border: orange 1px dashed;
+padding : 1px;
+text-align : center;
+
+}
+#inputDiv {
+position : relative;
+border: green 2px solid;
+padding : 10px;
+width : 90%;
+left : 2%;
+border-style:ridge;
+}
+.thumbpic {
+	border-radius : 12px;
+  width : 250px;
+  height : 250px;
+  
+}
+#REGallContainer .labelClass {
+	height : 32px;
+	padding : 3px;
+	font-size : 18px;
+	
+	margin : 1px;
+		  
+	}
+.selectClass {
+	font-size : 15px;
+	height : 42px;
+	border : green solid 1px;
+}
+
+.buttonclass {
+  position : relative;
+    border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 20px;
+  padding : 4px;
+  margin : 10px;
+  
+}
+
+.fileClass {
+    border : 1px dashed green;
+}
+
+#REGallContainer #detail_fs{
+  position : relative;
+  height : 70%;
+  border-style: outset;
+  padding : 20px;
+  width : 90%;
+  overflow : auto;
+  white-space : nowrap;
+  
+}
+
+/*this IBIS_other_functions.css
+it describes the Other functions page */
+
+.linklist {
+    border : 1px dashed blue;
+}
+
+#listsList {
+    position :relative;
+    width : 40%;
+}
+
+#AdminList{
+    position : relative;
+    width : 40%;
+    float : right;
+    border-color : green;
+    
+}
+#detail_fs{
+    position : relative;
+    height : 340px;
+    margin-top : 10px;
+}
+.buttonclass {
+  position : relative;
+  border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 20px;
+  padding : 4px;
+  margin : 10px;
+  
+}
+.locked {
+  background-color : rgba(2, 2, 2, 0.6);
+  color : grey;
+}
+
+.adminC {
+  background-color : rgba(255, 255, 255, 0.6);
+  color : black;
 }

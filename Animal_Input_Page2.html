@@ -6,8 +6,8 @@
             I B I S - Animal Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
-        <script type="text/javascript" src="http://127.0.0.1/ibis/fileselect.js"></script>
-	
+        <script type="text/javascript" src="fileselect.js"></script>
+        <script type="text/javascript" src="animalInput.js"></script>	
 	<script type="text/javascript">
 		$(document).ready(function(){
 	 	 	$('#mediaPic').change(handleFileSelect);	
@@ -28,23 +28,23 @@
 	</script>
 	<link rel="stylesheet"
         type="text/css"
-        href="./AnimInput.css"
+        href="./AnimInput_old.css"
   >
     </head>
-   <body name="AnimInputBody" onload="checkStorage()" >
+   <body name="AnimInputBody"  >
    <div id="lookupdiv" style="display:none;"></div>
       <div id="allContainer">
        
         <div name="Heading">
-	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
+	        <img id="logo_imageAI" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Animal Input Form</p>
         </div>
         
-        <div id="pgButtons" class="littleDD">
-        	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
-         <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
-        <input type="button" id="lookupList" class="buttonclass littleDD" onclick="loadList()" value="Load Lookup List" />
-        <input type="button" id="lookupHide" class="buttonclass littleDD" onclick="hideList()" value="Hide Lookup List" style="display : none;" />
+        <div id="pgButtonsAnim" class="littleDD">
+        	<input type="button" value="Submit Data" class="buttonclassAI littleDD" onclick="doSubmit()">   
+         <a href="IBIS_main2.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
+        <input type="button" id="lookupList" class="buttonclassAI littleDD" onclick="loadList()" value="Load Lookup List" />
+        <input type="button" id="lookupHide" class="buttonclassAI littleDD" onclick="hideList()" value="Hide Lookup List" style="display : none;" />
         </div>
   
         <div id="detail_fs_min" class="littleDD" ">
@@ -73,7 +73,7 @@
           <div id="outputBlock" class="bigDD outputblock">
             <p id="inputHeading">Enter Information</p>
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
-            <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()" >Send</a>
+            <a id="sendeditButton" class="buttonclassAI littleDD" onclick="sendedit()" >Send</a>
          </div> 
                 
         <form  name="AnimForm" action="../../cgi-bin/IBISCollectDataAnim.php3" method="POST" enctype="multipart/form-data" class="">
@@ -110,105 +110,17 @@
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
 	  			</fieldset>
 	 			</form>
-	 			<div id="messageDiv"></div>
-	 			<div id="infoDiv"> <p>You have to add a tag for each picture<br>that you want to submit or weird things will happen.</p><p>Click on a picture to add a tag</p></div>  
+	 			<form  name="AnimDupEditForm" action="../../cgi-bin/editstuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
+	<input type="text" name="thecat" value="animals" id="thecatid" class="hiddentext" />
+	<input type="text" name="specref" value="" id="specid" class="hiddentext" />
+</form>
+	 			<div id="messageDiv">
+	 				<div id="infoDiv"> 
+	 					
+	 			</div>
 	 		</div>
+	 		<div id="dupDialog"></div>
     </div> 
-    <script>
-    function loadList(){
-          $("#lookupdiv").load("IBIS_animalia-tablestripped.html");
-          $("#lookupdiv").css("display", "inline");
-          $("lookupdiv > #dateTime").css("display", "none");
-          $("#lookupList").css("display", "none");
-          $("#lookupHide").css("display", "inline");
-        }
-        function hideList(){
-        	$("#lookupdiv").css("display","none");
-        	$("#lookupHide").css("display", "none");
-          $("#lookupList").css("display", "inline");
-        }
-</script>
     
-        <script type="text/javascript">
-        var imgname = "";
-        var theHeading = "";
-	  		var theLabel ="";
-	  		
-	  		function addTag(){
-        var tagslist = $('#mediatagsinput').val();
-        var newtag = imgname +" : "+ tagslist;
-        var listitem = "<input type=\"text\"name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
-        $('#infoDiv').hide();
-        $('#tagslist').append(listitem);
-        }
-  
-        function showOps(that){
-		   	  imgname = that.title;
-		   	  $("#optionsDsplay").slideDown('fast');
-		   	  var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /\><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
-		  		$('#optionsDsplay').html(opttext);
-		  		
-      }
-    function checkDuplicate(){ 
-    var matchList = "";
-    alert("it is running the script");
-	 	var speciesval= $('#Species').val();
-		$.ajax({
-			url : '../../cgi-bin/checkdup.php3',
-			type : "get",
-			async : "false",
-			data :{species : speciesval},
-			success : function(data){
-				var testregexp = /nomatch/;
-				if (testregexp.test(data)){
-					alert("no matching species found");
-				}else {
-					var dataList = data.split(":");
-					for (i=0; i<dataList.length; i++){
-						if (dataList[i]==""){
-							continue;
-							}
-						//	alert(dataList[i]);
-					var	 matchList = '<li>' + dataList[i] + '</li>';
-					}
-			
-				}
-			}
-		})
-		var matchedDiv = "<div id=\"matches\">\
-												<p>Possible duplicate species found.\
-												Maybe you want to edit this existing record instead</p>\
-												<ul>" + matchList + "</ul>\
-												</div>";
-		$('#messageDiv').html(matchedDiv);
-}
-        
-	 function sendedit(){
-	  var editval = $("#outputBox").val();
-        $('#'+theHeading).val(editval);
-        theLabel.style.backgroundColor = "pink";
-        $("#outputBox").val("");
-        if (theHeading == "Species"){
-        checkDuplicate();
-        }
-     }
-     
-    function loadcontent(that){
-        theHeading = $(that).text();
-        theLabel = that;
-        $('.thisareaLabel').css("color" ,"black");
-        theLabel.style.color = "lightgreen";
-        //theLabel.color = "red";
-        var theContent = $('#'+theHeading).val();
-        $("#outputBox").val(theContent);
-     }
-        
-	function doSubmit(){
-		//cleanupData();
-		document.AnimForm.submit();
-	}
-  
-     
-      </script>
     </body>
 </html>
