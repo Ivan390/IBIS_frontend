@@ -60,3 +60,31 @@ I must check that shit.
 2016-11-01 13:22:08 
 the edit stuff page needs a link to the relevant glossary and lookup list.
 and the dates are still not being set properly.
+
+2016-12-07 19:43:53  
+when a registered user accesses the editstuff page,
+there will be a div showing how many times the page has been edited
+also a button that allows the user to view and posssibly retrieve a past version of a dataset
+now how to implement this?
+<div id="versionEd">
+	<div id="verText">
+	/*this is filled when the page loads
+	and will display something like "This page has been edited #number of times. click the button to view edits"
+	at this point the user clicks the <input type="button" onclick="getEdits()" value="blahhh">
+	*/
+	</div> 
+	<script type="text/javascript">
+		function getEdits(){
+		/*
+			which runs an AJAX query on the database sending in the ID of the species as a parameter
+			the php backend returns a list of datasets eg(dataset1val1:dataset1val2:dataset1val3::dataset2val1:dataset2val2....
+			which this function then splits into an array of datasets
+			it iterates through the list and foreach dataset {
+				split the dataset into individual values
+				write a div that displays the set
+				it will need a counter based on the  so that the divs can have unique ids
+			}
+		*/
+		
+		}
+	</script>
