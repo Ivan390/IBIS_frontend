@@ -286,23 +286,36 @@ position : absolute;
 
 #SFallContainer .selectList {
   position : relative;
-  font-size : 15px;
   height : auto;
-  width : auto;
+  min-width : 250px;
   margin : 15px;
   font-size : 20px;
-  padding : 5px;
+  padding : 10px;
   }
+#SFallContainer #findOptions {
+  position : relative;
+  border : 1px black dashed;
+  width : 60%;
+  padding : 10px;
+  
+}
+#SFallContainer #ddl3Txt {
+  font-size : 20px;
+}
 #selectBox {
     position : relative;
     border : 1px dashed red;
     width : 75%;
     
 }
-
+#findOptions input.buttonclass {
+  position : relative;
+  float : right;
+}
 #SFallContainer #pgButtons {
     position : relative;
     width: 500px;
+  margin-bottom : 15px;
 }
 
 .buttonclass {
@@ -320,7 +333,7 @@ position : absolute;
 #SFallContainer #theCategory {
   position : relative;
   padding : 10px;
- width : 222px;
+ width : 270px;
    border-style : dashed;
   border-width : 2px;
   max-height: 250px;
@@ -391,8 +404,8 @@ position : relative;
 }
 #catPicsList img {
   cursor : pointer;
-  width : 200px;
-  height : 150px;
+  width : 250px;
+  height : 250px;
 }
 /*this is details.css
 it describes the detailspage*/
