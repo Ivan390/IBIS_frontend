@@ -6,7 +6,9 @@
             I B I S - Animal Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
+        <script type="text/javascript" src="main.js"> </script>
         <script type="text/javascript" src="fileselect.js"></script>
+        <script type="text/javascript" src="dateshorts.js"> </script>
         <script type="text/javascript" src="animalInput.js"></script>	
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -31,12 +33,15 @@
         href="DataInput.css"
   >
     </head>
-   <body name="AnimInputBody"  >
-   <div id="lookupdiv" style="display:none;"></div>
+    <body name="AnimInputBody" id="TheBody" onload="initForm()">
+      <div id="lookupdiv" style="display:none;"></div>
       <div id="allContainer">
-       
+       <div id="dateTime">
+	      <div id="dateBlock">The Date</div>
+	      <div id="timeBlock">The Time</div>       
+	    </div>
         <div name="Heading">
-	        <img id="logo_imageAI" src="./images/Logo1_fullsizetransp.png">
+	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Animal Input Form</p>
         </div>
         
@@ -103,7 +108,7 @@
 						
 						<div id="images" class="littleDD">
           		<p class="labelclass">Add Media</p>
-	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
+	      			<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
 	      		</div>
 	      		<div id="tagslist"></div>
 	      		<div id="imgDisplay" class="littleDD"></div>

@@ -104,7 +104,7 @@
 						
 						<div id="images" class="littleDD">
           		<p class="labelclass">Add Media</p>
-	      			<input type="file" name="media[]" id="mediaPic" class="littleDD" multiple />
+	      			<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
 	      		</div>
 	      		
 	      		<div id="tagslist"></div>
@@ -172,7 +172,7 @@
 			success : function(data){
 				var testregexp = /nomatch/;
 				if (testregexp.test(data)){
-					alert("no matching species found");
+					//alert("no matching species found");
 				}else {
 					var dataList = data.split("::");
 					for (i=0; i<dataList.length; i++){
