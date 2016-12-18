@@ -1,17 +1,23 @@
-    var matchList = "";
-    var dupItems = "";
-    var dupItemsL = "";
-    var matchedDiv = ""; 
- 
-function showOps(that){
+        var imgname = "";
+        var theHeading = "";
+	  		var theLabel ="";
+	  			 
+        function addTag(){
+    	    var tagslist = $('#mediatagsinput').val();
+   	     var newtag = imgname +" : "+ tagslist;
+    	    var listitem = "<input type=\"text\" name=\"imgtag[]\" class=\"listitemC littleDD\" value=\""+newtag+"\" ></input><br />";
+     	   $('#tagslist').append(listitem);
+        }
+        
+        function showOps(that){
 		   	  imgname = that.title;
-		   	  	imgname = imgname.replace(/%20/g, ' ');
+		   	  imgname = imgname.replace(/%20/g, ' ');
 		   	  $("#optionsDsplay").slideDown('fast');
 		   	  var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="mediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /\><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
 		  		$('#optionsDsplay').html(opttext);
      		}
         
-function sendedit(){
+	 function sendedit(){
 	  var editval = $("#outputBox").val();
         $('#'+theHeading).val(editval);
         theLabel.style.backgroundColor = "pink";
@@ -21,8 +27,11 @@ function sendedit(){
         }
         }
         
-function checkDuplicate(){ 
-
+	function checkDuplicate(){ 
+    var matchList = "";
+    var dupItems = "";
+    var dupItemsL = "";
+    var matchedDiv = "";
    // alert("it is running the script");
 	 	var speciesval= $('#Species').val();
 	 	var catvalue = 'Vegetables';
@@ -34,7 +43,7 @@ function checkDuplicate(){
 			success : function(data){
 				var testregexp = /nomatch/;
 				if (testregexp.test(data)){
-					alert("no matching species found");
+					//alert("no matching species found");
 				}else {
 					var dataList = data.split("::");
 					for (i=0; i<dataList.length; i++){
@@ -55,11 +64,11 @@ function checkDuplicate(){
 			}
 		})
 	}
-function submitDupForm(){
+	function submitDupForm(){
 			document.VegDupEditForm.submit();
 	}
      
-function loadcontent(that){
+    function loadcontent(that){
         theHeading = $(that).text();
         theLabel = that;
         $('.thisareaLabel').css("color" ,"black");
@@ -68,12 +77,12 @@ function loadcontent(that){
         var theContent = $('#'+theHeading).val();
         $("#outputBox").val(theContent);
      }
-function checkPics() {
+        function checkPics() {
           		var picValue = $('#imgDisplay').html();
           		return picValue;
         }
         
-function doSubmit(){
+	function doSubmit(){
 	var apicValue = checkPics();
 	 if (apicValue == ""){
 	 alert("dude you must add at least one picture... and dont forget the tag");
@@ -82,3 +91,5 @@ function doSubmit(){
 		//cleanupData();
 		document.VegForm.submit();
 	}
+
+  
