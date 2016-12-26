@@ -5,8 +5,8 @@ var theLabel ="";
 
 function loadList(){
 	$("#lookupdiv").load("IBIS_animalia-tablestripped.html");
-  $("#lookupdiv").css("display", "inline");
-  $("lookupdiv > #dateTime").css("display", "none");
+  $("#lookupdiv").css("display", "block");
+ // $("lookupdiv > #dateTime").css("display", "none");
   $("#lookupList").css("display", "none");
   $("#lookupHide").css("display", "inline");
 }

@@ -1,0 +1,27 @@
+so I want a form that lets me collect glossary terms into the IBIS database
+I'm thinking a php script that connects to the other functions page
+so only available to registered editors
+I will call it "Edit Vegetable Glossary"
+
+basicalyy....
+	present the form
+	enter a term its definition and maybe add a diagram image with a caption
+	click/or enter submits the data to IBIS via AJAX call
+returns green check mark on no error
+increments term entry count to present subtext "you have entered 'entryCount' terms"
+clear elements for additional entry
+returns red check mark and error message on submission failure
+but then nothing is ever that easy.
+
+soooo
+the term and definition entry is fine
+uploading pictures and captions seem to be trick
+first select the pictures and collect them in a div adding a onclick trigger to each one
+in fact its quite similar to what i did on the editdata form....
+
+jquery basic ajax transaction
+$.post("../../vegGlEntry.php3", $('#glossEntry').serialize(), function(data){
+	alert(data);
+}); 
+return false
+

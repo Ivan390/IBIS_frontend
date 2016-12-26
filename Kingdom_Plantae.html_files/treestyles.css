@@ -175,12 +175,13 @@ border-radius : 15px;
 	display:block;
 	min-width:33%;
 	max-width:60%;
-	max-height:95%;
+	max-height:75%;
 	color:black;
 	background:#ffffff;
 	font:normal 16px courier, sans-serif;
 	border:1px solid black;
 	padding:10px;
+	top : -50px;
 }
 
 .note:before {

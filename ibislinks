@@ -1,0 +1,101 @@
+
+http://127.0.0.1/ibis/IBIS_main2.html
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/main.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/picswap.js
+	http://127.0.0.1/ibis/IBIS_maincss.css
+	http://127.0.0.1/ibis/login.js
+	http://127.0.0.1/ibis/images/Logo1_fullsizetransp.png
+	http://127.0.0.1/ibis/images/animals.gif
+	http://127.0.0.1/ibis/images/minerals.gif
+	http://127.0.0.1/ibis/images/vegetablesCl.gif
+	http://127.0.0.1/cgi-bin/login.php3?uName=Ivan55&uEmail=ivy3595%40gmail.com
+	http://127.0.0.1/cgi-bin/newIndexCreator.php3
+		http://127.0.0.1/ibis/IBIS_Registration.html
+		http://127.0.0.1/cgi-bin/IBIS_GuestBook.php3
+		http://127.0.0.1/ibis/IBIS_other_functions.html
+	
+http://127.0.0.1/cgi-bin/newIndexCreator.php3
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/IBIS_maincss.css
+	http://127.0.0.1/ibis/Gmain.js
+	http://127.0.0.1/ibis/IBIS_maincss.css
+	http://127.0.0.1/cgi-bin/IBIS_catIndexCreator.php3?ddl1val=Family&ddl1minval=&catValtext=animals
+	http://127.0.0.1/cgi-bin/testgetCatIndex.php3?ddl1val=Family&ddl2val=Viperidae&ddl1minval=&catValtext=animals\vegetables\minerals
+	http://127.0.0.1/cgi-bin/keywordIndex.php3?ddl3dd=distrib&ddl3Txt=beer&catValtext=animals\vegetables\minerals
+	http://127.0.0.1/cgi-bin/getSummarry.php3?pictitle=nivea&catValtext=animals\vegetables\minerals
+	
+http://127.0.0.1/cgi-bin/getDetailspl.php3
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/Gmain.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/IBIS_maincss.css
+		 <form name="editForm" action="../../cgi-bin/editstuff.php3"
+	
+http://127.0.0.1/cgi-bin/editstuff.php3
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/fileselect.js
+	http://127.0.0.1/ibis/animedit.css
+		<form  name="EditsForm" action="../../cgi-bin/IBISEditDataAnim.php3"
+
+http://127.0.0.1/cgi-bin/IBIS_GuestBook.php3
+	http://127.0.0.1/ibis/Gmain.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/DD_rondies.js
+	http://127.0.0.1/ibis/guestcss.css
+	http://127.0.0.1/ibis/fileselecter.js
+	http://127.0.0.1/ibis/guests.js
+		<form name="guestBook" action="../../cgi-bin/IBIS_collectGuestData.php3"
+	  
+http://127.0.0.1/ibis/IBIS_Registration.html
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/Gmain.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/fileselect.js
+	http://127.0.0.1/ibis/IBIS_maincss.css
+	http://127.0.0.1/ibis/IBIS_register.js
+	-->http://127.0.0.1/cgi-bin/IBIS_register.php3
+	
+http://127.0.0.1/ibis/IBIS_other_functions.html
+	-->http://127.0.0.1/ibis/IBIS_main2.html
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/Gmain.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/IBIS_maincss.css
+	-->http://127.0.0.1/ibis/Veg_Input_Page.html
+	-->http://127.0.0.1/ibis/Animal_Input_Page2.html
+	-->http://127.0.0.1/ibis/Mineral_Input_Page2.html
+	-->http://127.0.0.1/ibis/IBIS_animalia-table.html
+	-->http://127.0.0.1/ibis/VegGlEntry.html
+	-->http://127.0.0.1/ibis/plantae.html
+	
+http://127.0.0.1/ibis/Veg_Input_Page.html
+	-->http://127.0.0.1/ibis/IBIS_main2.html
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/fileselect.js
+	http://127.0.0.1/ibis/vegInput.js
+	http://127.0.0.1/ibis/DataInput.css
+	-->http://127.0.0.1/cgi-bin/editstuff.php3
+	-->http://127.0.0.1/cgi-bin/IBISCollectVegData.php3
+	
+http://127.0.0.1/ibis/Animal_Input_Page2.html	
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/main.js
+	http://127.0.0.1/ibis/fileselect.js
+	http://127.0.0.1/ibis/dateshorts.js
+	http://127.0.0.1/ibis/DataInput.css
+	http://127.0.0.1/ibis/animalInput.js
+	-->http://127.0.0.1/cgi-bin/editstuff.php3
+	-->http://127.0.0.1/cgi-bin/IBISCollectDataAnim.php3
+	
+http://127.0.0.1/ibis/Mineral_Input_Page2.html
+	-->http://127.0.0.1/ibis/IBIS_main2.html
+	http://127.0.0.1/ibis/minInput.js
+	http://127.0.0.1/ibis/jquery-1.11.3.js
+	http://127.0.0.1/ibis/DD_rondies.js
+	http://127.0.0.1/ibis/fileselect.js
+	http://127.0.0.1/ibis/DataInput.css
+	-->http://127.0.0.1/cgi-bin/IBISCollectDataMin.php3
