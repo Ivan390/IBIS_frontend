@@ -38,7 +38,7 @@ http://127.0.0.1/cgi-bin/editstuff.php3
 	http://127.0.0.1/ibis/jquery-1.11.3.js
 	http://127.0.0.1/ibis/dateshorts.js
 	http://127.0.0.1/ibis/fileselect.js
-	http://127.0.0.1/ibis/animedit.css
+	http://127.0.0.1/ibis/animedit.css/vegedit.css/minedit.css
 		<form  name="EditsForm" action="../../cgi-bin/IBISEditDataAnim.php3"
 
 http://127.0.0.1/cgi-bin/IBIS_GuestBook.php3
