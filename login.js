@@ -7,6 +7,7 @@ function do_logout(){
   $("#greetingDiv").text("");
   $("#loginhead").css("display", "block");
   $("#logouthead").css("display", "none");
+  $("#regPic").css("display","none");
  // $("#registerBlock").removeClass("locked").addClass("adminC");
   $("#registerBlock").html("<a href=\"IBIS_Registration.html\" class=\"littleDD linksclass\">Register as a contributer</a>");
   sessionStorage.userRef = "";
@@ -33,8 +34,11 @@ function submitDetails(){
 	        var thedata = data.split(" : ");
 	        $("#greetingDiv").text("Hello " + thedata[0]);
 	        sessionStorage.userRef = thedata[1] + " : " + thedata[2] + " : " + thedata[3];
+	        imgsrc = '<img id = "regPic" src="'+ thedata[4] + '" width="" height="" >';
+	        //alert(imgsrc);
 	        if (sessionStorage.userRef){
 	          var sessref = sessionStorage.userRef;
+	          $("#regpic").html(imgsrc);
 	          $("#greetingDiv").text("Hello " + thedata[0]);
 	          $("#registerBlock").addClass("locked");
 	          $("#registerBlock a").removeAttr("href")  ;

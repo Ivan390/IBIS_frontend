@@ -1,0 +1,172 @@
+/* guestcss.css*/
+#allContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+  border-radius: 22px;
+ 
+}
+#dateTime {
+  color: green;
+  
+}
+#pgButtons{
+	position : relative;
+  top : 45px;
+}
+
+
+#logo_image {
+  position : relative;
+  width : 25%;
+  left :75%;
+  top : -50px;
+}
+.hiddentext {
+  display : none;
+  
+}
+
+#gTitle {
+  position: relative;
+  top:-155px;
+  font-size: 54px;
+  left:35%;
+  z-index:4;
+  color: black;
+
+}
+#optionsDsplay {
+  position : absolute;
+  left : 170%;
+  top : 35%;
+  
+}
+#mediatagsinput{
+  position : relative;
+  top : 30px;
+  
+  width:  150px;
+  height: auto;
+}
+#guestImages {
+  position : absolute;
+  top : 102%;
+ height : 220px;
+  width : 109%;
+  padding : 15px;
+  padding-bottom: 20px;
+  overflow : auto; 
+  
+  border-style : dashed;
+  border-width : 3px;
+  /*! height : 125px; */
+  font-size : 15px;
+}
+.thumbpic {
+  width : 170px;
+  height : 100px;
+  border-radius : 12px;
+  padding: 1px;
+}
+#GuestPic {
+  position : absolute;
+  left : 170%;
+  top : -6px;
+  width : auto;
+  height : auto;
+}
+#detailcont{  position : relative;
+  width : 98%;
+  color : black;
+  top : -60px;
+   border : 1px black inset;
+  height : 320px;
+  border-radius : 12px;
+
+}
+
+#detail_fs {
+  position : relative;
+  width : 50%;
+  color : black;
+  height : 500px;
+  border : 1px black inset;
+  height : auto;
+  margin : 10px;
+  
+}
+.multiliner {
+    width : 90%;
+  padding : 10px;
+}
+.buttonclass {
+position : relative;
+top : -37px;
+  border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 16px;
+  padding : 4px;
+  margin : 10px;
+  
+}
+.listimage {
+  float : left;
+  width : 130px;
+  height : 110px;
+  padding : 1px;
+  
+}
+
+.comtag {
+  position : relative;
+  display : block;
+  top : 5%;
+  
+  font-size : 15px;
+  z-index : 7;
+  width : 200px;
+  border-style : dashed;
+  border-color : black;
+  border-width : 1px;
+  padding : 15px;
+}
+
+.comtaghead {
+  position : absolute;
+  display : block;
+  top : 40%;
+  left : 55%;
+  z-index : 8;
+  width : 170px;
+  text-align : center;
+ 
+}
+
+.infoblock {
+
+  top : 50px;
+  width : 600px;
+  padding : 15px;
+  height : 300px;
+}
+
+.listimage:hover .comtag {
+  display : block;
+  
+}
+
+#guestArea {
+position : absolute;
+  top : -5px;
+  left : 103%;
+  width : 500px;
+}
+ 
+
+
+
+
