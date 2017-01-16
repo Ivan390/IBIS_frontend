@@ -81,11 +81,12 @@ color : blue;
 }
 #regPic {
   position : relative;
-  width : 150px;
-  height : 150px;
+  /*! width : 150px; */
+  height : 50px;
   float : left;
-  top : -120px;
-  left : 40px;
+  /*! top : -120px; */
+  /*! left : 40px; */
+  font-size: 16px;
 }
 
 #LinkList {

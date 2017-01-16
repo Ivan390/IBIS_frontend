@@ -7,8 +7,11 @@ function submitRegistration(){
   var fName = $("#fName").val();
   var secA = $("#secA").val();
   
-  if (fName.length > 10 || secA.length > 20){
-    alert("please keep your name less than 10 characters and your security answer to less than 20" );
+  if (fName.length > 10){
+  alert("please keep your name less than 10 characters" );
+    exit();
+  }if( secA.length > 20){
+    alert("please keep your security answer to less than 20 characters" );
     exit();
   }else{
     document.registerForm.submit();

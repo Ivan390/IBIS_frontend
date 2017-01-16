@@ -26,63 +26,59 @@
     </head>
     <body id="TheBody" onload="initForm()">
       <div id="REGallContainer" class="ac">
-       <div id="dateTime">
-        <div id="dateBlock">The Date</div>
-        <div id="timeBlock">The Time</div>       
+      	<div id="dateTime">
+        	<div id="dateBlock">The Date</div>
+        	<div id="timeBlock">The Time</div>       
+      	</div>
+      	<div id="logo_image_holder">
+      	  <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
+      	</div>
+      	<div id="allcontainer">
+					<form name="registerForm" method="POST" action="../../cgi-bin/IBIS_register.php3" enctype="multipart/form-data" >
+						<div id=pgButtons>
+	      			<input type="button" id="buttonBtn" class="littleDD buttonclass" onclick="submitRegistration()" value="Submit">
+	      			<a id="backButton" href="/ibis/IBIS_main2.html" class="littleDD buttonclass">Back to Main Page </a>
+	    			</div>
+	  				<fieldset id="detail_fs" class="littleDD">
+            	<div id="personalDetails" class="littleDD">
+            	  <p>
+		        			<label class="labelClass" class="requiredf" >Your first name/s </label>
+            	    <input type="text" name="name" id="fName" class="inputClass littleDD requiredf" maxlength="10" />
+            	  </p>
+            	  <p>
+									<label class="labelClass" class="requiredf" >Your last name/s</label>
+            	    <input type="text" name="lastname" class="inputClass littleDD" class="requiredf" />
+            	  </p>
+            		<p> 
+									<label class="labelClass" class="requiredf" >Your email address</label>
+                	<input type="text" name="email" class="inputClass littleDD" class="requiredf" />
+              	</p>
+             	</div>
+            	<div>
+	      				<div id=imgDisplay class="bigDD">
+	      				</div>
+	        			<label class="labelClass">Add a picture of yourself</label>
+            		<input type="file" name="picture" id="regPic" class="littleDD" />
+          		</div>
+            	<div id="securityInfo" class="bigDD">
+	      				<p>
+		    					<label class="labelClass ">Select a question and enter an answer in the space below.</label>
+	      				</p>
+        				<p>
+		    					<select id = "secQ" name="secQ" class="labelClass littleDD selectClass" >
+        	  				<option value = "favColor">What is your favourite colour?</option>
+            				<option value = "favFood">What is your favourite food?</option>
+            				<option value = "uncName">What is the name of your favourite uncle?</option>
+            				<option value = "petName">What is the name of your favourite pet?</option>
+          				</select></br>
+          				<input type="text" name=secA id="secA" class="labelClass littleDD" />
+        				</p>
+      				</div>
+      				<input type="text" id="userName" name="userName" class="hiddentext">
+	    				<input type="text" id="kingdom" name="kingdom" value="Register" class="hiddentext" >
+	  				</fieldset>
+					</form>
+				</div>
       </div>
-      <div id="logo_image_holder">
-        <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
-      </div>
-      <div id="allcontainer">
-	<form name="registerForm" method="POST" action="../../cgi-bin/IBIS_register.php3" enctype="multipart/form-data" >
-	<div id=pgButtons>
-	      <input type="button" id="buttonBtn" class="littleDD buttonclass" onclick="submitRegistration()" value="Submit">
-	      <a id="backButton" href="/ibis/IBIS_main2.html" class="littleDD buttonclass">Back to Main Page </a>
-	    </div>
-	  <fieldset id="detail_fs" class="littleDD">
-            <div id="personalDetails" class="littleDD">
-              <p>
-		        <label class="labelClass" class="requiredf" >Your first name/s </label>
-                <input type="text" name="name" id="fName" class="inputClass littleDD requiredf" maxlength="10" />
-              </p>
-              <p>
-		<label class="labelClass" class="requiredf" >Your last name/s</label>
-                <input type="text" name="lastname" class="inputClass littleDD" class="requiredf" />
-              </p>
-             <p> 
-		<label class="labelClass" class="requiredf" >Your email address</label>
-                <input type="text" name="email" class="inputClass littleDD" class="requiredf" />
-              </p>
-             
-		    </div>
-            <div>
-	      <div id=imgDisplay class="bigDD"></div>
-	        <label class="labelClass">Add a picture of yourself</label>
-            <input type="file" name="picture" id="regPic" class="littleDD" />
-          </div>
-            <div id="securityInfo" class="bigDD">
-	      <p>
-		    <label class="labelClass ">Select a question and enter an answer in the space below.</label>
-	      </p>
-              <p>
-		         <select id = "secQ" name="secQ" class="labelClass littleDD selectClass" >
-                    <option value = "favColor">What is your favourite colour?</option>
-                    <option value = "favFood">What is your favourite food?</option>
-                    <option value = "uncName">What is the name of your favourite uncle?</option>
-                    <option value = "petName">What is the name of your favourite pet?</option>
-                </select></br>
-                <input type="text" name=secA id="secA" class="labelClass littleDD" /></p>
-                
-            </div>
-            
-            <input type="text" id="userName" name="userName" class="hiddentext">
-	    <input type="text" id="kingdom" name="kingdom" value="Register" class="hiddentext" >
-	  </fieldset>
-	</form>
-	
-      </div>
- 
-      </div>
-      
-  </body>
+   </body>
 </html>
