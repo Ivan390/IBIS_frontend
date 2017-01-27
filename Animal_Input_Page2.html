@@ -11,23 +11,20 @@
         <script type="text/javascript" src="dateshorts.js"> </script>
         <script type="text/javascript" src="animalInput.js"></script>	
 	<script type="text/javascript">
-		$(document).ready(function(){
-	 	 	$('#mediaPic').change(handleFileSelect);	
-	 	 	 if (sessionStorage.userRef){
-	 	 	 sessVar = sessionStorage.userRef;
-	 	 	 //alert(sessVar);
-	 	 	 sesA = sessVar.split(":");
-	 	 	 conID = sesA[1];
-	 	 	// alert(conID);
-	 	 	 $('#contrib_ID').val(conID);
-	 	 	 }else {
+	$(document).ready(function(){
+          $('#mediaPic').change(handleFileSelect);	
+	  if (sessionStorage.userRef){
+             sessVar = sessionStorage.userRef;
+	     sesA = sessVar.split(":");
+	      conID = sesA[1];
+	      $('#contrib_ID').val(conID);
+	  }else {
 	    alert("You should really not be on this page!")
 	    document.location = "IBIS_main2.html";
-	    }
-	 	}) 
-	 	
-
-	</script>
+	  }
+        }) 
+	 
+       </script>
 	<link rel="stylesheet"
         type="text/css"
         href="DataInput.css"
@@ -36,11 +33,11 @@
     <body name="AnimInputBody" id="TheBody" onload="initForm()">
       
       <div id="allContainer">
-      	<div id="lookupdiv" style=""></div>
-       <div id="dateTime">
-	      <div id="dateBlock">The Date</div>
-	      <div id="timeBlock">The Time</div>       
-	    </div>
+      	<div id="lookupdiv" ></div>
+	<div id="dateTime">
+	 <div id="dateBlock">The Date</div>
+	 <div id="timeBlock">The Time</div>       
+	 </div>
         <div name="Heading">
 	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Animal Input Form</p>

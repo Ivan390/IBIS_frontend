@@ -71,9 +71,10 @@
 }
 #headingText{
  position : relative;
- font-size : 28px;
+ font-size : 38px;
  text-align : center;
    width : 300px;
+ left: 40%;
 }
 #headinglist {
 position : relative;

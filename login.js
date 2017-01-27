@@ -1,6 +1,8 @@
 function showLogin(){
     $("#loginLink").addClass("loginshow");
     $("#login").css("display", "block");
+    $("#uname").val("");
+    $("#uemail").val("");
 }
 
 function do_logout(){
