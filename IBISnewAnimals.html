@@ -20,7 +20,7 @@
 	      $('#contrib_ID').val(conID);
 	  }else {
 	    alert("You should really not be on this page!")
-	    document.location = "IBIS_main2.html";
+	    document.location = "IBISmain.html";
 	  }
         }) 
 	 
@@ -45,7 +45,7 @@
         
         <div id="pgButtonsAnim" class="littleDD">
         	<input type="button" value="Submit Data" class="buttonclassAI littleDD" onclick="doSubmit()">   
-         <a href="IBIS_main2.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
+         <a href="IBISmain.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
         <input type="button" id="lookupList" class="buttonclassAI littleDD" onclick="loadList()" value="Load Lookup List" />
         <input type="button" id="lookupHide" class="buttonclassAI littleDD" onclick="hideList()" value="Hide Lookup List"  />
         </div>
@@ -79,7 +79,7 @@
             <a id="sendeditButton" class="buttonclassAI littleDD" onclick="sendedit()" >Send</a>
          </div> 
                 
-        <form  name="AnimForm" action="../../cgi-bin/IBISCollectDataAnim.php3" method="POST" enctype="multipart/form-data" class="">
+        <form  name="AnimForm" action="../../cgi-bin/IBISnewAnimals.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" name="Akingdom" value="Animalia" class="hiddentext"></input>
 				    <input type="text" id="Phylum" name="Aphylum" class="hiddentext"></input>
@@ -113,7 +113,7 @@
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
 	  			</fieldset>
 	 			</form>
-	 			<form  name="AnimDupEditForm" action="../../cgi-bin/editstuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
+	 			<form  name="AnimDupEditForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
 	<input type="text" name="thecat" value="animals" id="thecatid" class="hiddentext" />
 	<input type="text" name="specref" value="" id="specid" class="hiddentext" />
 </form>

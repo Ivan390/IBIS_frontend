@@ -25,7 +25,7 @@
 	    <div id="logo_image_holder">
 	      <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
 	    </div>
-	    <form name="categoryForm" action="../../cgi-bin/newIndexCreator.php3" method="POST" enctype="multipart/form-data" >
+	    <form name="categoryForm" action="../../cgi-bin/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >
 	      <input type="text" name="catValue" id="catHeading" class="hiddentext" />
 	    </form>
 	    <div id="errorDiv"></div>
@@ -37,7 +37,7 @@
 	      <label id="loginhead" class="littleDD linksclass" onclick="showLogin()">Login</label>
 	      <label id="logouthead" class="littleDD linksclass logoutCstart" style="display:none;" onclick="do_logout()">Logout</label>
 	    
-	      <form name="loginForm" action="../../cgi-bin/login.php3" method="POST" enctype="multipart/form-data">
+	      <form name="loginForm" action="../../cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data">
 	        <div id="login" class="littleDD login" style="display : none;">
 	          <label class="labelClass">Your user name</label><br>
 	          <input type="text" name="uName" id="uname" class="" /><br>
@@ -53,10 +53,10 @@
 	    <div id="cgiResult" ></div>
 	    <div id="detail_fs_main" class="littleDD">
 	      <div id="registerBlock" class="littleDD linksclass adminC ">
-	        <a href="IBIS_Registration.html" class="littleDD linksclass">Register as a contributer</a>
+	        <a href="IBISregistration.html" class="littleDD linksclass">Register as a contributer</a>
 	      </div>
 	      <div id="guestBook" class="littleDD linksclass">
-	        <a href="../../cgi-bin/IBIS_GuestBook.php3" class="littleDD linksclass">The GuestBook</a>
+	        <a href="../../cgi-bin/IBISnewGuest.php3" class="littleDD linksclass">The GuestBook</a>
 	      </div>
 	      <div id="LinkList" class="bigDD">
 	        <p class="H2">Eco Links</p>
@@ -64,7 +64,7 @@
 	          <li><a href="">CTEET</a></li>
 	          <li><a href="./fbay/fbepfacts1.php.html">FBNR</a></li>
 	          <li><a href="">Read more about something else....</a></li>
-	          <li><a href="IBIS_other_functions.html">Other functions</a></li>
+	          <li><a href="IBISutilities.html">Other functions</a></li>
 	        </ul>
 	      </div>
 	      <div id="FindInfo" class="bigDD">

@@ -21,7 +21,7 @@
 	 	 	 $('#contrib_ID').val(conID);
 	 	 	 }else {
 	    alert("You should really not be on this page!")
-	    document.location = "IBIS_main2.html";
+	    document.location = "IBISmain.html";
 	    }
 	 	})
 
@@ -42,7 +42,7 @@
         </div>
         <div id="pgButtons" class="littleDD">
         	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
-         <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
+         <a href="IBISmain.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
         </div>
         
         <div id="detail_fs_min" class="littleDD" ">
@@ -75,7 +75,7 @@
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
         	</div>  
         	
-        <form  name="VegForm" action="../../cgi-bin/IBISCollectVegData.php3" method="POST" enctype="multipart/form-data" class="">
+        <form  name="VegForm" action="../../cgi-bin/IBISnewVegetables.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" name="Akingdom" value="Plantae" class="hiddentext">
 				    <input type="text" id="Phylum" name="phylum" class="hiddentext">
@@ -118,7 +118,7 @@
 	  			</fieldset>
 	 			
 	 			</form>
-	 			<form  name="VegDupEditForm" action="../../cgi-bin/editstuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
+	 			<form  name="VegDupEditForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
 						<input type="text" name="thecat" value="vegetables" id="thecatid" class="hiddentext" />
 						<input type="text" name="specref" value="" id="specid" class="hiddentext" />
 				</form>

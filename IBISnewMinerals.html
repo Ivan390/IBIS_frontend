@@ -22,7 +22,7 @@
 	 	 	 $('#contrib_ID').val(conID);
 	 	 	 }else {
 	    alert("You should really not be on this page!")
-	    document.location = "IBIS_main2.html";
+	    document.location = "IBISmain.html";
 	    }
 	 	})
 
@@ -45,7 +45,7 @@
         </div>
         <div id="pgButtons" class="littleDD">
         	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
-         <a href="IBIS_main2.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
+         <a href="IBISmain.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
         </div>
         <div id="detail_fs_min" class="littleDD" >
           <div id="headinglist" class="littleDD">
@@ -72,7 +72,7 @@
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
          	</div>   
-         	<form  name="MinForm" action="../../cgi-bin/IBISCollectDataMin.php3" method="POST" enctype="multipart/form-data" class="">
+         	<form  name="MinForm" action="../../cgi-bin/IBISnewMinerals.php3" method="POST" enctype="multipart/form-data" class="">
 	  				<fieldset id="dataForm" class="">
 							<input type="text" name="Akingdom" value="Minerals" class="hiddentext">
 							<input type="text" id="Name" name="Mname" class="hiddentext">
