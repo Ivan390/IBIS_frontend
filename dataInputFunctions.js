@@ -64,9 +64,9 @@ function checkDuplicate(){
     var dupItemsL = "";
     var matchedDiv = "";
     var speciesval= $('#Species').val();
-    var catvalue = 'Vegetables';
+    var catvalue = $('#thecatid').val();
     $.ajax({
-	url : '../../cgi-bin/checkdup.php3',
+	url : '../../cgi-bin/IBIScheckdup.php3',
 	type : "get",
 	async : "false",
 	data :{species : speciesval, catval : catvalue},
@@ -134,13 +134,21 @@ function checkPics() {
 }
         
 function doSubmit(){
+var catvalue = $('#thecatid').val();
     var apicValue = checkPics();
     if (apicValue == ""){
 			alert("dude you must add at least one picture... and dont forget the tag");
 			exit;
     }
 //cleanupData();
-     document.VegForm.submit(); 
+		if (catvalue == "Vegetables"){
+		document.VegForm.submit(); 
+		}
+     else if (catvalue == "Animals"){
      document.AnimForm.submit();
-     document.MinForm.submit();
+     }
+     else if (catvalue == "Minerals"){
+      document.MinForm.submit();
+     }
+    
 }

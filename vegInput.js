@@ -35,7 +35,7 @@ function checkDuplicate(){
     var speciesval= $('#Species').val();
     var catvalue = 'Vegetables';
     $.ajax({
-	url : '../../cgi-bin/checkdup.php3',
+	url : '../../cgi-bin/IBIScheckdup.php3',
 	type : "get",
 	async : "false",
 	data :{species : speciesval, catval : catvalue},

@@ -111,6 +111,6 @@ function showOps(that){
 		}
 	}
 }
-function doSubmit(){
+function doEdSubmit(){
 document.EditsForm.submit();// should validate and sanitize inputs here
 }

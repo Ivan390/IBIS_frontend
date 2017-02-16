@@ -21,7 +21,7 @@ function submitDetails(){
     var value1 = $("#uname").val();
     var value2 = $("#uemail").val();
     $.ajax({
-	    url : '../../cgi-bin/login.php3',
+	    url : '../../cgi-bin/IBISlogin.php3',
 	    type : "get",
 	    async : "false",
 	    data : {uName : value1, uEmail : value2},
