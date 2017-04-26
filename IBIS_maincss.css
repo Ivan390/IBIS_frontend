@@ -2,9 +2,9 @@
 It describes the main page*/
 
 #MainallContainer {
-  position : relative;
-  width : 95%;
-  height : 80%;
+  position : absolute;
+  width : 90vw;
+  /*! height : 100vh; */
   padding : 20px;
   border-style: inset;
   border-radius : 15px;
@@ -36,12 +36,10 @@ It describes the main page*/
 #MainallContainer #detail_fs_main {
   position : relative;
   border-style: outset;
-  top : -45%;
-  width : 94%;
+  top : -18%;
+  width : 99%;
   padding : 5px;
-  height : auto;
-  padding-left : 10px;
-  margin-left : 10px;
+  height : 88%;
   border-radius : 25px;
 }
 
@@ -107,7 +105,7 @@ width : auto;
 
 #DidYouKnow {
     position: relative;
-    top: -15px;
+    /*! top: 150px; */
     height: auto;
     width : 97%;
     border: green 1px dashed;
@@ -124,7 +122,7 @@ width : auto;
 #FindInfo {
     position: relative;
     width:60%;
-    height:370px;
+    height:470px;
     text-align: center;
     text-decoration: underline;
     border: red 1px dashed;
@@ -180,7 +178,7 @@ width : auto;
   padding:5px;
   width : 18%;
   top : 15px;
-  left : 80%;
+  left : 75%;
   text-align : center;
    border-radius : 15px;
   
@@ -192,7 +190,7 @@ width : auto;
   height : 12%;
   top : 10px;
  z-index : 8;
-  left : 80%;
+  left : 75%;
   font-size: 180%;
   text-decoration: underline;
   text-align : center;
@@ -431,6 +429,7 @@ it describes the detailspage*/
   padding : 20px;
   border-style: inset;
     border-radius: 22px;
+  top: 10vh;
 }
 #DETallContainer #dateTime {
   position: relative;

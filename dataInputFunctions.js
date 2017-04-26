@@ -9,7 +9,7 @@ var theHeading = "";
 var theLabel ="";
 
 function loadList(){
-    $("#lookupdiv").load("IBIS_animalia-tablestripped.html");
+    $("#lookupdiv").load("IBISanimalsRefMini.html");
     $("#lookupdiv").css("display", "block");
     $("#lookupList").css("display", "none");
     $("#lookupHide").css("display", "inline");
