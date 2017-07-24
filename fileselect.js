@@ -1,9 +1,9 @@
-
 var theSrc = "";
 var theTag = "";
 var imgDelList = "";
 var tagList = "";
 var imgname = "";
+
 function handleFileSelect(evt) {
 	var files = evt.target.files; 
 	$("#optionsDsplay").slideUp('fast');
