@@ -141,7 +141,7 @@ var catvalue = $('#thecatid').val();
 			exit;
     }
 //cleanupData();
-		if (catvalue == "Vegetables"){
+		if (catvalue == "vegetables"){
 		document.VegForm.submit(); 
 		}
      else if (catvalue == "Animals"){

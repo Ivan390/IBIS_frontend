@@ -74,7 +74,8 @@
  font-size : 38px;
  text-align : center;
    width : 300px;
- left: 40%;
+ left: 70%;
+ top: -180px;
 }
 #headinglist {
 position : relative;
@@ -239,6 +240,8 @@ width : 170%;
     left : -50px;
     
 }
-
+#Heading{
+    position : relative;
+}
         	
         	

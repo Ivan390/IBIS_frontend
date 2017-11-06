@@ -6,8 +6,10 @@
             I B I S - Vegetable Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
-	<script type="text/javascript" src="http://127.0.0.1/ibis/fileselect.js"></script>
-	<script type="text/javascript" src="http://127.0.0.1/ibis/dataInputFunctions.js"></script>
+<script type="text/javascript" src="main.js"> </script> 
+	<script type="text/javascript" src="fileselect.js"></script>
+<script type="text/javascript" src="dateshorts.js"> </script>
+	<script type="text/javascript" src="dataInputFunctions.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -33,13 +35,17 @@
              >
         
     </head>
-    <body name="VegInputBody" >
+    <body name="VegInputBody" id="TheBody" onload="initForm()" >
       <div id="allContainer">
        
         <div name="Heading">
 	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Vegetable Input Form</p>
         </div>
+	<div id="dateTime">
+	 <div id="dateBlock">The Date</div>
+	 <div id="timeBlock">The Time</div>       
+	 </div>
         <div id="pgButtons" class="littleDD">
         	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
          <a href="IBISmain.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
