@@ -7,8 +7,8 @@
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
         <script type="text/javascript" src="DD_rondies.js"></script>
-				<script type="text/javascript" src="http://127.0.0.1/ibis/dataInputFunctions.js"></script>
-				<script type="text/javascript" src="http://127.0.0.1/ibis/fileselect.js"></script>
+				<script type="text/javascript" src="dataInputFunctions.js"></script>
+				<script type="text/javascript" src="fileselect.js"></script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -49,11 +49,11 @@
         </div>
         <div id="detail_fs_min" class="littleDD" >
           <div id="headinglist" class="littleDD">
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name</label></p>
+           			<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Group</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Crystal_System</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habit</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Chemical Formula</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Chemical_Formula</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Hardness</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Density</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Cleavage</label></p>
@@ -74,7 +74,7 @@
          	</div>   
          	<form  name="MinForm" action="../../cgi-bin/IBISnewMinerals.php3" method="POST" enctype="multipart/form-data" class="">
 	  				<fieldset id="dataForm" class="">
-							<input type="text" name="Akingdom" value="Minerals" class="hiddentext">
+							<input type="text" id = "Kingdom" name="Akingdom" value="Minerals" class="hiddentext">
 							<input type="text" id="Name" name="Mname" class="hiddentext">
 							<input type="text" id="Group" name="Mgroup" class="hiddentext">
 							<input type="text" id="Crystal_System" name="crystSys" class="hiddentext">
@@ -103,6 +103,7 @@
 	      		<div id="tagslist"></div>
 	      		<div id="imgDisplay" class="littleDD"></div>
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
+	      		<div id="messageDiv">
 	      		
   		</div>   
 	      		

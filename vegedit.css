@@ -202,5 +202,10 @@
   
     
 }
-
+#editorwin{
+  position :relative;
+  border : black;
+  top : -50px;
+  
+}
 

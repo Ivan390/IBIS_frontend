@@ -10,14 +10,17 @@
 <script type="text/javascript" src="dateshorts.js"> </script>
 
 <script type="text/javascript">
-	var IC = 0;
+	
 	$(document).ready(function(){
-          $('.pictures').change(handleFileSelect);	
+	
+          $('.clickme').change(handleFileSelect);
+          
 	  if (sessionStorage.userRef){
              sessVar = sessionStorage.userRef;
 	     sesA = sessVar.split(":");
 	      conID = sesA[1];
 	      $('#contrib_ID').val(conID);
+	      $('#ICval').val(0);	
 	  }else {
 	    alert("You should really not be on this page!")
 	    document.location = "IBISmain.html";
@@ -43,25 +46,11 @@
     <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
   </div>
   <input type="button" class="buttClass" value="Send Entry To IBIS" onclick="submitForm()"/>
+  <input type="text" id="ICval" name="ICVal" value="" />
   <div id=allContainer class="ac">
     <input type="button" class="buttClass" value="Add another Item" onclick="addAnotherItem()"/>
+    <div id="glossEntry"></div>
     
-    <form name="glossentry" id="glossEntry" method="POST" enctype="multipart/form-data" action="../cgi-bin/vegGlEntry.php3">
-     <div id="vegGlosItem0" class="itemC">
-       <label class="labelText">Term</label>
-       <input type="text" name="item0" class="inputText shortText" />
-       <label class="labelText">Definition</label>
-       <textarea name="definition0" class="inputText longText"></textarea>
-     <div id="imageDiv0" >
-       <label class="labelC">Add a Diagram</label></br>
-       <input id="pictures0" class="pictures" type ="file" name="pictures0" value="clickme" onchange="" /></br>
-       <label class="labelText" onclick="addCaption(this)">Caption</label></br>
-       <div id="glosspic" class="glossP"></div>
-       <input type="text" name="diagramCap0"  />
-     <div id="newtagslist0" class="nothiddentext"></div>
-   </div>
- </div>
-   </form>
    <div id=mesText> </div>
   </div>
  </body>
@@ -69,7 +58,7 @@
  
   function showImage(that){
     var imgdiv = that.nextSibling.src;
-    alert(imgdiv);
+   // alert(imgdiv);
   //	imgdiv.innerHTML = '<img src="" alt="this is where the image will go" />';
     if (that.files && that.files[0]){
       var reader = new FileReader();
@@ -84,8 +73,10 @@
   }
 
   function addAnotherItem(){
+    IC = $('#ICval').val() ;
     IC++;
-  //alert("at least its running the functionand IC is " + IC);
+    $('#ICval').val(IC);
+  alert("at least its running the functionand IC is " + IC);
     var addItem ='\
     <form name="glossentry'+ IC +'" id="glossEntry" method="POST" enctype="multipart/form-data" action="../cgi-bin/vegGlEntry.php3"> \
     	<div id="vegGlosItem'+ IC +'" class="itemC">\
@@ -96,8 +87,9 @@
       	<div id="imageDiv'+ IC +'">\
 					<label class="labelC">Add a Diagram</label>\
 					</br>\
-					<input id="pictures'+ IC +'" type ="file" name="pictures'+ IC +'" class="clickme" onchange="showImage(this)" /></br>\
-        	<div id="diagram0" class="hidden"> <div id="glosspic'+ IC +'"" class="glossP"></div>\
+					<input id="pictures'+ IC +'" type ="file" name="pictures'+ IC +'" class="clickme" onchange="handleFileSelect()" /></br>\
+        	<div id="diagram0" class="hidden"> \
+        	<div id="glosspic'+ IC +'" class="glossP"></div>\
 	  				<label class="labelText" onclick="addCaption(this)">Caption</label></br>\
 	  				<input type="text" name="diagramCap0"  />\
 					</div>\
@@ -107,11 +99,10 @@
     $('#glossEntry').append(addItem);
     //	alert("and it finishes the function");
   }
-
-  function submitForm(){
-    document.glossentry.submit();
-  }
+  
   function handleFileSelect(evt) {
+  	 IC  = $('#ICval').val();
+  	alert(IC);
 		var files = evt.target.files; 
 		for (var i = 0, f; f = files[i]; i++) {
 	  	if (!f.type.match('image.*')) {
@@ -120,11 +111,15 @@
 	 	var reader = new FileReader();
 		reader.onload = (function(theFile) {
 	  return function(e) {
-		$('#glosspic'+ IC ).html('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');	
+		document.getElementByID("glosspic" + IC).HTML('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');	
 	  };
 	})(f);
 	reader.readAsDataURL(f);
   }
 }
+
+  function submitForm(){
+    document.glossentry.submit();
+  }
  </script> 
 </html>

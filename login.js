@@ -11,8 +11,16 @@ function do_logout(){
   $("#logouthead").css("display", "none");
   $("#regPic").css("display","none");
  // $("#registerBlock").removeClass("locked").addClass("adminC");
-  $("#registerBlock").html("<a href=\"IBIS_Registration.html\" class=\"littleDD linksclass\">Register as a contributer</a>");
+ $("#adminBlock").hide();
+  $("#adminBlock").html("<div id=\"registerBlock\" class=\"littleDD linksclass adminC \">\
+			    <a href=\"IBISregistration.html\" class=\"littleDD linksclass\">Register as a contributer</a>\
+			  </div>\
+			  <div id=\"guestBook\" class=\"littleDD linksclass\">\
+			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\"littleDD linksclass\">The GuestBook</a>\
+			  </div>");
+	$("#adminBlock").fadeIn();
   sessionStorage.userRef = "";
+  
 }
 
 function submitDetails(){
@@ -34,16 +42,24 @@ function submitDetails(){
 	      }
 	      else {
 	        var thedata = data.split(" : ");
-	        $("#greetingDiv").text("Hello " + thedata[0]);
-	        sessionStorage.userRef = thedata[1] + " : " + thedata[2] + " : " + thedata[3];
+	        
+	        sessionStorage.userRef = thedata[0] + " : " + thedata[1] + " : " +thedata[2] + " : " + thedata[3] + " : " + thedata[4];
 	        imgsrc = '<img id = "regPic" src="'+ thedata[4] + '" width="" height="" >';
 	        //alert(imgsrc);
+	        $("#greetingDiv").text("Hello " + thedata[0]);
 	        if (sessionStorage.userRef){
 	          var sessref = sessionStorage.userRef;
-	          $("#regpic").html(imgsrc);
+	          $("#adminBlock").hide();
+	          $("#adminBlock").html("<div id=\"welcBlock\" style=\"\>\
+	      	<div id=\"regholder\">\
+	    		<div id=\"regpic\"></div>\
+	    		<div id=\"greetingDiv\"></div>\
+	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+thedata[1]+"\">Go to your profile page</a></br></div>\
+	   		</div></div>");
+	   		$("#regpic").html(imgsrc);
 	          $("#greetingDiv").text("Hello " + thedata[0]);
-	          $("#registerBlock").addClass("locked");
-	          $("#registerBlock a").removeAttr("href")  ;
+	          $("#adminBlock").fadeIn();
+	         // $("#registerBlock a").removeAttr("href")  ;
 	        }
 	        $("#errorDiv").text("");
 	        cancelLogin();

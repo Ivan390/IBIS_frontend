@@ -3,6 +3,20 @@ var theTag = "";
 var imgDelList = "";
 var tagList = "";
 var imgname = "";
+var heading = "";
+function enlarge(that){
+heading = that.id;
+var theContent = $('#'+heading).val();
+$("#editArea").val(theContent);
+$("#editArea").addClass("editwin");
+$("#editorwin").show();
+
+}
+function doneEdit(){
+var thisContent = $("#editArea").val();
+$('#'+heading).val(thisContent);
+$("#editorwin").hide();
+}
 
 function handleFileSelect(evt) {
 	var files = evt.target.files; 
@@ -37,7 +51,7 @@ function markDel(){
 	var thisFSrc = $('#srcVal').val();
 	var chkBx = $('#chkbx1');
 	var messg = "";
-	var localFpart = 'http://127.0.0.1/ibis/Data/Images/';//http://127.0.0.1/ibis/Data/Images/
+	var localFpart = 'http://192.168.43.132/ibis/Data/Images/';//http://127.0.0.1/ibis/Data/Images/
 	thisSrc = thisFSrc.replace(localFpart, "");
 	if ($('#chkbx1').prop('checked')) {
 		var imgDelList = thisSrc + ":";
@@ -67,7 +81,7 @@ function markDel(){
 }
 function addTag(){
 	var tag = $('#mediatagsinput').val();
-	var tagpair = imgname +" : "+ tag + "::";
+	var tagpair = imgname +":"+ tag + "::";
 	var existingtags = $('#newtagslist').val();
 	if (existingtags.search(imgname) == -1){
 		var pretags = $('#newtagslist').val();
@@ -83,7 +97,7 @@ function showOps(that){
 	
 	if ($('#newtagslist').val() == "" ){
 		//alert("the newtagslist is empty");
-		var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
+		var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag()" />';
 		$('#optionsDsplay').html(opttext);
 		$("#optionsDsplay").slideDown('fast');
 	}
@@ -94,7 +108,7 @@ function showOps(that){
 			if (!tsl[i]){continue;}
 			else if (tsl[i].search(imgname) == -1){
 				//alert('it is not empty but it does not have this imgname');
-				var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag();" />';
+				var opttext = '<p class="labelclass">Add Media Tags for <br>' + imgname + '</p><input type="text" name="AmediaTagsInput" id="mediatagsinput" class="littleDD inputclass" /><br><input type="button" class="buttonclass" value="Add" onclick="addTag()" />';
 				$('#optionsDsplay').html(opttext);
 				$("#optionsDsplay").slideDown('fast');
 				//continue;

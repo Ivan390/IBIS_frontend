@@ -49,7 +49,7 @@ function sendedit(){
 			theLabel.style.backgroundColor = "pink";
 			$("#outputBox").val("");
     }
-    if (theHeading == "Species"){
+    if (theHeading == "Species" || theHeading == "Name"){
 			checkDuplicate();
     }
 }
@@ -59,12 +59,22 @@ function clsbx(){
 }
        
 function checkDuplicate(){ 
+	var setval = $('#Kingdom').val();
     var matchList = "";
     var dupItems = "";
     var dupItemsL = "";
     var matchedDiv = "";
-    var speciesval= $('#Species').val();
+    var speciesval= "";
     var catvalue = $('#thecatid').val();
+    if (setval == "Animalia"){
+    	speciesval= $('#Species').val();
+    }
+    if (setval == "Plantae"){
+    	speciesval= $('#Species').val();
+    } 
+    if (setval == "Minerals"){
+    	speciesval= $('#Name').val();
+    }
     $.ajax({
 	url : '../../cgi-bin/IBIScheckdup.php3',
 	type : "get",
