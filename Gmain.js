@@ -18,6 +18,26 @@ function initForm() {
 		$("#editDetails").css("display", "none");
 	}
 }
+function handleFileSelect(evt) {
+	var files = evt.target.files; 
+	for (var i = 0, f; f = files[i]; i++) {
+		if (!f.type.match('image.*')) {
+		 	continue;
+	 	}
+	 	if (i > 5){
+			alert("Select up to 6 media files");
+			continue;
+		}
+		var reader = new FileReader();
+		reader.onload = (function(theFile) {
+			return function(e) {
+				$('#imageSpan').html('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');
+			};
+		})(f);
+		reader.readAsDataURL(f);
+		}
+		$('#newtagslist').html("");
+}
  function show_oDD(that){
  	var theValue = that.parentNode.lastChild.innerHTML;
   $(".oDHClass").css("color","black");
@@ -99,6 +119,35 @@ function dismissNote(){
  $("#commentBlock").hide();
 }
 
+function updateDetails() {
+/*
+var theForm = $("#regPic").val();
+
+$.ajax({
+		url : '../../cgi-bin/IBISupdContrib.php3',
+		type : "post",
+		data :{name1:theForm},
+		success : function(data){
+		
+		alert(data);
+		}
+	});
+
+*/
+
+}
+
+function loadRegWin(){
+	theUser = $("#userRef").val();
+	var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN='+theUser+'', 'RegWin', 'height=720, width=580');
+	
+}
+
+function closeRegWin(){
+	regWin.close;
+	$('#closewin').hide();
+}
+
 function submitNote(){
 	var conRef = $("#conRef").val();
 	var noteCont = $("#edNotes").val();
@@ -117,4 +166,24 @@ function submitNote(){
 	$("#commentBlock").hide();
 	$("#commentBlock").html("<p>Your comment has been saved</p>");
 	$("#commentBlock").show();
+}
+
+function handleFileSelecting(that) {
+  	 IC  = $('#ICval').val();
+  	 var butVal = that.name;
+  	 butVal = butVal[butVal.length-1];
+		var files = that.files; 
+		for (var i = 0, f; f = files[i]; i++) {
+	  	if (!f.type.match('image.*')) {
+	 	 	continue;
+	 	}
+	 	var reader = new FileReader();
+		reader.onload = (function(theFile) {
+	  return function(e) {
+		$("#glosspic" + butVal).html('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" width="" height="" /\>');	
+		$("#picRef" + butVal).val(theFile.name);
+	  };
+	})(f);
+	reader.readAsDataURL(f);
+  }
 }

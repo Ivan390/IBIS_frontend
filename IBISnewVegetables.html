@@ -18,7 +18,7 @@
 	 	 	 sessVar = sessionStorage.userRef;
 	 	 	 //alert(sessVar);
 	 	 	 sesA = sessVar.split(":");
-	 	 	 conID = sesA[1];
+	 	 	 conID = sesA[0];
 	 	 	// alert(conID);
 	 	 	 $('#contrib_ID').val(conID);
 	 	 	 }else {
@@ -36,20 +36,22 @@
         
     </head>
     <body name="VegInputBody" id="TheBody" onload="initForm()" >
+    		
       <div id="allContainer">
-       
+       <div id="dateTime">
+					 <div id="dateBlock">The Date</div>
+					 <div id="timeBlock">The Time</div>       
+				 </div>
+				  <div id="pgButtons" class="littleDD">
+        	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
+         <a href="IBISmain.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
+        </div>
         <div name="Heading">
 	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Vegetable Input Form</p>
         </div>
-	<div id="dateTime">
-	 <div id="dateBlock">The Date</div>
-	 <div id="timeBlock">The Time</div>       
-	 </div>
-        <div id="pgButtons" class="littleDD">
-        	<input type="button" value="Submit Data" class="buttonclass littleDD" onclick="doSubmit()">   
-         <a href="IBISmain.html" class="buttonclass littleDD"><img src="" alt="">Back to Main Screen</a>
-        </div>
+					
+       
         
         <div id="detail_fs_min" class="littleDD" ">
           <div id="headinglist" class="littleDD">

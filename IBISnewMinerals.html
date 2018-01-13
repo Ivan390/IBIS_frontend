@@ -17,7 +17,7 @@
 	 	 	 sessVar = sessionStorage.userRef;
 	 	 	 //alert(sessVar);
 	 	 	 sesA = sessVar.split(":");
-	 	 	 conID = sesA[1];
+	 	 	 conID = sesA[0];
 	 	 	// alert(conID);
 	 	 	 $('#contrib_ID').val(conID);
 	 	 	 }else {
@@ -103,14 +103,14 @@
 	      		<div id="tagslist"></div>
 	      		<div id="imgDisplay" class="littleDD"></div>
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
-	      		<div id="messageDiv">
-	      		
-  		</div>   
+	      		   
 	      		
            </div>
 	  			</fieldset>
 	 			
 	 			</form>
+	 			
+	 			<div id="messageDiv"></div>
   </div>
        
 

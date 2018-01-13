@@ -68,39 +68,53 @@ function checkDuplicate(){
     var catvalue = $('#thecatid').val();
     if (setval == "Animalia"){
     	speciesval= $('#Species').val();
+    	category = "Animals";
+    	thecat = "animals";
     }
     if (setval == "Plantae"){
     	speciesval= $('#Species').val();
+    	category = "Vegetables";
+    	thecat = "vegetables";
     } 
     if (setval == "Minerals"){
     	speciesval= $('#Name').val();
+    	category = "Minerals";
+    	thecat = "minerals";
     }
+    
     $.ajax({
 	url : '../../cgi-bin/IBIScheckdup.php3',
 	type : "get",
 	async : "false",
-	data :{species : speciesval, catval : catvalue},
+	data :{species : speciesval, catval : catvalue, group : category},
 	success : function(data){
 	    var testregexp = /nomatch/;
 	    if (testregexp.test(data)){
-	    
+	    	
 	    }else {
 				var dataList = data.split("::");
 				for (i=0; i<dataList.length; i++){
 		    	if (dataList[i]==""){
 						continue;
 		    	}
-		    	dupItems = dataList[0]; 
+		    	dupItems = dataList[i]; 
 		    	dupItemsL = dupItems.split(":");
-		    	matchList += '<li id="matchItem" onclick="submitDupForm()">' + dupItemsL[0] +':'+ dupItemsL[1] + '</li>';
-	       }
-	       alert(matchList);
+		    	genref = dupItemsL[1];
+		    	specref = dupItemsL[2];
+		    	recID = dupItemsL[0];
+		    	conRef = dupItemsL[4];
+		    	localN = dupItemsL[3];
+		  matchList += "<li><a href=\"../../cgi-bin/IBISeditStuff.php3?thecat="+thecat+"&specref="+genref+"&genref="+specref+"\">"+specref +" "+ genref +"</a><span id=\"lcN\">  "+localN+"</span> </li>";
+		    }
+		  	       
 	       $('#specid').val(dupItemsL[1]);
-	       matchedDiv = "<div id=\"matches\"><p>Possible duplicate species found.Maybe you want to edit this existing record instead</p><ul>" + matchList + "</ul></div>";
-	       $('#messageDiv').html(matchedDiv);
+	       
+	       matchedDiv = "<div id=\"matDiv\">Possible duplicate entry.</br>Maybe you want to edit the existing record instead</br><ul id=\"matlist\">"+matchList+"</ul><input type=\"button\" class=\"buttonclass\" value=\"Enter anyway \" onclick=\"closeDiag()\"></div>";
+		       $('#messageDiv').html(matchedDiv);
 	   }
 		}
 	})
+	
 }
 
 function checkWords(content){
@@ -124,9 +138,8 @@ function checkWords(content){
 }	
 
 function submitDupForm(){
-    document.VegDupEditForm.submit(); // 	needs to be abstracted
-    document.AnimDupEditForm.submit();
-}
+    document.dplForm.submit(); // 	needs to be abstracted
+   }
      
 function loadcontent(that){
     theHeading = $(that).text();
@@ -142,16 +155,13 @@ function checkPics() {
     var picValue = $('#imgDisplay').html();
     return picValue;
 }
-        
-function doSubmit(){
+
+function closeDiag(){
+	$('#matDiv').hide();
+}
+function reallySubmit(){
 var catvalue = $('#thecatid').val();
-    var apicValue = checkPics();
-    if (apicValue == ""){
-			alert("dude you must add at least one picture... and dont forget the tag");
-			exit;
-    }
-//cleanupData();
-		if (catvalue == "Vegetables"){
+	if (catvalue == "Vegetables"){
 		document.VegForm.submit(); 
 		}
      else if (catvalue == "Animals"){
@@ -160,5 +170,22 @@ var catvalue = $('#thecatid').val();
      else if (catvalue == "Minerals"){
       document.MinForm.submit();
      }
+
+}        
+function hidethis(){
+$('#messD').hide();
+}
+function doSubmit(){
+
+    var apicValue = checkPics();
+    if (apicValue == ""){
+			//alert("dude you must add at least one picture... and dont forget the tag");
+			var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
+    $('#messageDiv').html(messgDiv);
+    }else{
+    reallySubmit();
+    }
+//cleanupData();
+	
     
 }

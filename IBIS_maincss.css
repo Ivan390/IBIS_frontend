@@ -3,8 +3,8 @@ It describes the main page*/
 
 #MainallContainer {
   position : absolute;
-  width : 95vw;
-  /*! height : 100vh; */
+  width : 93vw;
+  height : 90vh; 
   padding : 20px;
   border-style: inset;
   border-radius : 15px;
@@ -35,15 +35,35 @@ top : 10px;
   width : 70%;
   z-index : 6;
 }
+#errorDiv {
+  positon : relative;
+  width : 25%;
+  top : 5px;
+  text-align: center;
+}
+#errorDiv img {
+  position : relative;
+  top : -20vh
+  
+}
+#errorDiv #messSpan {
+  position : relative;
+  top : -20vh;
+  font-size :25px;
+  float : left;
+  
+  
+}
 
 #MainallContainer #detail_fs_main {
   position : relative;
   border-style: outset;
-  top : -18%;
+  top : -50px;
   width : 95%;
   padding : 5px;
-  height : 88%;
+  height : 65vh;
   border-radius : 25px;
+  left: 2%;
 }
 
 #MainallContainer #dateTime {
@@ -114,7 +134,7 @@ width : 60%;
 
 #DidYouKnow {
     position: relative;
-    /*! top: 150px; */
+    top: -150px;
     height: auto;
     width : 97%;
     border: green 1px dashed;
@@ -266,24 +286,29 @@ width : 60%;
   border-radius: 22px; 
   
   height: 90%;*/
- position : absolute;
-  width : 95vw;
-  /*! height : 100vh; */
+ position : relative;
+  width : 90vw;
+  height : auto;
   padding : 20px;
   border-style: inset;
   border-radius : 15px;
-  left : 19px;
+  left : 1%;
 }
 
 #option3btn {
   position : relative;
   top : -0px;
   
+  max-width: 100%;
+  font-size: 80%;
 }
 #option2btn {
   position : relative;
   top : 10px;
   
+  max-width: 70%;
+  font-size: 80%;
+  width: auto;
 }
 
 
@@ -329,21 +354,22 @@ position : absolute;
 
 #SFallContainer .selectList {
   position : relative;
-  height : auto;
-  min-width : 250px;
+  height : 25%;
+  min-width : 190px;
   margin : 15px;
-  font-size : 20px;
-  padding : 10px;
+  font-size : 100%;
+  padding : 1px;
   }
 #SFallContainer #findOptions {
   position : relative;
   border : 1px black dashed;
-  width : 60%;
+  width : 70%;
   padding : 10px;
   
+  height: 30vh;
 }
 #SFallContainer #ddl3Txt {
-  font-size : 20px;
+  font-size : 90%;
 }
 #selectBox {
     position : relative;
@@ -353,7 +379,7 @@ position : absolute;
 }
 #findOptions input.buttonclass {
   position : relative;
-  float : right;
+  /*! float : right; */
 }
 #SFallContainer #pgButtons {
     position : relative;
@@ -376,13 +402,15 @@ position : absolute;
 #SFallContainer #theCategory {
   position : relative;
   padding : 10px;
- width : 270px;
+ width : 20%;
    border-style : dashed;
   border-width : 2px;
-  max-height: 250px;
+  max-height: 260px;
   margin-right: 10px;
   float : right;
    overflow-y : scroll;
+  top: 110px;
+  left: 2%;
 }
 
 
@@ -400,10 +428,15 @@ position : relative;
   position : relative;
   width : 500px;
   padding : 12px;
-  top : -175px;
-  left : 200px
+  /*! top : -38vh; */
+  left : %;
   
   
+  width: 500px;
+  border: 1px black solid;
+  height: auto;
+  max-height: 200px;
+  overflow: auto;
 }
 .headingC {
   text-align : left;
@@ -415,27 +448,34 @@ position : relative;
 .detailC {
   text-align:  left;
   
+  word-wrap: normal;
+  overflow: auto;
 }
 #specipicH {
   position: relative;
   width : 60%;   
   
+  border: 1px black solid;
+  width: 40%;
+  height: 300px;
 }
 #speciePic {
   position : relative;
-  top : 40px;
+  top : -0px;
   width : auto;
   
+  float: right;
 }
 #subContain {
   position : relative;
-   width : 95%;
+   width : 85vw;
     height : auto;
-  min-height: 200px;
+  max-height: 100vh;
   padding : 20px;
   border-style: inset;
   border-radius: 22px; 
 
+  left: 1%;
 }
 #SFallContainer #catPicsList {
   position : relative;
@@ -447,8 +487,8 @@ position : relative;
 }
 #catPicsList img {
   cursor : pointer;
-  width : 250px;
-  height : 250px;
+  width : 200px;
+  height : 200px;
 }
 /*this is details.css
 it describes the detailspage*/
@@ -492,6 +532,7 @@ it describes the detailspage*/
   margin-left : 10px;
   border-radius: 12px;
    
+  max-height: 650px;
 }
 
 #DETallContainer #logo_image_holder{
@@ -569,8 +610,8 @@ it describes the detailspage*/
   position : relative;
   border : 1px black dashed;
   border-radius : 12px;
-  padding : 20px;
-  max-height : 80px;
+  padding : 10px;
+  max-height : 120px;
   max-width : 45%;
 
   overflow : auto;
@@ -612,7 +653,7 @@ top : 10%;
 }
 .OutputAnim {
 
-  top : -80px;
+  top : -70px;
 
 }
 .OutputMin {
@@ -707,8 +748,8 @@ border-style:ridge;
 }
 .thumbpic {
 	border-radius : 12px;
-  width : 250px;
-  height : 250px;
+  width : 120px;
+  height : 120px;
   
 }
 #REGallContainer .labelClass {
@@ -780,8 +821,8 @@ it describes the Other functions page */
   border : green solid 1px;
   height : auto;
   width : auto;
-  font-size : 20px;
-  padding : 4px;
+  font-size : 90%;
+  padding : 8px;
   margin : 10px;
   
 }
@@ -911,4 +952,64 @@ padding : 20px;
 }
 #infoDiv p {
   font-size : 200%;
+}
+#opt3btSpan {
+  position : relative;
+  width : 300px;
+  height: auto;
+  padding : 10px;
+  margin : 10px;
+  cursor : pointer;
+  top : -30px;
+} 
+#buttContSpan {
+  position : relative;
+  display : block;
+  width : 250px;
+  font-size : 140%;
+  left: 70%;
+  top: -20vh;
+  height: auto;
+}
+#op2btSpan {
+ position : relative;
+  max-width: 20%;
+  height: auto;
+  padding : 10px;
+  margin :10px;
+  cursor : pointer;
+}
+#ddl3Txt {
+  
+  position: relative;
+  height: 20%;
+  max-width: 150px;
+  top: -12px;
+  left: 20px;
+}
+#infoDiv p{
+  position : relative;
+  width : 35%;
+  text-overflow: wrap;
+  font-size : medium;
+  
+}
+.localN{
+  position : relative;
+  max-width: 60%;
+  
+  /*! border: 1px black solid; */
+  display: block;
+}
+/*! profile Section */
+
+#imageSpan img {
+  position : relative;
+}
+#imgDisplay2 {
+  position : relative;
+  float : right;
+  width : 300px;
+  top : -200px;
+  
 }

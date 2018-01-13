@@ -1,0 +1,51 @@
+/*classes
+ac
+buttClass
+glossEntry
+itemC
+labelText
+inputText
+shortText
+longText
+
+id
+dateTime
+dateBlock
+timeBlock
+logo_image_holder
+*/ 
+
+.ac{
+ position : relative;
+  width : 90vw;
+   height : 100vh;
+  padding : 20px;
+  border-style: inset;
+  border-radius : 15px;
+  left : 19px;
+top : 10px;
+}
+
+#logo_image{
+  position : relative;
+  width : 45%;
+  left : 45%;
+}
+
+#glossEntry .itemC {
+  position : relative;
+  width : 45%;
+  height : auto;
+  min-height: 200px;
+  
+}
+
+.glossP{
+  position : relative;
+  width : 120px;
+  height : 120px;
+float : right;
+top : -40px;
+  border : 1px solid aquamarine;
+  left: -20px;
+}

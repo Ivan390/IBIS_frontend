@@ -1,0 +1,44 @@
+#AllContainer {
+position : relative;
+  border : 1px black solid;
+  border-radius : 20px;
+  width : 90%;
+  border-style : inset;
+  left : 30px;
+  top : 10vh;
+  padding : 20px;
+  height : 80vh;
+}
+#subContainer {
+  position : relative;
+  border : 1px black solid; 
+  border-radius : 20px;
+  padding : 10px;
+  top : 15vh;
+ height  : 40vh
+}
+
+#sucCheck {
+  position : relative;
+  width : 200px;
+  left : 40%;
+  
+}
+#fileM {
+  postion : relative;
+  font-size : 30px;
+  left : -190px;
+  
+}
+#messSpan {
+  position : relative;
+ 
+   font-size : 30px;
+  left : -200px;
+  top : -15vh;
+  
+}
+.ac a{
+  font-size : 5vh;
+  
+}

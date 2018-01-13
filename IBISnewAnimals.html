@@ -16,7 +16,7 @@
 	  if (sessionStorage.userRef){
              sessVar = sessionStorage.userRef;
 	     sesA = sessVar.split(":");
-	      conID = sesA[1];
+	      conID = sesA[0];
 	      $('#contrib_ID').val(conID);
 	  }else {
 	    alert("You should really not be on this page!")
@@ -78,7 +78,7 @@
             <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
             <a id="sendeditButton" class="buttonclassAI littleDD" onclick="sendedit()" >Send</a>
          </div> 
-                
+           <div id="messageDiv"></div>     
         <form  name="AnimForm" action="../../cgi-bin/IBISnewAnimals.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" id = "Kingdom" name="Akingdom" value="Animalia" class="hiddentext"></input>
@@ -103,7 +103,7 @@
 						<textarea id="Distrib_Notes" name="Adistrib_Notes" class="hiddentext"></textarea>
 					  <textarea id="Image_Tags" name = "Aimg_Tags" class="hiddentext"></textarea>
 						<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext">
-						
+						<input type="text" name="thecat" value="Animals" id="thecatid" class="hiddentext" />
 						<div id="images" class="littleDD">
           		<p class="labelclass">Add Media</p>
 	      			<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
@@ -113,15 +113,11 @@
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
 	  			</fieldset>
 	 			</form>
-	 			<form  name="AnimDupEditForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
-	<input type="text" name="thecat" value="Animals" id="thecatid" class="hiddentext" />
-	<input type="text" name="specref" value="" id="specid" class="hiddentext" />
-</form>
-	 			<div id="messageDiv">
-	 				<div id="infoDiv"> 
+	 				
+	 				<div id="infoDiv"> </div>
 	 					
-	 			</div>
-	 		</div>
+	 			
+	 		
 	 		<div id="dupDialog"></div>
     </div> 
     

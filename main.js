@@ -8,13 +8,13 @@ function checkStorage(){
 	      	<div id=\"regholder\">\
 	    		<div id=\"regpic\"></div>\
 	    		<div id=\"greetingDiv\"></div>\
-	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+sesRef[1]+"\">Go to your profile page</a></br></div>\
+	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+sesRef[0]+"\">Go to your profile page</a></br></div>\
 	   		</div></div>");
 
 	  
-	  imgsrc = '<img id = "regPic" src="'+ sesRef[4] + '" width="" height="" >';
+	  imgsrc = '<img id = "regPic" src="'+ sesRef[5] + '" width="" height="" >';
 	  $("#regpic").html(imgsrc);
-	  $("#greetingDiv").text("Hello " + sesRef[0]);
+	  $("#greetingDiv").text("Hello " + sesRef[1]);
 	  $("#adminBlock").show();
 	    $("#loginhead").css("display", "none");
 	    $("#logouthead").css("display", "block");

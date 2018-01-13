@@ -37,16 +37,15 @@ function submitDetails(){
 	//  alert(data);
 	      var testregexp = /no match/;
 	      if (testregexp.test(data)) {
-	        $("#errorDiv").text("Your details were not found on the server");
+	        $("#errorDiv").html("<img id=\"sucCheck\" src=\"http://192.168.43.132/ibis/images/notokeydoke.png\"><span id=\"messSpan\">Your details were not found on the server</span>\"");
 	        showLogin();
 	      }
 	      else {
-	        var thedata = data.split(" : ");
-	        
-	        sessionStorage.userRef = thedata[0] + " : " + thedata[1] + " : " +thedata[2] + " : " + thedata[3] + " : " + thedata[4];
-	        imgsrc = '<img id = "regPic" src="'+ thedata[4] + '" width="" height="" >';
+	        var thedata = data.split(":");
+	        sessionStorage.userRef = thedata[0] + " : " + thedata[1] + " : " +thedata[2] + " : " + thedata[3] + " : " + thedata[4]+" : "+thedata[5];
+	        imgsrc = '<img id = "regPic" src="'+ thedata[5] + '" width="" height="" >';
 	        //alert(imgsrc);
-	        $("#greetingDiv").text("Hello " + thedata[0]);
+	        $("#greetingDiv").text("Hello " + thedata[1]);
 	        if (sessionStorage.userRef){
 	          var sessref = sessionStorage.userRef;
 	          $("#adminBlock").hide();
@@ -54,10 +53,10 @@ function submitDetails(){
 	      	<div id=\"regholder\">\
 	    		<div id=\"regpic\"></div>\
 	    		<div id=\"greetingDiv\"></div>\
-	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+thedata[1]+"\">Go to your profile page</a></br></div>\
+	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+thedata[0]+"\">Go to your profile page</a></br></div>\
 	   		</div></div>");
 	   		$("#regpic").html(imgsrc);
-	          $("#greetingDiv").text("Hello " + thedata[0]);
+	          $("#greetingDiv").text("Hello " + thedata[1]);
 	          $("#adminBlock").fadeIn();
 	         // $("#registerBlock a").removeAttr("href")  ;
 	        }
