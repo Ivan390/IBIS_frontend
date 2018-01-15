@@ -4,14 +4,15 @@ var imgDelList = "";
 var tagList = "";
 var imgname = "";
 var heading = "";
+
 function enlarge(that){
 heading = that.id;
 var theContent = $('#'+heading).val();
 $("#editArea").val(theContent);
 $("#editArea").addClass("editwin");
 $("#editorwin").show();
-
 }
+
 function doneEdit(){
 var thisContent = $("#editArea").val();
 $('#'+heading).val(thisContent);
@@ -48,36 +49,45 @@ function showImgOpts(that){
 	$('#oldTags').html(editImageDiv);
 }
 function markDel(){
-	var thisFSrc = $('#srcVal').val();
-	var chkBx = $('#chkbx1');
-	var messg = "";
-	var localFpart = 'http://192.168.43.132/ibis/Data/Images/';//http://127.0.0.1/ibis/Data/Images/
-	thisSrc = thisFSrc.replace(localFpart, "");
-	if ($('#chkbx1').prop('checked')) {
-		var imgDelList = thisSrc + ":";
-	 	var oldlist = $('#imgDeletelist').val();
-	 	var newList = oldlist + imgDelList;
-		$('#imgDeletelist').val(newList);
-		var imgList = document.images;
-		var imgCount = imgList.length;
+var thisFSrc = $('#srcVal').val();
+var chkBx = $('#chkbx1');
+var messg = "";
+var localFpart = 'http://192.168.43.132/ibis/Data/Images/';//http://127.0.0.1/ibis/Data/Images/
+thisSrc = thisFSrc.replace(localFpart, "");
+if ($('#chkbx1').prop('checked')) {
+	var imgDelList = thisSrc + ":";
+ 	var oldlist = $('#imgDeletelist').val();
+ 	var newList = oldlist + imgDelList;
+	$('#imgDeletelist').val(newList);
+	var imgList = document.images;
+	var imgCount = imgList.length;
+	var Icounter = $('#imgCounter').val();
+	if(Icounter <= 1 ){
+		alert("cant delete only image");
+		return ;
+		}	
 		for (i = 0; i < imgCount; i++){
 			if (imgList[i].src == thisFSrc){
 				imgList[i].src = "";
 				imgList[i].title = "";
+				Icounter--;
+				$('#imgCounter').val(Icounter);
 		 	}
-		}
-	 }else {
+		} 
+	
+	
+  }else {
 	 var thisTag = $('#editTag').val(); // get the text inside the editTag input
 	 tagList += thisSrc + ":" + thisTag + "::"; // construct the list entry
 	 $('#editedtagslist').val(tagList); // add the entry to the editedtagslist
-		var imgList = document.images;
-		var imgCount = imgList.length;
-		for (i = 0; i < imgCount; i++){
-			if (imgList[i].src == thisFSrc){
+	 var imgList = document.images;
+	 var imgCount = imgList.length;
+	 for (i = 0; i < imgCount; i++){
+	 	if (imgList[i].src == thisFSrc){
 				 imgList[i].title = thisTag;
-		 	}
 		}
 	 }
+	}
 }
 function addTag(){
 	var tag = $('#mediatagsinput').val();

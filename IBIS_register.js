@@ -17,3 +17,7 @@ function submitRegistration(){
     document.registerForm.submit();
   }
 }
+////-> submit registration to server and receive results into floating dialog
+function handleSubmition(){
+
+} 
