@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <title>
+        Picture Compare
+        </title>
+        <script type="text/javascript" src="jquery-1.11.3.js"></script>
+        <script type="text/javascript" src="Gmain.js"></script>
+         <script type="text/javascript">
+	 	$(document).ready(function(){
+	 	 	$('#picture').change(handleFileSelect);
+	 	 	})
+	 	 	function getVal(){
+	 	 		var selection = $('#optSelect').val();
+	 	 		$('#imgTag').val(selection);
+	 	 	}
+	 	 	function submitThis(){
+	 	 		document.picCompareF.submit();
+	 	 	}
+	 	 	</script>
+	 	 	<link rel="stylesheet"
+        		type="text/css"
+       		 	href="/ibis/imgmatch.css"
+      		/>
+      		
+     </head>
+     <body>
+       <form  name="picCompareF" action="../cgi-bin/picCompare2.php3" method="POST" enctype="multipart/form-data">
+       <input type="file" name="picture" id="picture"/>
+       <select id="optSelect" onchange="getVal()">
+       	<option id="option1">animal</option>
+       	<option id="option2">mineral</option>
+       	<option id="option3">vegetable</option>
+       </select>
+       <div id="messBlock"><p>This facility is slow and relatively inaccurate</br>Use at own risk</p></div>
+       <input type="text" name="imgtag" id="imgTag" style="display:none" value="animal" />
+       <input type="button" value="submit" onclick="submitThis()">
+       <span id="imageSpan"></span>
+       
+       </form>
+     
+     </body>
+</html>

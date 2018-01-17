@@ -3,7 +3,7 @@
 function checkStorage(){
 	  if (sessionStorage.userRef) {
 	  $("#adminBlock").hide();
-	  var sesRef = sessionStorage.userRef.split(" : ");
+	  var sesRef = sessionStorage.userRef.split(" :: ");
 	   $("#adminBlock").html("<div id=\"welcBlock\" style=\"\>\
 	      	<div id=\"regholder\">\
 	    		<div id=\"regpic\"></div>\
@@ -40,5 +40,6 @@ function initForm() {
   starttime();
   picswaps();
   checkStorage();
+  initthisForm();
 }
 

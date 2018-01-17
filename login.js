@@ -6,12 +6,26 @@ function showLogin(){
 }
 
 function do_logout(){
+	var uID = sessionStorage.userRef.split("::");
+	var user = uID[0];
+	var inDate = uID[6];
+	//alert(inDate+" :"+user);
+
   $("#greetingDiv").text("");
+  
   $("#loginhead").css("display", "block");
   $("#logouthead").css("display", "none");
   $("#regPic").css("display","none");
  // $("#registerBlock").removeClass("locked").addClass("adminC");
  $("#adminBlock").hide();
+ $.ajax({
+		url : "../../cgi-bin/IBISLogout.php3",
+		type : "POST",
+		data : {name1 : user, name2 : inDate},
+		success : function(data){
+			alert("Goodbye" + uID[1] );
+		}
+	});
   $("#adminBlock").html("<div id=\"registerBlock\" class=\"littleDD linksclass adminC \">\
 			    <a href=\"IBISregistration.html\" class=\"littleDD linksclass\">Register as a contributer</a>\
 			  </div>\
@@ -41,8 +55,8 @@ function submitDetails(){
 	        showLogin();
 	      }
 	      else {
-	        var thedata = data.split(":");
-	        sessionStorage.userRef = thedata[0] + " : " + thedata[1] + " : " +thedata[2] + " : " + thedata[3] + " : " + thedata[4]+" : "+thedata[5];
+	        var thedata = data.split("::");
+	        sessionStorage.userRef = thedata[0] + " :: " + thedata[1] + " :: " +thedata[2] + " :: " + thedata[3] + " :: " + thedata[4]+" :: "+thedata[5]+" :: "+thedata[6];
 	        imgsrc = '<img id = "regPic" src="'+ thedata[5] + '" width="" height="" >';
 	        //alert(imgsrc);
 	        $("#greetingDiv").text("Hello " + thedata[1]);

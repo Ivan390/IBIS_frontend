@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+    <title>
+      I B I S - Lost & Found
+    </title>
+    <script type="text/javascript" src="jquery-1.11.3.js"> </script>
+    <script type="text/javascript" src="LnF.js"> </script>
+    <script type="text/javascript" src="main.js"> </script>
+    <script type="text/javascript" src="dateshorts.js"> </script>
+    <script type="text/javascript" src="picswap.js"> </script>
+    <link rel="stylesheet"
+        type="text/css"
+        href="IBIS_maincss.css"
+    />
+    <script type="text/javascript">
+    	function andThis(that){
+    		var theVal = that.value;
+    		alert(theVal);
+    	}
+    </script>
+
+    </head>
+    <body id="TheBody" onload="initForm()">
+      <div id="MainallContainer" class="bigDD ac">
+	    <div id="dateTime">
+	      <div id="dateBlock">The Date</div>
+	      <div id="timeBlock">The Time</div>       
+	    </div>
+	    <div id="logo_image_holder">
+	      <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
+	    </div>
+	    <div id="detail_fs_main" class="littleDD">
+	    	<div id="LostBlock"><span id="Lheading" class="headC">Lost</span><input type="button" class="selectB" value=Animals onclick="andThis(this)" /><input type="button" class="selectB" value=Minerals onclick="andThis(this)" /><input type="button" class="selectB" value=Vegetables onclick="andThis(this)" /></div>
+	    	<div id="FoundBlock"><span id="Fheading" class="headC">Found</span></div>
+	    
+	    </div>
+	 </div>
+	</body>
+</html>

@@ -187,3 +187,41 @@ function handleFileSelecting(that) {
 	reader.readAsDataURL(f);
   }
 }
+
+function getNames(that){
+	var thisName = that.title;
+	var catvalue = $('#catval').val();
+	var aname = thisName.split("\n");
+	var justName = aname[0];
+	var MetricD = aname[1];
+	var picSrc = that.src;
+	var theDetails = "";
+	if (catvalue == "animal" || catvalue == "vegetable"){
+		specLabel = "Species:";
+		genLabel = "Genus:";
+		comLabel = "Common Names:";
+	}
+	if (catvalue == "mineral"){
+		specLabel = "Group:";
+		genLabel = "Name:";
+		comLabel = "Chemical Formula:";
+	
+	}
+$.ajax({
+	url : "../../cgi-bin/IBISgetNames.php3",
+	type : "POST",
+	data : {name1:justName, name2: catvalue},
+	success : function(response){
+		//alert(response);
+		var responseL = response.split(":");
+		var gen = responseL[0];
+		var spec = responseL[1];
+		var Cnames = responseL[2];
+		theDetails = "<div id=\"detailsBlock\"><img src="+picSrc+" /></br><label class=\"labelC\">"+genLabel+" </label><label class=\"contentC\">"+gen+"</label></br><label class=\"labelC\">"+specLabel+" </label><label class=\"contentC\">"+spec+"</label></br><label class=\"labelC\">"+comLabel+" </label><label class=\"contentC\">"+Cnames+"</label></br><label class=\"labelC\">Metric: </label><label class=\"contentC\">"+MetricD+"</label></div>";
+	$('#listDiv').html(theDetails);
+	}
+	
+})
+
+
+}

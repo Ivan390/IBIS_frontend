@@ -10,11 +10,67 @@
 }
 
 #listDiv {
-position : absolute;
-  top : 85px;
+position : relative;
+  top : 5px;
   left : 400px;
   width : 500px;
   max-height: 300px;
   overflow-y : scroll;  
 }
 
+#imageSpan img {
+	position : relative;
+	width : 200px;
+	height : 200px;
+}
+.buttonclass {
+  position : relative;
+  top : 40px;
+  height: auto;
+  width : auto;
+  font-size : xx-large;
+}
+#imageSpan {
+  position absolute;
+  float : right;
+  margin : 15px;  
+}
+
+#imgDiv img {
+  position : relative;
+  width : 100px;
+  height : 100px;
+  
+}
+#imgDiv {
+  position : relative;
+  width : 110px;
+  max-height : 220px;
+  
+}
+#listDiv {
+  position : relative;
+  left : 10px;
+    
+  
+}
+.imgthumb {
+  width : 200px;
+  height : 200px;
+  
+}
+.labelC {
+  font-size : x-large;
+  
+  
+}
+.contentC {
+  position : relative;
+  font-size: large;
+ }
+#listDiv img {
+  position : relative;
+  width : 250px;
+  float : right;
+  
+}

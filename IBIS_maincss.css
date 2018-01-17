@@ -1013,3 +1013,35 @@ padding : 20px;
   top : -200px;
   
 }
+/*lostnFounf*/
+
+* #LostBlock {
+  position : relative;
+  border : 1px black solid;
+  width : 45%;
+  height : 60vh;
+  padding : 10px;
+  margin : 5px
+  
+}
+#FoundBlock {
+  position  : relative;
+  float : right;
+  width : 50%;
+  border : 1px black solid;
+  top : -64vh;
+  
+}
+.headC {
+  position : relative;
+  font-size : x-large;
+  text-decoration: underline;
+  left : 40%;
+  
+}
+.selectB {
+  position : relative;
+  top : 40px;
+  clear : right;
+  
+}

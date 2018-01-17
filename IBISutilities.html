@@ -52,6 +52,12 @@
 	    <li>
               <a href="IBISplantsRef.html">Plantae</a>
 	    </li>
+	    <li>
+              <a href="IBISLostnFound.html">Lost & Found</a>
+	    </li>
+	    <li>
+              <label id=piccomp onclick="loadPicCompDialog()" class="linksclass">Picture Find</label>
+	    </li>
 	  </ul>
 	</div>
       </div>
@@ -65,6 +71,13 @@
        }
       }
       checkStorage();
+      
+      function loadPicCompDialog(){
+     theUser = $("#userRef").val();
+	var picCompWin = open('IBISpiccompare.html', 'picCompWin', 'height=720, width=580, top=50px, left=100px, location=no');
+	
+
+      }
     </script>
    </div>
  </body>
