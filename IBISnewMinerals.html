@@ -6,9 +6,9 @@
             I B I S - Mineral Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
-        <script type="text/javascript" src="DD_rondies.js"></script>
-				<script type="text/javascript" src="dataInputFunctions.js"></script>
-				<script type="text/javascript" src="fileselect.js"></script>
+         <script type="text/javascript" src="dataInputFunctions.js"></script>
+        <script type="text/javascript" src="fileselect.js"></script>
+        <script type="text/javascript" src="dateshorts.js"> </script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -26,9 +26,7 @@
 	    }
 	 	})
 
-	  DD_roundies.addRule('.littleDD', 35);
-	  DD_roundies.addRule('.bigDD', 25);
-
+	
 	</script>
 
          <link rel="stylesheet"
@@ -37,8 +35,12 @@
              >
         
     </head>
-    <body name="VegInputBody" >
+    <body name="VegInputBody" onload="initForm(); shortRefCode()" >
       <div id="allContainer">
+      	<div id="dateTime">
+	 			<div id="dateBlock">The Date</div>
+	 			<div id="timeBlock">The Time</div>       
+	 		</div>
       	<div name="Heading">
 	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
             <p id="headingText">Mineral Input Form</p>
@@ -65,7 +67,9 @@
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Origin</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Characteristics</label></p>
 				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distribution</label></p>        
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distribution</label></p>
+				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="refLabel">Reference Title</label></p>
+				<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="pgLabel">Page Number</label></p>        
           </div> 
           <div id="outputBlock" class="bigDD outputblock">
             <p id="inputHeading">Enter Information</p>
@@ -84,6 +88,8 @@
 							<input type="text" id="Density" name="Mdensity" class="hiddentext">
 							<input type="text" id="Cleavage" name="Mcleavage" class="hiddentext">
 							<input type="text" id="Fracture" name="Mfracture" class="hiddentext">
+							<input type="text" id="refTit" name="reftit" class="hiddentext" value=""></input>
+					<input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
 							<textarea id="Streak" name="Mstreak" class="hiddentext"></textarea>
 							<textarea id="Lustre" name="Mlustre" class="hiddentext"></textarea>
 							<textarea id="Fluorescence" name="Mfluorescense" class="hiddentext"></textarea>
@@ -106,17 +112,63 @@
 	      		   
 	      		
            </div>
+           <div id="shortSrcBlock">
+				  		<input type="button" onclick=shortRefCode() value="Refresh Sources" />
+				  		<input type="button" value="Add it" onclick="doRest()" id="addButton" />
+				  		<input type="button" value="Add New Source" onclick="showSrcBlock()" id="srcButton" />
+				  		<div id="refContainer">
+				  		</div>
+				  	</div>
 	  			</fieldset>
 	 			
 	 			</form>
+	 			<div id="SrcBlock" class="hiddentext">
+			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">
+	    			<fieldset>
+	    				<span><label>Type</label>
+	    				<select name="type" id="type">
+	    					<option>Book</option>
+	    					<option>Web Page</option>
+	    					<option>Journal</option>
+	    					<option>Media</option>
+	    					<option>Other</option>
+	    				</select></span>
+	    				<span><label>Title</label>
+	    				<input type="text" id="Title" class="inputC" name="title" width="120" /></span>
+	    				<span><label>Publisher</label>
+	    				<input type="text" id="Publisher" class="inputC" name="publshr" width="100"/></span>
+	    				<span><label>Publish Date</label>
+	    				<input type="text" id="pubD" class="inputC" name="publDate" width="20"/></span>
+	    				<span><label>Place of publication</label>
+	    				<input type="text" id="pubAddrs"class="inputC" name="publAddr" width="150"/></span>
+	    				<span><label>ISBN</label>
+	    				<input type="text" id="isbn" class="inputC" name="ISBN" width="20"/></span>
+	    				<span><label>Author/s</label>
+	    				<input type="text" id="auth" class="inputC" name="author" width="100"/></span>
+	    				<span><label>Editor/s</label>
+	    				<input type="text" id="ed" class="inputC" name="editor" width="100"/></span>
+	    				<span><label>Web Page url</label>
+	    				<input type="text" id="urlA" class="inputC" name="pgNumber" width="50"/></span>
+	    				<input type="text" id="contrib" class="hiddentext" id="contrib_ID"  name="contributer" width="50"/>
+	    				
+	    			</fieldset>
+	    			</form>
+	    			<input type="button" value="Submit" class="buttonC" onclick="srcSubmit()"/>
+	    			<input type="button" value="Dismiss" class="buttonC" onclick="closeThis()" />
+			 	</div>
 	 			
 	 			<div id="messageDiv"></div>
-  </div>
-       
-
-        
-        </div>
-        
-        
-    </body>
+	 			<div id="infoDiv"> </div>
+	 		<div id="dupDialog"></div>
+	 		
+	 		<div id="pgDialog" style="display : none;">
+				<label>Enter page number</label></br>
+				<input type="text" id="pgNum" /></br>
+				<input type="button" value="Add it to the form" onclick="addtToForm()" id="addButt"/>
+				<input type="button" id="clButton" value="Dismiss" onclick="closePgDialog()" />
+				<input type="text" id="tit" value=""  class="hiddentext"/>
+			</div>
+  		</div>
+    </div>
+ </body>
 </html>

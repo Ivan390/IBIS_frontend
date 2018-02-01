@@ -1,0 +1,1112 @@
+#MainallContainer {
+	position : absolute;
+	width : 85vw;
+	height : 90vh;
+	background-color : beige;
+	margin : 2px;
+	left : 0px;
+}
+#logo_image_holder {
+	position : relative;
+	width : auto;
+	left : 0px;
+}
+#compContainer #logo_image {
+	position : relative;
+	left : 85%;
+	width : 60%;
+	height :auto;
+	top : -5px;
+	height: auto;
+}
+#FindInfo {
+	position : relative;
+	width : 50%;
+	max-height : 250px;
+	overflow : auto;
+	top : 25px;
+
+}
+
+#FindInfo img {
+	position : relative;
+	width : 35%;
+	float : left;
+	margin : 0px;
+	padding : 0px;
+	
+}
+#FindInfo > h2 {
+	
+	display : none;
+	
+}
+#FindInfo .findHeading {
+	font-size : small;
+	left : -15px;
+	margin : 2px
+}
+.findOption:hover .contextHelp{
+	display : none;
+	
+}
+#welcBlock {
+	position : relative;
+	width : 93%;
+	left : 0px;
+	height : 10vh;
+	padding : 5px;
+}
+#greetingDiv{
+	position : relative;
+	top : -20px;
+	margin : 5px;
+}
+#welcBlock a{
+	position : relative;
+	top : -30px;
+	
+}
+#registerBlock {
+	position : relative;
+	width : 90%;
+	left : 0px;
+	font-size : smaller;
+	}
+#guestBook {
+		position : relative;
+	width : 90%;
+	left : 0px;
+	font-size : smaller;
+}
+#MainallContainer #dateTime {
+	top : -10px;
+	width : 60%;
+	left : -45%;
+}
+
+#welcBlock img {
+	display : none;
+}
+#MainallContainer #detail_fs_main {
+	position : relative;
+	top : -90px;
+	height : 350px;
+	overflow : auto;
+	
+}
+#LinkList {
+	position:relative;
+	height : 200px;
+	overflow : auto;
+	width : 100px;
+	left : 0px;
+	z-index : 5;
+}
+#LinkList p {
+	font-size : large;
+}
+#LinkList li {
+	position : relative;
+	left : -20px;
+	font-size : small;
+}
+#loginLink {
+	position : absolute;
+	left : 10%;
+	font-size : smaller;
+	top : 70px;
+	
+}
+
+#DidYouKnow {
+	display : none;
+	
+}
+/*start index style*/
+
+#SFallContainer {
+	position : relative;
+	width : 95vw;
+	height : 100vh;
+	background-color : beige;
+	margin : 2px;
+	left : 5px;
+}
+#SFallContainer #logo_image_holder {
+	position : relative;
+	left : 100px;
+}
+#SFallContainer #dateTime {
+	top : -20px;
+	width : 60%;
+	left : -40%;
+	top: -2px;
+}
+
+#SFallContainer #catHeading {
+	font-size : x-large;
+	top : 60px;
+}
+#Ghead {
+	font-size : x-large;
+	
+}
+.Gselect {
+	padding : 0.25px;
+	font-size : smaller;
+	
+}
+#GBlock {
+	position : relative;
+	left : -35px;
+	width : 100%;
+	top : -15px;
+	
+	
+}
+#findOptions {
+	position :relative;
+	left : -10px
+	
+}
+#SFallContainer #subContain {
+	position : relative;
+	height : 60%;
+	width : 90%;
+	left : 0px;
+	top : 0px;
+	
+}
+#infoSet {
+	position : relative;
+	width : 68%;
+	left : -8px;
+	max-height : 130px;
+	overflow : auto;
+}
+#SFallContainer .selectList  {
+    position: relative;
+    height: auto;
+    min-width: 90px;
+    margin: 1px;
+    font-size: smaller;
+    padding: 1px;
+
+}
+#DDL1Veg {
+	position : relative;
+	
+}
+#DDL2 {
+	position : relative;
+	left : 100px;
+	width : 120px;
+	
+}
+#DDL3dd {
+	position : relative;
+	top : 10px;
+	left : -2%;
+}
+#ddl3Txt {
+	position : relative;
+	top : 15px;
+	left : -6px;
+}
+#op2btSpan {
+	position : absolute;
+	top : 110px;
+	left : -12%;
+	max-width : 40%;
+	height : 30px;
+	font-size : small;
+	float : left;
+}
+#option2btn {
+	position : absolute;
+	width : 90px;
+	top : -0px;
+	
+}
+#opt3btSpan {
+	position : absolute;
+	top : 60px;
+	left : -70%;
+	width : 30%;
+	height : 30px;
+	font-size : small
+}
+#SFallContainer #catPicsList {
+    position: relative;
+    width: ;
+    height: auto;
+    top: 0%;
+    max-height: 350px;
+}
+#DDL1Min {
+	position : relative;
+	width : 40px;
+	
+}
+#SFallContainer #theCategory {
+    position: relative;
+    padding: 1px;
+    max-width: 20%;
+	 width : auto;
+    border-style: dashed;
+    border-width: 1px;
+    max-height: 200px;
+    margin-right: 1px;
+    float: right;
+    overflow-y: scroll;
+    top: 0px;
+    left: -3%;
+}
+#catPicsList img {
+	width : 60%;
+	height : 40%;
+	z-index : 7;
+}
+#speciePic {
+	position : relative;
+	width : 40%
+}
+#speciePic img {
+	width : 99%;
+	height : 35%
+	
+}
+#Ghead {
+	font-size : larger;
+	
+}
+#retBlock {
+    position: absolute;
+    border: 1px black solid;
+    width: 68%;
+    display: block;
+    top: 35%;
+   max-height: 40%;
+    background-color: rgba(52,34,14,80);
+    color: aliceblue;
+    overflow: auto;
+    left: 40%;
+	font-size : small;
+}
+.Gbutton {
+    position: relative;
+    font-size: x-larger;
+    left: 45%;
+    padding-bottom: 1px;
+    color: blue;
+    cursor: pointer;
+    width: 180px;
+    top: 40px;
+}
+#defBlock {
+	position : absolute;
+	max-width :670px;
+	left : 10%;
+}
+	
+#closeInfo {
+	position : absolute;
+	left : 60%;
+	top : 80px;
+}
+
+/*start getDetails*/
+#DETallContainer {
+	position : relative;
+	width : 128vw;
+	height : 160vh;
+	background-color : beige;
+	margin : 2px;
+	left : 5px;
+}
+#DETallContainer #dateTime {
+	position : relative;
+	left :-70%;
+	top : -10px;
+}
+#DETallContainer #logo_image {
+	position : relative;
+	left : -0%;
+	top : -20px;
+}
+#DETallContainer #imgGrid {
+    position: absolute;
+    max-width: 140px;
+    max-height: 310px;
+    top: 5%;
+    left: 80%;
+    overflow: auto;
+    margin-right: 2px;
+}
+#DETallContainer #imgGrid img {
+	position : relative;
+	width : 80%;
+	height : 90%;
+	
+}
+#DETallContainer #pgButtons {
+	position : relative;
+	top : -40px;
+	
+}
+#DETallContainer #detail_fs {
+	position : relative;
+	width : 95%;
+	left : 0px;
+	top : -50px;
+}
+#DETallContainer #catHeading {
+	font-size : xx-large;
+	
+}
+#DETallContainer #detail_fs .itemC {
+	position : relative;
+	border : none;
+	margin : 0px;
+	padding : 1px;
+	width : 80%
+	
+}
+ #DETallContainer #otherDetails {
+    position: relative;
+    width: 45%;
+    border-radius: 5px;
+    padding: 2px;
+    margin-top: 10px;
+    overflow: auto;
+    max-height: 140px;
+	top : 0px;
+}
+#otherDetails .oDC .labelClass  {
+	position : relative;
+	text-decoration: none;
+		font-size :  large;
+	padding : 1px;
+	width : 10%;
+float : left;
+	clear : both;
+	width : 80%
+}
+#oDDOutput {
+    position: relative;
+    border: 1px black dashed;
+    border-radius: 12px;
+    padding: 10px;
+    max-height: 120px;
+    max-width: 45%;
+    overflow: auto;
+    left: 50%;
+    padding-top: 5px;
+	top : -140px;
+}
+#viewsBlock {
+    position: relative;
+    border: black 1px solid;
+    border-radius: 20px;
+    padding: 5px;
+    width: 95%;
+    font-size: large;
+    top: -60px;
+    left: 8px;
+	margin-right : 5px;
+}
+#ratebut {
+    position: relative;
+    border: black 1px solid;
+    border-radius: 20px;
+    width: 97%;
+    min-width: 250px;
+    height: auto;
+    top: -58px;
+    left: 2%;
+    font-size: large;
+    text-decoration: underline;
+    background-color: yellow;
+}
+#ratingsBlock {
+    position: relative;
+    border: black 1px solid;
+	background-color: yellow;
+    border-radius: 20px;
+    width: 80%;
+    min-width: 300px;
+    height: 60px;
+    top: -40px;
+    left: 0%;
+    display: none;
+    overflow: auto;
+    padding: 30px;
+    padding-right: 0px;
+}
+/*start guestbook*/
+
+#allContainer {
+	position : relative;
+	width : 100vw;
+	height : 95vh;
+	background-color : beige;
+	margin : 2px;
+	left : 5px;
+}
+#allContainer #dateTime {
+	position : relative;
+	top : -20px;
+	width : 50%;
+	left : 58%;
+}
+
+#allContainer #logo_image_holder {
+	position : relative;
+	left : 20%;
+	width : 60%;
+}
+#gTitle {
+    position: relative;
+    top: -95px;
+    font-size: x-large;
+    left: 25%;
+    z-index: 4;
+    color: black;
+}
+#pgButtons {
+	position : relative;
+	top : 12px;
+}
+#pgButtons input {
+	border-radius : 10px;
+	margin : 1px;
+}
+#pgButtons a {
+	border-radius : 10px;
+}
+#allContainer #detail_fs {
+    position: relative;
+    width: 50%;
+    color: black;
+    height: 500px;
+    border: 1px black inset;
+    height: auto;
+    margin: 5px;
+	top : 0px;
+	left : 10px;
+}
+#allContainer #detail_fs input {
+	position : relative;
+	width : 80%;
+	
+}
+#allContainer #detail_fs textarea {
+	position : relative;
+	width : 80%;
+	
+}
+#guestImages {
+    position: absolute;
+    top: 102%;
+    height: 220px;
+    width: 20%;
+    padding: 1px;
+    padding-bottom: 2px;
+    overflow: auto;
+    border-style: dashed;
+    border-width: 3px;
+    height: 125px;
+    font-size: 15px;
+}
+#allContainer .thumbpic {
+	width : 100%;
+
+}
+#pictures {
+	width : 150px;
+	
+}
+#GuestPic {
+    position: absolute;
+    left: 105%;
+    top: 65%;
+    height: auto;
+	width : 50%;
+}
+/*start Registration*/
+
+#REGallContainer {
+	position : relative;
+	width : 100vw;
+	height : 100vh;
+	background-color : beige;
+	margin : 2px;
+	left : 5px;
+	
+}
+#REGallContainer #dateTime {
+	position : relative;
+	top : -20px;
+	width : 50%;
+	left : 8%;
+}
+#REGallContainer #logo_image_holder {
+	position : relative;
+	left : 20%;
+	width : 120%;
+}
+#pgButtons {
+	position : relative;
+	top : 10px;
+}
+
+#pgButtons input {
+	border-radius : 10px;
+	margin : 1px;
+	font-size : large;
+}
+#pgButtons a {
+	border-radius : 10px;
+	font-size : large;
+}
+#REGallContainer #detail_fs {
+    position: relative;
+    height: 70%;
+    border-style: outset;
+    padding: 2px;
+    width: 90%;
+	 top : 0px;
+}
+#REGallContainer #detail_fs label {
+	font-size : small;
+	
+}
+#REGallContainer .inputClass {
+    position: relative;
+clear :right;
+	width: 40%;
+    font-size: large;
+    left: -%;
+    margin: 2px;
+    top: -25px;
+    padding: 1px;
+	
+}
+#personalDetails {
+	position : relative;
+    width: 70%;
+     padding: 5px;
+}
+#REGallContainer #detail_fs #regPic {
+	position : relative;
+	float : left;
+	top : -0px;
+	font-size : small;
+	width : 50%;
+}
+#securityInfo label {
+	display : none;
+	
+}
+#securityInfo #secA {
+	position : relative;
+	left : -%;
+	width : 90%;
+	top : 10px;
+}
+#securityInfo #secQ {
+	position : relative;
+	left : -45%;
+	width : 100%;
+	font-size : smaller;
+	height : 20px;
+	padding : 0px;
+	top : 10px
+}
+#imgDisplay {
+    position: absolute;
+    top: 1px;
+    left: 74%;
+    width: 23%;
+    border: orange 1px dashed;
+    padding: 1px;
+    text-align: center;
+}
+#imgDisplay img {
+	width : 85%;
+	height : 85%;
+	
+}
+/*start Utilities page style*/
+
+#AdminList {
+    position: relative;
+    width: 50%;
+    border-color: green;
+	border-radius : 15px;
+	padding : 2px;
+	height : 160px;
+	
+}
+#AdminList li {
+	position : relative;
+	list-style : none;
+	left : -30px;
+	width : 100%;
+	overflow : auto;
+}
+#AdminList h3 {
+	position : relative;
+	font-size : large;
+	text-decoration: underline;
+	left : 6px;
+}
+#detail_fs {
+    position: relative;
+    width: 105%;
+	left : -8%;
+	border-radius : 20px;
+    color: black;
+    max-height: 500px;
+    border: 1px black inset;
+    margin: 10px;
+    top: -100px;
+	padding : 2px;
+	height : 190px;
+}
+#controlP {
+	position : relative;
+	top : -100px;
+	
+}
+#listsList {
+    position: relative;
+    width: 45%;
+	border-radius : 15px;
+}
+#listsList li {
+	position : relative;
+	list-style: none;
+	left : -28px;
+	
+}
+#listsList li ul {
+	position : relative;
+	list-style: none;
+	left : 28px;
+	
+}
+#listsList li ul ul li {
+	position : relative;
+	list-style: none;
+	left : -23px;
+	font-size : small;
+	width : 100%;
+		
+}
+/*start compare page styles*/
+
+#compContainer {
+	position : absolute;
+	width : 85vw;
+	height : 90vh;
+	background-color : beige;
+	margin : 2px;
+	left : 0px;
+}
+#compSub {
+	position : relative;
+	top : -100px;
+	height : 250px;
+	overflow : auto;
+	width : 90%;
+	left : -8px;
+	
+}
+ #compContainer #dateTime {
+	top : -20px;
+	width : 50%;
+	left : -50%;
+}
+#logo_image_holder {
+	position : relative;
+	width : 90%;
+	left : -100px;
+}
+#MainallContainer #logo_image {
+	position : relative;
+	left : 70%;
+	width : 90%;
+	height : 70%;
+	
+	top: 1px;
+}
+#picHeading {
+	position : absolute;
+	top : 70px;
+	left : 30%;
+	font-size : x-large;
+	width : 60%;
+	
+}
+#buttons {
+	position : relative;
+	top : -30px;
+	
+}
+#buttons a {
+	position : relative;
+	margin : 10px;
+	
+}
+#picture {
+	position : relative;
+	width : 60%;
+	float : left;
+}
+#optSelect {
+	position : relative;
+	float : right;
+	
+}
+
+#messBlock {
+	position : relative;
+	float : left;
+	font-size : large;
+}
+
+#imageSpan  img{
+	position : absolute;
+	left : 60%;
+	width : 40%;
+	height : 50%;
+	top : 40%;
+}
+#submitB {
+	position : absolute;
+	top : 80%;
+	left : 10%;
+	font-size : x-large;
+	
+}
+/*image match return set style*/
+
+#Retcontainer {
+		position : absolute;
+	width : 85vw;
+	height : 90vh;
+	background-color : beige;
+	margin : 2px;
+	left : 0px;
+	border : 1px black solid;
+	border-radius : 20px;
+	padding : 10px;
+		
+
+} 
+#OimageDiv {
+	position : relative;
+	border : none;
+}
+
+#OimageDiv img {
+	position : relative;
+	width : 40%;
+	
+}
+#Retcontainer #logo_image {
+	position : relative;
+	top : 5px;
+	left : 80%;
+	width : 60%;
+	height : 50%
+	
+}
+#Retcontainer #dateTime {
+	top :0px;
+}
+#Retcontainer #dateTime {
+	position : relative;
+	width : 50%;
+	left : -50%;
+}
+#Retcontainer #subContainer {
+	position : relative;
+	border : 1px black solid;
+	border-radius : 15px;
+	top : -15%;
+	height : 70%;
+		padding : 5px;
+}
+#Retcontainer #subContainer input {
+	position : relative;
+	top : -130px;
+	
+	font-size: x-large;
+}
+#Retcontainer #imgDiv  {
+  position : relative;
+  width : 40%;
+	max-height : 250px;
+		top : -105px;
+	border : none;
+	left : 13%;
+	
+}
+#Retcontainer #imgDiv img {
+  position : relative;
+	width : 80%;
+	height : 40%;
+}
+#listDiv   {
+	position : absolute;
+	width : 60%;
+	left : 1%;
+	max-height : 60%;
+	top : 35%;
+	overflow : auto;
+	
+}
+#buttons label{
+	position : relative;
+	top : -14%;
+	cursor : pointer;
+	font-size : large;
+	text-decoration : underline;
+}
+#buttons a {
+	position : relative;
+	top : -14%;
+	font-size : large;
+	left : 10px;
+	
+}
+
+#listDiv img {
+	position : relative;
+	width : 40%;
+		height : 40%;
+	
+}
+/* lost n Found section*/
+
+#LnFallContainer {
+  position : relative;
+  width : 95vw;
+  height : 100vh;
+  padding : 10px;
+  border-style: inset;
+   border-radius: 22px;
+  background-color : beige;
+}
+
+
+#LnFallContainer #detail_fs_main {
+  position : relative;
+  height : 80%;
+  border-style: outset;
+  width : 90%;
+	margin : 5px;
+  overflow : auto;
+	top : -5%;
+	border-radius : 15px;
+}
+#pgButtonslnf {
+	position : relative;
+	font-size : large;
+	top : -5%;
+	
+}
+#LnFallContainer #logo_image_holder {
+	position : relative;
+	left : -20%;
+	top : -7%
+}
+#animBut {
+	position : relative;
+	left : -23%;
+	top : 8%;
+}
+#vegBut{
+	position : relative;
+	top : -0%;
+	left : 50%;
+	
+}
+#LnFallContainer #dateTime {
+	position : relative;
+	left : 60%;
+	top : 0%;
+}
+.selectB {
+	position : relative;
+	width : 50%;
+	left : -50px;
+	
+}
+#LostBlock {
+	position : absolute;
+	width : 80%;
+	height : 80%;
+	z-index : 4;
+	background-color : burlywood;
+	overflow : scroll
+}
+#messDiv {
+	position : relative;
+	top : 4%;
+}
+
+.messSpan {
+	position : relative;
+	width : 4%;
+	white-space :unset ;
+	top : 0%;
+}
+
+#LostBlock #messDiv ul li {
+	position : relative;
+	left : -10%;
+	max-width : 80%;
+	padding-top : 5px;
+}
+
+
+#FoundBlock {
+	position : absolute;
+	width : 85%;
+	height : 85%;
+	background-color : blue;
+	z-index : 3;
+	top : 35px;
+left : 30px;	
+	padding : 5px;
+}
+#Fheading {
+	position : relative;
+	top : 90%;
+	left : 75%
+	
+}
+#Lheading {
+	position : relative;
+	top : -3%;
+	left : 0%;
+}
+.italic {
+	font-style : italic;
+}
+
+/*Sources page styles*/
+
+#SrcallContainer {
+ position : relative;
+  width : 95vw;
+  height : 100vh;
+  padding : 10px;
+  border-style: inset;
+   border-radius: 22px;
+  background-color : beige;
+}
+
+#src_fs_main {
+  position : relative;
+  height : 90%;
+  border-style: outset;
+  width : 90%;
+	margin : 5px;
+  overflow : auto;
+	top : -5%;
+	border-radius : 15px;
+}
+#SrcallContainer #dateTime {
+  	position : relative;
+	left : 60%;
+	top : 0%;
+}
+
+#SrcallContainer #logo_image_holder{
+    position : relative;
+	left : -20%;
+	top : -7%
+}
+
+
+#SrcallContainer #logo_image {
+  height : 60%;
+  width : 40%;
+  z-index : 6;
+}
+#pgHead {
+  position : relative;
+  top : -60px;
+  left : 40%;
+  font-size : x-large;
+  text-decoration: underline;
+  
+}
+#src_fs_main span {
+  position : relative;
+  float : left;
+	clear : both;
+  font-size : x-large;
+  width : 70%;
+  margin : 5px;
+}
+#src_fs_main input {
+  position : relative;
+  left : 0%;
+  float : left;
+  
+}
+#src_fs_main label {
+  position: relative;
+  left : 0px;
+	width : 80%;
+ } 
+#src_fs_main select {
+  ition : relative;
+  float : right;
+  width : 45%;
+  height : 40px;
+  
+}
+#src_fs_main select option {
+  position : relative;
+  font-size : x-large;
+  
+}
+#src_fs_main .buttonC {
+  position : relative;
+  float : left;
+  width : 15%;
+  height : 50px;
+  font-size : xx-large;
+  
+}
+#SrcallContainer .linkC {
+  position : relative;
+  font-size : x-large;
+  top : -50px;
+  left : 50px;
+
+}
+#retHeading {
+  position : relative;
+  top : -115px;
+  left : 20%;
+  font-size : x-large;
+  text-decoration : underline;
+  
+}
+#utilHeading {
+  position : relative;
+  top : -120px;
+  left : 25%;
+  font-size : x-large;
+  text-decoration : underline;
+  
+  
+}

@@ -2,6 +2,7 @@
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
     <title>
       I B I S - Lost & Found
     </title>
@@ -14,16 +15,33 @@
         type="text/css"
         href="IBIS_maincss.css"
     />
+    <link rel="stylesheet" 
+    	type="text/css" 
+    	media="only screen and (max-width: 580px)" 
+    	href="smallerDevice.css" />
     <script type="text/javascript">
-    	function andThis(that){
-    		var theVal = that.value;
-    		alert(theVal);
-    	}
-    </script>
+    
+	$(document).ready(function(){
+     
+	  if (sessionStorage.userRef){
+             sessVar = sessionStorage.userRef;
+	     sesA = sessVar.split(":");
+	      conID = sesA[0];
+	      $('#contrib_ID').val(conID);
+	  }else {
+	    alert("You should really not be on this page!")
+	    document.location = "IBISmain.html";
+	  }
+        }) 
+        function goback(){
+        	document.location = "http://192.168.43.132/ibis/IBISutilities.html";
+        }
+       
+        </script>
 
     </head>
     <body id="TheBody" onload="initForm()">
-      <div id="MainallContainer" class="bigDD ac">
+      <div id="LnFallContainer" class="bigDD ac">
 	    <div id="dateTime">
 	      <div id="dateBlock">The Date</div>
 	      <div id="timeBlock">The Time</div>       
@@ -31,11 +49,41 @@
 	    <div id="logo_image_holder">
 	      <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
 	    </div>
+	   <div id="pgButtonslnf" class="littleDD">
+        	<a href="IBISmain.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
+         </div>
 	    <div id="detail_fs_main" class="littleDD">
-	    	<div id="LostBlock"><span id="Lheading" class="headC">Lost</span><input type="button" class="selectB" value=Animals onclick="andThis(this)" /><input type="button" class="selectB" value=Minerals onclick="andThis(this)" /><input type="button" class="selectB" value=Vegetables onclick="andThis(this)" /></div>
-	    	<div id="FoundBlock"><span id="Fheading" class="headC">Found</span></div>
-	    
+	    <div><span id="errDiv"></span></div>
+	    	<div id="LostBlock" onclick="moveUp(this)">
+	    		<span id="Lheading" class="headC" >
+	    			Lost
+	    		</span>
+	    		<input type="button" id="animBut" class="selectB" value=Animals onclick="andThis(this)" />
+	    		<input type="button" id="vegBut"  class="selectB" value=Vegetables onclick="andThis(this)" />
+	    		<div id="messDiv">
+	    			<span class="messSpan"> Clicking one of the buttons presents a list of data entries that can not be displayed in the index because of deficient information. Click on an entry to edit it, you must at least add a picture to make the entry available in the index </span>
+	    		</div>
+	    		<form name="lnfForm" action="../../cgi-bin/IBISlnfCollect.php3" method="POST" enctype="multipart/form-data">
+					<input type="text" id="catVal" name="name1" class="hiddentext" value=""/>
+					<input type="text" id="recID" name="name2" class="hiddentext" value=""/>
+					<input type="text" id="gen" name="name3" class="hiddentext" value=""/>
+					<input type="text" id="spec" name="name4" class="hiddentext" value=""/>
+					<input type="text" id="Cnames" name="name5" class="hiddentext" value=""/>
+	    		</form>
+	    	</div>
+	    	<div id="FoundBlock" onclick="moveUp(this)">
+	    		<span id="Fheading" class="headC" >
+	    			Found
+	    		</span>
+	    		<span class="messSpan"> This is where all the unmatched images end up. If you know any of these, click on it to enter it as a new data entry </span>
+	    	</div>
+	     	<div id="buttons">
+			 	<span onclick="goback()">
+			 		&lt--
+			 	</span>
+	     	</div>
 	    </div>
 	 </div>
 	</body>
 </html>
+<!--<input type="button" class="selectB" value=Minerals onclick="andThis(this)" /> --not implemented yet

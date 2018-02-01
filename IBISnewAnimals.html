@@ -6,120 +6,169 @@
             I B I S - Animal Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
-        <script type="text/javascript" src="main.js"> </script>
+         <script type="text/javascript" src="dataInputFunctions.js"></script>
         <script type="text/javascript" src="fileselect.js"></script>
         <script type="text/javascript" src="dateshorts.js"> </script>
-        <script type="text/javascript" src="dataInputFunctions.js"></script>	
+       	
 	<script type="text/javascript">
 	$(document).ready(function(){
           $('#mediaPic').change(handleFileSelect);	
 	  if (sessionStorage.userRef){
              sessVar = sessionStorage.userRef;
-	     sesA = sessVar.split(":");
-	      conID = sesA[0];
+
+	     sesA = sessVar.split("::");
+	      conID = sesA[3];
 	      $('#contrib_ID').val(conID);
 	  }else {
 	    alert("You should really not be on this page!")
 	    document.location = "IBISmain.html";
 	  }
         }) 
-	 
+       
+	 	
        </script>
 	<link rel="stylesheet"
         type="text/css"
         href="DataInput.css"
-  >
+ 	 >
     </head>
-    <body name="AnimInputBody" id="TheBody" onload="initForm()">
-      
-      <div id="allContainer">
-      	<div id="lookupdiv" ></div>
-	<div id="dateTime">
-	 <div id="dateBlock">The Date</div>
-	 <div id="timeBlock">The Time</div>       
-	 </div>
-        <div id="Heading">
-	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
-            <p id="headingText">Animal Input Form</p>
-        </div>
-        
-        <div id="pgButtonsAnim" class="littleDD">
-        	<input type="button" value="Submit Data" class="buttonclassAI littleDD" onclick="doSubmit()">   
-         <a href="IBISmain.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
-        <input type="button" id="lookupList" class="buttonclassAI littleDD" onclick="loadList()" value="Load Lookup List" />
-        <input type="button" id="lookupHide" class="buttonclassAI littleDD" onclick="hideList()" value="Hide Lookup List"  />
-        </div>
-  
-        <div id="detail_fs_min" class="littleDD" ">
-          <div id="headinglist" class="littleDD">
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subPhylum</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Class</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subClass</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Order</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subOrder</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Family</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subFamily</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Genus</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subGenus</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Species</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subSpecies</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Common_Names</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name_Notes</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Description</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Ecology</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distrib_Notes</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habits</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Status</label></p>
-          </div> 
-          
-          <div id="outputBlock" class="bigDD outputblock">
-            <p id="inputHeading">Enter Information</p>
-            <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
-            <a id="sendeditButton" class="buttonclassAI littleDD" onclick="sendedit()" >Send</a>
-         </div> 
-           <div id="messageDiv"></div>     
-        <form  name="AnimForm" action="../../cgi-bin/IBISnewAnimals.php3" method="POST" enctype="multipart/form-data" class="">
+    <body name="AnimInputBody" id="TheBody" onload="initForm(); shortRefCode()">
+      	<div id="allContainer">
+      		<div id="lookupdiv" ></div>
+			<div id="dateTime">
+	 			<div id="dateBlock">The Date</div>
+	 			<div id="timeBlock">The Time</div>       
+	 		</div>
+        	<div id="Heading">
+	        	<img id="logo_image" src="./images/Logo1_fullsizetransp.png">
+            	<p id="headingText">Animal Input Form</p>
+        	</div>
+        	<div id="pgButtonsAnim" class="littleDD">
+		    	<input type="button" value="Submit Data" class="buttonclassAI littleDD" onclick="doSubmit()">   
+		     	<a href="IBISmain.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
+		    	<input type="button" id="lookupList" class="buttonclassAI littleDD" onclick="loadList()" value="Load Lookup List" />
+		    	<input type="button" id="lookupHide" class="buttonclassAI littleDD" onclick="hideList()" value="Hide Lookup List"  />
+        	</div>
+        	<div id="detail_fs_min" class="littleDD" ">
+          	<div id="headinglist" class="littleDD">
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subPhylum</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Class</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subClass</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Order</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subOrder</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Family</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subFamily</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Genus</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subGenus</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Species</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subSpecies</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Common_Names</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name_Notes</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Description</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Ecology</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distrib_Notes</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habits</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Status</label></p>
+		        <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="refLabel">Reference Title</label></p>
+				<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="pgLabel">Page Number</label></p>
+          	</div> 
+          	<div id="outputBlock" class="bigDD outputblock">
+		        <p id="inputHeading">Enter Information</p>
+		        <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
+		        <a id="sendeditButton" class="buttonclassAI littleDD" onclick="sendedit()" >Send</a>
+         	</div> 
+           	<div id="messageDiv"></div>     
+        	<form  name="AnimForm" action="../../cgi-bin/IBISnewAnimals.php3" method="POST" enctype="multipart/form-data" class="">
 	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" id = "Kingdom" name="Akingdom" value="Animalia" class="hiddentext"></input>
 				    <input type="text" id="Phylum" name="Aphylum" class="hiddentext"></input>
 				    <input type="text" id="subPhylum" name="AsubPhylum" class="hiddentext"></input>
 				    <input type="text" id="Class" name="Aclass" class="hiddentext"></input>
 				    <input type="text" id="subClass" name="AsubClass" class="hiddentext"></input>
-						<input type="text" id="Order" name="Aorder" class="hiddentext"></input>
-						<input type="text" id="subOrder" name="subOrder" class="hiddentext"></input>
-						<input type="text" id="Family" name="Afamily" class="hiddentext"></input>
-						<input type="text" id="subFamily" name="subFamily" class="hiddentext"></input>
-						<input type="text" id="Genus" name="Agenus" class="hiddentext"></input>
-						<input type="text" id="subGenus" name="subGenus" class="hiddentext"></input>
-						<input type="text" id="Species" name="Aspecies" class="hiddentext" change="checkDuplicate()"></input>
-						<input type="text" id="subSpecies" name="subSpecies" class="hiddentext"></input>
-						<input type="text" id="Common_Names" name="Acommon_Names" class="hiddentext"></input>
-						<textarea id="Name_Notes" name="Aname_Notes" class="hiddentext"></textarea>
-						<textarea id="Status" name="status" class="hiddentext"></textarea>
-						<textarea id="Description" name="Adescription" class="hiddentext"></textarea>
-						<textarea id="Ecology" name="Aecology" class="hiddentext"></textarea>
-						<textarea id="Habits" name="Ahabits" class="hiddentext"></textarea>
-						<textarea id="Distrib_Notes" name="Adistrib_Notes" class="hiddentext"></textarea>
-					  <textarea id="Image_Tags" name = "Aimg_Tags" class="hiddentext"></textarea>
-						<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext">
-						<input type="text" name="thecat" value="Animals" id="thecatid" class="hiddentext" />
-						<div id="images" class="littleDD">
-          		<p class="labelclass">Add Media</p>
-	      			<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
-	      		</div>
-	      		<div id="tagslist"></div>
-	      		<div id="imgDisplay" class="littleDD"></div>
-	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 	
-	  			</fieldset>
-	 			</form>
-	 				
-	 				<div id="infoDiv"> </div>
-	 					
-	 			
-	 		
+					<input type="text" id="Order" name="Aorder" class="hiddentext"></input>
+					<input type="text" id="subOrder" name="subOrder" class="hiddentext"></input>
+					<input type="text" id="Family" name="Afamily" class="hiddentext"></input>
+					<input type="text" id="subFamily" name="subFamily" class="hiddentext"></input>
+					<input type="text" id="Genus" name="Agenus" class="hiddentext"></input>
+					<input type="text" id="subGenus" name="subGenus" class="hiddentext"></input>
+					<input type="text" id="Species" name="Aspecies" class="hiddentext" change="checkDuplicate()"></input>
+					<input type="text" id="subSpecies" name="subSpecies" class="hiddentext"></input>
+					<input type="text" id="Common_Names" name="Acommon_Names" class="hiddentext"></input>
+					<input type="text" id="refTit" name="reftit" class="hiddentext" value=""></input>
+					<input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
+					<textarea id="Name_Notes" name="Aname_Notes" class="hiddentext"></textarea>
+					<textarea id="Status" name="status" class="hiddentext"></textarea>
+					<textarea id="Description" name="Adescription" class="hiddentext"></textarea>
+					<textarea id="Ecology" name="Aecology" class="hiddentext"></textarea>
+					<textarea id="Habits" name="Ahabits" class="hiddentext"></textarea>
+					<textarea id="Distrib_Notes" name="Adistrib_Notes" class="hiddentext"></textarea>
+					<textarea id="Image_Tags" name = "Aimg_Tags" class="hiddentext"></textarea>
+					<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" value="">
+					<input type="text" name="thecat" value="Animals" id="thecatid" class="hiddentext" />
+					<div id="images" class="littleDD">
+          				<p class="labelclass">Add Media</p>
+	      				<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
+	      			</div>
+				  	<div id="tagslist"></div>
+				  	<div id="imgDisplay" class="littleDD"></div>
+				  	<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
+				  	<div id="shortSrcBlock">
+				  		<input type="button" onclick=shortRefCode() value="Refresh Sources" />
+				  		<input type="button" value="Add it" onclick="doRest()" id="addButton" />
+				  		<input type="button" value="Add New Source" onclick="showSrcBlock()" id="srcButton" />
+				  		<div id="refContainer">
+				  		</div>
+				  	</div>
+				  		
+			  		</fieldset>
+			 	</form>
+			 	<div id="SrcBlock" class="hiddentext">
+			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">
+	    			<fieldset>
+	    				<span><label>Type</label>
+	    				<select name="type" id="type">
+	    					<option>Book</option>
+	    					<option>Web Page</option>
+	    					<option>Journal</option>
+	    					<option>Media</option>
+	    					<option>Other</option>
+	    				</select></span>
+	    				<span><label>Title</label>
+	    				<input type="text" id="Title" class="inputC" name="title" width="120" /></span>
+	    				<span><label>Publisher</label>
+	    				<input type="text" id="Publisher" class="inputC" name="publshr" width="100"/></span>
+	    				<span><label>Publish Date</label>
+	    				<input type="text" id="pubD" class="inputC" name="publDate" width="20"/></span>
+	    				<span><label>Place of publication</label>
+	    				<input type="text" id="pubAddrs"class="inputC" name="publAddr" width="150"/></span>
+	    				<span><label>ISBN</label>
+	    				<input type="text" id="isbn" class="inputC" name="ISBN" width="20"/></span>
+	    				<span><label>Author/s</label>
+	    				<input type="text" id="auth" class="inputC" name="author" width="100"/></span>
+	    				<span><label>Editor/s</label>
+	    				<input type="text" id="ed" class="inputC" name="editor" width="100"/></span>
+	    				<span><label>Web Page url</label>
+	    				<input type="text" id="urlA" class="inputC" name="pgNumber" width="50"/></span>
+	    				<input type="text" id="contrib" class="hiddentext" id="contrib_ID"  name="contributer" width="50"/>
+	    				
+	    			</fieldset>
+	    			</form>
+	    			<input type="button" value="Submit" class="buttonC" onclick="srcSubmit()"/>
+	    			<input type="button" value="Dismiss" class="buttonC" onclick="closeThis()" />
+			 	</div>
+	 		<div id="infoDiv"> </div>
 	 		<div id="dupDialog"></div>
-    </div> 
-    
+	 		
+	 		<div id="pgDialog" style="display : none;">
+				<label>Enter page number</label></br>
+				<input type="text" id="pgNum" /></br>
+				<input type="button" value="Add it to the form" onclick="addtToForm()" id="addButt"/>
+				<input type="button" id="clButton" value="Dismiss" onclick="closePgDialog()" />
+				<input type="text" id="tit" value=""  class="hiddentext"/>
+			</div>
+	 		
+	 		
+    	</div> 
     </body>
 </html>

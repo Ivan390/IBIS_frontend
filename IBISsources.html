@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+		<meta name="viewport" content="width=device-width" />	
+		<title>
+			IBIS Sources Entry Page
+		</title>
+		<script type="text/javascript" src="jquery-1.11.3.js"> </script>
+    	<script type="text/javascript" src="dataInputFunctions.js"></script>
+    	<script type="text/javascript" src="fileselect.js"></script>
+    	<script type="text/javascript" src="dateshorts.js"> </script>
+    	<script type="text/javascript">
+	$(document).ready(function(){
+          $('#mediaPic').change(handleFileSelect);	
+	  if (sessionStorage.userRef){
+             sessVar = sessionStorage.userRef;
+	     sesA = sessVar.split(":");
+	      conID = sesA[0];
+	      $('#contrib_ID').val(conID);
+	  }else {
+	    alert("You should really not be on this page!")
+	    document.location = "IBISmain.html";
+	  }
+        }) 
+        function submitThis() {
+srcSubmit();
+        }
+	 	function closeThis() {
+	 		$('#dataF').fadeOut();
+
+	 	}
+	 	function showForm(){
+	 		$('.inputC').val("");
+	 		$('#meth').val('new');
+	 		$('#Ocontainer').hide();
+	 		$('#subButton').show();
+			$('#updButton').hide();
+	 		$('#dataF').show();
+	 		
+	 	}
+	 	
+       </script>
+    	<link rel="stylesheet"
+		    type="text/css"
+		    href="IBIS_maincss.css"
+    	/>
+    	<link rel="stylesheet"
+        type="text/css"
+        href="DataInput.css"
+ 	 >
+    	<link rel="stylesheet" 
+			type="text/css" 
+			media="only screen and (max-width: 480px)" 
+			href="Src_smaller.css" 
+    	/>	
+	</head>
+	<body id="SrcTheBody" onload="initForm()">
+		<div id="SrcallContainer">
+			<div id="dateTime">
+				<div id="dateBlock">The Date</div>
+			  	<div id="timeBlock">The Time</div>       
+	    	</div>
+	    	<div id="logo_image_holder">
+	      		<img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
+	    	</div>
+	    	<div id="pgHead">Add or Edit Sources</div>
+			<div id="pgButtons" class="">
+				<a href="IBISutilities.html" class="linkC"><img src="" alt="">Back to Utilities</a>
+		    	<a href="IBISmain.html" class="linkC"><img src="" alt="">Back to Main</a>
+		    	
+		     </div>
+	    	<div id="src_fs_main" class="">
+	    	<div id="pgOptions">
+	    		<input type="button" value="New Source" onclick="showForm()" />
+	    		<input type="button" value="Edit Existing Source" onclick="updateForm()" />
+	    	</div>
+	    	<div id="Ocontainer" class="hiddentext">
+	    		<div id="refContainer"></div>
+	    		<input type="button" value="Edit it" onclick="updF()"/>
+	    	</div>
+	    		<form id="dataF" name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data" class="hiddentext">
+	    			<fieldset>
+	    				<span><label>Type</label>
+	    				<select name="type" id="type">
+	    					<option>Book</option>
+	    					<option>Web Page</option>
+	    					<option>Journal</option>
+	    					<option>Media</option>
+	    					<option>Other</option>
+	    				</select></span>
+	    				<span><label>Title</label>
+	    				<input type="text" id="Title" class="inputC" name="title" width="120" value="" /></span>
+	    				<span><label>Publisher</label>
+	    				<input type="text" id="Publisher" class="inputC" name="publshr" width="100" value="" /></span>
+	    				<span><label>Publish Date</label>
+	    				<input type="text" id="pubD" class="inputC" name="publDate" width="20" value="" /></span>
+	    				<span><label>Place of publication</label>
+	    				<input type="text" id="pubAddrs"class="inputC" name="publAddr" width="150" value="" /></span>
+	    				<span><label>ISBN</label>
+	    				<input type="text" id="isbn" class="inputC" name="ISBN" width="20" value="" /></span>
+	    				<span><label>Author/s</label>
+	    				<input type="text" id="auth" class="inputC" name="author" width="100" value="" /></span>
+	    				<span><label>Editor/s</label>
+	    				<input type="text" id="ed" class="inputC" name="editor" width="100" value="" /></span>
+	    				<span><label>Web Page url</label>
+	    				<input type="text" id="urlA" class="inputC" name="pgNumber" width="50" value="" /></span>
+	    				<input type="text" id="contrib_ID" class="hiddentext" name="contributer" width="50" value="" />
+	    				<input type="text" id="refid" class="hiddentext"  name="recID"  value="" />
+	    				<input type="text" id="meth" class="hiddentext"  name="meth"  value="" />
+	    				
+	    			</fieldset>
+	    			<input type="button" value="Submit" id="subButton"class="buttonC" onclick="submitThis()"/>
+	    			<input type="button" value="Update" id="updButton"class="buttonC hiddentext" onclick="submitThis()"/>
+	    			<input type="button" value="Dismiss" class="buttonC" onclick="closeThis()" />
+	    			
+	    		</form>
+	    	
+	    	</div>
+	    </div>
+	    
+	    
+
+	</body>
+
+
+</html>

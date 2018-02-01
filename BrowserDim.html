@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+  <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+  <meta name="viewport" content="width=device-width"/>
+  <title>
+   I B I S - Other Functions
+  </title>
+  <script type="text/javascript" src="jquery-1.11.3.js"> </script>
+  <script type="text/javascript">
+  	function getBsize(){
+  		var theH = document.body.clientHeight;
+  		var theW = document.body.clientWidth;
+  		var Bdimension = "<p>Height = "+theH+"</br> Width = "+theW+"</p>";
+  		$('#output').html(Bdimension);
+  	}
+  	
+  	function showName(){
+  		$('#realName').fadeIn(10000);
+  		$('#Pname').fadeIn('slow');
+		
+  	
+  	}
+  	
+  	function doName(){
+  	$('#nameIn').hide();
+		$('#realName').hide();
+  		$('#Nameshit').html("");
+		$('#Pname').hide();
+  		var aName = $('#nameIn').val();
+  		var nameA = aName.split("");
+  		$('#realName').html("<span id=\"Pname\" style=\"display:inline;\">"+aName+"</span>");
+  		
+  		for (i = 0; i < nameA.length; i++){
+  			var letter = nameA[i];
+  			var degN = 360 /(i + 3);
+  		var lettLA = "<li id=NIA"+i+" style=\"-moz-transform:rotate("+degN+"deg) ; -moz-transition: 4s all; left : 10px;\">"+letter+"</li>";
+  		var lettLB = "<li id=NIB"+i+" style=\"-moz-transform:rotate("+degN+"deg) ; -moz-transition: 4s all; left : 10px; color:blue;\">"+letter+"</li>";
+  		var lettLC = "<li id=NIB"+i+" style=\"-moz-transform:rotate("+degN+"deg) ; -moz-transition: 4s all; left : 10px; color:green;  opacity:60%;\">"+letter+"</li>";
+  			$('#Nameshit').append(lettLA);
+  			$('#Nameshit').append(lettLB);
+  			$('#Nameshit').append(lettLC);
+  			//$('#realName').fadeOut('slow');
+		
+		
+			
+  		}
+  		for (j = 0; j < 5; j++){
+		for (p = 0; p < nameA.length; p++){
+			
+			$('#NIA' + p ).animate({
+				left : '5%', rotate : '160deg', top : '95%'
+			}, 1500);
+			$('#NIA' + p ).animate({
+				width : '30%'  
+			}, 1500);
+			
+			
+			$('#NIB' + p ).animate({
+				left : '10%', rotate : '360deg'
+			}, 1400);
+			$('#NIB' + p ).animate({
+				width : '30%'  
+			}, 1400);
+			
+
+		}
+		
+		
+  		}
+  		
+			
+  		showName();
+  		
+  		
+		
+  	}
+  </script>
+  <style type="text/css" />
+  	#output {
+  		position : relative;
+  		width:100%;
+  		border : 1px black solid;
+  		border-radius : 20px;
+  	 	background-color : blue;  		
+  		
+  	}
+  	@media only screen and (orientation : landscape){
+  	 #output {
+  	 	background-color : red;
+  	 	width : 50%;
+  	 	
+  	 }
+  	}
+  	li {
+  		position : relative;
+  		font-size : 30px;
+  		float : left;
+  		list-style : none;
+  	}
+  	#Nameshit {
+	  	position : relative;
+	  	max-width : 90%;
+	  	max-height : 60%;
+	  	height : 300px;
+	  	width : 800px;
+		overflow : hidden;
+	  	top : 20%;
+	  	left : 10%;
+	  	background-color : beige;
+
+
+  	}
+  	#realName{
+  		position: absolute;
+font-size: 248%;
+top: 30%;
+left: 20%;
+z-index: 10;
+  	}
+  	#Pname {
+  	position : relative;
+	width : 600px;
+  	    
+    top: 40%;
+    left: 15%;
+}
+  	}
+  </style>
+  
+  </head>
+  <body>
+  	<div id="output" >
+  	
+  	</div>
+  	<input type="button" value="get size" onclick="getBsize(); doName()" />
+  	<div id=Nameshit></div>
+  	<div id="realName"></div>
+  	<input type=text id="nameIn" />
+  </body>
+</html>

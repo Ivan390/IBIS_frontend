@@ -1,0 +1,221 @@
+/*Sources page styles*/
+
+#SrcallContainer {
+ position : absolute;
+  width : 95vw;
+  height : 95vh;
+  padding : 10px;
+  border-style: inset;
+   border-radius: 22px;
+  background-color : beige;
+  overflow : auto;
+  left : -5px;
+}
+
+#src_fs_main {
+  position : relative;
+  height : auto;
+  border-style: outset;
+  width : 90%;
+	margin : 5px;
+  overflow : auto;
+	top : -15%;
+	border-radius : 15px;
+  left : -5px;
+  
+}
+
+#SrcallContainer #dateTime {
+  	position : relative;
+	left : -40%;
+	top : 0%;
+  font-size : large;
+  width : 60%;
+}
+
+#SrcallContainer #logo_image_holder{
+    position : relative;
+	left : 10%;
+	top : -8%;
+}
+
+
+#SrcallContainer #logo_image {
+  height : 60%;
+  width : 70%;
+  z-index : 6;
+  top : -15px;
+}
+#pgHead {
+  position : relative;
+  top : -15%;
+  left : 30%;
+  font-size : large;
+  text-decoration: underline;
+  
+}
+#src_fs_main span {
+  position : relative;
+  float : left;
+  clear : both;
+  font-size : large;
+  width : 90%;
+  margin : 5px;
+}
+#src_fs_main input {
+  position : relative;
+  left : 0%;
+  float : right;
+  
+  
+}
+#src_fs_main label {
+  position: relative;
+  left : 0px;
+	width : 80%;
+ } 
+#src_fs_main select {
+  ition : relative;
+  float : right;
+  width : 45%;
+  height : 40px;
+  
+}
+#src_fs_main select option {
+  position : relative;
+  font-size : x-large;
+  
+}
+#src_fs_main .buttonC {
+  position : relative;
+  float : left;
+  width : 25%;
+  height : 50%;
+  font-size : large;
+  
+  padding: 0px;
+}
+#SrcallContainer .linkC {
+  position : relative;
+  font-size : medium;
+   top : -70px; 
+  left : 15px;
+  margin : 10px;
+
+}
+#Ocontainer {
+    position : absolute;
+    left : -8%;
+    top : 45px;
+    width : 30%;
+    margin : 5px;
+    
+}
+#Ocontainer input {
+  position : relative;
+    width : 170px;
+    left: 95px;
+     top : 0px;
+}
+
+#Ocontainer #refContainer {
+    position : relative;
+    left : -00%;
+    width :10%;
+    clear :right;
+    font-size: small;
+}
+#Ocontainer #refSelect {
+  position : relative;
+  padding : 0px;
+  width : 170px;
+  left : 190px;
+  margin : 5px;
+  
+}
+#pgOptions {
+    position : relative;
+    left : -50%;
+    z-index : 6;
+}
+
+#pgOptions input {
+    position : relative;
+    width : 160px;
+    font-size : small;
+    
+}
+#dataF {
+    position : relative;
+    left : 3%;
+    width : 75;%
+}
+
+/* Glossary styles*/
+#GlBody .ac {
+  left : -5px;
+  width : 90%;
+  background-color : beige;
+  max-height : 100vh;
+  overflow : auto;
+  scroll : auto;
+  
+}
+
+#glossEntry .itemC {
+  position : relative;
+  width : 90%;
+  height : auto;
+  overflow : auto;
+  max-height: 80%;
+  }
+#glossEntry textarea {
+  position : relative;
+  height : 40px;
+      margin-top : 10px;
+
+  }
+#glossEntry input {
+  position : relative;
+  width : 80%;
+    margin-top : 10px;
+
+  }
+#glossEntry label {
+  position : relative;
+  align : left;
+  margin-top : 20px;
+}
+.glossP {
+  position : relative;
+  top : 5px;
+  height : 20%;
+  left : -55%;
+  
+}
+#logo_image {
+    position: relative;
+    width: 40%;
+    left: 45%;
+  top : -40px;
+  left : 60%;
+}
+#GlBody #glHeading {
+  position : relative; 
+  left : 25%;
+  font-size : x-large;
+  
+}
+#GlBody #pgButtons {
+  position : relative;
+  left : 2%;
+  
+}
+#GlBody #pgButtons input {
+  position : relative;
+  height  : 40px;
+  left : 20%;
+  border-radius : 15px;
+  width : 30%;
+  
+}

@@ -6,11 +6,16 @@ function showLogin(){
 }
 
 function do_logout(){
-	var uID = sessionStorage.userRef.split("::");
-	var user = uID[0];
-	var inDate = uID[6];
-	//alert(inDate+" :"+user);
+if (!sessionStorage.userRef){
+	var oldSes = readCookie("IBIS_session");
+	sessionStorage.userRef = oldSes;
+}
 
+	var uID = sessionStorage.userRef.split("::");
+	var logID = uID[6];
+	//var inDate = uID[6];
+	//alert(inDate+" :"+user);
+		
   $("#greetingDiv").text("");
   
   $("#loginhead").css("display", "block");
@@ -18,12 +23,22 @@ function do_logout(){
   $("#regPic").css("display","none");
  // $("#registerBlock").removeClass("locked").addClass("adminC");
  $("#adminBlock").hide();
+ var loCount = 0;
  $.ajax({
 		url : "../../cgi-bin/IBISLogout.php3",
 		type : "POST",
-		data : {name1 : user, name2 : inDate},
+		data : {name1 : logID},
 		success : function(data){
-			alert("Goodbye" + uID[1] );
+		if (data !== ""){
+			loCount = readCookie("loCount");
+			//loCount = loCount.toInt();
+			if (isNaN(loCount)){
+			 loCount = 0;
+			}
+			loCount = parseInt(loCount) + 1;
+			writeCookie("loCount=", loCount, 365);
+		}
+			alert("Goodbye" + uID[1] + " your cookie was erased. " +loCount+" logouts" );
 		}
 	});
   $("#adminBlock").html("<div id=\"registerBlock\" class=\"littleDD linksclass adminC \">\
@@ -34,7 +49,7 @@ function do_logout(){
 			  </div>");
 	$("#adminBlock").fadeIn();
   sessionStorage.userRef = "";
-  
+  eraseCookie("IBIS_session=");
 }
 
 function submitDetails(){
@@ -73,6 +88,12 @@ function submitDetails(){
 	          $("#greetingDiv").text("Hello " + thedata[1]);
 	          $("#adminBlock").fadeIn();
 	         // $("#registerBlock a").removeAttr("href")  ;
+	       writeCookie("IBIS_session=", sessref, 1);
+	       if(readCookie("IBIS_session")){
+	       	//alert("Cookie was not set");
+	       }else {
+	       //	alert("cookie was set");
+	       }
 	        }
 	        $("#errorDiv").text("");
 	        cancelLogin();
@@ -83,6 +104,7 @@ function submitDetails(){
 	  
 	    }
     });
+    
 }
 
 function input_checker(){
@@ -106,5 +128,40 @@ function cancelLogin() {
      $("#login").css("display", "none");
     $("#loginhead").text("Login");
     $("#errorDiv").text(" ");
+}
+
+function checkNav(){
+	if (navigator.cookieEnabled){
+		if (sessionStorage.userRef ){
+			//alert("session ref exists will do nothing");
+		}else {
+			//alert("session ref is not set, should check cookies here");
+			
+			if(readCookie("IBIS_session")){
+			var messg= "<p>A previous unclosed session has been detected</br>click on Continue to continue with that session or Cancel to start a new one<div id=\"errButtons\" ><input type=\"button\" value=\"Continue\" onclick=\"contSes()\" /><input type=\"button\" value=\"Cancel\" onclick=\"newSes()\" /></div></p>";
+				$('#errorDiv').html(messg);
+				$('#errorDiv').show();
+				
+			}else {
+
+			}
+		}
+	    }else {
+			alert ("cookies appear to not be enabled");
+    	}	
+ }
+function contSes(){
+	$('#errorDiv').hide();
+	var oldSes = readCookie("IBIS_session");
+	sessionStorage.userRef = oldSes;
+	checkStorage();
+	
+	//document.location = "IBISmain.html";
+}
+function newSes(){
+$('#errorDiv').hide();
+	cancelLogin();
+	do_logout();
+
 }
 

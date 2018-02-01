@@ -6,10 +6,9 @@
             I B I S - Vegetable Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
-<script type="text/javascript" src="main.js"> </script> 
-	<script type="text/javascript" src="fileselect.js"></script>
-<script type="text/javascript" src="dateshorts.js"> </script>
-	<script type="text/javascript" src="dataInputFunctions.js"></script>
+         <script type="text/javascript" src="dataInputFunctions.js"></script>
+        <script type="text/javascript" src="fileselect.js"></script>
+        <script type="text/javascript" src="dateshorts.js"> </script>
 	
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -35,7 +34,7 @@
              >
         
     </head>
-    <body name="VegInputBody" id="TheBody" onload="initForm()" >
+    <body name="VegInputBody" id="TheBody" onload="initForm(); shortRefCode()" >
     		
       <div id="allContainer">
        <div id="dateTime">
@@ -76,6 +75,8 @@
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Category</label></p>
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Status</label></p>
             <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Growing</label></p>
+            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="refLabel">Reference Title</label></p>
+				<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="pgLabel">Page Number</label></p>
           </div> 
           <div id="outputBlock" class="bigDD outputblock">
             <p id="inputHeading">Enter Information</p>
@@ -99,6 +100,8 @@
 						<input type="text" id="Species" name="species" class="hiddentext">
 						<input type="text" id="subSpecies" name="subspecies" class="hiddentext">
 						<input type="text" id="Common_Names" name="common_Names" class="hiddentext">
+						<input type="text" id="refTit" name="reftit" class="hiddentext" value=""></input>
+					<input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
 						<textarea id="Name_Notes" name="name_Notes" class="hiddentext"></textarea>
 						<textarea id="Description" name="description" class="hiddentext"></textarea>
 						<textarea id="Ecology" name="ecology" class="hiddentext"></textarea>
@@ -119,6 +122,13 @@
 	      		<div id="tagslist"></div>
 	      		<div id="imgDisplay" class="littleDD"></div>
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
+	      		<div id="shortSrcBlock">
+				  		<input type="button" onclick=shortRefCode() value="Refresh Sources" />
+				  		<input type="button" value="Add it" onclick="doRest()" id="addButton" />
+				  		<input type="button" value="Add New Source" onclick="showSrcBlock()" id="srcButton" />
+				  		<div id="refContainer">
+				  		</div>
+				  	</div>
 	      		
   		</div>   
 	      		
@@ -126,6 +136,40 @@
 	  			</fieldset>
 	 			
 	 			</form>
+	 			<div id="SrcBlock" class="hiddentext">
+			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">
+	    			<fieldset>
+	    				<span><label>Type</label>
+	    				<select name="type" id="type">
+	    					<option>Book</option>
+	    					<option>Web Page</option>
+	    					<option>Journal</option>
+	    					<option>Media</option>
+	    					<option>Other</option>
+	    				</select></span>
+	    				<span><label>Title</label>
+	    				<input type="text" id="Title" class="inputC" name="title" width="120" /></span>
+	    				<span><label>Publisher</label>
+	    				<input type="text" id="Publisher" class="inputC" name="publshr" width="100"/></span>
+	    				<span><label>Publish Date</label>
+	    				<input type="text" id="pubD" class="inputC" name="publDate" width="20"/></span>
+	    				<span><label>Place of publication</label>
+	    				<input type="text" id="pubAddrs"class="inputC" name="publAddr" width="150"/></span>
+	    				<span><label>ISBN</label>
+	    				<input type="text" id="isbn" class="inputC" name="ISBN" width="20"/></span>
+	    				<span><label>Author/s</label>
+	    				<input type="text" id="auth" class="inputC" name="author" width="100"/></span>
+	    				<span><label>Editor/s</label>
+	    				<input type="text" id="ed" class="inputC" name="editor" width="100"/></span>
+	    				<span><label>Web Page url</label>
+	    				<input type="text" id="urlA" class="inputC" name="pgNumber" width="50"/></span>
+	    				<input type="text" id="contrib" class="hiddentext" id="contrib_ID"  name="contributer" width="50"/>
+	    				
+	    			</fieldset>
+	    			</form>
+	    			<input type="button" value="Submit" class="buttonC" onclick="srcSubmit()"/>
+	    			<input type="button" value="Dismiss" class="buttonC" onclick="closeThis()" />
+			 	</div>
 	 			<form  name="VegDupEditForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">
 						<input type="text" name="thecat" value="Vegetables" id="thecatid" class="hiddentext" />
 						<input type="text" name="specref" value="" id="specid" class="hiddentext" />
@@ -134,6 +178,14 @@
 	 				<div id="infoDiv"></div>
 		 		</div>
 		 		<div id="dupDialog"></div>
+		 		<div id="pgDialog" style="display : none;">
+				<label>Enter page number</label></br>
+				<input type="text" id="pgNum" /></br>
+				<input type="button" value="Add it to the form" onclick="addtToForm()" id="addButt"/>
+				<input type="button" id="clButton" value="Dismiss" onclick="closePgDialog()" />
+				<input type="text" id="tit" value=""  class="hiddentext"/>
+			</div>
+	 		
     </div>
         
        

@@ -2,6 +2,7 @@
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
  <head>
   <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+  <meta name="viewport" content="width=device-width"/>
   <title>
    I B I S - Other Functions
   </title>
@@ -9,9 +10,13 @@
   <script type="text/javascript" src="Gmain.js"></script>
   <script type="text/javascript" src="dateshorts.js"></script>
   <link rel="stylesheet"
-  type="text/css"
-              href="IBIS_maincss.css"
-              />
+  		type="text/css"
+        href="IBIS_maincss.css"
+       />
+ <link rel="stylesheet" 
+    	type="text/css" 
+    	media="only screen and (max-width: 580px)" 
+    	href="smallerDevice.css" />
       
     </head>
     <body id="TheBody" onload="initForm()">
@@ -22,41 +27,53 @@
       </div>
       <div id="logo_image_holder">
         <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
-      </div>
+      </div><div id="utilHeading">Utilities</div>
       <div id="controlP">
         <a href="IBISmain.html" class="submitButton littleDD buttonclass"><img src="" alt="" />Back to Main Screen</a>
       </div>
       <div id="detail_fs" class="littleDD detail_fs">
         <div id="AdminList" class="linklist littleDD locked">
-	  <h3>Add Information to the Database</h3>
+	  <h3>Add Information</h3>
 	  <ul>
 	    <li>
-  	      <a href="IBISnewVegetables.html">Add Vegetable Data</a>
+  	      <a href="IBISnewVegetables.html">New Vegetable </a>
 	    </li>
 	    <li>
-	      <a href="IBISnewAnimals.html">Add Animal Data</a>
+	      <a href="IBISnewAnimals.html">New Animal </a>
 	    </li>
 	    <li>
-	      <a href="IBISnewMinerals.html">Add Mineral Data</a>
+	      <a href="IBISnewMinerals.html">New Mineral </a>
 	    </li>
 	  </ul>
 	</div>
 	<div id="listsList" class="linklist littleDD">
 	  <ul>
 	    <li>
-	      <a href="IBISanimalsRef.html">Kingdom Animalia </a>
-	    </li>
-	    <li>
-	      <a href="IBISvegGlossaryEntry.html">Add a Glossary item </a>
+	      <a href="IBISanimalsRef.html">Animalia </a>
 	    </li>
 	    <li>
               <a href="IBISplantsRef.html">Plantae</a>
+	    </li>
+	     <li>
+	    	<ul>
+	    		<li id="glList" onclick="showstuff()" class="linksclass">Glossary
+					<ul id="listStuff">
+						<li class="Glist"><a href="IBISvegGlossaryEntry.php3?name1=Animals">Animal  </a></li>
+						<li class="Glist"><a href="IBISvegGlossaryEntry.php3?name1=Minerals">Mineral  </a></li>
+						<li class="Glist"><a href="IBISvegGlossaryEntry.php3?name1=Vegetables">Vegetable </a></li>
+					</ul>
+	    		</li>
+	    	</ul>
+	      
 	    </li>
 	    <li>
               <a href="IBISLostnFound.html">Lost & Found</a>
 	    </li>
 	    <li>
               <label id=piccomp onclick="loadPicCompDialog()" class="linksclass">Picture Find</label>
+	    </li>
+	    <li>
+              <a href="IBISsources.html">Add Source</a>
 	    </li>
 	  </ul>
 	</div>
@@ -73,11 +90,12 @@
       checkStorage();
       
       function loadPicCompDialog(){
-     theUser = $("#userRef").val();
-	var picCompWin = open('IBISpiccompare.html', 'picCompWin', 'height=720, width=580, top=50px, left=100px, location=no');
-	
-
-      }
+      	theUser = $("#userRef").val();
+	 	 var picCompWin = open('IBISpiccompare.php3', 'picCompWin', 'height=720px, width=440px, top=50px, left=100px');
+	  }
+	  function showstuff(){
+	  $('#listStuff').toggle();
+	  }
     </script>
    </div>
  </body>

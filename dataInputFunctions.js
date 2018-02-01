@@ -2,12 +2,40 @@
 jscript script to deal handle the data input events
 
 */
+function initForm() {
+  $("#dateBlock").html(new Date().shortFormat());
+  starttime();
+  $('.inputC').val("");
 
+}
 // vegInput
 var imgname = "";
 var theHeading = "";
 var theLabel ="";
 
+function doRest(){
+  var selVal = $('#refSelect').val();
+
+  $('#tit').val(selVal);
+   	$('#pgDialog').show();
+        
+}
+
+function closePgDialog(){
+	$('#pgDialog').fadeOut();
+	$('#pgNum').val("");
+}
+
+function addtToForm(){
+	var reftit = $('#tit').val();
+	var pgNum = $('#pgNum').val();
+	$('#refTit').val(reftit);
+	$('#pgnum').val(pgNum);
+	$('#refLabel').css('background-color','pink');
+	$('#pgLabel').css('background-color','pink');
+	closePgDialog();
+
+}
 function loadList(){
     $("#lookupdiv").load("IBISanimalsRefMini.html");
     $("#lookupdiv").css("display", "block");
@@ -20,7 +48,7 @@ function hideList(){
     $("#lookupHide").css("display", "none");
     $("#lookupList").css("display", "inline");
 }
-	  			 
+  			 
 function addTag(){
     var tagslist = $('#mediatagsinput').val();
     var newtag = imgname +" : "+ tagslist;
@@ -121,7 +149,7 @@ function checkWords(content){
     var swearWrd = "";
     var wordexp = "";
     var messg = "";
-    var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead", "asscrack", "bullshit", "damnit");
+    var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead", "asscrack", "bullshit", "damnit", "poes", "naai", );
     var comment = content;
     //alert(comment);
     for (i = 0; i < swearList.length; i++){
@@ -130,7 +158,6 @@ function checkWords(content){
 	//alert(wordexp);
 		if (wordexp.test(comment)){
 		    messg = "words like " + swearWrd + " are not allowed in this database!\nPlease clean up your fucking language.\nNo entry was recorded for this heading";
-		//	alert("words like " + swearWrd + " are not allowed in this database!\nPlease clean up your fucking language.\nNo entry was recorded for this heading" );
 		    return messg;
 		    break;
 		}
@@ -173,19 +200,115 @@ var catvalue = $('#thecatid').val();
 
 }        
 function hidethis(){
-$('#messD').hide();
+	$('#messD').hide();
 }
-function doSubmit(){
 
-    var apicValue = checkPics();
-    if (apicValue == ""){
-			//alert("dude you must add at least one picture... and dont forget the tag");
-			var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
-    $('#messageDiv').html(messgDiv);
-    }else{
-    reallySubmit();
-    }
+function doSubmit(){
+var apicValue = checkPics();
+	if (apicValue == ""){
+		var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
+		$('#messageDiv').html(messgDiv);
+	  }else{
+	   	reallySubmit();
+	  }
 //cleanupData();
 	
     
+}
+ function showSrcBlock(){
+        $('#SrcBlock').slideDown();
+        }
+        
+function shortRefCode() {
+        	var contrib = $('#contrib_ID').val();
+        	var titList = "";
+        	$.ajax({
+        		url : "../../cgi-bin/getRefs.php3",
+        		type : "POST",
+        		data : {name1 : contrib},
+        		success : function(response){
+        			var Rlist = response.split(":@");
+        			for (j = 0; j < Rlist.length; j++){
+        				if (Rlist[j] == ""){
+        					continue;
+        				}
+        				var refSet = Rlist[j].split(":*");
+        				
+        				titList += "<option value=\""+refSet[0]+"\">"+refSet[1]+"</option>";
+        			
+        			}
+        			selctList = "<select id=\"refSelect\">"+titList+"</select>";
+        			$('#refContainer').html(selctList);
+        			
+        		}
+        		
+        	})
+        }
+function closeThis() {
+        	$('#SrcBlock').fadeOut();
+        }
+
+function srcSubmit(){
+	var Type = $('#type').val();
+	var Title = $('#Title').val();
+	var Publisher = $('#Publisher').val();
+	var pubD = $('#pubD').val();
+	var pubAddrs = $('#pubAddrs').val();
+	var isbn = $('#isbn').val();
+	var auth = $('#auth').val();
+	var ed = $('#ed').val();
+	var urlA = $('#urlA').val();
+	var contrib = $('#contrib').val();
+	var meth = $('#meth').val();
+	var srcID = $('#refid').val();
+
+	$.ajax({
+		url : "../../cgi-bin/IBISsrc.php3",
+		type : "POST",
+		data : {type:Type, title : Title, publshr :Publisher, publDate : pubD, publAddr : pubAddrs, ISBN : isbn, author : auth, editor : ed, url: urlA, contributer: contrib, Meth:meth, SrcID : srcID },
+		success : function(data){
+			alert(data);
+		
+		}
+	
+	});
+	
+	$('#SrcBlock').fadeOut();
+	
+}
+function updateForm(){
+	shortRefCode();
+	$('#Ocontainer').show();
+	$('#dataF').hide();
+
+}
+function updF(){
+	//<option value=\""+refSet[0]+"\">"+refSet[1]+"</option>";
+	var recID = $('#refSelect').val();
+	$.ajax({
+		url : "../../cgi-bin/IBISupdSrc.php3",
+		type : "POST",
+		data : {name1:recID},
+		success : function(data){
+			//alert(data);
+		var SrcList = data.split(":@");
+		$('#type').val(SrcList[0]);
+		$('#Title').val(SrcList[1]);
+		$('#Publisher').val(SrcList[2]);
+		$('#pubD').val(SrcList[4]);
+		$('#pubAddrs').val(SrcList[3]);
+		$('#isbn').val(SrcList[5]);
+		$('#auth').val(SrcList[6]);
+		$('#ed').val(SrcList[7]);
+		$('#urlA').val(SrcList[8]);
+		$('#contrib').val(SrcList[9]);
+		$('#refid').val(SrcList[10]);
+		}
+	});
+	$('#subButton').hide();
+	$('#updButton').show();
+	$('#meth').val('update');
+	$('#dataF').show();
+	$('#Ocontainer').hide();
+	
 }

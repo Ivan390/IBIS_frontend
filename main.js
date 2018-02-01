@@ -10,36 +10,29 @@ function checkStorage(){
 	    		<div id=\"greetingDiv\"></div>\
 	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+sesRef[0]+"\">Go to your profile page</a></br></div>\
 	   		</div></div>");
-
-	  
 	  imgsrc = '<img id = "regPic" src="'+ sesRef[5] + '" width="" height="" >';
 	  $("#regpic").html(imgsrc);
 	  $("#greetingDiv").text("Hello " + sesRef[1]);
 	  $("#adminBlock").show();
-	    $("#loginhead").css("display", "none");
-	    $("#logouthead").css("display", "block");
-	     $("#registerBlock").addClass("locked");
-	   // $("#registerBlock a").removeAttr("href")  ;
-	   
+	  $("#loginhead").css("display", "none");
+	  $("#logouthead").css("display", "block");
+	  $("#registerBlock").addClass("locked");
 	  }else {
         $("#loginhead").css("display", "block");
 	    $("#logouthead").css("display", "none");
-	     $("#adminBlock").html("<div id=\"registerBlock\" class=\"littleDD linksclass adminC \">\
+	    $("#adminBlock").html("<div id=\"registerBlock\" class=\"littleDD linksclass adminC \">\
 			    <a href=\"IBISregistration.html\" class=\"littleDD linksclass\">Register as a contributer</a>\
-			  </div>\
-			  <div id=\"guestBook\" class=\"littleDD linksclass\">\
+			  	</div>\
+			  	<div id=\"guestBook\" class=\"littleDD linksclass\">\
 			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\"littleDD linksclass\">The GuestBook</a>\
-			  </div>");
-
+			  	</div>");
 	  }
-	}
-	
-
+}
 function initForm() {
   $("#dateBlock").html(new Date().shortFormat());
   starttime();
   picswaps();
   checkStorage();
-  initthisForm();
+	checkNav();
 }
 

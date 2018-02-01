@@ -27,9 +27,9 @@ function showGuests(){
 	lastNum = lastNum+dispLimit+1;
 	if (lastNum >= guestCount){
 		lastNum = 0;
-		$('#showguests').val("<Show Guests>");
+		$('#showguests').val("Guests");
 	}else {
-		$('#showguests').val("<Show More>");
+		$('#showguests').val("More");
 	}
 	$('#catPicsList').html(shortList);
 }

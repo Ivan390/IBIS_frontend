@@ -2,6 +2,7 @@
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width"/>
     <title>
       I B I S - Indexed Biological Information Server
     </title>
@@ -9,12 +10,18 @@
     <script type="text/javascript" src="main.js"> </script>
     <script type="text/javascript" src="dateshorts.js"> </script>
     <script type="text/javascript" src="picswap.js"> </script>
+    <script type="text/javascript" src="cookies.js"> </script>
+    <script type=text/javascript>
+    
+    </script>
     <link rel="stylesheet"
         type="text/css"
         href="IBIS_maincss.css"
     />
-    
-
+    <link rel="stylesheet" 
+    	type="text/css" 
+    	media="only screen and (max-width: 480px)" 
+    	href="smallerDevice.css" />
     </head>
     <body id="TheBody" onload="initForm()">
       <div id="MainallContainer" class="bigDD ac">
@@ -28,12 +35,11 @@
 	    <form name="categoryForm" action="../../cgi-bin/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >
 	      <input type="text" name="catValue" id="catHeading" class="hiddentext" />
 	    </form>
-	    <div id="errorDiv"></div>
+	    <div id="errorDiv" style="display:none;"></div>
 	   
 	    <div id="loginLink" class="littleDD linksclass" style="">
 	      <label id="loginhead" class="littleDD linksclass" onclick="showLogin()">Login</label>
 	      <label id="logouthead" class="littleDD linksclass logoutCstart" style="display:none;" onclick="do_logout()">Logout</label>
-	    
 	      <form name="loginForm" action="../../cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data">
 	        <div id="login" class="littleDD login" style="display : none;">
 	          <label class="labelClass">Your user name</label><br>
@@ -43,39 +49,31 @@
 	          <input type="button" value="OKay" onclick="input_checker()" />
 	          <input type="button" value="Cancel" onclick="cancelLogin()" /><br>
 	        </div>
-	      
 	      </form>
 	    </div>
-	  
 	    <div id="cgiResult" ></div>
 	    <div id="detail_fs_main" class="littleDD">
-	      <div id="adminBlock">
-			  
-	      </div>
-	      
-	      
-	      <div id="LinkList" class="bigDD">
+	      <div id="adminBlock"></div>
+		  <div id="LinkList" class="bigDD">
 	        <p class="H2">Eco Links</p>
 	        <ul>
-	          <li><a href="">CTEET</a></li>
-	          <li><a href="./fbay/fbepfacts1.php.html">FBNR</a></li>
-	          <li><a href="">Read more about something else....</a></li>
+	          
 	          <li><a href="IBISutilities.html">Other functions</a></li>
 	        </ul>
 	      </div>
 	      <div id="FindInfo" class="bigDD">
 	        <h2>Find Information</h2>
-	        <div id="animal" class="findOption">
+	        <div id="animal" class="findOption" onclick="loadIndex('animals');">
 	          <h2 class="findHeading">Animal</h2>
 	          <img id="animlink" class="optImage" src="images/animals.gif" onclick="loadIndex('animals');" /> 
 	          <p class="contextHelp">Click here to find info on animals.</p>
 	        </div>
-	        <div id="vegetable" class="findOption">
+	        <div id="vegetable" class="findOption" onclick="loadIndex('vegetables');">
 	          <h2 class="findHeading">Vegetable</h2>
 	          <img id="veglink" class="optImage" src="images/vegetablesCl.gif" onclick="loadIndex('vegetables');" /> 
 	          <p class="contextHelp">Click here to find info on plants.</p>
 	        </div>
-	        <div id="mineral" class="findOption">
+	        <div id="mineral" class="findOption" onclick="loadIndex('minerals');">
 	          <h2 class="findHeading">Mineral</h2>
 	          <img id="minlink" class="optImage" src="images/minerals.gif" onclick="loadIndex('minerals');" />
 	          <p class="contextHelp">Click here to find info on minerals.</p>
@@ -85,14 +83,16 @@
 	        <div id="DYK"><h2>Did you know?</h2></div>
 	        <div id=dykText> that the sky is blue </div>
 	      </div>
-	      <script type="text/javascript" src="login.js"></script>
-	      <script type="text/javascript">
-	        function loadIndex(catname){
-	          document.categoryForm.catValue.value = catname;
-	          document.categoryForm.submit();
-          }
-      	</script>
+	    </div>
+	      
     </body>
+    <script type="text/javascript" src="login.js"></script>
+	<script type="text/javascript">
+		function loadIndex(catname){
+	    	document.categoryForm.catValue.value = catname;
+	    	document.categoryForm.submit();
+    	}
+    </script>
 </html>
 
 
