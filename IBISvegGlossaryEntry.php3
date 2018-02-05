@@ -26,11 +26,7 @@
 </script>
 <link rel="stylesheet"
   type="text/css"
-  href="IBIS_maincss.css"
-/>
-<link rel="stylesheet"
-  type="text/css"
-  href="vegGloss.css "
+  href="Bgloss.css "
 />
 <link rel="stylesheet" 
 			type="text/css" 
@@ -46,9 +42,11 @@
   <div id="logo_image_holder">
     <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
   </div>
-  <div id="glHeading">Glossary Input</div>
+  <div id="glHeading"><?php $title = $_GET['name1']; print "$title ";?>Glossary Input</div>
   <div id=pgButtons>
-  <a id="backButton" href="/ibis/IBISmain.html" class="buttonclass littleDD">Back to Main Page </a>
+  <a href="IBISutilities.html" class="linkC"><img src="" alt="">Back to Utilities</a>
+  <a id="backButton" href="/ibis/IBISmain.html" class="linkC">Back to Main Page </a>
+  
   	<input type="button" class="buttClass" value="Submit" onclick="submitForm()"/>
   	
   </div>

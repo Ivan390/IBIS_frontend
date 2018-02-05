@@ -59,7 +59,7 @@
   width : 30%;
   left : 20%;
   top : -50px;
-  
+  text-decoration : underline;
 }
 #dateTime {
   position: relative;
@@ -95,5 +95,18 @@ position : relative;
   left : 30%;
   font-size : x-large;
   text-decoration : underline;
+  
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: large;
+  text-decoration : underline;
+  cursor : pointer;
+  top : -35%;
+  }
+.linkC:hover {
+  color : blue;
   
 }

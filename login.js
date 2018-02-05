@@ -66,7 +66,8 @@ function submitDetails(){
 	//  alert(data);
 	      var testregexp = /no match/;
 	      if (testregexp.test(data)) {
-	        $("#errorDiv").html("<img id=\"sucCheck\" src=\"http://192.168.43.132/ibis/images/notokeydoke.png\"><span id=\"messSpan\">Your details were not found on the server</span>\"");
+	        $("#errorDiv").html("<img id=\"sucCheck\" src=\"http://192.168.43.132/ibis/images/notokeydoke.png\"><span id=\"messSpan\">Your details were not found on the server</br>Check your spelling</span>");
+	        $('#errorDiv').show();
 	        showLogin();
 	      }
 	      else {
@@ -128,6 +129,7 @@ function cancelLogin() {
      $("#login").css("display", "none");
     $("#loginhead").text("Login");
     $("#errorDiv").text(" ");
+    $('#errorDiv').hide();
 }
 
 function checkNav(){

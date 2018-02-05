@@ -1,0 +1,242 @@
+/*Details styles*/
+
+#DETallContainer {
+  position : absolute;
+  width : 95%;
+  height : 89%;
+  padding : 20px;
+  border-style: inset;
+  border-radius: 20px;
+  top: 1%;
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: large;
+  text-decoration : underline;
+  cursor : pointer;
+  }
+.linkC:hover {
+  color : blue;
+  
+}
+#pgHeading {
+  position : relative;
+  top : -15%;
+  left : 35%;
+  font-size : xx-large;
+  text-decoration : underline;
+  
+}
+#DETallContainer #dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+#DETallContainer .buttonclass {
+  position: relative;
+  border : 1px solid green;
+  font-size: 16px;
+  border-radius: 12px;
+  padding : 5px;
+}
+#DETallContainer #detail_fs {
+  position : relative;
+  border-style: outset;
+  top : -65px;
+  width : 95%;
+  padding : 5px;
+  height :auto;
+  padding-left : 10px;
+  margin-left : 10px;
+  border-radius: 12px;
+  max-height: 650px;
+}
+#DETallContainer #logo_image_holder{
+  position : relative;
+   left : 68%;
+  top : -40px;
+ }
+#DETallContainer #logo_image {
+  height : 40%;
+  width : 30%;
+}
+#DETallContainer #fqnNameList{
+  position : relative;
+  width : 75%;
+  /*height :auto;*/
+  height: 300px;
+  min-height: 200px;
+  padding : 10px;
+  border-style: inset;
+  border-radius: 12px; 
+  overflow: auto;
+  margin-top :  10px;
+}
+#DETallContainer .labelClass {
+ text-align : left;
+ text-decoration: underline;
+ font-size : 20px ;
+} 
+.itemC {
+  position : relative;
+  width : 43%;
+  border : 1px black dashed;
+  float : left;
+  margin : 5px;
+  border-radius : 22px;
+  padding : 10px;
+  max-height : 95px;
+}
+#otherDetails {
+  position : relative;
+  width : 25%;
+  border : 1px black dashed;
+  border-radius : 5px;
+  padding : 10px;
+  margin-top : 10px;
+  overflow : auto;
+  max-height : 100px;
+}
+.oDD{
+  display : none;
+}
+.hiddentext{
+  display : none;
+}
+#DETallContainer #catHeading {
+  position : relative;
+  left : 10%;
+  font-size : 330%;
+  width: auto;
+}
+.italC {
+  font-style : italic;
+}
+#oDDOutput {
+  position : relative;
+  border : 1px black dashed;
+  border-radius : 12px;
+  padding : 10px;
+  max-height : 120px;
+  max-width : 45%;
+  overflow : auto;
+  left : 29%;
+  padding-top : 10px;
+}
+.oDHClass {
+  cursor: pointer;
+}
+#DETallContainer #imgGrid {
+  position : absolute;
+  max-width : 340px;
+  max-height : 310px;
+  float : right;
+  top : 10%;
+  left : 78%;
+  overflow : auto;
+  margin-right : 10px;
+  margin-top : 15px;
+}
+#DETallContainer .imgClass {
+  width : 150px;
+  height : 150px;
+  border-radius: 12px;
+  margin-left: 3px;
+}
+.longText {
+  max-width : 85%;
+}
+#suboD {
+  position : relative;
+  width : 100%;
+  max-height : 150px;
+}
+.OutputAnim {
+  top : -70px;
+}
+.OutputMin {
+  top : -70px;
+}
+.OutputVeg {
+  top : -100px;
+}
+#DETallContainer #pgButtons {
+position : relative;
+  	top : -60px;
+	left: 1%;
+}
+#viewsBlock {
+    position: relative;
+    border: black 1px solid;
+    border-radius: 20px;
+    padding: 15px;
+    width: 15vw;
+    font-size: 120%;
+    top: -60px;
+    left: 8px;
+}
+#ratingsBlock{
+    position: relative;
+    border: black 1px solid;
+    border-radius: 20px;
+    width: 16vw;
+  	min-width:300px;
+    height: 100px;
+ 	top : -225px;
+  	left :20%;
+  	display :none;
+  	overflow: auto;
+  	padding: 30px;
+  	padding-right : 0px;
+}
+#ratehead {
+  padding : 20%;
+  font-size : 130%;
+  text-decoration: underline;
+}
+#ratebut{
+  	position : relative;
+  	border: black 1px solid;
+    border-radius: 20px;
+    width: 16vw;
+  	min-width:250px;
+    height: auto;
+  	top : -230px;
+  	left :20%;
+  	font-size : 190%;
+  	text-decoration: underline;
+ 	 background-color: yellow;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: blue;
+}
+.button{
+  padding-left:20px;
+}
+#commentBlock {
+  	position : relative;
+  	border : 1px black solid;
+  	border-radius : 25px;
+	padding : 20px; 
+  	width : 40%;
+  	background-color: pink;
+  	top : -270px;
+  	left :38%;
+  	display : none;
+}
+#commentBlock label {
+  font-size : 120%;
+}
+
+#currScore {
+  font-size : 300%;
+}

@@ -1,0 +1,99 @@
+/*start utilities*/
+#UtilallContainer {
+  position : absolute;
+  width : 93vw;
+  height : 90vh; 
+  padding : 20px;
+  border-style: inset;
+  border-radius : 15px;
+  left : 19px;
+}
+#UtilallContainer #dateTime {
+  color : green;
+  
+}
+#controlP {
+  position : relative;
+  top : 15%;
+  font-size : x-large;
+  left : 2%;
+  
+}
+
+#UtilallContainer #logo_image_holder{
+    position: absolute;
+    left :65% ;
+    margin-left: auto;
+    margin-right: auto;
+    width : 50%;
+    height : 55%;
+    top : 2px;
+}
+
+#UtilallContainer #logo_image {
+  height : 40%;
+  width : 70%;
+  z-index : 6;
+}
+#listsList {
+    position :relative;
+    width : 40%;
+  
+} 
+#listsList .linksclass {
+  text-decoration: underline;
+  color : black;
+   cursor : pointer;
+}
+#listsList li {
+  color : black;
+  cursor : pointer;
+  
+}
+#AdminList{
+    position : relative;
+    width : 40%;
+    float : right;
+    border-color : green;
+}
+#UtilallContainer #detail_fs{
+    position : relative;
+    height : 340px;
+    margin-top : 10px;
+  border : 1px black solid;
+  padding : 10px;
+  border-radius : 15px;
+  top : 15%;
+}
+
+#utilHeading {
+  position : relative;
+  top : 15%;
+  left : 40%;
+  font-size : xx-large;
+  text-decoration : underline;
+}
+.locked {
+  background-color : rgba(2, 2, 2, 0.6);
+  color : grey;
+}
+.adminC {
+  background-color : rgba(255, 255, 255, 0.6);
+  color : black;
+}
+.linklist {
+    border : 1px dashed blue;
+}
+#listsList #glList {
+  position : relative;
+  margin-left : -42px;
+  list-style-type: none;
+  cusrsor : pointer;
+  text-decoration: underline;
+}
+#listStuff {
+  position : relative;
+  margin-left : -30px;
+  display : none;
+}
+

@@ -1,0 +1,279 @@
+/* This is IBISmaincss.css 
+It describes the main page*/
+
+#MainallContainer {
+  position : absolute;
+  width : 93vw;
+  height : 90%; 
+  padding : 20px;
+  border-style: inset;
+  border-radius : 15px;
+  left : 19px;
+}
+.ac(
+top : 10px;
+)
+.littleDD {
+	border-radius:35px;
+}
+.bigDD {
+	border-radius:25px;
+}
+
+#MainallContainer #logo_image_holder{
+    position: relative;
+    left :-0% ;
+    margin-left: auto;
+    margin-right: auto;
+    width : 50%;
+    height : 55%;
+    top : -42px;
+}
+#MainallContainer #errorDiv {
+  position : absolute;;
+  border : 1px black solid;
+  border-radius : 15px;
+  padding : 10px;
+  background-color : yellow;
+  top : 60px;
+  left : 10%;
+  font-size : large;
+  z-index : 7;
+}
+#MainallContainer #logo_image {
+  position : relative;
+  height : 60%;
+  width : 70%;
+  z-index : 6;
+}
+#MainallContainer #logo_image img{
+  position : relative;
+  height : 0%;
+  width : 70%;
+  z-index : 6;
+}
+
+
+#MainallContainer #errorDiv img {
+  position : relative;
+  top : -vh;
+  left : -74%;
+  
+}
+#MainallContainer #errorDiv #messSpan {
+  position : relative;
+  top : 50%;
+  font-size :x-large;
+  float : left;
+  left : 20%;
+  
+}
+
+#MainallContainer #detail_fs_main {
+  position : relative;
+  border-style: outset;
+  top : -30%;
+  width : 95%;
+  padding : 5px;
+  height : 65%;
+  border-radius : 25px;
+  left: 2%;
+}
+
+#MainallContainer #dateTime {
+  position: relative;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+.hiddentext {
+  display : none;
+}
+
+.optImage {
+  position : relative;
+  max-width: 100%;
+  max-height : 160px;
+  float : left;
+  border-radius : 15px;
+  padding: 3px;
+  width: 120%;
+}
+#greetingDiv{
+	position : relative;
+	font-size : 28px;
+	color : blue; 
+	top : ;
+}
+#regholder {
+  position : relative;
+  width: auto;
+}
+#regpic {
+  position : relative;
+  width : 60%;  
+  top: -0px;
+  padding: 5px;
+}
+#regPic {
+  position : relative;
+   max-width: 44%; 
+  font-size: 16px;
+  border-radius: 20px;
+  top: 10px;
+  width: 320px;
+}
+
+#LinkList {
+    position: relative;
+    width: 25%;
+   height: auto;
+    margin-left: auto;
+    border-radius : 15px;
+    color: black;
+    font-size : 20px;
+    border : green 2px dashed;
+    float:right;
+    top : 25px;
+    left: -8.5%;
+    padding: 10px;
+}
+
+#DidYouKnow {
+    position: relative;
+    top: -230px;
+    height: auto;
+    width : 97%;
+    border: green 1px dashed;
+    text-align : center;
+    padding: 10px;
+   border-radius : 15px;
+    
+}
+#dykText{
+    text-align: center;
+    text-decoration: none;
+}
+
+#FindInfo {
+    position: relative;
+    width:70%;
+    height:470px;
+    text-align: center;
+    text-decoration: underline;
+    padding:2px;
+    padding-bottom : 5px;
+    padding-left : 5px;
+    top : -30%;
+}
+
+.findOption {
+    float: left;
+    margin-right: 5%;
+    position: relative;
+    }
+
+.findOption .contextHelp {
+    position: relative;
+    z-index: 6;
+    font-size: 20px;
+    color: darkgreen;
+    display: none;
+    height: 30px;
+  	text-align : center;    
+}
+
+.findOption:hover .contextHelp {
+    display: block;
+    position : relative;
+    width: 200px;
+}
+ .findHeading {
+   position : relative;
+   width : 100px;  
+   left : 25%;
+   font-size : 200%;
+}
+.findOption:hover{
+	cursor: pointer; 
+}
+
+#guestBook {
+  position : relative;
+  font-size : 180%;
+  text-decoration: underline;
+  text-align : center;
+  border: blue 1px dashed;
+  padding:5px;
+  width : 23.5%;
+  top : 15px;
+  left : 65%;
+  text-align : center;
+   border-radius : 15px;
+ }
+#registerBlock {
+  position: relative;
+  width : 23%;
+  height : 12%;
+  top : 10px;
+ z-index : 8;
+  left : 65%;
+  font-size: 180%;
+  text-decoration: underline;
+  text-align : center;
+  border: green 1px dashed;
+  padding:10px;
+  /*! padding-bottom : 5px; */
+  margin-bottom: 0px;
+   border-radius : 15px;
+}
+#loginLink {
+    position : absolute;
+    top : 80px;
+    left : 73%;
+    text-align : left;
+    font-size : 25px;
+    padding : 10px;
+    z-index : 18;
+    cursor: pointer;
+}
+.loginshow {
+   color : blue;
+   width : 250px;
+   background-color : rgba(225,235, 12, 0.7);
+   border : 1px dashed orange;
+   display : block;
+   border-radius : 15px;
+}
+.logoutCstart {
+  display : none;
+}
+.logoutCshow {
+  display : inline;
+}
+
+#welcBlock {
+  position : relative;
+  border : 1px black solid;
+  border-radius : 20px;
+  width : 24%;
+  left : 65%;
+  height : auto;
+  top : 5%;
+  padding : 10px;
+  padding-top: 0px;
+}
+.buttonclass{
+     cursor : pointer;
+}
+#logouthead{
+    cursor : pointer; 
+}
+#loginhead{
+    cursor : pointer; 
+}
+/*end main*/

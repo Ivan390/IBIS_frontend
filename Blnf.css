@@ -1,0 +1,130 @@
+/*LnF styles*/
+#LnFallContainer{
+   position : absolute;
+  width : 93vw;
+  height : 90%; 
+  padding : 20px;
+  border-style: inset;
+  border-radius : 15px;
+  left : 19px;
+  
+}
+#logo_image_holder{
+    position: relative;
+    left :-0% ;
+    margin-left: auto;
+    margin-right: auto;
+    width : 50%;
+    height : 55%;
+    top : -42px;
+}
+ #logo_image {
+  position : relative;
+  height : 50%;
+  width : 70%;
+  z-index : 6;
+   left : 75%;
+   top : -3%;
+}
+#dateTime {
+  color : green;
+  
+}
+#LostBlock {
+  position : relative;
+  border : 1px black solid;
+  width : 45%;
+  height : 80%;
+  padding : 10px;
+  margin : 5px
+}
+#LostBlock .messSpan {
+  position :relative;
+  top : 10%;
+  
+}
+#FoundBlock {
+  position  : relative;
+  float : right;
+  width : 51%;
+  border : 1px black solid;
+  top : -86%;
+  left: -10px;
+  height : 84.5%;
+}
+#Fheading {
+  position : relative;
+  margin-bottom : 50px;
+  
+}
+#FoundBlock .messSpan {
+  position : relative;
+  top : 5%;
+  width : 90%;  
+  display : block;;
+  left : 10px;
+  
+}
+#pgButtonslnf {
+  position : relative;
+  width : auto;
+  font-size : x-large;
+  top : -35%;
+  left : 3%;
+}
+#pgButtonslnf a {
+  margin : 10px;
+  
+}
+.hiddentext {
+  display : none;
+  
+}
+#detail_fs_main {
+  position : relative;
+  border-style: outset;
+  top : -35%;
+  width : 95%;
+  padding : 5px;
+  height : 65%;
+  border-radius : 25px;
+  left: 2%;
+  
+}
+#messDiv {
+  position : relative;
+  height : 75%;
+  overflow : auto;
+  top : 15%;
+}
+#messDiv li {
+  font-size : large;
+  cursor : pointer;
+  width : auto;
+  max-width : 90%;
+}
+#messDiv li:hover {
+  color : blue;
+}
+.selectB {
+  position : relative;
+  top : 40px;
+  clear : right;
+  width: 30%;
+  left: -25px;
+  font-size: large;
+}
+.headC {
+  position : relative;
+  font-size : x-large;
+  text-decoration: underline;
+  left : 40%;
+}
+#pgHeading {
+  position : relative;
+  top : -40%;
+  left : 35%;
+  font-size : xx-large;
+  text-decoration : underline;
+  
+}

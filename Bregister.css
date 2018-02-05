@@ -1,0 +1,103 @@
+/*Register styles*/
+
+#REGallContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+   border-radius: 22px;
+}
+#REGallContainer #dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+#REGallContainer #logo_image_holder{
+  position : relative;
+   left : 68%;
+   top : -40px;
+ }
+
+#REGallContainer #logo_image {
+  height : 40%;
+  width : 30%;
+}
+#REGallContainer #pgButtons {
+	position : relative;
+}
+.inputClass {
+	position : relative;
+	float : right;
+	width : 50%;
+	font-size : 18px;
+	left : 0%;
+	margin : 2px;
+	top : -30px;
+	padding : 3px;
+}
+#personalDetails {
+	 width : 60%;
+	 border: green 1px dashed;
+	padding : 10px;
+}
+#imgDisplay{
+	position : absolute;
+	top : 15px;
+	left : 65%;
+	width : 30%;
+	border: orange 1px dashed;
+	padding : 1px;
+	text-align : center;
+}
+#inputDiv {
+	position : relative;
+	border: green 2px solid;
+	padding : 10px;
+	width : 90%;
+	left : 2%;
+	border-style:ridge;
+}
+.thumbpic {
+	border-radius : 12px;
+  	width : 120px;
+  	height : 120px;
+}
+#REGallContainer .labelClass {
+	height : 32px;
+	padding : 3px;
+	font-size : 18px;
+	margin : 1px;
+}
+.selectClass {
+	font-size : 15px;
+	height : 42px;
+	border : green solid 1px;
+}
+.buttonclass {
+  position : relative;
+    border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 20px;
+  padding : 4px;
+  margin : 10px;
+}
+.fileClass {
+    border : 1px dashed green;
+}
+#REGallContainer #detail_fs{
+  position : relative;
+  height : 70%;
+  border-style: outset;
+  padding : 20px;
+  width : 90%;
+  overflow : auto;
+  white-space : nowrap;
+}

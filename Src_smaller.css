@@ -202,9 +202,9 @@
 }
 #GlBody #glHeading {
   position : relative; 
-  left : 25%;
+  left : 10%;
   font-size : x-large;
-  
+  text-decoration : underline;
 }
 #GlBody #pgButtons {
   position : relative;
@@ -212,10 +212,18 @@
   
 }
 #GlBody #pgButtons input {
-  position : relative;
+  position : absolute;
   height  : 40px;
-  left : 20%;
+  left : 0%;
   border-radius : 15px;
-  width : 30%;
+  width : 25%;
+  top : -65px;
+  font-size : x-large;
+  
+}
+#GlBody #pgButtons a {
+  position : relative;
+  font-size : large;
+  margin : 10px;
   
 }
