@@ -1,0 +1,162 @@
+
+#SFallContainer {
+	position : absolute;
+	width : 95%;
+	height : 100vh;
+	background-color : beige;
+	margin : 2px;
+	left : -5px;
+}
+#SFallContainer #logo_image_holder {
+	position : relative;
+	left : 70%;
+}
+#SFallContainer #dateTime {
+	top : -20px;
+	width : 60%;
+	left : -40%;
+	top: -2px;
+}
+
+#SFallContainer #catHeading {
+	font-size : x-large;
+	top : 60px;
+}
+#Ghead {
+	font-size : x-large;
+	
+}
+.Gselect {
+	padding : 2px;
+	font-size : x-large;
+	
+}
+#GBlock {
+	position : relative;
+	left : -35px;
+	width : 100%;
+	top : -35px;
+	
+	
+}
+#findOptions {
+	position :relative;
+	left : -10px
+	
+}
+#SFallContainer #subContain {
+	position : relative;
+	height : 60%;
+	width : 90%;
+	left : 0px;
+	top : 0px;
+	
+}
+#infoSet {
+	position : relative;
+	width : 68%;
+	left : -8px;
+	max-height : 130px;
+	overflow : auto;
+}
+#SFallContainer .selectList  {
+    position: relative;
+    height: auto;
+    min-width: 90px;
+    margin: 1px;
+    font-size: smaller;
+    padding: 1px;
+
+}
+#DDL1Veg {
+	position : relative;
+	
+}
+#DDL2 {
+	position : relative;
+	left : 100px;
+	width : 120px;
+	
+}
+#DDL3dd {
+	position : relative;
+	top : 10px;
+	left : -2%;
+}
+#ddl3Txt {
+	position : relative;
+	top : 15px;
+	left : -6px;
+}
+#buttContSpan {
+	position : relative;
+	top : 10%;
+	left : 0%;
+	width : 90%;
+	
+}
+#op2btSpan {
+	position : relative;
+	
+	
+	height : 30px;
+	font-size : small;
+	
+}
+#option2btn {
+	position : relative;
+	
+	
+	
+	
+}
+#opt3btSpan {
+	position : relative;
+	width: 20px;
+	
+}
+#option3btn {
+height : 30px;
+	font-size : small
+	
+}
+#SFallContainer #catPicsList {
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 0%;
+    max-height: 350px;
+}
+#DDL1Min {
+	position : relative;
+	width : 40px;
+	
+}
+#SFallContainer #theCategory {
+    position: relative;
+    padding: 1px;
+    max-width: 20%;
+	 width : auto;
+    border-style: dashed;
+    border-width: 1px;
+    max-height: 200px;
+    margin-right: 1px;
+    float: right;
+    overflow-y: scroll;
+    top: 0px;
+    left: -3%;
+}
+#catPicsList img {
+	width : 60%;
+	height : 40%;
+	z-index : 7;
+}
+#speciePic {
+	position : relative;
+	width : 40%
+}
+#speciePic img {
+	width : 99%;
+	height : 35%
+	
+}

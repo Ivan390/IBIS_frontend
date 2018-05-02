@@ -1,0 +1,450 @@
+#allContainer {
+    position: relative;
+    width: 93vw;
+    height: 90%;
+    padding: 20px;
+    border-style: inset;
+    border-radius: 22px;
+}
+/*edit file css*/
+#logo_image {
+  position : relative;
+  height : 40%;
+  width : 30%;
+  z-index : -1;
+  top : -60px;
+   left : 70%;
+}
+.littleDD {
+    border-radius : 15px;    
+}
+.hiddentext {
+  display : none;
+}
+.thisareaLabel {
+    font-size : 25px;
+    border : solid 1px green;
+    padding : 5px;
+    margin : 5px;
+    width : 280px;
+    float : left;
+    color : black;
+    cursor : pointer;
+}
+#editcommentL {
+    padding : 20px;
+    border : none;
+    width : 400px;
+    font-size : 16px;
+}
+#lookupHide {
+    display : none;
+}
+#editcommentC{
+  position : relative;
+  float : left;
+}
+#lookupdiv {
+    position :absolute;
+    display : none;
+    border : 1px black solid;
+    border-radius : 15px;
+    width : 40%;
+    left : 54%;
+    max-height : 270px;
+    overflow-y : scroll;
+    z-index: 6;
+}
+#commentBlock{
+    position : relative;
+    border :none;
+    width : 500px;
+    height : 150px;
+    top : 80px;
+    margin-left : 12px;
+}
+#headingText{
+ position : relative;
+ font-size : 38px;
+ text-align : center;
+ width : 300px;
+ left: 35%;
+ top: -180px;
+ text-decoration : underline;
+}
+#headinglist {
+	position : relative;
+	max-width : 55%;
+	border : dashed 1px green;
+	height : 400px;
+	overflow : auto;
+	margin : 10px;
+    border-radius : 10px;
+    padding : 5px;
+}
+#dateTime {
+    position: relative;
+    left : -68%;
+    z-index: 3;
+    font-size: 18px;
+    margin-left: auto;
+    padding-left: 10px;
+    color: green;
+    width: 30%;    
+}
+#sendeditButton {
+	position : relative;
+	float : left;
+	width:  auto;
+	font-size:  24px;
+}
+.buttonclass {
+    border : solid 1px green;
+    padding : 5px;
+    font-size : 16px;
+    margin : 8px;
+}
+.thisarea {
+    width : 400px;
+    height : auto;
+    border-style : dashed;
+    border-color : black;
+    border-width : 1px;
+    padding : 5px; 
+}
+#outputBlock {
+    position : relative;
+    border : dashed 1px green;
+    padding :10px; 
+    max-width : 30%;
+    height : 180px; 
+    margin : 10px;
+    top : -400px;
+    left :60%;
+    border-radius:  25px;
+    font-size:  20px;
+}
+#addimages {
+    position : relative;
+    display : block;
+    border : dashed 1px blue;
+    left : 56%;
+    top : 2px;
+    width : 300px;
+    padding : 10px;
+    margin : 1px;
+    clear : left;
+}
+.outputbox {
+    position : relative;
+    height : 20%;
+    width : 90%;
+    padding : 10px;
+    font-size : 22px;   
+}
+#dataForm {
+    display : block;
+    border : none;
+    height : 0px;
+}
+#currImages {
+    position : absolute;
+    left : 80%;
+    width : 200px;
+    top : 15px;
+    height : 390px;
+    overflow : auto;
+}
+#detail_fs_min {
+  position : relative;
+  border-style: inset;
+   top : -145px; 
+  width : 95%;
+  height : 85%;
+  margin : 1px;
+  overflow : auto;
+  overflow-x : hidden;
+  white-space : nowrap;
+}
+#pgButtons {
+    position: relative;
+	top : -150px;
+}
+#imgDisplay {
+	position : relative;
+	border : 1px black dashed;
+  	background-color : rgba(205,135, 12, 0.7);
+    padding-top: 3px;
+    top : -180px;       		
+}
+.thumbpic {
+	position : relative;
+	width : 150px;
+	height : 150px;
+}
+#images {
+position : relative;
+    top : -190px;
+  display:block;
+}
+#optionsDsplay {
+	position : relative;
+	display : block;
+	width : 20%;
+	height : auto;
+    left : 265px;
+    top : -469px;
+	border : 1px black dashed;
+	background-color : rgba(205,135, 12, 0.7);
+	padding : 12px;
+	font-size: 12px;
+}
+#tagslist{
+position : absolute;
+    top : 38%;
+    left : 57%;
+    width : 20%;
+}
+.listitemC {
+width : 170%;
+}      	
+#acclevel {
+     position : relative;
+     left : -50px;
+ }
+#contrib_ID {
+    position : relative;
+    left : -50px;
+}
+#Heading{
+    position : relative;
+}
+#reglogo_image{
+    position : relative;
+    width : 20%;
+    left : 30%;
+    top:-60px;
+}        	
+#regheadingText {
+    position : relative;
+    font-size : 200%;
+    margin : 0;
+    left : %;
+    width : 200px;
+    top : -60px;
+    float : right
+}
+.inputClass {
+    padding : 5px;
+}
+#reglogo_image{
+position : relative;
+width : 20%;
+height : 20%;
+}
+#imgDisplay1 {
+    position : absolute;
+    top : 25vh;
+    left : 75%;
+}
+#imgDisplay1 img{
+position : relative;
+    width : 100px;
+    height  : 100px;
+    border-radius: 20px;
+}
+#pgButtonsAnim {
+    position : relative;
+    top : -153px;
+    font-size : 20px;    
+}
+#matDiv {
+    position : absolute;
+    border : 3px black solid;
+    top : 50%;
+    left : 30%;
+    width : auto;
+    max-width : 50vw;
+    height : 250px;
+    border-radius : 20px;
+    border-style : outset;
+    background-color :gainsboro;
+    font-size : 120%;
+    overflow: auto;
+    padding : 10px;
+    z-index: 10;
+}
+.buttonclass {
+    position : relative;
+    border-radius : 10px;
+    top : 10px;
+    font-size : 120%;
+    cursor : pointer;
+}
+.dialogC {
+     position : absolute;
+    border : 3px black solid;
+    top : 50%;
+    left : 30%;
+    width : auto;
+    max-width : 50vw;
+    height : 250px;
+    border-radius : 20px;
+    border-style : outset;
+    background-color :gainsboro;
+    font-size : 120%;
+    overflow: auto;
+    padding : 10px;
+    
+}
+    
+#shortSrcBlock {
+     position : absolute;
+    border : 1px black solid;
+    top : 44%;
+    left : 55%;
+    
+    
+     margin: 10px;
+}
+#pgDialog {
+    position : absolute;
+    border : 1px black solid;
+    border-radius : 15px;
+    width : 30%;
+    height : 150px;
+    background-color : yellow;
+    top : 48%;
+    left  : 57%;
+    
+}
+#pgDialog #pgNum {
+    position : relative;
+    width : 20%;
+    left : 40%;
+    font-size : x-large;
+    margin-bottom : 10px;
+}
+#pgDialog label {
+    position : relative;
+    left : 25%;
+    clear : right;
+    font-size : x-large;
+}
+#pgDialog #addButt {
+    position : relative;
+    font-size : large;
+    left : 40%;
+    
+}
+#clButton {
+    position : relative;
+    left : -45%;
+    font-size : large;
+    
+}
+fieldset {
+    border : none;
+    
+}
+#SrcBlock {
+    position : absolute;
+    width :  40%;
+    top : 50%;
+    height : 240px;
+    left : 55%;
+    background-color : yellow;
+    overflow : auto;
+    border : 1px black solid;
+    border-radius : 15px;
+    scroll : auto;
+}
+#SrcBlock span {
+    position : relative;
+    float : left;
+    clear : both;
+    width : 90%;
+    top : 10px;
+    
+}
+#SrcBlock label {
+    position : relative;
+    font-size : large;
+    width : 60%;
+    top : 0px;
+}
+#SrcBlock input {
+    position : relative;
+    float : right;
+    top : -0px;
+    margin-bottom : 10px
+  
+}
+#SrcBlock select {
+    position : relative;
+    font-size : x-large;
+    float : right;
+    top : -0px;
+    margin-bottom : 10px;
+    
+}
+/* Sources style*/
+
+#Ocontainer {
+    position : absolute;
+    left : -8%;
+    top : 45px;
+    width : 30%;
+    margin : 5px;
+    
+}
+#Ocontainer input {
+    position : relative;
+    width : 20%;
+    top : -25px
+}
+
+#Ocontainer select {
+    position : relative;
+    left : 165px;
+    width : 120px;
+    
+    font-size: small;
+}
+#pgOptions {
+    position : relative;
+    left : -78%;
+    
+}
+#pgOptions {
+    position : relative;
+    left : -78%;
+    
+}#pgOptions input {
+    position : relative;
+    width : 110px;
+    font-size : small;
+    
+}
+#dataF {
+    position : relative;
+    left : 23%;
+    width : 75;%
+}
+#dataF fieldset {
+    border : none;
+    
+}
+	.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: x-large;
+  text-decoration : underline;
+  cursor : pointer;
+   margin-right : 10px;
+  }
+.linkC:hover {
+  color : blue;
+  
+}
