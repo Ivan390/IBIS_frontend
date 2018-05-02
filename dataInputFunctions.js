@@ -149,7 +149,7 @@ function checkWords(content){
     var swearWrd = "";
     var wordexp = "";
     var messg = "";
-    var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead", "asscrack", "bullshit", "damnit", "poes", "naai", );
+    var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead", "asscrack", "bullshit", "damnit", "poes", "naai" );
     var comment = content;
     //alert(comment);
     for (i = 0; i < swearList.length; i++){

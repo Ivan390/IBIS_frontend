@@ -104,7 +104,6 @@ position : relative;
   font-size: large;
   text-decoration : underline;
   cursor : pointer;
-  top : -35%;
   }
 .linkC:hover {
   color : blue;

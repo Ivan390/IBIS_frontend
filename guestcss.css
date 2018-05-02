@@ -14,7 +14,7 @@
 }
 #pgButtons{
 	position : relative;
-  top : 45px;
+  top : 4%;
 }
 
 
@@ -31,12 +31,25 @@
 
 #gTitle {
   position: relative;
-  top:-155px;
+  top:-120px;
   font-size: 54px;
   left:35%;
   z-index:4;
   color: black;
+  text-decoration: underline;
 
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: large;
+  text-decoration : underline;
+  cursor : pointer;
+  }
+.linkC:hover {
+  color : blue;
+  
 }
 #optionsDsplay {
   position : absolute;
@@ -55,7 +68,7 @@
   position : absolute;
   top : 102%;
  height : 220px;
-  width : 109%;
+  width : 95%;
   padding : 15px;
   padding-bottom: 20px;
   overflow : auto; 
@@ -72,9 +85,9 @@
   padding: 1px;
 }
 #GuestPic {
-  position : absolute;
-  left : 170%;
-  top : -6px;
+  position : relative;
+  left : 60%;
+  top : -80px;
   width : auto;
   height : auto;
 }

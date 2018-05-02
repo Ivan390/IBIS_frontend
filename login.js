@@ -83,8 +83,7 @@ function submitDetails(){
 	      	<div id=\"regholder\">\
 	    		<div id=\"regpic\"></div>\
 	    		<div id=\"greetingDiv\"></div>\
-	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+thedata[0]+"\">Go to your profile page</a></br></div>\
-	   		</div></div>");
+	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+thedata[0]+"\">Go to your profile?</a></br></div></div></div>");
 	   		$("#regpic").html(imgsrc);
 	          $("#greetingDiv").text("Hello " + thedata[1]);
 	          $("#adminBlock").fadeIn();

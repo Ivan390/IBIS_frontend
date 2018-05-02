@@ -2,13 +2,14 @@
 It describes the main page*/
 
 #MainallContainer {
-  position : absolute;
+  position : relative;
   width : 93vw;
-  height : 90%; 
+  height : 99%; 
   padding : 20px;
   border-style: inset;
   border-radius : 15px;
-  left : 19px;
+  left : 9px;
+  top : 10px;
 }
 .ac(
 top : 10px;
@@ -19,15 +20,19 @@ top : 10px;
 .bigDD {
 	border-radius:25px;
 }
-
+#adminBlock {
+  position : relative;
+  float : right;
+  
+}
 #MainallContainer #logo_image_holder{
-    position: relative;
-    left :-0% ;
-    margin-left: auto;
-    margin-right: auto;
-    width : 50%;
-    height : 55%;
-    top : -42px;
+    /*! position: relative; */
+    /*! left :-0% ; */
+    /*! margin-left: auto; */
+    /*! margin-right: auto; */
+    /*! width : 150%; */
+    /*! height : 155%; */
+    /*! top : -42px; */
 }
 #MainallContainer #errorDiv {
   position : absolute;;
@@ -42,7 +47,7 @@ top : 10px;
 }
 #MainallContainer #logo_image {
   position : relative;
-  height : 60%;
+  height : 53%;
   width : 70%;
   z-index : 6;
 }
@@ -75,20 +80,20 @@ top : 10px;
   top : -30%;
   width : 95%;
   padding : 5px;
-  height : 65%;
+  height : auto;
   border-radius : 25px;
   left: 2%;
 }
 
 #MainallContainer #dateTime {
   position: relative;
-  left: -70%;
+  left: -20%;
   z-index:3;
   font-size: 18px;
   margin-left:auto;
   padding-left:10px;
   color: green;
-  width: 30%;
+  width: 80%;
 }
 .hiddentext {
   display : none;
@@ -118,16 +123,20 @@ top : 10px;
   width : 60%;  
   top: -0px;
   padding: 5px;
+  
 }
 #regPic {
   position : relative;
-   max-width: 44%; 
   font-size: 16px;
   border-radius: 20px;
   top: 10px;
-  width: 320px;
+  width: 120px;
+  height : 100px;
+ 
 }
-
+#regpic img {
+  position : relative;
+}
 #LinkList {
     position: relative;
     width: 25%;
@@ -136,17 +145,17 @@ top : 10px;
     border-radius : 15px;
     color: black;
     font-size : 20px;
-    border : green 2px dashed;
-    float:right;
-    top : 25px;
-    left: -8.5%;
+    border : lightblue 2px dashed;
+    /*! float:right; */
+    top : -35px;
+    left: -4.5%;
     padding: 10px;
 }
 
 #DidYouKnow {
     position: relative;
-    top: -230px;
-    height: auto;
+    top: 20px;
+    height: 90px;
     width : 97%;
     border: green 1px dashed;
     text-align : center;
@@ -154,21 +163,34 @@ top : 10px;
    border-radius : 15px;
     
 }
+#DYK h2 {
+  position : absolute;
+  width : 50%;
+  /*! top : -20%; */
+  height : 50px;
+  left: 20%;
+  text-decoration: underline;
+}
 #dykText{
-    text-align: center;
+  position : absolute;
+  /*! float : left; */
+  top : 40px;
+clear : both;
+  left : 22%;
     text-decoration: none;
+  width: 50%;
 }
 
 #FindInfo {
     position: relative;
-    width:70%;
-    height:470px;
+    /*! width:70%; */
+    /*! height:470px; */
     text-align: center;
     text-decoration: underline;
     padding:2px;
     padding-bottom : 5px;
     padding-left : 5px;
-    top : -30%;
+    /*! top : -30%; */
 }
 
 .findOption {
@@ -180,7 +202,7 @@ top : 10px;
 .findOption .contextHelp {
     position: relative;
     z-index: 6;
-    font-size: 20px;
+    font-size: small;
     color: darkgreen;
     display: none;
     height: 30px;
@@ -208,20 +230,21 @@ top : 10px;
   text-decoration: underline;
   text-align : center;
   border: blue 1px dashed;
-  padding:5px;
-  width : 23.5%;
-  top : 15px;
-  left : 65%;
+  /*! padding:5px; */
+  /*! width : 23.5%; */
+  /*! top : 15px; */
+  /*! left : 65%; */
   text-align : center;
    border-radius : 15px;
+  margin-top: 10px;
  }
 #registerBlock {
   position: relative;
-  width : 23%;
-  height : 12%;
-  top : 10px;
- z-index : 8;
-  left : 65%;
+  /*! width : 23%; */
+  /*! height : 12%; */
+  /*! top : 10px; */
+ /*! z-index : 8; */
+  /*! left : 65%; */
   font-size: 180%;
   text-decoration: underline;
   text-align : center;
@@ -240,6 +263,12 @@ top : 10px;
     padding : 10px;
     z-index : 18;
     cursor: pointer;
+}
+#login input {
+  position : relative;
+  width : 95%;
+  font-size: large;
+  
 }
 .loginshow {
    color : blue;
@@ -260,12 +289,13 @@ top : 10px;
   position : relative;
   border : 1px black solid;
   border-radius : 20px;
-  width : 24%;
-  left : 65%;
+  width : 83%;
+  left : -70%;
   height : auto;
-  top : 5%;
+  top : 1%;
   padding : 10px;
   padding-top: 0px;
+  margin-bottom: 1px;
 }
 .buttonclass{
      cursor : pointer;

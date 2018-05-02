@@ -29,7 +29,7 @@
        </script>
 	<link rel="stylesheet"
         type="text/css"
-        href="DataInput.css"
+        href="animDataInput.css"
  	 >
     </head>
     <body name="AnimInputBody" id="TheBody" onload="initForm(); shortRefCode()">
@@ -44,10 +44,11 @@
             	<p id="headingText">Animal Input Form</p>
         	</div>
         	<div id="pgButtonsAnim" class="littleDD">
-		    	<input type="button" value="Submit Data" class="buttonclassAI littleDD" onclick="doSubmit()">   
-		     	<a href="IBISmain.html" class="buttonclassAI littleDD"><img src="" alt="">Back to Main Screen</a>
-		    	<input type="button" id="lookupList" class="buttonclassAI littleDD" onclick="loadList()" value="Load Lookup List" />
-		    	<input type="button" id="lookupHide" class="buttonclassAI littleDD" onclick="hideList()" value="Hide Lookup List"  />
+		    	<input type="button" value="Submit Data" class="linkC" onclick="doSubmit()"> 
+		    	<a href="IBISutilities.html" class="linkC"><img src="" alt="">Back to Utilities</a>  
+		     	<a href="IBISmain.html" class="linkC"><img src="" alt="">Back to Main</a>
+		    	<!--<input type="button" id="lookupList" class="linkC" onclick="loadList()" value="Load Lookup List" />
+		    	<input type="button" id="lookupHide" class="linkC" onclick="hideList()" value="Hide Lookup List"  />-->
         	</div>
         	<div id="detail_fs_min" class="littleDD" ">
           	<div id="headinglist" class="littleDD">

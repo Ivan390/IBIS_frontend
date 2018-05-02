@@ -31,7 +31,7 @@
   position : relative;
   width : 30%;
   left : 70%;
-  top : 20px;
+  top : 0px;
 }
 .hiddentext {
   display : none;
@@ -54,7 +54,7 @@
 
 #dateTime {
   position: fixed;
-  top: 12px;
+  top: 22px;
   left: 20px;
   z-index:3;
   font-size: 18px;
@@ -107,6 +107,7 @@
   font-size: 32px;
   left : 30%;
   top : -40px;
+  text-decoration: underline;
   
 }
 #imgDisplay {
@@ -206,6 +207,19 @@
   position :relative;
   border : black;
   top : -50px;
+  
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: x-large;
+  text-decoration : underline;
+  cursor : pointer;
+  margin-right : 10px;
+  }
+.linkC:hover {
+  color : blue;
   
 }
 

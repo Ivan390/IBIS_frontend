@@ -1,7 +1,7 @@
 #MainallContainer {
 	position : absolute;
-	width : 85vw;
-	height : 90vh;
+	width : 90vw;
+	height : 90%;
 	background-color : beige;
 	margin : 2px;
 	left : 0px;
@@ -40,6 +40,18 @@
 	
 	display : none;
 	
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: large;
+  text-decoration : underline;
+  cursor : pointer;
+  }
+.linkC:hover {
+  color : blue;
+  
 }
 #FindInfo .findHeading {
 	font-size : small;
@@ -852,7 +864,7 @@ clear :right;
 #Retcontainer #logo_image {
 	position : relative;
 	top : 5px;
-	left : 80%;
+	left : 75%;
 	width : 60%;
 	height : 50%
 	
@@ -904,14 +916,14 @@ clear :right;
 }
 #buttons label{
 	position : relative;
-	top : -14%;
+	top : -10%;
 	cursor : pointer;
-	font-size : large;
+	font-size : x-large;
 	text-decoration : underline;
 }
 #buttons a {
 	position : relative;
-	top : -14%;
+	top : -10%;
 	font-size : large;
 	left : 10px;
 	

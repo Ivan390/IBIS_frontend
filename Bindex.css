@@ -9,7 +9,7 @@
   border-radius : 15px;
   left : 1%;
 }
-.linkC {
+	.linkC {
   position : relative;
   border : none;
   background : none;
@@ -42,6 +42,15 @@
 }
 .italC {
   font-style: italic;
+}
+.hiddentext {
+  display : none;
+  
+}
+#DDL3Option{
+  position : absolute;
+  top : 50%;
+  left : -0px;
 }
 #SFallContainer #dateTime {
   position: relative;
@@ -129,11 +138,11 @@
 }
 #SFallContainer #theCategory {
   position : relative;
-  padding : 10px;
+  padding : 5px;
   width : 20%;
    border-style : dashed;
   border-width : 2px;
-  max-height: 260px;
+  max-height: 230px;
   margin-right: 10px;
   float : right;
    overflow-y : scroll;
@@ -215,12 +224,12 @@ position : relative;
   left: 30px;
 } 
 #buttContSpan {
-  position : relative;
+  position : absolute;
   display : block;
   width : 250px;
   font-size : 140%;
   left: 70%;
-  top: -50%;
+  top: 30%;
   height: auto;
 }
 #op2btSpan {
@@ -237,7 +246,7 @@ position : relative;
   position: relative;
   height: 20%;
   max-width: 150px;
-  top: -12px;
+  /*! top: -12px; */
   left: 20px;
 }
 #infoDiv p{
@@ -263,9 +272,14 @@ position : relative;
 #Ghead {
   position : relative;
   display : block;
-  left : 30%;
+  left : 45%;
   font-size : x-large;
   text-decoration:  underline;
+  cursor: pointer;
+}
+#Ghead:hover {
+  color : blue;
+  
 }
 #listsList #glList {
   position : relative;
@@ -291,6 +305,10 @@ position : relative;
   color : aliceblue;
   overflow : auto;
   left: 80%;
+}
+
+#GBlock p {
+	display : none;
 }
 .GitemC {
   position : relative;
@@ -343,4 +361,12 @@ position : relative;
   margin : 3px;
   font-size : x-large;
   padding-left: 1.5%;
+}
+#hitCnt {
+  position : absolute;
+  top : -60px;
+  left : 75%;
+  z-index: 1;
+  font-size : x-large;
+  
 }

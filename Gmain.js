@@ -81,7 +81,7 @@ function submitVote() {
       rating = currentScore.value;
     }
   }
-  if (rating < 3) {
+  if (rating < 3 && !sessionStorage.userRef) {
     $('#commentBlock').fadeIn();
   } else {
     $('#commentBlock').hide();
@@ -118,7 +118,7 @@ function dismissNote() {
 }
 function loadRegWin() {
   theUser = $('#userRef').val();
-  var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=720, width=580');
+  var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');
 }
 function closeRegWin() {
   regWin.close;
@@ -234,6 +234,7 @@ function readGloss(that) {
         var itemA = entryL[i].split(':*');
         var item = itemA[0];
         var defin = itemA[1];
+     //   defin =defin.substr("?"," ");
         Ilist += '<span class="entryP" ><span class="GitemC" onclick="showDef(this)">' + item + '</span><span class="GdefC">' + defin + '</span></span></br>';
       }
       $('#defBlock').hide('slow');
@@ -244,3 +245,8 @@ function readGloss(that) {
     }
   })
 } 
+
+function showAlpha(){
+	$("#GBlock .Gselect").toggle("slow");
+	closeGl();
+	}		

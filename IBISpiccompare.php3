@@ -45,7 +45,7 @@
 	      <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
 	    </div>
 	    <span id="buttons">
-	    <label class="" onclick="goBack()">Dismiss</label></span>
+	    <label class="linkC" onclick="goBack()">Dismiss</label></span>
 	    <span id="picHeading">Picture Match</span>
      	<div id="compSub">
      		 <form  name="picCompareF" action="../cgi-bin/picCompare2.php3" method="POST" enctype="multipart/form-data">

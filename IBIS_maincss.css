@@ -2,7 +2,7 @@
 It describes the main page*/
 
 #MainallContainer {
-  position : absolute;
+  position : relative;
   width : 93vw;
   height : 90%; 
   padding : 20px;
@@ -493,8 +493,8 @@ position : relative;
 /*this is details.css*/
 #DETallContainer {
   position : relative;
-  width : 100vw;
-  height : 87vh;
+  width : 94vw;
+  height : auto;
   padding : 20px;
   border-style: inset;
   border-radius: 22px;
@@ -876,7 +876,7 @@ position : relative;
   position : relative;
   border : 2px black solid;
   border-radius : 20px;
-  height : 80vh;
+  height : auto;
   border-style : outset;
   padding : 15px;
 }

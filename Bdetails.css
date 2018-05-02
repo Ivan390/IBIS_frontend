@@ -1,7 +1,7 @@
 /*Details styles*/
 
 #DETallContainer {
-  position : absolute;
+  position : relative;
   width : 95%;
   height : 89%;
   padding : 20px;
@@ -13,7 +13,7 @@
   position : relative;
   border : none;
   background : none;
-  font-size: large;
+  font-size: x-large;
   text-decoration : underline;
   cursor : pointer;
   }
@@ -23,11 +23,11 @@
 }
 #pgHeading {
   position : relative;
-  top : -15%;
+  top : -25px;
   left : 35%;
   font-size : xx-large;
   text-decoration : underline;
-  
+  width: 100px;
 }
 #DETallContainer #dateTime {
   position: relative;

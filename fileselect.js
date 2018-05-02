@@ -35,7 +35,7 @@ function handleFileSelect(evt) {
 		var reader = new FileReader();
 		reader.onload = (function(theFile) {
 			return function(e) {
-				$('#imgDisplay').append('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');
+				$('#imgDisplay').html('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');
 			};
 		})(f);
 		reader.readAsDataURL(f);
