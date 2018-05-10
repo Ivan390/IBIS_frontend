@@ -1,0 +1,145 @@
+#allContainer {
+  position : relative;
+  width : 90%;
+  height : 90%;
+  padding : 20px;
+  border-style: inset;
+   border-radius: 22px;
+}
+#allContainer #dateTime {
+  position: relative;
+  top: 15px;
+  left: -70%;
+  z-index:3;
+  font-size: 18px;
+  margin-left:auto;
+  padding-left:10px;
+  color: green;
+  width: 30%;
+}
+.heading {
+  position : relative;
+  font-size : xx-large;
+  top : -10px;
+  left : 0%;
+  text-decoration: underline;
+  
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: large;
+  text-decoration : underline;
+  cursor : pointer;
+  }
+.linkC:hover {
+  color : blue;
+  
+}
+#allContainer #logo{
+  position : relative;
+   left : 38%;
+   top : -0px;
+ }
+
+#allContainer #logo_image {
+  height : 40%;
+  width : 30%;
+}
+ #pgButtons {
+	position : relative;
+  border-radius : 15px;
+}
+.inputClass {
+	position : relative;
+	float : right;
+	width : 50%;
+	font-size : 18px;
+	left : 0%;
+	margin : 2px;
+	top : -30px;
+	padding : 3px;
+}
+#personalDetails {
+	 width : 60%;
+	 border: green 1px dashed;
+	padding : 10px;
+}
+#imgDisplay{
+	position : absolute;
+	top : 15px;
+	left : 65%;
+	width : 30%;
+	border: orange 1px dashed;
+	padding : 1px;
+	text-align : center;
+}
+#inputDiv {
+	position : relative;
+	border: green 2px solid;
+	padding : 10px;
+	width : 90%;
+	left : 2%;
+	border-style:ridge;
+}
+.thumbpic {
+	border-radius : 12px;
+  	width : 120px;
+  	height : 120px;
+}
+#allContainer .labelClass {
+	height : 32px;
+	padding : 3px;
+	font-size : 18px;
+	margin : 1px;
+}
+.hiddentext {
+  display : none;
+  
+}
+.selectClass {
+	font-size : 15px;
+	height : 42px;
+	border : green solid 1px;
+}
+.buttonclass {
+  position : relative;
+    /*! border : green solid 1px; */
+  height : auto;
+  width : auto;
+  font-size : 20px;
+  padding : 4px;
+  margin : 10px;
+}
+#phpOutput {
+  position : relative;
+  
+}
+#messSpan {
+  position : relative;
+  top : -70px;
+  left : 10px;
+  font-size : 20px;
+  
+}
+.fileClass {
+    border : 1px dashed green;
+}
+.Important {
+  position : relative;
+  color : red;
+  font-size : 26px;
+  
+}
+#detail_fs{
+  position : relative;
+  border : 1px black solid;
+  border-radius : 20px;
+  height : 70%;
+  border-style: outset;
+  padding : 20px;
+  width : 93%;
+  overflow : auto;
+  white-space : nowrap;
+}
