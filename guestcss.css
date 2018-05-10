@@ -64,6 +64,12 @@
   width:  150px;
   height: auto;
 }
+#showguests {
+  position : relative;
+  font-size : 26px;
+  width : 100%;
+  
+}
 #guestImages {
   position : absolute;
   top : 102%;

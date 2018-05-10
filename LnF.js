@@ -1,5 +1,3 @@
-
-
 function andThis(that){
 	var theVal = that.value;
 	var Elist = "";
@@ -11,6 +9,9 @@ function andThis(that){
 	var fam = "";
 	var spec = "";
 	var comN = "";
+	
+	var spce = ' ';
+	
 	$.ajax({
 		url : "../../cgi-bin/lnf.php3",
 		type : "POST",
@@ -27,7 +28,13 @@ function andThis(that){
 			gen = setA[1];
 			spec = setA[2];
 			comN = setA[3];
-			Elist +="<li onclick=\"editThis(this)\"><span class=\"lc\"><span class=\"hiddentext\">"+recID+"</span>"+gen+":<span class=\"italic\" >"+spec+"</span>:</br>"+comN+"</span></li>";
+			//recID.replace(regexper, " ");
+			//gen.replace(regexper, " ");
+			//spec.replace(regexper, " ");
+			//comN.replace(regexper, " ");
+
+			//comN.replace(weirdch,spce);
+			Elist +="<li onclick=\"editThis(this)\"><span class=\"lc\"><span class=\"hiddentext\">"+recID+"</span>"+gen+": <span class=\"italic\" >"+spec+"</span> : "+comN+"</span></li>";
 		}
 		Rlist = "<ul>"+Elist+"</ul>";
 		$('#messDiv').html(Rlist);
@@ -35,6 +42,7 @@ function andThis(that){
 		}
 	})
 }
+
 function moveUp(that){
 	var item = that.id;
 	if (item == "LostBlock"){
@@ -45,19 +53,17 @@ function moveUp(that){
 		$("#" + item).css('z-index','12');
 		$('#LostBlock').css('z-index','1');
 	}
-	
-	
 }
 
 function editThis(that){
 	var thetext = that.firstChild.innerHTML;
 	var theID = that.firstChild.firstChild.innerHTML;
-	var theItemA = thetext.split(":");
+	var theItemA = thetext.split(" : ");
 	$('#recID').val(theID);
 	var thegenA = theItemA[0].split("</span>");
 	var thegen = thegenA[1];
 	$('#gen').val(thegen);
 	$('#spec').val(theItemA[1]);
-	$('#Cnames').val(theItemA[2]);
+	//$('#Cnames').val(theItemA[2]);
 	document.lnfForm.submit();
 }

@@ -65,12 +65,12 @@
 	    		<div id="messDiv">
 	    			<span class="messSpan"> Clicking one of the buttons presents a list of data entries that can not be displayed in the index because of deficient information. Click on an entry to edit it, you must at least add a picture to make the entry available in the index </span>
 	    		</div>
-	    		<form name="lnfForm" action="../../cgi-bin/IBISlnfCollect.php3" method="POST" enctype="multipart/form-data">
-					<input type="text" id="catVal" name="name1" class="hiddentext" value=""/>
-					<input type="text" id="recID" name="name2" class="hiddentext" value=""/>
-					<input type="text" id="gen" name="name3" class="hiddentext" value=""/>
-					<input type="text" id="spec" name="name4" class="hiddentext" value=""/>
-					<input type="text" id="Cnames" name="name5" class="hiddentext" value=""/>
+	    		<form name="lnfForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data">
+					<input type="text" id="catVal" name="thecat" class="hiddentext" value=""/>
+					<input type="text" id="recID" name="recID" class="hiddentext" value=""/>
+					<input type="text" id="gen" name="genref" class="hiddentext" value=""/>
+					<input type="text" id="spec" name="specref" class="hiddentext" value=""/>
+					
 	    		</form>
 	    	</div>
 	    	<div id="FoundBlock" onclick="moveUp(this)">

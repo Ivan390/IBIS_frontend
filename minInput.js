@@ -29,12 +29,10 @@ function loadcontent(that){
     theLabel = that;
     $('.thisareaLabel').css("color" ,"black");
     theLabel.style.color = "lightgreen";
-    //theLabel.color = "red";
     var theContent = $('#'+theHeading).val();
     $("#outputBox").val(theContent);
 }
         
 function doSubmit(){
-    //cleanupData();
     document.MinForm.submit();
 }

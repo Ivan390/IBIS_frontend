@@ -5,15 +5,12 @@ function writeCookie(name, value, days){
 		date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000) );
 		expires = date.toGMTString();
 	}
-	//document.cookie = name + "=" + value + expires + "; path=/";
 	document.cookie = name +value+"; expires="+expires+";";
-
 }
 
 function readCookie(name){
 	var searchName = name + "=";
 	var cookies = document.cookie.split(';');
-	
 	for ( var i = 0; i < cookies.length; i++){
 		var c = cookies[i];
 		 while (c.charAt(0) == ' ')
@@ -23,7 +20,6 @@ function readCookie(name){
 	  }
 	  return null;
 	}
-
 
 function eraseCookie(name){
 	writeCookie(name, "", -1);

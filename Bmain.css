@@ -147,7 +147,7 @@ top : 10px;
     font-size : 20px;
     border : lightblue 2px dashed;
     /*! float:right; */
-    top : -35px;
+    top : -0px;
     left: -4.5%;
     padding: 10px;
 }

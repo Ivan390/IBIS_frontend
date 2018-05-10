@@ -33,7 +33,7 @@
 #LostBlock {
   position : relative;
   border : 1px black solid;
-  width : 45%;
+  width : 55%;
   height : 80%;
   padding : 10px;
   margin : 5px
@@ -46,9 +46,9 @@
 #FoundBlock {
   position  : relative;
   float : right;
-  width : 51%;
+  width : 41%;
   border : 1px black solid;
-  top : -86%;
+  top : -90%;
   left: -10px;
   height : 84.5%;
 }

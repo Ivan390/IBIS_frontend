@@ -88,18 +88,16 @@ function submitVote() {
   }
   var newScore = eval('parseInt(curScore) + parseInt(rating)');
   var respScore = '';
-  //alert(rating+"\n"+ recNumber+"\n"+conRef+"\n"+theCat+"\n"+ newScore);
   $.ajax({
     url: '../../cgi-bin/IBISvotes.php3',
     type: 'post',
     data: {
-      name1: rating,
-      name2: recNumber,
-      name3: conRef,
-      name4: theCat
+		  name1: rating,
+		  name2: recNumber,
+		  name3: conRef,
+		  name4: theCat
     },
     success: function (data) {
-      //alert(data);
       var response = data.split(':');
       respScore = response[1];
       var recID = response[0];
@@ -116,14 +114,17 @@ function submitVote() {
 function dismissNote() {
   $('#commentBlock').hide();
 }
+
 function loadRegWin() {
   theUser = $('#userRef').val();
   var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');
 }
+
 function closeRegWin() {
   regWin.close;
   $('#closewin').hide();
 }
+
 function submitNote() {
 /*I am not implementing this but I might change my mind later so I will leave the definition*/
   var conRef = $('#conRef').val();
@@ -145,6 +146,7 @@ function submitNote() {
   $('#commentBlock').html('<p>Your comment has been saved</p>');
   $('#commentBlock').show();
 }
+
 function handleFileSelecting(that) {
   IC = $('#ICval').val();
   var butVal = that.name;
@@ -164,6 +166,7 @@ function handleFileSelecting(that) {
     reader.readAsDataURL(f);
   }
 }
+
 function getNames(that) {
   var thisName = that.title;
   var catvalue = $('#catval').val();
@@ -200,20 +203,24 @@ function getNames(that) {
     }
   })
 }
+
 function showDef(that) {
   var theSpan = that.nextSibling;
   var definC = that.innerHTML + ' - ' + theSpan.innerHTML;
   $('#defBlock').text(definC);
   $('#defBlock').slideDown();
 }
+
 function closethis(that) {
   $(that).hide();
 }
+
 function closeGl() {
   $('#retBlock').hide('slow');
   $('.Gbutton').hide('slow');
   $('#defBlock').hide('slow');
 }
+
 function readGloss(that) {
   var letter = that.innerHTML;
   var category = $('#catVal').val();
@@ -234,7 +241,6 @@ function readGloss(that) {
         var itemA = entryL[i].split(':*');
         var item = itemA[0];
         var defin = itemA[1];
-     //   defin =defin.substr("?"," ");
         Ilist += '<span class="entryP" ><span class="GitemC" onclick="showDef(this)">' + item + '</span><span class="GdefC">' + defin + '</span></span></br>';
       }
       $('#defBlock').hide('slow');
@@ -249,4 +255,4 @@ function readGloss(that) {
 function showAlpha(){
 	$("#GBlock .Gselect").toggle("slow");
 	closeGl();
-	}		
+}		

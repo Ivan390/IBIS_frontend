@@ -30,7 +30,7 @@
        />
          
     </head>
-    <body id="TheBody" onload="initForm()">
+    <body id="TheBody" onload="initForm(); showAgreement();">
       <div id="REGallContainer" class="ac">
       	<div id="dateTime">
         	<div id="dateBlock">The Date</div>
@@ -43,42 +43,42 @@
 			<form name="registerForm" method="POST" action="../../cgi-bin/IBIScontribRegister.php3" enctype="multipart/form-data" >
 				<div id=pgButtons>
 	    			<a id="backButton" href="/ibis/IBISmain.html" class="linkC">Back to Main </a>
-	    			<input type="button" id="buttonBtn" class="linkC" onclick="submitRegistration()" value="Submit">
+	    			<input type="button" id="buttonBtn" class="linkC requiredf" onclick="submitRegistration()" value="Submit">
 	      			
 	    		</div>
 	  			<fieldset id="detail_fs" class="littleDD">
         	    	<div id="personalDetails" class="littleDD">
         				<p>
-		    	   			<label class="labelClass requiredf" >Your first name/s </label>
-            				<input type="text" name="name" id="fName" class="inputClass littleDD requiredf" maxlength="10" />
+		    	   			<label class="labelClass " >Your first name/s </label>
+            				<input type="text" name="name" id="fName" class="inputClass littleDD requiredf" disable maxlength="10" onchange="checkWords(this)" />
             			</p>
             			<p>
-							<label class="labelClass" class="requiredf" >Your last name/s</label>
-            				<input type="text" name="lastname" class="inputClass littleDD" class="requiredf" />
+							<label class="labelClass" class="" >Your last name/s</label>
+            				<input type="text" name="lastname" class="inputClass littleDD requiredf" onchange="checkWords(this)" />
             			</p>
             			<p> 
-							<label class="labelClass" class="requiredf" >Your email address</label>
-            				<input type="text" name="email" class="inputClass littleDD" class="requiredf" />
+							<label class="labelClass" class="" >Your email address</label>
+            				<input type="text" name="email" class="inputClass littleDD requiredf" onchange="checkWords(this)" />
             			</p>
             		</div>
             		<div>
 	      				<div id=imgDisplay class="bigDD">
 	      				</div>
 	        			<label class="labelClass">Add a picture of yourself</label>
-            			<input type="file" name="picture" id="regPic" class="littleDD" />
+            			<input type="file" name="picture" id="regPic" class="littleDD requiredf" />
           			</div>
             		<div id="securityInfo" class="bigDD">
 	      				<p>
 		    				<label class="labelClass ">Select a question and enter an answer in the space below.</label>
 	      				</p>
         				<p>
-		    				<select id = "secQ" name="secQ" class="labelClass littleDD selectClass" >
+		    				<select id = "secQ" name="secQ" class="labelClass littleDD selectClass requiredf" >
 		    	  				<option value = "favColor">What is your favourite colour?</option>
 		        				<option value = "favFood">What is your favourite food?</option>
 		        				<option value = "uncName">What is the name of your favourite uncle?</option>
 		        				<option value = "petName">What is the name of your favourite pet?</option>
           					</select></br>
-          					<input type="text" name=secA id="secA" class="labelClass littleDD" />
+          					<input type="text" name=secA id="secA" class="labelClass littleDD requiredf" onchange="checkWords(this)" />
         				</p>
       				</div>
       				<input type="text" id="userName" name="userName" class="hiddentext">

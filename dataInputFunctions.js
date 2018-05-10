@@ -6,7 +6,6 @@ function initForm() {
   $("#dateBlock").html(new Date().shortFormat());
   starttime();
   $('.inputC').val("");
-
 }
 // vegInput
 var imgname = "";
@@ -15,10 +14,8 @@ var theLabel ="";
 
 function doRest(){
   var selVal = $('#refSelect').val();
-
   $('#tit').val(selVal);
-   	$('#pgDialog').show();
-        
+  $('#pgDialog').show();
 }
 
 function closePgDialog(){
@@ -111,38 +108,35 @@ function checkDuplicate(){
     }
     
     $.ajax({
-	url : '../../cgi-bin/IBIScheckdup.php3',
-	type : "get",
-	async : "false",
-	data :{species : speciesval, catval : catvalue, group : category},
-	success : function(data){
-	    var testregexp = /nomatch/;
-	    if (testregexp.test(data)){
-	    	
-	    }else {
-				var dataList = data.split("::");
-				for (i=0; i<dataList.length; i++){
-		    	if (dataList[i]==""){
-						continue;
-		    	}
-		    	dupItems = dataList[i]; 
-		    	dupItemsL = dupItems.split(":");
-		    	genref = dupItemsL[1];
-		    	specref = dupItemsL[2];
-		    	recID = dupItemsL[0];
-		    	conRef = dupItemsL[4];
-		    	localN = dupItemsL[3];
-		  matchList += "<li><a href=\"../../cgi-bin/IBISeditStuff.php3?thecat="+thecat+"&specref="+genref+"&genref="+specref+"\">"+specref +" "+ genref +"</a><span id=\"lcN\">  "+localN+"</span> </li>";
-		    }
-		  	       
-	       $('#specid').val(dupItemsL[1]);
-	       
-	       matchedDiv = "<div id=\"matDiv\">Possible duplicate entry.</br>Maybe you want to edit the existing record instead</br><ul id=\"matlist\">"+matchList+"</ul><input type=\"button\" class=\"buttonclass\" value=\"Enter anyway \" onclick=\"closeDiag()\"></div>";
-		       $('#messageDiv').html(matchedDiv);
-	   }
-		}
-	})
-	
+			url : '../../cgi-bin/IBIScheckdup.php3',
+			type : "get",
+			async : "false",
+			data :{species : speciesval, catval : catvalue, group : category},
+			success : function(data){
+			  var testregexp = /nomatch/;
+			  if (testregexp.test(data)){
+			  ///	
+			  }else {
+					var dataList = data.split("::");
+					for (i=0; i<dataList.length; i++){
+				  	if (dataList[i]==""){
+							continue;
+				  	}
+				  	dupItems = dataList[i]; 
+				  	dupItemsL = dupItems.split(":");
+				  	genref = dupItemsL[1];
+				  	specref = dupItemsL[2];
+				  	recID = dupItemsL[0];
+				  	conRef = dupItemsL[4];
+				  	localN = dupItemsL[3];
+				matchList += "<li><a href=\"../../cgi-bin/IBISeditStuff.php3?thecat="+thecat+"&specref="+genref+"&genref="+specref+"\">"+specref +" "+ genref +"</a><span id=\"lcN\">  "+localN+"</span> </li>";
+				  }
+					$('#specid').val(dupItemsL[1]);
+			    matchedDiv = "<div id=\"matDiv\">Possible duplicate entry.</br>Maybe you want to edit the existing record instead</br><ul id=\"matlist\">"+matchList+"</ul><input type=\"button\" class=\"buttonclass\" value=\"Enter anyway \" onclick=\"closeDiag()\"></div>";
+				  $('#messageDiv').html(matchedDiv);
+			 }
+			}
+		})
 }
 
 function checkWords(content){
@@ -153,15 +147,14 @@ function checkWords(content){
     var comment = content;
     //alert(comment);
     for (i = 0; i < swearList.length; i++){
-	 swearWrd = swearList[i];
-	 wordexp = new RegExp(swearWrd);
-	//alert(wordexp);
-		if (wordexp.test(comment)){
+	 		swearWrd = swearList[i];
+	 		wordexp = new RegExp(swearWrd);
+   		if (wordexp.test(comment)){
 		    messg = "words like " + swearWrd + " are not allowed in this database!\nPlease clean up your fucking language.\nNo entry was recorded for this heading";
-		    return messg;
+		   	return messg;
 		    break;
+			}
 		}
-	}
 }	
 
 function submitDupForm(){
@@ -173,7 +166,6 @@ function loadcontent(that){
     theLabel = that;
     $('.thisareaLabel').css("color" ,"black");
     theLabel.style.color = "lightgreen";
-     //theLabel.color = "red";
     var theContent = $('#'+theHeading).val();
     $("#outputBox").val(theContent);
 }
@@ -186,42 +178,41 @@ function checkPics() {
 function closeDiag(){
 	$('#matDiv').hide();
 }
+
 function reallySubmit(){
 var catvalue = $('#thecatid').val();
 	if (catvalue == "Vegetables"){
 		document.VegForm.submit(); 
 		}
-     else if (catvalue == "Animals"){
-     document.AnimForm.submit();
-     }
-     else if (catvalue == "Minerals"){
-      document.MinForm.submit();
-     }
-
-}        
+    else if (catvalue == "Animals"){
+    	document.AnimForm.submit();
+    }
+    else if (catvalue == "Minerals"){
+    	document.MinForm.submit();
+    }
+}
+        
 function hidethis(){
 	$('#messD').hide();
 }
 
 function doSubmit(){
-var apicValue = checkPics();
+	var apicValue = checkPics();
 	if (apicValue == ""){
-		var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
+	var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
 		$('#messageDiv').html(messgDiv);
 	  }else{
 	   	reallySubmit();
 	  }
-//cleanupData();
-	
-    
 }
+
  function showSrcBlock(){
         $('#SrcBlock').slideDown();
         }
         
 function shortRefCode() {
-        	var contrib = $('#contrib_ID').val();
-        	var titList = "";
+var contrib = $('#contrib_ID').val();
+var titList = "";
         	$.ajax({
         		url : "../../cgi-bin/getRefs.php3",
         		type : "POST",
@@ -233,17 +224,14 @@ function shortRefCode() {
         					continue;
         				}
         				var refSet = Rlist[j].split(":*");
-        				
         				titList += "<option value=\""+refSet[0]+"\">"+refSet[1]+"</option>";
-        			
         			}
         			selctList = "<select id=\"refSelect\">"+titList+"</select>";
         			$('#refContainer').html(selctList);
-        			
         		}
-        		
         	})
-        }
+}
+
 function closeThis() {
         	$('#SrcBlock').fadeOut();
         }
@@ -268,14 +256,11 @@ function srcSubmit(){
 		data : {type:Type, title : Title, publshr :Publisher, publDate : pubD, publAddr : pubAddrs, ISBN : isbn, author : auth, editor : ed, url: urlA, contributer: contrib, Meth:meth, SrcID : srcID },
 		success : function(data){
 			alert(data);
-		
 		}
-	
 	});
-	
 	$('#SrcBlock').fadeOut();
-	
 }
+
 function updateForm(){
 	shortRefCode();
 	$('#Ocontainer').show();
@@ -283,14 +268,12 @@ function updateForm(){
 
 }
 function updF(){
-	//<option value=\""+refSet[0]+"\">"+refSet[1]+"</option>";
 	var recID = $('#refSelect').val();
 	$.ajax({
 		url : "../../cgi-bin/IBISupdSrc.php3",
 		type : "POST",
 		data : {name1:recID},
 		success : function(data){
-			//alert(data);
 		var SrcList = data.split(":@");
 		$('#type').val(SrcList[0]);
 		$('#Title').val(SrcList[1]);

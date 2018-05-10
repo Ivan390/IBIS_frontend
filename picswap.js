@@ -24,35 +24,26 @@ var dyklist = new Array(
 )
 
 function picswaps(){
-
-  //DYK = $("#dykText");
-  
   setInterval("updateDYK()", 15000);
- 
- // setInterval("dotoggle()", 2000);
   setInterval( "dotoggleText()", 7500);
 }
 
-
 function doDYK(){
-  
   updateDYK();
 }
 
 function dotoggle(){
   $(".optImage").fadeToggle(500);
-  
 }
+
 function dotoggleText(){
-  
   $("#dykText").slideToggle(3000);
-  
 }
 
 function updateDYK(){
   dykframe++;
   if (dykframe >= dyklist.length-1){
     dykframe = 0;
-  } // end if
+  } 
   $('#dykText').html(dyklist[dykframe]);
-} // end updateImage
+} 

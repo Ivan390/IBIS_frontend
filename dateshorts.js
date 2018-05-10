@@ -1,4 +1,4 @@
-/* main.js*/
+/* dateshorts.js*/
 Date.prototype.shortFormat = function() {
   var myDate = Date();
   var dateString = myDate.split(" ");

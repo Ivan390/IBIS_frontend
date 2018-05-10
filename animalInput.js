@@ -5,7 +5,6 @@ var theLabel ="";
 function loadList(){
     $("#lookupdiv").load("IBIS_animalia-tablestripped.html");
     $("#lookupdiv").css("display", "block");
- // $("lookupdiv > #dateTime").css("display", "none");
     $("#lookupList").css("display", "none");
     $("#lookupHide").css("display", "inline");
 }
@@ -41,74 +40,68 @@ function checkDuplicate(){
     var dupItems = "";
     var dupItemsL = "";
     var matchedDiv = "";
-   // alert("it is running the script");
     var speciesval= $('#Species').val();
     var catvalue = 'Animals';
     $.ajax({
-	url : '../../cgi-bin/IBIScheckdup.php3',
-	type : "get",
-	async : "false",
-	data :{species : speciesval, catval : catvalue},
-	success : function(data){
-		var testregexp = /nomatch/;
-		if (testregexp.test(data)){
-			alert("no matching species found");
-		}else {
-		    var dataList = data.split("::");
-		    for (i=0; i<dataList.length; i++){
-			if (dataList[i]==""){
-			    continue;
+			url : '../../cgi-bin/IBIScheckdup.php3',
+			type : "get",
+			async : "false",
+			data :{species : speciesval, catval : catvalue},
+			success : function(data){
+				var testregexp = /nomatch/;
+				if (testregexp.test(data)){
+					alert("no matching species found");
+				}else {
+		    	var dataList = data.split("::");
+		    	for (i=0; i<dataList.length; i++){
+						if (dataList[i]==""){
+					  	continue;
+						}
+					dupItems = dataList[0]; //.split(":");
+					dupItemsL = dupItems.split(":");
+					matchList += '<li id="matchItem" onclick="submitDupForm()">' + dupItemsL[0] +':'+ dupItemsL[1] + '</li>';
+		  	}
+	    alert(matchList);
+	    $('#specid').val(dupItemsL[1]);
+	    matchedDiv = "<div id=\"matches\"><p>Possible duplicate species found.Maybe you want to edit this existing record instead</p><ul>" + matchList + "</ul></div>";
+	    $('#messageDiv').html(matchedDiv);
 			}
-			dupItems = dataList[0]; //.split(":");
-			dupItemsL = dupItems.split(":");
-			//	alert(dataList[i]);
-			matchList += '<li id="matchItem" onclick="submitDupForm()">' + dupItemsL[0] +':'+ dupItemsL[1] + '</li>';
-		    }
-		    // last error said that dataList.split is not a function????....because it was allready an array
-		    alert(matchList);
-		    $('#specid').val(dupItemsL[1]);
-		    matchedDiv = "<div id=\"matches\"><p>Possible duplicate species found.Maybe you want to edit this existing record instead</p><ul>" + matchList + "</ul></div>";
-		    $('#messageDiv').html(matchedDiv);
 		}
-	}
-    })
+	});
 }
         
 function sendedit(){
     var editval = $("#outputBox").val();
     var errmssg = checkWords(editval);
-    //alert("from sendedit\n"+errmssg);
     if (errmssg){
-	alert("This is a family website\n"+errmssg);
-	$('#'+theHeading).val("");
-	theLabel.style.backgroundColor = "red";
-	$("#outputBox").val("Bad Word User");
-    }else{
-	$('#'+theHeading).val(editval);
-	theLabel.style.backgroundColor = "pink";
-	$("#outputBox").val("");
-    }
+			alert("This is a family website\n"+errmssg);
+			$('#'+theHeading).val("");
+			theLabel.style.backgroundColor = "red";
+			$("#outputBox").val("Bad Word User");
+   		}else{
+				$('#'+theHeading).val(editval);
+				theLabel.style.backgroundColor = "pink";
+				$("#outputBox").val("");
+    	}
     if (theHeading == "Species"){
-	checkDuplicate();
+				checkDuplicate();
     }
 }
+
 function checkWords(content){
     var swearWrd = "";
     var wordexp = "";
     var messg = "";
     var swearList = new Array("fuck", "shit", "asshole", "bitch", "cunt", "shithead", "asscrack", "bullshit", "damnit");
     var comment = content;
-    //alert(comment);
     for (i = 0; i < swearList.length; i++){
-	 swearWrd = swearList[i];
-	 wordexp = new RegExp(swearWrd);
-	//alert(wordexp);
-		if (wordexp.test(comment)){
+	 		swearWrd = swearList[i];
+	 		wordexp = new RegExp(swearWrd);
+			if (wordexp.test(comment)){
 		    messg = "words like " + swearWrd + " are not allowed in this database!\nPlease clean up your fucking language.\nNo entry was recorded for this heading";
-		//	alert("words like " + swearWrd + " are not allowed in this database!\nPlease clean up your fucking language.\nNo entry was recorded for this heading" );
-		    return messg;
+			  return messg;
 		    break;
-		}
+			}
 	}
 }		
 	    
@@ -117,7 +110,6 @@ function loadcontent(that){
     theLabel = that;
     $('.thisareaLabel').css("color" ,"black");
     theLabel.style.color = "lightgreen";
-    //theLabel.color = "red";
     var theContent = $('#'+theHeading).val();
     checkWords(theContent);
     $("#outputBox").val(theContent);
@@ -128,6 +120,5 @@ function submitDupForm(){
 }
 
 function doSubmit(){
-//cleanupData();
     document.AnimForm.submit();
 }

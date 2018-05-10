@@ -16,13 +16,12 @@ function showGuests(){
 		theList += '<img class="thumbpic" src="'+imgsrc+'" title="'+imgtitle +'" />:';
 	}
 	var listArray = theList.split(":");
-	
 	for (l=0; l<=dispLimit; l++){
-	shortListEntry = listArray[l+lastNum];
-	if (l+lastNum >= guestCount){
-	break;
-	}
-	 shortList += listArray[l+lastNum];
+		shortListEntry = listArray[l+lastNum];
+		if (l+lastNum >= guestCount){
+		break;
+		}
+		 shortList += listArray[l+lastNum];
 	}
 	lastNum = lastNum+dispLimit+1;
 	if (lastNum >= guestCount){
