@@ -2,44 +2,43 @@
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>
       I B I S - Indexed Biological Information Server
     </title>
     <script type="text/javascript" src="jquery-2.1.1.min.js"> </script>
+    <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
     <script type="text/javascript" src="main.js"> </script>
     <script type="text/javascript" src="dateshorts.js"> </script>
     <script type="text/javascript" src="picswap.js"> </script>
     <script type="text/javascript" src="cookies.js"> </script>
+    <script type="text/javascript" src="login.js"></script>
+    
     <script type=text/javascript>
     
     </script>
+    <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet"
         type="text/css"
         href="Bmain.css"
     />
+    
     <link rel="stylesheet" 
     	type="text/css" 
     	media="only screen and (max-width: 480px)" 
     	href="Smain.css" 
     	/>
-    	
-    <link href="css/bootstrap.min.css" rel="stylesheet"/>
     </head>
     <body id="TheBody" onload="initForm()">
       <div id="MainallContainer" class="container">
       <div class="row">
-      	<div class="col-md-4">
       		<div id="dateTime">
 					  <div id="dateBlock">The Date</div>
 					  <div id="timeBlock">The Time</div>       
 			  	</div>
-      	</div>
-      	<div class="col-md-6 col-md-offset-2 col-sm-12" >
       		<div id="logo_image_holder">
-					  <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
+					  <img id="logo_image" src="./images/Logo1_smaller.png"/>
 					</div>
-      	</div>
       </div>
 	    
 	    
@@ -63,50 +62,51 @@
 	      </form>
 	    </div>
 	    <div id="cgiResult" ></div>
-	    <div id="detail_fs_main" class="littleDD">
+	    <div id="detail_fs_main" class="container">
+	    <div id="adminBlockholder" class="row">
+	    	<div id="adminBlock"></div>
+	    </div>
+	   
+	   
 	    <div class="row">
-	    	<div class="col-md-8 col-sm-12">
-			  	<div id="FindInfo" class="bigDD">
-			      <h2>Find Information</h2>
-			      <div id="animal" class="findOption" onclick="loadIndex('animals');">
-			        <h2 class="findHeading">Animal</h2>
-			        <img id="animlink" class="optImage" src="images/animals.gif" onclick="loadIndex('animals');" /> 
-			        <p class="contextHelp">Click here to find info on animals.</p>
-			      </div>
-			      <div id="vegetable" class="findOption" onclick="loadIndex('vegetables');">
-			        <h2 class="findHeading">Vegetable</h2>
-			        <img id="veglink" class="optImage" src="images/vegetablesCl.gif" onclick="loadIndex('vegetables');" /> 
-			        <p class="contextHelp">Click here to find info on plants.</p>
-			      </div>
-			      <div id="mineral" class="findOption" onclick="loadIndex('minerals');">
-			        <h2 class="findHeading">Mineral</h2>
-			        <img id="minlink" class="optImage" src="images/minerals.gif" onclick="loadIndex('minerals');" />
-			        <p class="contextHelp">Click here to find info on minerals.</p>
-			      </div>
-			    </div>
-	    	</div>
-	    	<div class="col-md-4 col-sm-12 ">
-	    		<div id="adminBlock"></div>
-	    	</div>
+	    	<span id="FindInfo" class="">
+					<h2>Find Information</h2>
+					<div id="animal" class="findOption" onclick="loadIndex('animals');">
+						<h2 class="findHeading">Animal</h2>
+						<img id="animlink" class="optImage" src="images/animals.gif" onclick="loadIndex('animals');" /> 
+						<p class="contextHelp">Click here to find info on animals.</p>
+					</div>
+					<div id="vegetable" class="findOption" onclick="loadIndex('vegetables');">
+						<h2 class="findHeading">Vegetable</h2>
+						<img id="veglink" class="optImage" src="images/vegetablesCl.gif" onclick="loadIndex('vegetables');" /> 
+						<p class="contextHelp">Click here to find info on plants.</p>
+					</div>
+					<div id="mineral" class="findOption" onclick="loadIndex('minerals');">
+						<h2 class="findHeading">Mineral</h2>
+						<img id="minlink" class="optImage" src="images/minerals.gif" onclick="loadIndex('minerals');" />
+						<p class="contextHelp">Click here to find info on minerals.</p>
+					</div>
+				</span>    	
+				<span id="LinkList" class="" >
+					<p class="">Eco Links</p>
+					<ul class="list-unstyled">
+						<li><a href="IBISutilities.html">Utilities</a></li>
+					</ul>
+				</span>
+	    
+	    
+				</div>
+			
+			</div>
+	    
+	    </div>  
+	    <div id="DidYouKnow" class="">
+	        <div id="DYK" class="text-center"><h2>Did you know?</h2></div>
+	        <div id=dykText class="text-center"> that the sky is blue </div>
 	    </div>
-	      
-		  <div id="LinkList" class="bigDD">
-	        <p class="H2">Eco Links</p>
-	        <ul>
-	          
-	          <li><a href="IBISutilities.html">Other functions</a></li>
-	        </ul>
-	      </div>
-	      
-	      
-	    </div>
-	    <div id="DidYouKnow" class="littleDD">
-	        <div id="DYK"><h2>Did you know?</h2></div>
-	        <div id=dykText> that the sky is blue </div>
-	      </div>
 	      
     </body>
-    <script type="text/javascript" src="login.js"></script>
+    
 	<script type="text/javascript">
 		function loadIndex(catname){
 	    	document.categoryForm.catValue.value = catname;

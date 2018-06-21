@@ -1,155 +1,186 @@
 #MainallContainer {
 	position : relative;
-	/*! width : 90vw; */
-	/*! height : 90%; */
-	background-color : beige;
-	margin : 2px;
-	/*! left : 0px; */
+	border : 1px lightblue solid;
+	border-radius : 10px;
+	padding : 5px;
+	width : 99%;
+	left : 0px;
+	height : auto;
 }
-#logo_image_holder {
+
+h1 {
+position : relative;
+font-size : large;
+}
+#dateTime {
 	position : relative;
 	width : auto;
-	left : 0px;
+	height : 10%;
+	margin-left : 6%;
+	padding : 5px;
 }
-#adminBlock {
-    position: relative;
-    left : 1%;
-	top : -210px;
-	width : 95%;
-	margin : 5px;
+
+#logo_image_holder {
+position : relative;
+	width : 70%;
+	height :20%;
+float : right;
+	padding : 5px;
+	top : -70px;
 }
 #MainallContainer #logo_image {
+ position : relative;
+	height: 53%;
+	width: 70%;
+	z-index: 6;
+	left : 50%;
+}
+#loginLink {
+	left : 3%;
+	z-index: 6;
+}
+.loginshow {
+	position : absolute;
+   color : blue;
+   width : auto;
+   background-color : rgba(225,235, 12, 0.7);
+   border : 1px lightblue orange;
+   display : block;
+   border-radius : 15px;
+   left : 3%;
+   padding : 5px;
+}
+
+#title #mainline {
 	position : relative;
-	left : 25%;
-	width : 60%;
-	height :auto;
-	/*! top : -5px; */
-	height: auto;
+	left : 50%;
+	font-size : x-large;
+	text-decoration : underline;
+}
+
+#title #subline {
+	position : relative;
+	left : 10%;
+	font-size : large;
+	text-decoration : underline;
+}
+#detail_fs_main {
+	position : relative;
+	border : 1px lightblue solid;
+	border-radius : 10px;
+	padding : 5px;
+	width : 95%;
+	
+}
+
+#adminBlockholder {
+
+
+	background-color : lightblue;
+	border-radius : 10px;
+	margin : 5px;
+	padding : 2px;
+	left : 5px;
+
+}
+#adminBlock {
+	position : relative;
+
+}
+
+
+#register {
+	float : left;
+	border : 1px blue solid;
+		font-size : xx-large;
+	text-decoration : underline;
+	cursor : pointer;
+
+	width : auto;
+}
+#guestbook {
+	float : right;
+	border : 1px blue solid;
+		font-size : xx-large;
+	text-decoration : underline;
+	cursor : pointer;
+	left : 130%;
+	width : auto;
 }
 #FindInfo {
 	position : relative;
-	/*! width : 50%; */
-	/*! max-height : 250px; */
-	overflow : auto;
- top : 95px; 
+
+	background-color : lightblue;
+	border-radius : 10px;
+	margin-right : 5px;
+	padding : 5px;
+	width : 50%;
 
 }
 
 #FindInfo img {
 	position : relative;
-	width : 35%;
-	float : left;
-	margin : 0px;
-	padding : 0px;
-	
+	cursor : pointer;
+	margin-left : 5px;
+	width : 80%;
 }
-#FindInfo > h2 {
-	
-	display : none;
-	
-}
-.linkC {
-  position : relative;
-  border : none;
-  background : none;
-  font-size: large;
-  text-decoration : underline;
-  cursor : pointer;
-  }
-.linkC:hover {
-  color : blue;
-  
-}
-#FindInfo .findHeading {
-	font-size : small;
-	left : -15px;
-	margin : 2px
-}
-.findOption:hover .contextHelp{
-	display : none;
-	
-}
-#welcBlock {
+#FindInfo h2 {
 	position : relative;
-	width : 93%;
-	left : 0px;
-	height : auto;
-	padding : 5px;
-}
-#greetingDiv{
-	position : relative;
-	top : -20px;
-	margin : 5px;
 	font-size : large;
+	text-decoration : underline;
 }
-#welcBlock a{
+.findHeading {
 	position : relative;
-	top : -30px;
-	
-}
-#registerBlock {
-	position : relative;
-	/*! width : 90%; */
-	left : 0px;
-	font-size : smaller;
-	}
-#guestBook {
-		position : relative;
-	/*! width : 90%; */
-	left : 0px;
-	font-size : smaller;
-}
-#MainallContainer #dateTime {
-	top : -10px;
-	width : 60%;
-	left : -45%;
+	left : 25%;
 }
 
-#welcBlock img {
-	display : none;
-}
-#MainallContainer #detail_fs_main {
-	position : relative;
-	top : -45%;
-	height : 350px;
-	overflow : auto;
-	
-}
 #LinkList {
-	position:relative;
-	height : 200px;
-	overflow : auto;
-	width : 100px;
-	left : 0px;
-	z-index : 5;
-	top : -200px;
+	position : relative;
+	width : 40%;
+	background-color : lightgreen;
+	border-radius : 10px;
+	padding : 5px;
 }
+
 #LinkList p {
-	font-size : large;
+	font-size : x-large;
+	text-decoration : underline;
 }
 #LinkList li {
-	position : relative;
-	left : -20px;
-	font-size : small;
-}
-#loginLink {
-	position : absolute;
-	left : 10%;
-	font-size : smaller;
-	top : 70px;
-	
+	border-bottom : 1px blue dashed;
+	font-size : large;
 }
 
 #DidYouKnow {
-	display : none;
-	
+	position : relative;
+	width : 99%;
+	border : 1px lightblue solid;
+	margin : 2px;
+	border-radius : 10px;
+	padding : 5px;
+	margin-bottom : 50px;
 }
+#DYK h2 {
+	position : relative;	
+  /*! top : -20%; */
+  left: 20%;
+  font-size : large;
+  text-decoration: underline;
+}
+#dykText{
+	position : relative;	
+top : -30px;
+	width : auto;
+	left : -10px; 
+  text-decoration: none;
 
-#MainallContainer #errorDiv {
-	position : absolute;
-	width : 75%;
-	left : 10%;
-	z-index : 9;
-	
-	
+}
+#MainallContainer #errorDiv img {
+	position: relative;
+	top: -vh;
+	left: -4%;
+}
+#welcBlock  {
+	position : relative;
+	width : 80vw;
 }

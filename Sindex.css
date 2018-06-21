@@ -1,57 +1,92 @@
 
 #SFallContainer {
-	position : absolute;
-	width : 95%;
+	width : 98%;
 	height : 95%;
-	background-color : beige;
 	margin : 2px;
-	left : -5px;
+	border : 1px lightblue solid;
 }
+
 #SFallContainer #logo_image_holder {
 	position : relative;
-	left : 70%;
+	left : 40vw;
+	width : 75%;
+	height : 16%;
+	top : -65px;
 }
 #SFallContainer #dateTime {
-	top : -20px;
+	top : -10px;
 	width : 60%;
 	left : -40%;
-	top: -2px;
+
 }
 
 #SFallContainer #catHeading {
-	font-size : x-large;
-	top : 60px;
+	position : relative;
+	font-size : xx-large;
+	top : -55px;
+	left : 10%;
+	
 }
 #Ghead {
-	font-size : x-large;
+	font-size : xx-large;
+	left : 25%;
 	
 }
 .Gselect {
-	padding : 2px;
-	font-size : x-large;
+	padding-right : px;
+	font-size : xx-large;
 	
 }
 .Gbutton{
-	left : 30%;
-	top : -160px;
-	
+position: relative;
+font-size: xx-large;
+left: 78%;
+padding-bottom: 1px;
+color: blue;
+cursor: pointer;
+width: 150px;
+top: -25px;
 }
 #GBlock {
-	position : absolute;
+	position : relative;
 	left : -15px;
 	width : 100%;
-	top : 100%;
-	
-	
+	top : -60px;
+}
+#tablecont  {
+	position : relative;
+	width : 80%;
+
+	top : -0px;
+	margin-top : 10px;
 }
 #retBlock {
-	left : 60%;
+position: relative;
+border: 1px black solid;
+width: 68%;
+display: block;
+top: -90px;
+z-index: 6;
+max-height: 10vh;
+background-color: rgba(52,34,14,80);
+color: aliceblue;
+overflow: auto;
+left: 8%;
 	
 }
 #defBlock {
-	
-	max-width : 80%;
-	left : 8%;
+position: relative;
+border: 1px black solid;
+max-width: 68%;
+max-height: 80%;
+top: -85px;
+background-color: rgba(152,34,14,80);
+color: aliceblue;
+font-size: x-large;
+z-index: 6;
+padding: 5px;
+overflow: auto;
+left: 8%;
 	
 }
 #findOptions {
@@ -63,17 +98,33 @@
 #SFallContainer #subContain {
 	position : relative;
 	height : 60%;
-	width : 90%;
+	width : 99%;
 	left : -10px;
-	top : 0px;
-	
+	top : -40px;	
+}
+#hitCnt {
+  position : relative;
+  top : -30px;
+  left : 75%;
+  z-index: 1;
+  font-size : x-large;
+  
+}
+#SFallContainer #pgButtons {
+	position: relative;
+	width: auto;
+	left: 15px;
+	margin-bottom : 2px;
+	top : -40px;
 }
 #infoSet {
 	position : relative;
-	width : 68%;
-	left : -8px;
-	max-height : 110px;
+	width : 98%;
+	max-height : 140px;
 	overflow : auto;
+	margin-bottom : 15px;
+	top : 0px;
+	left : -10px;
 }
 #SFallContainer .selectList  {
     position: relative;
@@ -91,20 +142,14 @@
 }
 #DDL2 {
 	position : relative;
-	left : 100px;
-	width : 120px;
 	
 }
 #DDL3dd {
 	position : relative;
-	top : -20px;
-	left : -%;
 }
 #ddl3Txt {
 	position : relative;
-	top : -5px;
-	left : -1%;
-	margin-left : 5px;
+	width : 170px;
 }
 #buttContSpan {
 	position : relative;
@@ -121,8 +166,16 @@
 	font-size : small;
 	
 }
+#alphList {
+	position : relative;
+	height : 60px;
+	overflow: auto;
+	width : auto;
+	left : 20px;
+
+}
 #option2btn {
-	position : absolute;;
+	position : relative;
 
 		font-size : small;
 }
@@ -132,7 +185,7 @@
 	left : 120px;
 }
 #option3btn {
-	position : absolute;
+	position : relative;
 	font-size : small;
 
 	
@@ -140,9 +193,8 @@
 #SFallContainer #catPicsList {
     position: relative;
     width: auto;
-    height: auto;
-    top: 0%;
-    max-height: 350px;
+    top: -0%;
+    max-height: 160px;
 }
 #DDL1Min {
 	position : relative;
@@ -152,21 +204,22 @@
 #SFallContainer #theCategory {
     position: relative;
     padding: 1px;
-    max-width: 20%;
+    /*! max-width: 20%; */
 	 width : auto;
-    border-style: dashed;
-    border-width: 1px;
-    max-height: 200px;
+    /*! border-style: dashed; */
+    /*! border-width: 1px; */
+    max-height: 200px; 
     margin-right: 1px;
-    float: right;
+    /*! float: right; */
     overflow-y: scroll;
-    top: 0px;
-    left: -3%;
+    top: -40px;
+     left: -3%; 
 }
 #catPicsList img {
 	width : 60%;
-	height : 40%;
+	/*! height : 40%; */
 	z-index : 7;
+	top: -80px;
 }
 #speciePic {
 	position : relative;

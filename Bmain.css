@@ -24,12 +24,13 @@ top : 10px;
   position : relative;
   float : right;
   
+  width: 30%;
 }
 #MainallContainer #logo_image_holder{
-    /*! position: relative; */
-    /*! left :-0% ; */
-    /*! margin-left: auto; */
-    /*! margin-right: auto; */
+    position: relative;
+    left :-0% ;
+    margin-left: auto;
+    margin-right: auto;
     /*! width : 150%; */
     /*! height : 155%; */
     /*! top : -42px; */
@@ -47,8 +48,8 @@ top : 10px;
 }
 #MainallContainer #logo_image {
   position : relative;
-  height : 53%;
-  width : 70%;
+  height : 93%;
+  width : 100%;
   z-index : 6;
 }
 #MainallContainer #logo_image img{
@@ -144,52 +145,65 @@ top : 10px;
     margin-left: auto;
     border-radius : 15px;
     color: black;
-    font-size : 20px;
+  
     border : lightblue 2px dashed;
     /*! float:right; */
     top : -0px;
     left: -4.5%;
     padding: 10px;
+
 }
+#LinkList p {
+	font-size : x-large;
+	text-decoration : underline;
+}
+#LinkList li {
+  border-bottom: 1px blue dashed;
+  font-size : large;
+  text-decoration : none;
+  
+}
+
+
 
 #DidYouKnow {
     position: relative;
     top: 20px;
-    height: 90px;
-    width : 97%;
+    height: auto;
+    width : %;
     border: green 1px dashed;
     text-align : center;
     padding: 10px;
    border-radius : 15px;
+  margin-bottom: 50px;
     
 }
 #DYK h2 {
-  position : absolute;
+  position : relative ;
   width : 50%;
+  left : 20%;
   /*! top : -20%; */
   height : 50px;
-  left: 20%;
   text-decoration: underline;
 }
 #dykText{
-  position : absolute;
+  position : relative;
   /*! float : left; */
-  top : 40px;
-clear : both;
-  left : 22%;
-    text-decoration: none;
-  width: 50%;
+  font-size : large;
+  text-decoration: none;
+  
 }
 
 #FindInfo {
     position: relative;
-    /*! width:70%; */
+    width:70%;
     /*! height:470px; */
     text-align: center;
     text-decoration: underline;
     padding:2px;
     padding-bottom : 5px;
     padding-left : 5px;
+    margin-left : 15px;
     /*! top : -30%; */
 }
 
@@ -224,21 +238,19 @@ clear : both;
 	cursor: pointer; 
 }
 
-#guestBook {
+#guestbook {
   position : relative;
   font-size : 180%;
-  text-decoration: underline;
   text-align : center;
-  border: blue 1px dashed;
-  /*! padding:5px; */
+   padding:15px; 
   /*! width : 23.5%; */
   /*! top : 15px; */
   /*! left : 65%; */
   text-align : center;
    border-radius : 15px;
-  margin-top: 10px;
+  margin : 10px;
  }
-#registerBlock {
+#register {
   position: relative;
   /*! width : 23%; */
   /*! height : 12%; */
@@ -246,12 +258,10 @@ clear : both;
  /*! z-index : 8; */
   /*! left : 65%; */
   font-size: 180%;
-  text-decoration: underline;
   text-align : center;
-  border: green 1px dashed;
-  padding:10px;
+  padding:15px;
   /*! padding-bottom : 5px; */
-  margin-bottom: 0px;
+  margin : 10px;
    border-radius : 15px;
 }
 #loginLink {
@@ -287,10 +297,10 @@ clear : both;
 
 #welcBlock {
   position : relative;
-  border : 1px black solid;
+
   border-radius : 20px;
   width : 83%;
-  left : -70%;
+  left : -1%;
   height : auto;
   top : 1%;
   padding : 10px;
@@ -305,5 +315,15 @@ clear : both;
 }
 #loginhead{
     cursor : pointer; 
+}
+#adminBlockholder {
+
+
+	background-color : lightblue;
+	border-radius : 10px;
+	margin : 5px;
+	padding : 2px;
+	left : 5px;
+
 }
 /*end main*/

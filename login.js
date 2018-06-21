@@ -34,12 +34,12 @@ function do_logout(){
 			alert("Goodbye" + uID[1] );
 		}
 	});
-  $("#adminBlock").html("<div id=\"registerBlock\" class=\"littleDD linksclass adminC \">\
-			    <a href=\"IBISregistration.html\" class=\"littleDD linksclass\">Register as a contributer</a>\
-			  </div>\
-			  <div id=\"guestBook\" class=\"littleDD linksclass\">\
-			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\"littleDD linksclass\">The GuestBook</a>\
-			  </div>");
+  $("#adminBlock").html("<span id=\"register\" class=\"col-xs-12 col-sm-12\">\
+			    <a href=\"IBISregistration.html\" class=\" linksclass\">Register</a>\
+			  </span>\
+			  <span id=\"guestbook\" class=\"col-xs-12 col-sm-12\">\
+			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\" linksclass\">GuestBook</a>\
+			  </span>");
 	$("#adminBlock").fadeIn();
   sessionStorage.userRef = "";
   eraseCookie("IBIS_session=");
