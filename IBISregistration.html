@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
-        <meta name="viewport" content="width=device-width"/>
-        <title>
-          I B I S - Registration
-        </title>
-        <script type="text/javascript" src="jquery-1.11.3.js"></script>
-        <script type="text/javascript" src="Gmain.js"> </script>
-        <script type="text/javascript" src="dateshorts.js"></script>
-        <script type="text/javascript" src="IBIS_register.js"></script>
-        <script type="text/javascript" src="fileselect.js"></script>
-	
-	<script type="text/javascript">
+  <head>
+    <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>
+      I B I S Registration
+    </title>
+    <script type="text/javascript" src="jquery-2.1.1.min.js"> </script>
+    <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
+    <script type="text/javascript" src="Gmain.js"> </script>
+    <script type="text/javascript" src="dateshorts.js"></script>
+    <script type="text/javascript" src="IBIS_register.js"></script>
+    <script type="text/javascript" src="fileselect.js"></script>
+		<script type="text/javascript">
 		$(document).ready(function(){
 	 	 	$('#regPic').change(handleFileSelect);	
-	 		
 	 	})
-	 
-	</script>
-        <link rel="stylesheet"
-		          type="text/css"
-		          href="./Breg.css"
-              />
-       <link rel="stylesheet" 
+	 </script>
+	 <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
+   <link rel="stylesheet"
+	       type="text/css"
+	       href="./Breg.css"
+         />
+   <link rel="stylesheet" 
 			   type="text/css" 
-			   media="only screen and (max-width: 580px)" 
+			   media="only screen and (max-width: 480px)" 
 			   href="smallerDevice.css" 
        />
          
-    </head>
+  </head>
     <body id="TheBody" onload="initForm(); showAgreement();">
-      <div id="REGallContainer" class="ac">
-      	<div id="dateTime">
-        	<div id="dateBlock">The Date</div>
-        	<div id="timeBlock">The Time</div>       
+      <div id="REGallContainer" class="container">
+      	<div class="row">
+      		<div id="dateTime">
+        		<div id="dateBlock">The Date</div>
+        		<div id="timeBlock">The Time</div>       
+      		</div>
+      		<div id="logo_image_holder">
+      		  <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
+      		</div>
       	</div>
-      	<div id="logo_image_holder">
-      	  <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
+      	<div class="row">
+		    	<div id=pgButtons>
+			  		<a id="backButton" href="/ibis/IBISmain.html" class="linkC text-info">Back to Main </a>
+			  		<input type="button" id="buttonBtn" class="linkC text-info" onclick="submitRegistration()" value="Submit">
+			 		</div>
       	</div>
-      	<div id="allcontainer">
-			<form name="registerForm" method="POST" action="../../cgi-bin/IBIScontribRegister.php3" enctype="multipart/form-data" >
-				<div id=pgButtons>
-	    			<a id="backButton" href="/ibis/IBISmain.html" class="linkC">Back to Main </a>
-	    			<input type="button" id="buttonBtn" class="linkC requiredf" onclick="submitRegistration()" value="Submit">
-	      			
-	    		</div>
-	  			<fieldset id="detail_fs" class="littleDD">
-        	    	<div id="personalDetails" class="littleDD">
-        				<p>
-		    	   			<label class="labelClass " >Your first name/s </label>
-            				<input type="text" name="name" id="fName" class="inputClass littleDD requiredf" disable maxlength="10" onchange="checkWords(this)" />
-            			</p>
-            			<p>
-							<label class="labelClass" class="" >Your last name/s</label>
-            				<input type="text" name="lastname" class="inputClass littleDD requiredf" onchange="checkWords(this)" />
-            			</p>
-            			<p> 
-							<label class="labelClass" class="" >Your email address</label>
-            				<input type="text" name="email" class="inputClass littleDD requiredf" onchange="checkWords(this)" />
-            			</p>
-            		</div>
-            		<div>
-	      				<div id=imgDisplay class="bigDD">
-	      				</div>
-	        			<label class="labelClass">Add a picture of yourself</label>
-            			<input type="file" name="picture" id="regPic" class="littleDD requiredf" />
-          			</div>
-            		<div id="securityInfo" class="bigDD">
-	      				<p>
-		    				<label class="labelClass ">Select a question and enter an answer in the space below.</label>
-	      				</p>
-        				<p>
-		    				<select id = "secQ" name="secQ" class="labelClass littleDD selectClass requiredf" >
-		    	  				<option value = "favColor">What is your favourite colour?</option>
-		        				<option value = "favFood">What is your favourite food?</option>
-		        				<option value = "uncName">What is the name of your favourite uncle?</option>
-		        				<option value = "petName">What is the name of your favourite pet?</option>
-          					</select></br>
-          					<input type="text" name=secA id="secA" class="labelClass littleDD requiredf" onchange="checkWords(this)" />
-        				</p>
-      				</div>
-      				<input type="text" id="userName" name="userName" class="hiddentext">
-	    			<input type="text" id="kingdom" name="kingdom" value="Register" class="hiddentext" >
-	  			</fieldset>
+      	<div id="allcontainer" class="container">
+			<form name="registerForm" role="form" class="form-horizontal" method="POST" action="../../cgi-bin/IBIScontribRegister.php3" enctype="multipart/form-data" >
+				<fieldset id="detail_fs" class="form-group">
+      	 	<div id="personalDetails" class="littleDD">
+      			<p>
+		  	 			<label class="labelClass " for="fName" >First name </label>
+       				<input type="text" name="name" id="fName" class="inputClass form-control requiredf" disable maxlength="10" onchange="checkWords(this)" />
+       			</p>
+       			<p>
+							<label class="labelClass"  for="lName">Last name</label>
+       				<input type="text" name="lastname" id="lName" class="inputClass form-control requiredf" onchange="checkWords(this)" />
+         		</p>
+            <p> 
+							<label class="labelClass" for="email">Email </label>
+            	<input type="text" name="email"  id="email" class="inputClass form-control requiredf" onchange="checkWords(this)" />
+            </p>
+          </div>
+          <div>
+	      		<div id=imgDisplay class="bigDD">
+	      	</div>
+	        <label class="labelClass">Add a picture of yourself</label></br>
+          <input type="file" name="picture" id="regPic" class="requiredf" />
+        </div>
+        <div id="securityInfo" class="bigDD">
+	      	<p>
+		    		<label class="labelClass ">Select a question and enter an answer in the space below.</label>
+	      	</p>
+        	<p>
+		    		<select id = "secQ" name="secQ" class="labelClass littleDD selectClass requiredf" >
+		    			<option value = "favColor">What is your favourite colour?</option>
+		      		<option value = "favFood">What is your favourite food?</option>
+		      		<option value = "uncName">What is the name of your favourite uncle?</option>
+		      		<option value = "petName">What is the name of your favourite pet?</option>
+          	</select></br>
+          	<input type="text" name=secA id="secA" class="labelClass form-control requiredf" onchange="checkWords(this)" />
+        	</p>
+      	</div>
+      		<input type="text" id="userName" name="userName" class="hiddentext">
+	    		<input type="text" id="kingdom" name="kingdom" value="Register" class="hiddentext" >
+	  	</fieldset>
 			</form>
 		</div>
 	</div>

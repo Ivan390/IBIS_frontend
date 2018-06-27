@@ -1,5 +1,14 @@
 /*Index Styles*/
-
+body {
+  position : relative;
+  width : 1264px 
+    height : 884.8px;
+}
+.highlite {
+  background-color: yellow;
+  color : red;
+  
+}
 #SFallContainer {
   position : relative;
   width : 89vw;
@@ -32,9 +41,9 @@
 }
 #SFallContainer #logo_image_holder {
     position: relative;
-    left: 15%;
-    /*! top: -50px; */
-  width : 70%;
+    left: 40%;
+     top: -80px; 
+  width : auto;
 }
 .italC {
   font-style: italic;
@@ -51,7 +60,7 @@
 #SFallContainer #dateTime {
   position: relative;
   top: 15px;
-  /*! left: -70%; */
+  left: -70%;
   z-index:3;
   font-size: x-large;
   margin-left:auto;
@@ -269,17 +278,17 @@ position : relative;
 }
 #alphList {
 	position : relative;
-  left : -2%;
-  width : 90vw;
+  left : -28px;
+  width : 95vw;
 
 }
 #Ghead {
   position : relative;
-  display : block;
   left : 45%;
   font-size : x-large;
   text-decoration:  underline;
   cursor: pointer;
+  width : auto;
 }
 #Ghead:hover {
   color : blue;
@@ -363,7 +372,7 @@ position : relative;
   color : blue;
   margin : 3px;
   font-size : xx-large;
-  padding-left: 1.5%;
+  padding-left: 15px;
   float : left;
 }
 #hitCnt {

@@ -1,12 +1,18 @@
 #REGallContainer {
   position : relative;
-  width : 95%;
+  width : 98%;
   height : 90%;
   padding : 20px;
-  border-style: inset;
-   border-radius: 22px;
- 
+  border : 1px lightblue solid;
+  border-radius: 22px;
   margin : 10px;
+}
+#Acheck {
+  position : relative;
+  width : 20px;
+  height : 20px;
+  margin-right : 15px;
+  color : blue;
 }
 #agree p {
   position : relative;
@@ -27,10 +33,10 @@
 }
 #dateTime {
   position: relative;
-  top: 15px;
-  left: -70%;
+  top: 0px;
+  left: 0%;
   z-index:3;
-  font-size: 18px;
+  font-size: x-large;
   margin-left:auto;
   padding-left:10px;
   color: green;
@@ -58,27 +64,24 @@
 }
 #allContainer #logo{
   position : relative;
-   left : 38%;
    top : -0px;
  }
 
 #logo_image {
-  height : 40%;
-  width : 30%;
+  height : 70%;
+  width : 60%;
+  left : -20px;
 }
 #logo_image_holder{
   position : relative;
-   left : 38%;
+   left : 25%;
    top : -0px;
  }
 
-#allContainer #logo_image {
-  height : 40%;
-  width : 30%;
-}
- #pgButtons {
+#pgButtons {
 	position : relative;
   border-radius : 15px;
+  left: 80px;
 }
 .inputClass {
 	position : relative;

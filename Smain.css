@@ -38,6 +38,7 @@ float : right;
 #loginLink {
 	left : 3%;
 	z-index: 6;
+	top : 10%;
 }
 .loginshow {
 	position : absolute;
