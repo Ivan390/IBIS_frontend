@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="viewport" content="width=device-width"/>
+ <head>
+  <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
         <title>
         Picture Compare
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"></script>
+   <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
         <script type="text/javascript" src="Gmain.js"></script>
         <script type="text/javascript" src="/ibis/dateshorts.js"></script>
          <script type="text/javascript">
@@ -26,17 +27,18 @@
         		close();
         		}
 	 	 	</script>
+	 	 	<link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
 	 	 	<link rel="stylesheet"
         		type="text/css"
        		 	href="/ibis/imgmatch.css"
       		/>
       		<link rel="stylesheet" 
     	type="text/css" 
-    	media="only screen and (max-width: 580px)" 
-    	href="smallerDevice.css" />
+    	media="only screen and (max-width: 480px)" 
+    	href="imgmatchsmall.css" />
      </head>
      <body onload="initForm()">
-     <div id="compContainer">
+     <div id="compContainer" class="container">
      <div id="dateTime">
 	      <div id="dateBlock">The Date</div>
 	      <div id="timeBlock">The Time</div>       
@@ -45,7 +47,7 @@
 	      <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
 	    </div>
 	    <span id="buttons">
-	    <label class="linkC" onclick="goBack()">Dismiss</label></span>
+	    <label class="listItem button btn-large btn-info" onclick="goBack()">Dismiss</label></span>
 	    <span id="picHeading">Picture Match</span>
      	<div id="compSub">
      		 <form  name="picCompareF" action="../cgi-bin/picCompare2.php3" method="POST" enctype="multipart/form-data">

@@ -4,8 +4,8 @@ It describes the main page*/
 #MainallContainer {
   position : relative;
   width : 93vw;
-  height : 99%; 
-  padding : 20px;
+  height : 660px; 
+  /*! padding : 20px; */
   border-style: inset;
   border-radius : 15px;
   left : 9px;
@@ -24,7 +24,7 @@ top : 10px;
   position : relative;
   float : right;
   
-  width: 30%;
+  /*! width: 30%; */
 }
 #MainallContainer #logo_image_holder{
     position: relative;
@@ -49,8 +49,10 @@ top : 10px;
 #MainallContainer #logo_image {
   position : relative;
   height : 93%;
-  width : 100%;
+  width : 70%;
   z-index : 6;
+  left : 20%;
+  top : -50px;
 }
 #MainallContainer #logo_image img{
   position : relative;
@@ -78,7 +80,7 @@ top : 10px;
 #MainallContainer #detail_fs_main {
   position : relative;
   border-style: outset;
-  top : -30%;
+  top : -70px;
   width : 95%;
   padding : 5px;
   height : auto;
@@ -113,7 +115,21 @@ top : 10px;
 	position : relative;
 	font-size : 28px;
 	color : blue; 
-	top : ;
+	top : -110px ;
+  left : 140px;
+}
+#greetA {
+  position : relative;
+	font-size : xx-large;
+	color : blue; 
+	top : -110px ;
+  left : 140px;
+}
+#greetA:hover {
+  cursor : pointer;
+  text-decoration : underline;
+  
+}  
 }
 #regholder {
   position : relative;
@@ -266,7 +282,7 @@ top : 10px;
 }
 #loginLink {
     position : absolute;
-    top : 180px;
+    top : 120px;
     left : 8%;
     text-align : left;
     font-size : 25px;
@@ -325,5 +341,6 @@ top : 10px;
 	padding : 2px;
 	left : 5px;
 
+	max-height: 122px;
 }
 /*end main*/

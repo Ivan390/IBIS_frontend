@@ -14,6 +14,18 @@
   margin-right : 15px;
   color : blue;
 }
+#agreement {
+  position : absolute;
+  z-index : 8;
+  background-color: rgba(225,235, 12, 0.9);
+  width : 85%;
+    height : 50%;
+  border : 1px lightblue solid;
+  border-radius : 15px;
+  top : 20%;
+  
+  left: 5%;
+}
 #agree p {
   position : relative;
   width : 95%;
@@ -101,11 +113,12 @@
 #imgDisplay{
 	position : absolute;
 	top : 15px;
-	left : 65%;
-	width : 30%;
+	left : 70%;
+	width : auto;
 	border: orange 1px dashed;
 	padding : 1px;
 	text-align : center;
+  
 }
 #inputDiv {
 	position : relative;
@@ -117,8 +130,8 @@
 }
 .thumbpic {
 	border-radius : 12px;
-  	width : 120px;
-  	height : 120px;
+  	width : 250px;
+  	height : 220px;
 }
 #allContainer .labelClass {
 	height : 32px;

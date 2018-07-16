@@ -36,7 +36,7 @@
 .Gselect {
 	padding-right : px;
 	font-size : xx-large;
-	
+	display : none;
 }
 .Gbutton{
 position: relative;
@@ -52,7 +52,7 @@ top: -25px;
 	position : relative;
 	left : -15px;
 	width : 100%;
-	top : -60px;
+	top : -30px;
 }
 #tablecont  {
 	position : relative;
@@ -178,7 +178,7 @@ left: 8%;
 	overflow: auto;
 	width : auto;
 	left : 20px;
-
+display : none;
 }
 #option2btn {
 	position : relative;
@@ -226,6 +226,15 @@ left: 8%;
 	/*! height : 40%; */
 	z-index : 7;
 	top: -80px;
+}
+#catPicsList p {
+	position : relative;
+	width : 70px;
+	top : 10px;
+	left : 152px;
+	z-index : 1;
+	background-color: yellowgreen;
+	
 }
 #speciePic {
 	position : relative;

@@ -1,14 +1,16 @@
-<! DOCTYPE html>
+<!DOCTYPE html>
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="content-type" content="text/xml; charset=utf-8" />
-<meta name="viewport" content="width=device-width" />	
-<title>
-  Enter Vegetable LookUp Terms
-</title>
-<script type="text/javascript" src="jquery-1.11.3.js"> </script>
-<script type="text/javascript" src="Gmain.js"> </script>
-<script type="text/javascript" src="dateshorts.js"> </script>
+ <head>
+  <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>
+   I B I S - Glossary Input Page
+  </title>
+  <script type="text/javascript" src="jquery-1.11.3.js"></script>
+   <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
+  <script type="text/javascript" src="Gmain.js"></script>
+  <script type="text/javascript" src="dateshorts.js"></script>
+   <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
 <script type="text/javascript">
 	$(document).ready(function(){
 	     if (sessionStorage.userRef){
@@ -35,6 +37,7 @@
     	/>	
 </head>
 <body id="GlBody" onload="initForm()">
+	<div id="mainContainer" class="container">
   <div id="dateTime">
   <div id="dateBlock">The Date</div>
   <div id="timeBlock">The Time</div>       
@@ -44,17 +47,14 @@
   </div>
   <div id="glHeading"><?php $title = $_GET['name1']; print "$title ";?>Glossary Input</div>
   <div id=pgButtons>
-  <a href="IBISutilities.html" class="linkC"><img src="" alt="">Back to Utilities</a>
-  <a id="backButton" href="/ibis/IBISmain.html" class="linkC">Back to Main Page </a>
-  
-  	<input type="button" class="buttClass" value="Submit" onclick="submitForm()"/>
-  	
+  	<ul  class="list-unstyled">
+  		<li class="listItem"><a href="IBISutilities.html" class="button btn-large btn-info"><img src="" alt="">Utilities</a></li>
+  		<li class="listItem"><a id="backButton" href="/ibis/IBISmain.html" class="button btn-large btn-info">Main </a></li>
+  		<li class="listItem"><input type="button" class="button btn-large btn-info" value="Submit" onclick="submitForm()"/></li>
+  	</ul>
   </div>
-  
-  
-  <div id=allContainer class="ac">
-  	
-    <input type="button" class="buttClass" value="Add an item" onclick="addAnotherItem()"/>
+  <div id=subContainer class="container">
+    <input type="button" class="button btn-large btn-info" value="Add an item" onclick="addAnotherItem()"/>
     <form name="glossentry" id="glossEntry" method="POST" enctype="multipart/form-data" action="../cgi-bin/IBISglossary.php3">
 		<input type="text" id="ICval" name="ICVal" value="" class="hiddentext"/>
 		<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" >
@@ -65,6 +65,7 @@
     </form>
    <div id=mesText> </div>
   </div>
+ </div> 
  </body>
   <script type="text/javascript">
   function addAnotherItem(){

@@ -1,0 +1,202 @@
+#allContainer {
+  position : relative;
+  width : 95%;
+  height : 90%;
+  padding : 20px;
+  border : 1px lightblue solid;
+  border-radius: 22px;
+ 
+}
+#pgButtons {
+    position : relative;
+  
+    width: 800px;
+    top: -85px;
+}
+
+.buttonclass {
+  position : relative;
+   border-radius: 25px; 
+  border : green solid 1px;
+  height : auto;
+  width : auto;
+  font-size : 16px;
+  padding : 4px;
+  margin : 5px;
+  left : 0%;
+  
+}
+#logo_image {
+  position : relative;
+  width : 40%;
+  left : 60%;
+  top : -90px;
+}
+.hiddentext {
+  display : none;
+  
+}
+
+#detail_fs_min {
+  position : relative;
+  border : 1px lightblue inset;
+  top : -85px;
+  width : 99%;
+  padding : 15px;
+  height : auto;
+  padding-left : 15px;
+  margin-left : 10px;
+  overflow : auto;
+  border-radius : 15px;
+   
+}
+
+#dateTime {
+  position: relative;
+  font-size: x-large;
+  margin-left:auto;
+  padding-left:0px;
+  color: green;
+}
+.nothiddentext {
+  position : relative;
+  width : 100%;
+  font-size : 110%;
+  
+}
+.inputClass {
+  position : relative;
+  float : left;
+  margin-right : 32px;
+  width : 20%;
+}
+
+#dataForm {
+  position : relative;
+  width : 95%;
+ text-align: center;
+  border-radius : 18px;
+}
+
+.labelClass {
+  position : relative;
+  width : auto;
+  float : left;
+  font-size : 120%;
+  text-decoration: underline;
+}
+#headingText {
+  position : relative;
+  font-size: 300%;
+  left : 30%;
+  top : -80px;
+  text-decoration : underline;
+  
+}
+#imgDisplay {
+	position : relative;
+	border : 1px black dashed;
+  background-color : rgba(205,135, 12, 0.7);
+  padding-left: 2px;
+  padding-top: 3px;
+  width : 120px;
+  max-height : 170px;
+  overflow: auto;
+  left : 90%;
+  top : -70px;      		
+}
+.imgClass{
+  	position : relative;
+	width : 150px;
+	height : 100px;
+  
+  	border-radius: 12px;
+}
+#newtagslist{
+   position : relative;
+   top : -258px;
+  width : auto;
+   left : 75%;
+   padding : 5px;
+  
+}
+#newtagslist input {
+  width : 300px;
+  
+}
+.listitemC {
+  width : 170px;
+ padding-left : 2px; 
+  
+}
+
+
+.thumbpic {
+	position : relative;
+	width : 100px;
+	height : 100px;
+}
+.imgHolder {
+  position : relative;
+  width : 200px;
+  max-height : 150px;
+  overflow : auto;
+}
+#images {
+  position : relative;
+  height : 200px;
+  border : 1px black solid;
+  overflow : auto;
+  top : -30px;
+  left : 3px;
+  width : 97%;
+  overflow-x:  hidden;
+  
+  border-radius: 15px;
+  padding-left: 15px;
+}
+#oldImages {
+  position : relative;
+  top : 8px;
+  padding-left : 12px;
+}
+
+#newImages {
+  position :absolute;
+  top : 5px;
+  left : 55% ;
+  width : 200px;;
+  
+  
+}
+#oldTags {
+  position : relative;
+  left : 240px; 
+  top : -110px;
+  
+  max-width: 300px;
+}
+#optionsDsplay{
+  position : absolute;
+  top : 8px;
+  left : -190%;
+  width : 190px;
+  overflow :hidden;
+  padding-left : 28px;
+  
+    
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: x-large;
+  text-decoration : underline;
+  cursor : pointer;
+  margin-right : 10px;
+  }
+.linkC:hover {
+  color : blue;
+  
+}
+

@@ -1,7 +1,7 @@
 /* guestcss.css*/
 #allContainer {
   position : relative;
-  width : 95%;
+  /*! width : 95%; */
   height : 90%;
   padding : 20px;
   border-style: inset;
@@ -20,8 +20,8 @@
 
 #logo_image {
   position : relative;
-  width : 25%;
-  left :75%;
+  width : 65%;
+  left :45%;
   top : -50px;
 }
 .hiddentext {

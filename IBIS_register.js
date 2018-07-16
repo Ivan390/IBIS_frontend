@@ -8,15 +8,14 @@ function showAgreement(){
 	$("#secQ").hide();
 	$("#detail_fs").css("background-color", "gray");
 	var Adiv = "<div id=\"agree\"><p>Hi<br>If you are here then you must want to register to contribute to this project. In that case, there are some things you should know. Firstly this is a personal project I compiled because I had trouble remembering the names of stuff. It is meant to be usefull. <span><input type=\"checkbox\" id=\"Acheck\" onchange=\"enableForm()\"><label>  I agree</label><span><\p><\div>";
-	$("#imgDisplay").css("background-color", "white");
-	$("#imgDisplay").html(Adiv);
+	//$("#agreement").css("background-color", "white");
+	$("#agreement").html(Adiv);
 }
 
 function enableForm(){
 	$(".requiredf").show();
 	$("#detail_fs").css("background-color", "white");
-	$("#agree").css("background-color", "white");
-	$("#agree").remove();
+	$("#agreement").remove();
 }
 function submitRegistration(){
   var fName = $("#fName").val();

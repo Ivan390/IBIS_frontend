@@ -13,16 +13,11 @@
     <script type="text/javascript" src="picswap.js"> </script>
     <script type="text/javascript" src="cookies.js"> </script>
     <script type="text/javascript" src="login.js"></script>
-    
-    <script type=text/javascript>
-    
-    </script>
     <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet"
         type="text/css"
         href="Bmain.css"
     />
-    
     <link rel="stylesheet" 
     	type="text/css" 
     	media="only screen and (max-width: 480px)" 
@@ -40,17 +35,14 @@
 					  <img id="logo_image" src="./images/Logo1_smaller.png"/>
 					</div>
       </div>
-	    
-	    
 	    <form name="categoryForm" action="../../cgi-bin/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >
-	      <input type="text" name="catValue" id="catHeading" class="hiddentext" />
+	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />
 	    </form>
 	    <div id="errorDiv" style="display:none;"></div>
-	   
 	    <div id="loginLink" class="littleDD linksclass" style="">
-	      <label id="loginhead" class="littleDD linksclass" onclick="showLogin()">Login</label>
-	      <label id="logouthead" class="littleDD linksclass logoutCstart" style="display:none;" onclick="do_logout()">Logout</label>
-	      <form name="loginForm" action="../../cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data">
+	      <label id="loginhead" class="littleDD linksclass label-info" onclick="showLogin()">Login</label>
+	      <label id="logouthead" class="littleDD linksclass logoutCstart label-info" style="display:none;" onclick="do_logout()">Logout</label>
+	      <form name="loginForm" action="../../cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data" >
 	        <div id="login" class="littleDD login" style="display : none;">
 	          <label class="labelClass">Your user name</label><br>
 	          <input type="text" name="uName" id="uname" class="" /><br>
@@ -60,14 +52,15 @@
 	          <input type="button" value="Cancel" onclick="cancelLogin()" /><br>
 	        </div>
 	      </form>
+	      <form name=proForm action="../../cgi-bin/IBISprofile.php3" method="POST" enctype="multipart/form-data">
+	      	<input type="text" value="" id="usrRef" name="userN" style="display:none;">
+	      </form>
 	    </div>
 	    <div id="cgiResult" ></div>
 	    <div id="detail_fs_main" class="container">
 	    <div id="adminBlockholder" class="row">
 	    	<div id="adminBlock"></div>
 	    </div>
-	   
-	   
 	    <div class="row">
 	    	<span id="FindInfo" class="">
 					<h2>Find Information</h2>
@@ -93,26 +86,18 @@
 						<li><a href="IBISutilities.html">Utilities</a></li>
 					</ul>
 				</span>
-	    
-	    
-				</div>
-			
-			</div>
-	    
-	    </div>  
-	    <div id="DidYouKnow" class="">
-	        <div id="DYK" class="text-center"><h2>Did you know?</h2></div>
-	        <div id=dykText class="text-center"> that the sky is blue </div>
 	    </div>
-	      
-    </body>
-    
-	<script type="text/javascript">
+		</div>
+	</div>  
+	<div id="DidYouKnow" class="">
+	  <div id="DYK" class="text-center"><h2>Did you know?</h2></div>
+	  <div id=dykText class="text-center"> that the sky is blue </div>
+	</div>
+</body>
+<script type="text/javascript">
 		function loadIndex(catname){
-	    	document.categoryForm.catValue.value = catname;
-	    	document.categoryForm.submit();
+	    	$("#catValue").val(catname);
+	    	$(categoryForm).submit();
     	}
     </script>
 </html>
-
-

@@ -8,7 +8,7 @@
 }
 #logo_image_holder {
 	position : relative;
-	width : auto;
+	/*! width : auto; */
 	left : 0px;
 }
 #compContainer #logo_image {
@@ -521,39 +521,41 @@ p {
 
 #allContainer {
 	position : relative;
-	width : 100vw;
+	/*! width : 100vw; */
 	height : 95vh;
-	background-color : beige;
+	/*! background-color : beige; */
 	margin : 2px;
 	left : 5px;
 }
 #allContainer #dateTime {
 	position : relative;
-	top : -20px;
+	top : -15px;
 	width : 50%;
-	left : 58%;
 }
 
 #allContainer #logo_image_holder {
 	position : relative;
 	left : 20%;
-	width : 60%;
+	width : 70%;
 }
 #gTitle {
     position: relative;
-    top: -95px;
+    top: -85px;
     font-size: x-large;
     left: 25%;
     z-index: 4;
     color: black;
+    width: 200px;
 }
 #pgButtons {
 	position : relative;
-	top : 12px;
+	top : -25px;
 }
 #pgButtons input {
 	border-radius : 10px;
 	margin : 1px;
+	background-color: dodgerblue;
+	font-size: large;
 }
 #pgButtons a {
 	border-radius : 10px;
@@ -562,21 +564,22 @@ p {
     position: relative;
     width: 50%;
     color: black;
-    height: 500px;
-    border: 1px black inset;
+
+    /*! border: 1px black inset; */
     height: auto;
     margin: 5px;
 	top : 0px;
-	left : 10px;
+	left : 5px;
 }
 #allContainer #detail_fs input {
 	position : relative;
-	width : 80%;
+	width : 100%;
+	font-size : large;
 	
 }
 #allContainer #detail_fs textarea {
 	position : relative;
-	width : 80%;
+	width :100%;
 	
 }
 #guestImages {
@@ -588,7 +591,7 @@ p {
     padding-bottom: 2px;
     overflow: auto;
     border-style: dashed;
-    border-width: 3px;
+    border-width: 1px;
     height: 125px;
     font-size: 15px;
 }
@@ -603,15 +606,15 @@ p {
 #GuestPic {
     position: absolute;
     left: 105%;
-    top: 65%;
+    top: 45%;
     height: auto;
-	width : 50%;
+	width : 80%;
 }
 /*start Registration*/
 
 #REGallContainer {
 	position : relative;
-	width : 95vw;
+	width : 95%;
 	height : 80%;
 	
 	margin : 2px;
@@ -627,12 +630,36 @@ p {
 	font-size : large;
 	
 }
+#agreement {
+	position: absolute;
+	z-index: 8;
+	background-color: rgba(225,235, 12, 0.9);
+	width: 85%;
+	height: 90%;
+	border: 1px lightblue solid;
+	border-radius: 15px;
+	top: -20%;
+	left: 5%;
+}
+#agree p {
+	position: relative;
+	width: 100%;
+	left : 0%;
+	max-height: 200px;
+	overflow: auto;
+	padding: 5px;
+	white-space: normal;
+}
 #REGallContainer #logo_image_holder {
 	position : relative;
-	left : 48%;
-	width : 80%;
+	left : 40%;
+ width : 200px;
 	height : 40%;
 	top : -60px;
+}
+#REGallContainer #logo_image {
+	height: 70%;
+	width: 100%;
 }
 #REGallContainer #pgButtons {
 	position : relative;
@@ -682,6 +709,7 @@ p {
 	width : 100%;
 	z-index : 8;
 }
+
 #securityInfo label {
 	display : none;
 	
@@ -716,22 +744,34 @@ p {
 	
 }
 /*start Utilities page style*/
-
+#UtilallContainer {
+	position : relative;
+	border : 1px lightblue solid;
+	left : 0px;
+	top : 10px;
+}
 #AdminList {
     position: relative;
-    width: 50%;
+    width: 52%;
     border-color: green;
-	border-radius : 15px;
-	padding : 2px;
-	height : 160px;
+	border-radius : 10px;
+	padding : 1px;
+	padding-top : 10px;
+	height : 145px;
+	overflow : auto;
 	
 }
 #AdminList li {
 	position : relative;
 	list-style : none;
-	left : -30px;
+	/*! left : -30px; */
 	width : 100%;
+		font-size : medium;
 	overflow : auto;
+}
+#UtilallContainer #controlP {
+	position : relative;
+	top : 15px;
 }
 #AdminList h3 {
 	position : relative;
@@ -739,14 +779,34 @@ p {
 	text-decoration: underline;
 	left : 6px;
 }
+#AdminList li {
+	position : relative;
+	left : -30px;
+	color : blue;
+}
+#AdminList li li {
+	position : relative;
+	left : -35px;
+	width : 100px;
+	
+}
+ #UtilallContainer #detail_fs {
+	position: relative;
+	 height: 200px; 
+	margin-top: 10px;
+	border: 1px lightblue solid;
+	padding: 10px;
+	border-radius: 15px;
+	top: 0px;
+}
 #detail_fs {
     position: relative;
     width: 105%;
 	left : -8%;
 	border-radius : 20px;
     color: black;
-    max-height: 500px;
-    border: 1px black inset;
+    /*! max-height: 500px; */
+    /*! border: 1px black inset; */
     margin: 10px;
     top: -100px;
 	padding : 2px;
@@ -754,35 +814,52 @@ p {
 }
 #controlP {
 	position : relative;
-	top : -100px;
+	top : -30px;
 	
 }
 #listsList {
     position: relative;
     width: 45%;
-	border-radius : 15px;
+	padding-top : 10px;
+	border-radius : 10px;
+
+}
+#listsList h3{
+  font-size : large;
+	text-decoration : underline;
 }
 #listsList li {
 	position : relative;
 	list-style: none;
 	left : -28px;
-	
+	width : 100px;
+
 }
 #listsList li ul {
 	position : relative;
 	list-style: none;
 	left : 28px;
-	
+	width : 100px;
 }
-#listsList li ul ul li {
+#listsList li  {
 	position : relative;
 	list-style: none;
-	left : -23px;
-	font-size : small;
+	left : -28px;
+	font-size : ;
 	width : 100%;
 		
 }
-/*start compare page styles*/
+#Glist {
+	width : auto;
+}
+#listStuff{
+	position : relative;
+	left : 10px;
+	font-size : smaller;
+	width : 100%;
+}
+
+/*start cnompare page styles*/
 
 #compContainer {
 	position : absolute;
@@ -808,7 +885,7 @@ p {
 }
 #logo_image_holder {
 	position : relative;
-	width : 90%;
+	/*! width : 90%; */
 	left : -100px;
 }
 #MainallContainer #logo_image {
@@ -1188,10 +1265,15 @@ left : 30px;
 }
 #utilHeading {
   position : relative;
-  top : -120px;
+  top : 20px;
   left : 25%;
   font-size : x-large;
   text-decoration : underline;
   
   
+}
+#detail_fs {
+	position : relative;
+	height:  95%;
+	top : -120px;
 }

@@ -6,41 +6,40 @@
   padding : 20px;
   border : 1px lightblue solid;
   border-radius : 15px;
-  left : 19px;
+  left : 0px;
   overflow : auto;
   top : 20px;
 }
 #UtilallContainer #dateTime {
   position : relative;
   color : green;
-  font-size : large;
+  font-size : medium;
 }
 #controlP {
   position : relative;
-  top : 5%;
+  top : -1%;
   font-size : x-large;
   left : 2%;
   width : 200px;
 }
 
 #logo_image_holder {
-    position: relative;
-    left: 10%;
+ position: relative;
+    left : 15% ;
     margin-left: auto;
     margin-right: auto;
-    width: 813px;
-    height: 25%;
-    top: -0px;
+    width : 60%;
+    height : 45%;
+    top : -10px;
 }
 #UtilallContainer #logo_image {
-  position : relative;
-  height : 40%;
+ height : 60%;
   width : 70%;
   z-index : 6;
 }
 #listsList {
     position :relative;
-    width : 45%;
+    width : 48%;
   padding : 5px;
   
     /*! color: blue; */
@@ -57,20 +56,15 @@
 }
 #AdminList{
     position : relative;
-    width : 40%;
+    width : 48%;
     float : right;
     border-color : green;
    padding : 5px;
 }
 li {
   list-style: none;
-  margin-left : -20px;
-  cursor : pointer;
+  margin-left : -35px;
   
-}
-li:focus, li:hover {
-	color: #014c8c;
-	text-decoration: underline;
 }
 .listItem {
 	padding : 3px;
@@ -79,18 +73,18 @@ li:focus, li:hover {
 }
 #UtilallContainer #detail_fs{
     position : relative;
-     height : 340px; 
+     height : 300px; 
     margin-top : 10px;
   border : 1px lightblue solid;
   padding : 10px;
   border-radius : 15px;
-  top : 3%;
+  top : -4%;
 }
 
 #utilHeading {
   position : relative;
-  top : 5%;
-  left : 40%;
+  top : -0%;
+  left : 25%;
   font-size : xx-large;
   text-decoration : underline;
   width : 200px;
@@ -118,4 +112,5 @@ li:focus, li:hover {
  /* margin-left : -30px;*/
   display : none;
 }
+
 

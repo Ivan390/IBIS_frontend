@@ -26,7 +26,7 @@ position : relative;
 	height :20%;
 float : right;
 	padding : 5px;
-	top : -70px;
+	top : -15px;
 }
 #MainallContainer #logo_image {
  position : relative;
@@ -38,7 +38,10 @@ float : right;
 #loginLink {
 	left : 3%;
 	z-index: 6;
-	top : 10%;
+	top : 44px;
+	font-size : x-large;
+	left : 10%
+	
 }
 .loginshow {
 	position : absolute;
@@ -71,7 +74,18 @@ float : right;
 	border-radius : 10px;
 	padding : 5px;
 	width : 95%;
+	top : 60px;
 	
+}
+#MainallContainer #detail_fs_main {
+  position : relative;
+  border-style: outset;
+  top : -50px;
+  width : 95%;
+  padding : 5px;
+  height : auto;
+  border-radius : 25px;
+  left: 2%;
 }
 
 #adminBlockholder {
@@ -88,12 +102,26 @@ float : right;
 	position : relative;
 
 }
-
+#greetA label {
+	font-size : large;
+	width : 130px
+}
+#greetA label:hover {
+	text-decoration:  underline;
+	cursor : pointer;
+}
+#greetingDiv {
+	position: relative;
+	font-size: large;
+	color: blue;
+	top: -110px;
+	left: 140px;
+}
 
 #register {
 	float : left;
 	border : 1px blue solid;
-		font-size : xx-large;
+		font-size : large;
 	text-decoration : underline;
 	cursor : pointer;
 
@@ -102,10 +130,9 @@ float : right;
 #guestbook {
 	float : right;
 	border : 1px blue solid;
-		font-size : xx-large;
+		font-size : large;
 	text-decoration : underline;
 	cursor : pointer;
-	left : 130%;
 	width : auto;
 }
 #FindInfo {

@@ -70,15 +70,11 @@ function submitDetails(){
 	        if (sessionStorage.userRef){
 	          var sessref = sessionStorage.userRef;
 	          $("#adminBlock").hide();
-	          $("#adminBlock").html("<div id=\"welcBlock\" style=\"\>\
-	      	<div id=\"regholder\">\
-	    		<div id=\"regpic\"></div>\
-	    		<div id=\"greetingDiv\"></div>\
-	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+thedata[0]+"\">Go to your profile?</a></br></div></div></div>");
+	          $("#adminBlock").html("<div id=\"regholder\"><div id=\"regpic\"></div><div id=\"greetingDiv\"></div><div id=\"greetA\" ><label id=\"proLab\" class=\"label-info\" onclick=\"goPro("+thedata[0]+")\" >Your profile page</label></div></div>");
 	   				$("#regpic").html(imgsrc);
-	          $("#greetingDiv").text("Hello " + thedata[1]);
+	          $("#greetingDiv").text(thedata[1]);
 	          $("#adminBlock").fadeIn();
-			      writeCookie("IBIS_session=", sessref, 1);
+	          writeCookie("IBIS_session=", sessref, 1);
 	       		if(readCookie("IBIS_session")){
 	       			//alert("Cookie was not set");
 	       		}else {
@@ -92,6 +88,12 @@ function submitDetails(){
 	      } 
 	    }
     });
+   
+}
+function goPro(refNum) {
+	$("#usrRef").val(refNum);
+	document.proForm.submit();
+	
 }
 
 function input_checker(){

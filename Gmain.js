@@ -253,6 +253,7 @@ function readGloss(that) {
 } 
 
 function showAlpha(){
+	$("#alphList").toggle("slow");
 	$("#GBlock .Gselect").toggle("slow");
 	closeGl();
 }		

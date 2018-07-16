@@ -383,3 +383,21 @@ position : relative;
   font-size : xx-large;
   
 }
+.selectholder .helpT {
+    position: absolute;
+    z-index: 6;
+    font-size: ;
+    color: darkgreen;
+    display: none; 
+    height: auto;
+  	text-align : center; 
+  max-width : 150px;
+  background-color: yellowgreen;
+  left : 160px;
+}
+
+.selectholder:hover .helpT {
+    display: block;
+    position : ;
+    width: 200px;
+}

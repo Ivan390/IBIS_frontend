@@ -4,15 +4,10 @@ function checkStorage(){
 	  if (sessionStorage.userRef) {
 	  $("#adminBlock").hide();
 	  var sesRef = sessionStorage.userRef.split(" :: ");
-	   $("#adminBlock").html("<div id=\"welcBlock\" style=\"\>\
-	      	<div id=\"regholder\">\
-	    		<div id=\"regpic\"></div>\
-	    		<div id=\"greetingDiv\"></div>\
-	    		<div id=\"\"><a href=\"../../cgi-bin/IBISprofile.php3/?userN="+sesRef[0]+"\">Go to your profile page</a></br></div>\
-	   		</div></div>");
+	   $("#adminBlock").html("<div id=\"regholder\"><div id=\"regpic\"></div><div id=\"greetingDiv\"></div><div id=\"greetA\" ><label id=\"proLab\" class=\"label-info\" onclick=\"goPro("+sesRef[0]+")\" >Your profile page</label></div></div>");
 	  imgsrc = '<img id = "regPic" src="'+ sesRef[5] + '" width="" height="" >';
 	  $("#regpic").html(imgsrc);
-	  $("#greetingDiv").text("Hello " + sesRef[1]);
+	  $("#greetingDiv").text(sesRef[1]);
 	  $("#adminBlock").show();
 	  $("#loginhead").css("display", "none");
 	  $("#logouthead").css("display", "block");
@@ -28,6 +23,12 @@ function checkStorage(){
 			  	</span>");
 	  }
 }
+function goPro(refNum) {
+	$("#usrRef").val(refNum);
+	document.proForm.submit();
+	
+}
+
 function initForm() {
   $("#dateBlock").html(new Date().shortFormat());
   starttime();
