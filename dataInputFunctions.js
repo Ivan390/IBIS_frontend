@@ -164,6 +164,7 @@ function submitDupForm(){
 function loadcontent(that){
     theHeading = $(that).text();
     theLabel = that;
+    theHeading = theHeading.replace(' ', '_');
     $('.thisareaLabel').css("color" ,"black");
     theLabel.style.color = "lightgreen";
     var theContent = $('#'+theHeading).val();

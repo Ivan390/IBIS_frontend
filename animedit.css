@@ -26,11 +26,16 @@
   left : 0%;
   
 }
+#logo_image_holder {
+	position: relative;
+	left: -3%;
+	top: 0px;
+	width: 30%;
+}
+
 #logo_image {
-  position : relative;
-  width : 40%;
-  left : 60%;
-  top : -90px;
+ height: 100%;
+	width: 100%;
 }
 .hiddentext {
   display : none;
@@ -53,10 +58,12 @@
 
 #dateTime {
   position: relative;
-  font-size: x-large;
+  z-index:3;
+  font-size: large;
   margin-left:auto;
   padding-left:0px;
   color: green;
+  left : -55%;
 }
 .nothiddentext {
   position : relative;

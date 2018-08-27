@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
         <title>
             I B I S - Mineral Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
-         <script type="text/javascript" src="dataInputFunctions.js"></script>
+        <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
+        <script type="text/javascript" src="dataInputFunctions.js"></script>
         <script type="text/javascript" src="fileselect.js"></script>
         <script type="text/javascript" src="dateshorts.js"> </script>
 	
@@ -25,57 +28,64 @@
 	    document.location = "IBISmain.html";
 	    }
 	 	})
-
-	
 	</script>
-
+    <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
          <link rel="stylesheet"
               type="text/css"
               href="minDataInput.css"
              >
-        
+        <link rel="stylesheet"
+              type="text/css"
+              media="only screen and (max-width: 480px)" 
+              href="minDataInputS.css"
+             >
     </head>
     <body name="VegInputBody" onload="initForm(); shortRefCode()" >
-      <div id="allContainer">
-      	<div id="dateTime">
-	 			<div id="dateBlock">The Date</div>
-	 			<div id="timeBlock">The Time</div>       
+      <div id="allContainer" class="container">
+		    <div class="row">
+		    	<div id="dateTime">
+		 				<div id="dateBlock">The Date</div>
+		 				<div id="timeBlock">The Time</div>
+		 				<div id="logo_image_holder">
+							<img id="logo_image" src="./images/Logo1_smaller.png"/>
+						</div>
+					
+		    </div>      	       
 	 		</div>
-      	<div name="Heading">
-	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
-            <p id="headingText">Mineral Input Form</p>
+      	<div id="Heading" class="row">
+	        <p id="headingText">Mineral Input Form</span>
         </div>
-        <div id="pgButtons" class="littleDD">
-        	<input type="button" value="Submit Data" class="linkC" onclick="doSubmit()"> 
-        	<a href="IBISutilities.html" class="linkC"><img src="" alt="">Back to Utilities</a>   
-		     	<a href="IBISmain.html" class="linkC">Back to Main</a>
+        <div id="pgButtons" class="row">
+        	<a href="IBISutilities.html" class="linkC"><img src="" alt="">Utilities</a>   
+		     	<a href="IBISmain.html" class="linkC">Main</a>
+        	<input type="button" value="Submit" class="linkC" onclick="doSubmit()"> 
         </div>
-        <div id="detail_fs_min" class="littleDD" >
-          <div id="headinglist" class="littleDD">
-           			<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Group</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Crystal_System</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Habit</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Chemical_Formula</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Hardness</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Density</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Cleavage</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fracture</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Streak</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Lustre</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Fluorescence</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Notes</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Origin</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Characteristics</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distribution</label></p>
-				    <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="refLabel">Reference Title</label></p>
-				<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="pgLabel">Page Number</label></p>        
+        <div id="detail_fs_min" class="container" >
+          <div id="headinglist" class="subContainer">
+           			<span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Name</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Group</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Crystal System</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Habit</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Chemical Formula</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Hardness</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Density</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Cleavage</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Fracture</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Streak</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Lustre</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Fluorescence</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Notes</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Origin</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Characteristics</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Uses</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)">Distribution</label></span>
+				    <span><label class="thisareaLabel littleDD " onclick="loadcontent(this)" id="refLabel">Reference Title</label></span>
+				<span><label class="thisareaLabel littleDD " onclick="loadcontent(this)" id="pgLabel">Page Number</label></span>        
           </div> 
-          <div id="outputBlock" class="bigDD outputblock">
-            <p id="inputHeading">Enter Information</p>
-            <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
-            <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
+          <div id="outputBlock" class=" outputblock">
+            <span id="inputHeading">Enter Information</span><br />
+            <textarea id="outputBox" class=" outputbox" placeholder="Enter your input here and click send"></textarea><br />
+            <a id="sendeditButton" class="buttonclass " onclick="sendedit()">Send</a>
          	</div>   
          	<form  name="MinForm" action="../../cgi-bin/IBISnewMinerals.php3" method="POST" enctype="multipart/form-data" class="">
 	  				<fieldset id="dataForm" class="">
@@ -90,7 +100,7 @@
 							<input type="text" id="Cleavage" name="Mcleavage" class="hiddentext">
 							<input type="text" id="Fracture" name="Mfracture" class="hiddentext">
 							<input type="text" id="refTit" name="reftit" class="hiddentext" value=""></input>
-					<input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
+							<input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
 							<textarea id="Streak" name="Mstreak" class="hiddentext"></textarea>
 							<textarea id="Lustre" name="Mlustre" class="hiddentext"></textarea>
 							<textarea id="Fluorescence" name="Mfluorescense" class="hiddentext"></textarea>
@@ -103,26 +113,26 @@
 							<input type="text" name="Macclvl" id="acclevel" class="hiddentext" value="">
 							<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" value="">
 							<div id="images" class="littleDD">
-          		<p class="labelclass">Add Media</p>
-	      			<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
+          		<span class="labelclass">Add Media</span><br />
+	      			<input type="file" name="ibismedia[]" id="mediaPic" class="" multiple />
 	      		</div>
 	      		<input type="text" name="thecat" value="Minerals" id="thecatid" class="hiddentext" />
 	      		<div id="tagslist"></div>
-	      		<div id="imgDisplay" class="littleDD"></div>
-	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
-	      		   
-	      		
-           </div>
-           <div id="shortSrcBlock">
-				  		<input type="button" onclick=shortRefCode() value="Refresh Sources" />
-				  		<input type="button" value="Add it" onclick="doRest()" id="addButton" />
-				  		<input type="button" value="Add New Source" onclick="showSrcBlock()" id="srcButton" />
+	      		<div id="imgDisplay" class=""></div>
+	      		<div id="optionsDsplay" class="" style="display : none;"></div> 
+	      		 <div id="shortSrcBlock">
+				  		<input type="button" onclick=shortRefCode() value="Refresh" />
+				  		<input type="button" value="Add" onclick="doRest()" id="addButton" />
+				  		<input type="button" value="New" onclick="showSrcBlock()" id="srcButton" />
 				  		<div id="refContainer">
 				  		</div>
 				  	</div>
 	  			</fieldset>
 	 			
-	 			</form>
+	 			</form>   
+	      		
+           </div>
+          
 	 			<div id="SrcBlock" class="hiddentext">
 			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">
 	    			<fieldset>
@@ -165,7 +175,7 @@
 	 		<div id="pgDialog" style="display : none;">
 				<label>Enter page number</label></br>
 				<input type="text" id="pgNum" /></br>
-				<input type="button" value="Add it to the form" onclick="addtToForm()" id="addButt"/>
+				<input type="button" value="Add it to the form" onclick="addtToForm()" id="addButt"/><br />
 				<input type="button" id="clButton" value="Dismiss" onclick="closePgDialog()" />
 				<input type="text" id="tit" value=""  class="hiddentext"/>
 			</div>

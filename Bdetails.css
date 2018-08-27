@@ -31,12 +31,12 @@
 }
 #DETallContainer #dateTime {
   position: relative;
-  font-size: x-large;
+  z-index:3;
+  font-size: large;
   margin-left:auto;
-  padding-left:10px;
+  padding-left:0px;
   color: green;
-  width: 30%;
-  left : -40%;
+  left : -55%;
 }
 #DETallContainer .buttonclass {
   position: relative;

@@ -1,19 +1,29 @@
 #allContainer {
     position: relative;
-    width: 93vw;
-    height: 90%;
+    width: 97vw;
+    height: 95vh;
     padding: 20px;
     border-style: inset;
     border-radius: 22px;
+    margin : 8px;
 }
 /*edit file css*/
+#logo_image_holder {
+    position : relative;
+  height : 80%;
+  width : 90%;
+  z-index : 1;
+  top : -60px;
+   left : 240%;
+    
+}
+
 #logo_image {
   position : relative;
-  height : 40%;
-  width : 30%;
-  z-index : -1;
-  top : -60px;
-   left : 70%;
+  height : 80%;
+  width : 90%;
+  z-index : 1;
+  
 }
 .littleDD {
     border-radius : 15px;    
@@ -22,14 +32,15 @@
   display : none;
 }
 .thisareaLabel {
-    font-size : 25px;
+    font-size : x-large;
     border : solid 1px green;
-    padding : 5px;
-    margin : 5px;
-    width : 280px;
+    padding : 2px;
+    margin-right : 15px;
+    width : 45%;
     float : left;
     color : black;
     cursor : pointer;
+    
 }
 #editcommentL {
     padding : 20px;
@@ -63,13 +74,18 @@
     top : 80px;
     margin-left : 12px;
 }
+#Heading {
+    position : relative;
+    top : -150px;
+    left : 30%;
+    width : 300px;
+    
+}
 #headingText{
- position : relative;
- font-size : 38px;
+ font-size : xx-large;
  text-align : center;
  width : 300px;
- left: 35%;
- top: -180px;
+ color : black;
  text-decoration : underline;
 }
 #headinglist {
@@ -85,7 +101,7 @@
 #dateTime {
     position: relative;
     left : -68%;
-    z-index: 3;
+    z-index: 1;
     font-size: 18px;
     margin-left: auto;
     padding-left: 10px;
@@ -94,15 +110,14 @@
 }
 #sendeditButton {
 	position : relative;
-	float : left;
 	width:  auto;
-	font-size:  24px;
+	font-size:  large;
 }
 .buttonclass {
     border : solid 1px green;
-    padding : 5px;
-    font-size : 16px;
-    margin : 8px;
+    padding : 2px;
+  
+    margin : 2px;
 }
 .thisarea {
     width : 400px;
@@ -137,10 +152,10 @@
 }
 .outputbox {
     position : relative;
-    height : 20%;
-    width : 90%;
-    padding : 10px;
-    font-size : 22px;   
+    height : auto;
+    width : 98%;
+    padding : 2px;
+    font-size : large;   
 }
 #dataForm {
     display : block;
@@ -159,7 +174,7 @@
   position : relative;
   border-style: inset;
    top : -145px; 
-  width : 95%;
+  width : 98%;
   height : 85%;
   margin : 1px;
   overflow : auto;
@@ -169,6 +184,9 @@
 #pgButtons {
     position: relative;
 	top : -150px;
+    width : auto;
+    left : 20px;
+    z-index: 3;
 }
 #imgDisplay {
 	position : relative;
@@ -215,9 +233,6 @@ width : 170%;
 #contrib_ID {
     position : relative;
     left : -50px;
-}
-#Heading{
-    position : relative;
 }
 #reglogo_image{
     position : relative;
@@ -299,13 +314,12 @@ position : relative;
 }
     
 #shortSrcBlock {
-     position : absolute;
+     position : relative;
     border : 1px black solid;
-    top : 44%;
-    left : 55%;
-    
-    
-     margin: 10px;
+    top :-454px;
+    left : 56%;
+    margin: 10px;
+    width : 490px;
 }
 #pgDialog {
     position : absolute;
@@ -314,14 +328,14 @@ position : relative;
     width : 30%;
     height : 150px;
     background-color : yellow;
-    top : 48%;
+    top : 38%;
     left  : 57%;
     
 }
 #pgDialog #pgNum {
     position : relative;
-    width : 20%;
-    left : 40%;
+    width : 60%;
+    left : 10%;
     font-size : x-large;
     margin-bottom : 10px;
 }
@@ -339,7 +353,8 @@ position : relative;
 }
 #clButton {
     position : relative;
-    left : -45%;
+    left : 10%;
+    top : -35px;
     font-size : large;
     
 }
@@ -350,9 +365,9 @@ fieldset {
 #SrcBlock {
     position : absolute;
     width :  40%;
-    top : 50%;
+    top : 40%;
     height : 240px;
-    left : 55%;
+    left : 54%;
     background-color : yellow;
     overflow : auto;
     border : 1px black solid;
@@ -370,19 +385,28 @@ fieldset {
 #SrcBlock label {
     position : relative;
     font-size : large;
-    width : 60%;
+    width : 40%;
     top : 0px;
+    margin-left : 3px;
 }
 #SrcBlock input {
     position : relative;
     float : right;
-    top : -0px;
+    top : 0px;
     margin-bottom : 10px
   
 }
+#SrcBlock .buttonC {
+    position : relative;
+    top : 5px;
+    left : -290px;
+    font-size: large;
+    margin : 3px;
+    margin-bottom : 12px;
+}
 #SrcBlock select {
     position : relative;
-    font-size : x-large;
+    font-size : large;
     float : right;
     top : -0px;
     margin-bottom : 10px;
@@ -436,15 +460,17 @@ fieldset {
     
 }
 	.linkC {
-  position : relative;
+  /*! position : relative; */
   border : none;
   background : none;
   font-size: x-large;
   text-decoration : underline;
   cursor : pointer;
    margin-right : 10px;
+  color: blue;
   }
 .linkC:hover {
-  color : blue;
+  color : green;
+  cursor : pointer;
   
 }

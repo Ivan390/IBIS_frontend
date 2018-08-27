@@ -4,11 +4,10 @@ It describes the main page*/
 #MainallContainer {
   position : relative;
   width : 93vw;
-  height : 660px; 
+  height : 580px; 
   /*! padding : 20px; */
   border-style: inset;
   border-radius : 15px;
-  left : 9px;
   top : 10px;
 }
 .ac(
@@ -124,6 +123,7 @@ top : 10px;
 	color : blue; 
 	top : -110px ;
   left : 140px;
+  cursor: pointer;
 }
 #greetA:hover {
   cursor : pointer;
@@ -186,13 +186,14 @@ top : 10px;
     position: relative;
     top: 20px;
     height: auto;
-    width : %;
+    width : 93vw;
     border: green 1px dashed;
     text-align : center;
     padding: 10px;
    border-radius : 15px;
   margin-bottom: 50px;
     
+    left: 3%;
 }
 #DYK h2 {
   position : relative ;

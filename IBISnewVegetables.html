@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="EN" dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="content-type" content="text/xml; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
         <title>
             I B I S - Vegetable Input Form
         </title>
         <script type="text/javascript" src="jquery-1.11.3.js"> </script>
+        <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
          <script type="text/javascript" src="dataInputFunctions.js"></script>
         <script type="text/javascript" src="fileselect.js"></script>
         <script type="text/javascript" src="dateshorts.js"> </script>
@@ -27,61 +30,67 @@
 	 	})
 
 	</script>
+		<link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet"
+	   type="text/css"
 
-            <link rel="stylesheet"
-              type="text/css"
-              href="vegDataInput.css"
-             >
-        
+     href="vegDataInput.css"
+     >
+  <link rel="stylesheet"
+	   type="text/css"
+	   	   media="only screen and (max-width: 480px)" 
+     href="vegDataInputS.css"
+     >
     </head>
     <body name="VegInputBody" id="TheBody" onload="initForm(); shortRefCode()" >
-    		
-      <div id="allContainer">
-       <div id="dateTime">
-					 <div id="dateBlock">The Date</div>
-					 <div id="timeBlock">The Time</div>       
-				 </div>
-				  <div id="pgButtons" class="littleDD">
-        	<input type="button" value="Submit Data" class="linkC" onclick="doSubmit()">
-        	<a href="IBISutilities.html" class="linkC"><img src="" alt="">Back to Utilities</a>    
-		     	<a href="IBISmain.html" class="linkC"><img src="" alt="">Back to Main</a>
-        </div>
-        <div name="Heading">
-	        <img id="logo_image" src="./images/Logo1_fullsizetransp.png">
-            <p id="headingText">Vegetable Input Form</p>
-        </div>
+    <div id="allContainer" class="container">
+		    <div class="row">
+		    	<div id="dateTime">
+		 				<div id="dateBlock">The Date</div>
+		 				<div id="timeBlock">The Time</div>
+		 				<div id="logo_image_holder">
+							<img id="logo_image" src="./images/Logo1_smaller.png"/>
+						</div>
 					
-       
-        
-        <div id="detail_fs_min" class="littleDD" ">
-          <div id="headinglist" class="littleDD">
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subPhylum</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Class</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subClass</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Order</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subOrder</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Family</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subFamily</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Genus</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subGenus</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Species</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subSpecies</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Common_Names</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name_Notes</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Description</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Ecology</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distrib_Notes</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Category</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Status</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Growing</label></p>
-            <p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="refLabel">Reference Title</label></p>
-				<p><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="pgLabel">Page Number</label></p>
+		    </div>      	       
+	 		</div>
+      	<div id="Heading" class="row">
+	        <p id="headingText">Vegetable Input Form</span>
+        </div>
+        <div id="pgButtons" class="row">
+        	<a href="IBISutilities.html" class="linkC  btn-large btn-info"><img src="" alt="">Utilities</a>   
+		     	<a href="IBISmain.html" class="linkC  btn-large btn-info">Main</a>
+        	<input type="button" value="Submit" class="linkC  btn-large btn-info" onclick="doSubmit()"> 
+        </div>
+        <div id="detail_fs_min" class="container" >
+          <div id="headinglist" class="subContainer">
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Phylum</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subPhylum</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Class</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subClass</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Order</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subOrder</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Family</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subFamily</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Genus</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subGenus</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Species</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">subSpecies</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Status</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Name Notes</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Description</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Ecology</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Distrib Notes</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Uses</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Category</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Common Names</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)">Growing</label></span>
+            <span><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="refLabel">Reference Title</label></span>
+				<span><label class="thisareaLabel littleDD" onclick="loadcontent(this)" id="pgLabel">Page Number</label></span>
           </div> 
           <div id="outputBlock" class="bigDD outputblock">
-            <p id="inputHeading">Enter Information</p>
-            <textarea id="outputBox" class="littleDD outputbox"></textarea><br>
+            <span id="inputHeading">Enter Information</span><br />
+            <textarea id="outputBox" class="littleDD outputbox" placeholder="Enter your input here and click send"></textarea><br />
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
         	</div>  
         	
@@ -102,7 +111,7 @@
 						<input type="text" id="subSpecies" name="subspecies" class="hiddentext">
 						<input type="text" id="Common_Names" name="common_Names" class="hiddentext">
 						<input type="text" id="refTit" name="reftit" class="hiddentext" value=""></input>
-					<input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
+					  <input type="text" id="pgnum" name="pgNumber" class="hiddentext" value=""></input>
 						<textarea id="Name_Notes" name="name_Notes" class="hiddentext"></textarea>
 						<textarea id="Description" name="description" class="hiddentext"></textarea>
 						<textarea id="Ecology" name="ecology" class="hiddentext"></textarea>
@@ -116,7 +125,7 @@
 						<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" value="">
 						
 						<div id="images" class="littleDD">
-          		<p class="labelclass">Add Media</p>
+          		<span class="labelclass">Add Media</span><br />
 	      			<input type="file" name="ibismedia[]" id="mediaPic" class="littleDD" multiple />
 	      		</div>
 	      		
@@ -124,9 +133,10 @@
 	      		<div id="imgDisplay" class="littleDD"></div>
 	      		<div id="optionsDsplay" class="littleDD" style="display : none;"></div> 
 	      		<div id="shortSrcBlock">
-				  		<input type="button" onclick=shortRefCode() value="Refresh Sources" />
-				  		<input type="button" value="Add it" onclick="doRest()" id="addButton" />
-				  		<input type="button" value="Add New Source" onclick="showSrcBlock()" id="srcButton" />
+	      			<span class="labelclass">Add Source</span><br />
+				  		<input type="button" onclick=shortRefCode() value="Refresh" />
+				  		<input type="button" value="Add" onclick="doRest()" id="addButton" />
+				  		<input type="button" value="New" onclick="showSrcBlock()" id="srcButton" />
 				  		<div id="refContainer">
 				  		</div>
 				  	</div>
