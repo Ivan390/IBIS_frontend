@@ -19,8 +19,7 @@ function do_logout(){
 	$("#adminBlock").hide();
  	var loCount = 0;
  	$.ajax({
-		url : "../../cgi-bin/IBISLogout.php3",
-		type : "POST",
+		url : "cgi/IBISLogout.php3",		type : "POST",
 		data : {name1 : logID},
 		success : function(data){
 		if (data !== ""){
@@ -38,8 +37,7 @@ function do_logout(){
 			    <a href=\"IBISregistration.html\" class=\" linksclass\">Register</a>\
 			  </span>\
 			  <span id=\"guestbook\" class=\"col-xs-12 col-sm-12\">\
-			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\" linksclass\">GuestBook</a>\
-			  </span>");
+			    <a href=\"cgi/IBISnewGuest.php3\" class=\" linksclass\">GuestBook</a>\			  </span>");
 	$("#adminBlock").fadeIn();
   sessionStorage.userRef = "";
   eraseCookie("IBIS_session=");
@@ -51,8 +49,7 @@ function submitDetails(){
     var value1 = $("#uname").val();
     var value2 = $("#uemail").val();
     $.ajax({
-	    url : '../../cgi-bin/IBISlogin.php3',
-	    type : "get",
+	    url : 'cgi/IBISlogin.php3',	    type : "get",
 	    async : "false",
 	    data : {uName : value1, uEmail : value2},
 	    success : function(data) {

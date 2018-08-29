@@ -13,8 +13,7 @@ function andThis(that){
 	var spce = ' ';
 	
 	$.ajax({
-		url : "../../cgi-bin/lnf.php3",
-		type : "POST",
+		url : "cgi/lnf.php3",		type : "POST",
 		data : {name1:theVal},
 		success : function(data){
 		var retListA = data.split(":@");

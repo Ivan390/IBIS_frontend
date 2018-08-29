@@ -19,8 +19,7 @@ function checkStorage(){
 			    <a href=\"IBISregistration.html\" class=\"linksclass\">Register</a>\
 			  	</span>\
 			  	<span id=\"guestbook\" class=\"col-xs-12 col-sm-12\">\
-			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\"littleDD linksclass\">GuestBook</a>\
-			  	</span>");
+			    <a href=\"cgi/IBISnewGuest.php3\" class=\"littleDD linksclass\">GuestBook</a>\			  	</span>");
 	  }
 }
 function goPro(refNum) {
