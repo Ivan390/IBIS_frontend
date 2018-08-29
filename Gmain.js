@@ -89,8 +89,7 @@ function submitVote() {
   var newScore = eval('parseInt(curScore) + parseInt(rating)');
   var respScore = '';
   $.ajax({
-    url: 'cgi/IBISvotes.php3',    type: 'post',
-    data: {
+    url: '../../cgi-bin/IBISvotes.php3',    type: 'post',    data: {
 		  name1: rating,
 		  name2: recNumber,
 		  name3: conRef,
@@ -116,8 +115,7 @@ function dismissNote() {
 
 function loadRegWin() {
   theUser = $('#userRef').val();
-  var regWin = open('cgi/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');}
-
+  var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');}
 function closeRegWin() {
   regWin.close;
   $('#closewin').hide();
@@ -130,8 +128,7 @@ function submitNote() {
   var rcid = $('#rcID').val();
   var sucText = '';
   $.ajax({
-    url: 'cgi/IBIScomments.php3',    type: 'post',
-    data: {
+    url: '../../cgi-bin/IBIScomments.php3',    type: 'post',    data: {
       name1: conRef,
       name2: noteCont,
       name3: rcid
@@ -183,8 +180,7 @@ function getNames(that) {
     	comLabel = 'Chemical Formula:';
   }
   $.ajax({
-    url: 'cgi/IBISgetNames.php3',    type: 'POST',
-    data: {
+    url: '../../cgi-bin/IBISgetNames.php3',    type: 'POST',    data: {
       name1: justName,
       name2: catvalue
     },
@@ -194,8 +190,7 @@ function getNames(that) {
       var spec = responseL[1];
       var Cnames = responseL[2];
       var recID = responseL[3];
-      theDetails = '<div id="detailsBlock"><img src=' + picSrc + ' /></br><label class="labelC">' + genLabel + ' </label><label class="contentC">' + gen + '</label></br><label class="labelC">' + specLabel + ' </label><label class="contentC">' + spec + '</label></br><label class="labelC">' + comLabel + ' </label><label class="contentC">' + Cnames + '</label></br><label class="labelC">Metric: </label><label class="contentC">' + MetricD + '</label><a class="linksclass" href="cgi/IBISgetDetails.php3?recID='+recID+'&catVal='+catvalue+'">Go to Details</a></div>';      $('#listDiv').html(theDetails);
-    }
+      theDetails = '<div id="detailsBlock"><img src=' + picSrc + ' /></br><label class="labelC">' + genLabel + ' </label><label class="contentC">' + gen + '</label></br><label class="labelC">' + specLabel + ' </label><label class="contentC">' + spec + '</label></br><label class="labelC">' + comLabel + ' </label><label class="contentC">' + Cnames + '</label></br><label class="labelC">Metric: </label><label class="contentC">' + MetricD + '</label><a class="linksclass" href="../../cgi-bin/IBISgetDetails.php3?recID='+recID+'&catVal='+catvalue+'">Go to Details</a></div>';      $('#listDiv').html(theDetails);    }
   })
 }
 
@@ -221,8 +216,7 @@ function readGloss(that) {
   var category = $('#catVal').val();
   var Ilist = '';
   $.ajax({
-    url: 'cgi/IBISgetnames.php3',    type: 'POST',
-    data: {
+    url: '../../cgi-bin/IBISgetnames.php3',    type: 'POST',    data: {
       name1: letter,
       name2: category
     },

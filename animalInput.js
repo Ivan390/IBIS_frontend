@@ -43,8 +43,7 @@ function checkDuplicate(){
     var speciesval= $('#Species').val();
     var catvalue = 'Animals';
     $.ajax({
-			url : 'cgi/IBIScheckdup.php3',			type : "get",
-			async : "false",
+			url : '../../cgi-bin/IBIScheckdup.php3',			type : "get",			async : "false",
 			data :{species : speciesval, catval : catvalue},
 			success : function(data){
 				var testregexp = /nomatch/;
