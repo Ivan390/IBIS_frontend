@@ -91,8 +91,7 @@
 				      <a id="sendeditButton" class="buttonclass " onclick="sendedit()" >Send</a>
          		</div> 
            	<div id="messageDiv"></div>     
-        	<form  name="AnimForm" action="../../cgi-bin/IBISnewAnimals.php3" method="POST" enctype="multipart/form-data" class="">
-	  			<fieldset id="dataForm" class="hiddentext">
+        	<form  name="AnimForm" action="cgi/IBISnewAnimals.php3" method="POST" enctype="multipart/form-data" class="">	  			<fieldset id="dataForm" class="hiddentext">
 				    <input type="text" id = "Kingdom" name="Akingdom" value="Animalia" class="hiddentext"></input>
 				    <input type="text" id="Phylum" name="Aphylum" class="hiddentext"></input>
 				    <input type="text" id="subPhylum" name="AsubPhylum" class="hiddentext"></input>
@@ -137,8 +136,7 @@
 			  		</fieldset>
 			 	</form>
 			 	<div id="SrcBlock" class="hiddentext">
-			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">
-	    			<fieldset>
+			 	<form name="SourceF" action="cgi/IBISsrc.php3" method="POST" enctype="mulipart/form-data">	    			<fieldset>
 	    				<span><label>Type</label>
 	    				<select name="type" id="type">
 	    					<option>Book</option>

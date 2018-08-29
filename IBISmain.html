@@ -35,15 +35,13 @@
 					  <img id="logo_image" src="./images/Logo1_smaller.png"/>
 					</div>
       </div>
-	    <form name="categoryForm" action="../../cgi-bin/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >
-	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />
+	    <form name="categoryForm" action="cgi/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />
 	    </form>
 	    <div id="errorDiv" style="display:none;"></div>
 	    <div id="loginLink" class="littleDD linksclass" style="">
 	      <label id="loginhead" class="littleDD linksclass label-info" onclick="showLogin()">Login</label>
 	      <label id="logouthead" class="littleDD linksclass logoutCstart label-info" style="display:none;" onclick="do_logout()">Logout</label>
-	      <form name="loginForm" action="../../cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data" >
-	        <div id="login" class="littleDD login" style="display : none;">
+	      <form name="loginForm" action="cgi/IBISlogin.php3" method="POST" enctype="multipart/form-data" >	        <div id="login" class="littleDD login" style="display : none;">
 	          <label class="labelClass">Your user name</label><br>
 	          <input type="text" name="uName" id="uname" class="" /><br>
 	          <label class="labelClass">Your email</label><br>
@@ -52,8 +50,7 @@
 	          <input type="button" value="Cancel" onclick="cancelLogin()" /><br>
 	        </div>
 	      </form>
-	      <form name=proForm action="../../cgi-bin/IBISprofile.php3" method="POST" enctype="multipart/form-data">
-	      	<input type="text" value="" id="usrRef" name="userN" style="display:none;">
+	      <form name=proForm action="cgi/IBISprofile.php3" method="POST" enctype="multipart/form-data">	      	<input type="text" value="" id="usrRef" name="userN" style="display:none;">
 	      </form>
 	    </div>
 	    <div id="cgiResult" ></div>
