@@ -94,9 +94,10 @@
 }
 #headingText {
   position : relative;
-  font-size: 300%;
+  font-size: xx-large;
   left : 30%;
   top : -80px;
+  width : 400px;
   text-decoration : underline;
   
 }

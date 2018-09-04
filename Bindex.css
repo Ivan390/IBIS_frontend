@@ -18,7 +18,7 @@ body {
   border-radius : 15px;
   left : 1%;
   margin-top : 2%;
-  overflow: auto;
+  overflow: hidden;
   top: -20px;
 }
 	.linkC {

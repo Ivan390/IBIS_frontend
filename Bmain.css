@@ -45,6 +45,17 @@ top : 10px;
   font-size : large;
   z-index : 7;
 }
+#clsbox {
+  position : relative;
+  border : 1px lightblue solid;
+  padding : 5px;
+  background-color: white;
+  border-radius: 12px;
+  float : right;
+  top : 20px;
+  cursor: pointer;
+  
+}
 #MainallContainer #logo_image {
   position : relative;
   height : 93%;
@@ -125,7 +136,7 @@ top : 10px;
   left : 140px;
   cursor: pointer;
 }
-#greetA:hover {
+#greetA label:hover {
   cursor : pointer;
   text-decoration : underline;
   

@@ -94,10 +94,11 @@
 }
 #headingText {
   position : relative;
-  font-size: 300%;
+  font-size: xx-large;
   left : 30%;
   top : -40px;
   text-decoration: underline;
+  width : 400px;
   
 }
 #imgDisplay {

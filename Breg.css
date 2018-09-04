@@ -11,18 +11,20 @@
   position : relative;
   width : 20px;
   height : 20px;
-  margin-right : 15px;
+  /*! margin-right : 15px; */
   color : blue;
 }
 #agreement {
   position : absolute;
   z-index : 8;
-  background-color: rgba(225,235, 12, 0.9);
+  background-color: rgba(225,235, 12, 0.6);
   width : 85%;
-    height : 50%;
+    height : 70%;
   border : 1px lightblue solid;
   border-radius : 15px;
   top : 20%;
+  overflow : hidden;
+  padding :10px;
   
   left: 5%;
 }
@@ -38,15 +40,21 @@
 }
 #agree span {
   position : relative;
-  top : 60px;
-  float: left;
+   top : 20px; 
+  /*! float: left; */
   font-size: x-large;
-  align-items: ;
+}
+
+#agree label {
+  position : relative;
+  margin-left : 20px;
+  width : auto;
+  
 }
 #dateTime {
   position: relative;
   top: 0px;
-  left: 0%;
+  left: -40%;
   z-index:3;
   font-size: x-large;
   margin-left:auto;
@@ -80,14 +88,15 @@
  }
 
 #logo_image {
-  height : 70%;
-  width : 60%;
+  height : 100%;
+  width : 100%;
   left : -20px;
 }
 #logo_image_holder{
   position : relative;
-   left : 25%;
+   left : %;
    top : -0px;
+  width : 30%;
  }
 
 #pgButtons {

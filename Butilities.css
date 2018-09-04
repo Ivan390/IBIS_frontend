@@ -25,17 +25,16 @@
 
 #logo_image_holder {
     position: relative;
-    left: 10%;
+    left: 23%;
     margin-left: auto;
     margin-right: auto;
-    width: 813px;
-    height: 25%;
+    width: 40%;
     top: -0px;
 }
 #UtilallContainer #logo_image {
   position : relative;
-  height : 40%;
-  width : 70%;
+  height : 100%;
+  width : 100%;
   z-index : 6;
 }
 #listsList {
@@ -79,7 +78,7 @@ li:focus, li:hover {
 }
 #UtilallContainer #detail_fs{
     position : relative;
-     height : 340px; 
+     height : 40%; 
     margin-top : 10px;
   border : 1px lightblue solid;
   padding : 10px;

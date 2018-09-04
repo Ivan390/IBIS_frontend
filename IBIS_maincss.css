@@ -539,12 +539,13 @@ position : relative;
 }
 #DETallContainer #logo_image_holder{
   position : relative;
-   left : 68%;
-  top : -40px;
+   left : 240%;
+  top : -60px;
+  width : 100%;
  }
 #DETallContainer #logo_image {
-  height : 40%;
-  width : 30%;
+  height : 100%;
+  width : 100%;
 }
 #DETallContainer #fqnNameList{
   position : relative;
@@ -648,8 +649,10 @@ position : relative;
 }
 #DETallContainer #pgButtons {
 position : relative;
-  	top : -60px;
-	left: 1%;
+  	top : 0px;
+	left: 2%;
+  font-size: xx-large;
+  cursor : pointer;
 }
 /*this is register.css*/
 

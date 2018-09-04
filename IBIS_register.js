@@ -7,11 +7,13 @@ function showAgreement(){
 	$(".requiredf").hide();
 	$("#secQ").hide();
 	$("#detail_fs").css("background-color", "gray");
-	var Adiv = "<div id=\"agree\"><p>Hi<br>If you are here then you must want to register to contribute to this project. In that case, there are some things you should know. Firstly this is a personal project I compiled because I had trouble remembering the names of stuff. It is meant to be usefull. <span><input type=\"checkbox\" id=\"Acheck\" onchange=\"enableForm()\"><label>  I agree</label><span><\p><\div>";
+	var Adiv = "<div id=\"agree\"><p>Hi<br>If you are here then you must want to register to contribute to this project. In that case, there are some things you should know. Firstly this is a personal project I compiled because I had trouble remembering the names of stuff. It is meant to be usefull.<br /><span><input type=\"checkbox\" id=\"Acheck\" onchange=\"enableForm()\"><label>Yes</label></span><br /><span><input type=\"checkbox\" id=\"Rcheck\" onchange=\"closeThis()\"><label>  No</label></span></p></div>";
 	//$("#agreement").css("background-color", "white");
 	$("#agreement").html(Adiv);
 }
-
+function closeThis(){
+	document.location = "IBISmain.html";
+}
 function enableForm(){
 	$(".requiredf").show();
 	$("#detail_fs").css("background-color", "white");
