@@ -6,6 +6,7 @@
     border-style: inset;
     border-radius: 22px;
     margin : 8px;
+    overflow : auto;
 }
 /*edit file css*/
 #logo_image_holder {
@@ -193,7 +194,10 @@
 	border : 1px black dashed;
   	background-color : rgba(205,135, 12, 0.7);
     padding-top: 3px;
-    top : -180px;       		
+    top : -360px; 
+    width : 170px;
+    padding : 10px;
+    left : 52%;
 }
 .thumbpic {
 	position : relative;
@@ -312,11 +316,16 @@ position : relative;
     padding : 10px;
     
 }
-    
+.card {
+    top : -180px;
+}   
+.dm-uploader {
+    top : -180px;
+}
 #shortSrcBlock {
-     position : relative;
+     position : absolute;
     border : 1px black solid;
-    top :-454px;
+    top : 230px;
     left : 56%;
     margin: 10px;
     width : 490px;

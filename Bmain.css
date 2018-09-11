@@ -102,11 +102,12 @@ top : 10px;
   position: relative;
   left: -20%;
   z-index:3;
-  font-size: 18px;
+  font-size: x-large;
   margin-left:auto;
   padding-left:10px;
   color: green;
   width: 80%;
+  top : 10px;
 }
 .hiddentext {
   display : none;
@@ -297,11 +298,28 @@ top : 10px;
     top : 120px;
     left : 8%;
     text-align : left;
-    font-size : 25px;
+    font-size : x-large;
     padding : 10px;
     z-index : 18;
     cursor: pointer;
+  color : black;
+  
 }
+#loginhead {
+  font-size : xx-large;
+}
+#loginhead:hover {
+  color : lightblue;
+  text-decoration : underline;
+}
+#logouthead {
+  font-size : xx-large;
+}
+#logouthead:hover {
+  color : lightblue;
+  text-decoration : underline;
+  
+} 
 #login input {
   position : relative;
   width : 95%;

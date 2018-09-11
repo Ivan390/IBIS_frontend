@@ -18,6 +18,7 @@
 	 	})
 	 </script>
 	 <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
+	 <link href="jquery.dm-uploader.min.css" rel="stylesheet">
    <link rel="stylesheet"
 	       type="text/css"
 	       href="./Breg.css"
@@ -40,18 +41,24 @@
       		  <img id="logo_image" src="./images/Logo1_fullsizetransp.png" />
       		</div>
       	</div>
+      	<div id="Heading" class="row">
+	        <span id="headingText">Registration</span>
+        </div>
       	<div class="row">
 		    	<div id=pgButtons>
-			  		<a id="backButton" href="/ibis/IBISmain.html" class="linkC text-info">Back to Main </a>
-			  		<input type="button" id="buttonBtn" class="linkC text-info" onclick="submitRegistration()" value="Submit">
+			  		<a id="backButton" href="/ibis/IBISmain.html" class="linkC ">Back to Main </a>
+			  		<input type="button" id="buttonBtn" class="linkC " onclick="submitRegistration()" value="Submit">
 			 		</div>
       	</div>
       	<div id="allcontainer" class="container">
       	<div id="agreement"></div>
-			<form name="registerForm" role="form" class="form-horizontal" method="POST" action="../../cgi-bin/IBIScontribRegister.php3" enctype="multipart/form-data" >				<fieldset id="detail_fs" class="form-group">      	 	<div id="personalDetails" class="littleDD">
+      	<div id="imgDisplay"></div>
+			<form name="registerForm" role="form" class="form-horizontal" method="POST" action="../../cgi-bin/IBIScontribRegister.php3" enctype="multipart/form-data" >
+				<fieldset id="detail_fs" class="form-group">
+					<div id="personalDetails" class="littleDD">
       			<p>
 		  	 			<label class="labelClass " for="fName" >First name </label>
-       				<input type="text" name="name" id="fName" class="inputClass form-control requiredf" disable maxlength="10" onchange="checkWords(this)" />
+       				<input type="text" name="name" id="fName" class="inputClass form-control requiredf" maxlength="10" onchange="checkWords(this)" />
        			</p>
        			<p>
 							<label class="labelClass"  for="lName">Last name</label>
@@ -62,13 +69,7 @@
             	<input type="text" name="email"  id="email" class="inputClass form-control requiredf" onchange="checkWords(this)" />
             </p>
           </div>
-          <div>
-	      		<div id=imgDisplay class="bigDD">
-	      	</div>
-	        <label class="labelClass">Add a picture of yourself</label></br>
-          <input type="file" name="picture" id="regPic" class="requiredf" />
-        </div>
-        <div id="securityInfo" class="bigDD">
+          <div id="securityInfo" class="bigDD">
 	      	<p>
 		    		<label class="labelClass ">Select a question and enter an answer in the space below.</label>
 	      	</p>
@@ -82,11 +83,56 @@
           	<input type="text" name=secA id="secA" class="labelClass form-control requiredf" onchange="checkWords(this)" />
         	</p>
       	</div>
+          <div class="row">
+        <div class="col-md-6 col-sm-12">
+					<div id="drag-and-drop-zone" class="dm-uploader p-5">
+            <div class="btn btn-primary btn-block mb-5">
+                <span>Open the file Browser</span>
+                <input name="picture" id="regPic" type="file" title='Click to add Files' />
+            </div>
+          </div>
+          
+        </div>
+       
+        <div class="col-md-6 col-sm-12">
+          <div class="card h-100">
+            <div class="card-header">
+              File List
+            </div>
+
+            <ul class="list-unstyled p-2 d-flex flex-column col" id="files">
+              <li class="text-muted text-center empty">No files uploaded.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+        
       		<input type="text" id="userName" name="userName" class="hiddentext">
 	    		<input type="text" id="kingdom" name="kingdom" value="Register" class="hiddentext" >
 	  	</fieldset>
 			</form>
 		</div>
 	</div>
+	<div id="ajaxBox"></div>
+    	<script src="jquery.dm-uploader.min.js"></script>
+    	 <script type="text/javascript" src="regAsyncUpload.js"></script>
+    	 <script src="demo-ui.js"></script>
+    	  <script type="text/html" id="files-template">
+      <li class="media">
+        <div class="media-body mb-1">
+          <p class="mb-2">
+            <strong>%%filename%%</strong> - Status: <span class="text-muted">Waiting</span>
+          </p>
+          <div class="progress mb-2">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+              role="progressbar"
+              style="width: 0%" 
+              aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+          <hr class="mt-1 mb-1" />
+        </div>
+      </li>
+    </script>
    </body>
 </html>

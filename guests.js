@@ -13,7 +13,10 @@ function showGuests(){
 		}
 		imgsrc = guestEntry[0];
 		imgtitle  = guestEntry[1];
-		theList += '<img class="thumbpic" src="'+imgsrc+'" title="'+imgtitle +'" />:';
+		theList +='<tr>\
+			<td><span class="Gtext">'+imgtitle+'</span></td>\
+			<td><img class="thumbpic" src="'+imgsrc+'" width="100px" height="100px" /></td>\
+		</tr>:';
 	}
 	var listArray = theList.split(":");
 	for (l=0; l<=dispLimit; l++){
@@ -30,5 +33,5 @@ function showGuests(){
 	}else {
 		$('#showguests').val("More");
 	}
-	$('#catPicsList').html(shortList);
+	$('#Gtable').html(shortList);
 }

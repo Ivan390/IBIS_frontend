@@ -1,9 +1,9 @@
 #allContainer {
     position: relative;
+      border : 1px lightblue solid;
     width: 97vw;
     height: 95vh;
     padding: 20px;
-    border-style: inset;
     border-radius: 22px;
     margin : 8px;
 }
@@ -83,14 +83,14 @@
 #Heading {
     position : relative;
     top : -50px;
-    left : 25%;
-    width : 150px;
+    left : 15%;
+    width : 250px;
     
 }
-#headingText{
+#headingText{   		
  font-size : large;
  text-align : center;
- width : 150px;
+ width : 250px;
  color : black;
  text-decoration : underline;
 }
@@ -175,7 +175,7 @@
 }
 #detail_fs_min {
   position : relative;
-  border-style: inset;
+  border : 1px lightblue solid;
    top : -55px; 
   width : 99%;
   height : 75%;

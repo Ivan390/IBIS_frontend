@@ -210,13 +210,9 @@ display : none;
 #SFallContainer #theCategory {
     position: relative;
     padding: 1px;
-    /*! max-width: 20%; */
-	 width : auto;
-    /*! border-style: dashed; */
-    /*! border-width: 1px; */
+    width : auto;
     max-height: 200px; 
     margin-right: 1px;
-    /*! float: right; */
     overflow-y: scroll;
     top: -40px;
      left: -3%; 
@@ -244,4 +240,17 @@ display : none;
 	width : 99%;
 	height : 35%
 	
+}
+.selectholder .helpT {
+	position: absolute;
+	z-index: 0;
+	font-size: ;
+	color: darkgreen;
+	display: none;
+	height: auto;
+	text-align: center;
+	max-width: 150px;
+	background-color: yellowgreen;
+	left: 160px;
+	top : 40px;
 }

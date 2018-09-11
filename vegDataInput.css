@@ -6,6 +6,7 @@
     border-style: inset;
     border-radius: 22px;
     margin : 8px;
+    overflow : auto;
 }
 /*edit file css*/
 #logo_image_holder {
@@ -78,13 +79,13 @@
     position : relative;
     top : -150px;
     left : 30%;
-    width : 500px;
+    width : 400px;
     
 }
 #headingText{
+    position : relative;
  font-size : xx-large;
- text-align : center;
- width : 500px;
+ width : 100%;
  color : black;
  text-decoration : underline;
 }
@@ -193,7 +194,10 @@
 	border : 1px black dashed;
   	background-color : rgba(205,135, 12, 0.7);
     padding-top: 3px;
-    top : -180px;       		
+    top : -345px;  
+    width : 170px;
+    padding : 10px;
+    left : 52%;
 }
 .thumbpic {
 	position : relative;
@@ -314,12 +318,12 @@ position : relative;
 }
     
 #shortSrcBlock {
-     position : relative;
+     position : absolute;
     border : 1px black solid;
-    top :-454px;
-    left : 56%;
+    top : 230px;
+    left :56%;
     margin: 10px;
-    width : 480px;
+    width : 43%;
 }
 #pgDialog {
     position : absolute;
@@ -328,7 +332,7 @@ position : relative;
     width : 30%;
     height : 150px;
     background-color : yellow;
-    top : 58%;
+    top : 48%;
     left  : 57%;
     
 }
@@ -341,19 +345,20 @@ position : relative;
 }
 #pgDialog label {
     position : relative;
-    left : 10%;
+    left : 15%;
     clear : right;
     font-size : x-large;
 }
 #pgDialog #addButt {
     position : relative;
     font-size : large;
-    left : 33%;
+    left : 40%;
     
 }
 #clButton {
     position : relative;
-    left : -40%;
+    left : 10%;
+    top : -33px;
     font-size : large;
     
 }
@@ -364,9 +369,9 @@ fieldset {
 #SrcBlock {
     position : absolute;
     width :  40%;
-    top : 50%;
+    top : 40%;
     height : 240px;
-    left : 53%;
+    left : 56%;
     background-color : yellow;
     overflow : auto;
     border : 1px black solid;
@@ -378,7 +383,7 @@ fieldset {
     float : left;
     clear : both;
     width : 90%;
-    top : 10px;
+    top : 5px;
     
 }
 #SrcBlock label {
@@ -386,29 +391,30 @@ fieldset {
     font-size : large;
     width : 40%;
     top : 0px;
-    margin-left : 3px;
+    margin : 0px;
 }
 #SrcBlock input {
     position : relative;
+    font-size : large;
     float : right;
     top : 0px;
-    margin-bottom : 10px
+    margin: 0px;
   
 }
 #SrcBlock .buttonC {
     position : relative;
-    top : 5px;
-    left : -290px;
+    top : 15px;
+    left : -250px;
     font-size: large;
     margin : 3px;
-    margin-bottom : 12px;
+    margin-bottom : 15px;
 }
 #SrcBlock select {
     position : relative;
     font-size : large;
     float : right;
     top : -0px;
-    margin-bottom : 10px;
+    margin : 0px;
     
 }
 /* Sources style*/
@@ -473,3 +479,11 @@ fieldset {
   cursor : pointer;
   
 }
+.dm-uploader {
+    top : -170px;
+}
+.card {
+    top : -170px;
+    
+}
+

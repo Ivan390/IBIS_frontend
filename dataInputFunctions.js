@@ -1,4 +1,4 @@
-/*
+	/*
 jscript script to deal handle the data input events
 
 */
@@ -165,8 +165,11 @@ function loadcontent(that){
     theLabel.style.color = "lightgreen";
     var theContent = $('#'+theHeading).val();
     $("#outputBox").val(theContent);
+    $("#outputBox").focus();
 }
- 
+function closethis(){
+$("#ajaxBox").fadeOut();
+}
 function checkPics() {
     var picValue = $('#imgDisplay').html();
     return picValue;
@@ -182,7 +185,7 @@ var catvalue = $('#thecatid').val();
 		document.VegForm.submit(); 
 		}
     else if (catvalue == "Animals"){
-    	document.AnimForm.submit();
+    	sendit();
     }
     else if (catvalue == "Minerals"){
     	document.MinForm.submit();
@@ -199,7 +202,7 @@ function doSubmit(){
 	var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
 		$('#messageDiv').html(messgDiv);
 	  }else{
-	   	reallySubmit();
+	   	sendit();
 	  }
 }
 

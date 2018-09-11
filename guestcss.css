@@ -4,14 +4,17 @@
   /*! width : 95%; */
   height : 90%;
   padding : 20px;
-  border-style: inset;
   border-radius: 22px;
- 
+  border : 1px lightblue solid;
+  top : 20px;
 }
 #dateTime {
+  position : relative;
+  font-size : x-large;
   color: green;
-  
+  left : 10px;
 }
+
 #pgButtons{
 	position : relative;
   top : 4%;
@@ -20,9 +23,15 @@
 
 #logo_image {
   position : relative;
-  width : 65%;
-  left :45%;
-  top : -50px;
+  width : 85%;
+  left :-5%;
+  top : -0px;
+}
+#logo_image_holder {
+  position : relative;
+  width :400px;
+  left : 56%;
+  top : -20px;
 }
 .hiddentext {
   display : none;
@@ -72,53 +81,69 @@
 }
 #guestImages {
   position : absolute;
-  top : 102%;
- height : 220px;
+  top : 100%;
+ height : 410px;
   width : 95%;
   padding : 15px;
   padding-bottom: 20px;
   overflow : auto; 
-  
-  border-style : dashed;
-  border-width : 3px;
-  /*! height : 125px; */
+  border : 1px lightblue solid;
   font-size : 15px;
 }
 .thumbpic {
-  width : 170px;
-  height : 100px;
+  position : relative;
+  width : 70px;
+  height : 70px;
   border-radius : 12px;
   padding: 1px;
+  float : right;
+}
+.Gtext {
+  font-size : large;
+  
 }
 #GuestPic {
   position : relative;
-  left : 60%;
-  top : -80px;
+  left : -10%;
+  top : -250px;
   width : auto;
   height : auto;
+  
+}
+#GuestPic .thumbpic {
+  position : absolute;
+  left : 75%;
+  width : 150px;
+  height : 150px;
+  border-bottom: 3px grey solid;
+  border-left : 3px grey solid;
+  
 }
 #detailcont{  position : relative;
   width : 98%;
   color : black;
   top : -60px;
    border : 1px black inset;
-  height : 320px;
+  height : 440px;
   border-radius : 12px;
 
 }
 
 #detail_fs {
   position : relative;
-  width : 50%;
+  width : 45%;
   color : black;
-  height : 500px;
   border : 1px black inset;
-  height : auto;
-  margin : 10px;
+  height : 410px;
+  margin : 0px;
+  overflow : auto;
+  top : 5px;
+  left : 5px;
   
 }
+
 .multiliner {
-    width : 90%;
+    width : 60%;
   padding : 10px;
 }
 .buttonclass {
@@ -179,13 +204,37 @@ top : -37px;
 }
 
 #guestArea {
-position : absolute;
-  top : -5px;
-  left : 103%;
-  width : 500px;
+position : relative;
+  top : -495px;
+  left : 45%;
+  width : 600px;
 }
- 
+.dm-uploader {
+top : 0px;
+  height : 100px;
+  padding : 10px;
+}
 
+.card {
+  top : 0px;
+  width : 100%;
+}
+.dm-uploader .btn {
+  width : 180px;
+  left : -40px;
+  top : -20px;
+}
+.btn-info {
+  position : relative;
+  color : black;
+  font-size : x-large;
+  background-color : white;
+    top : 20px;
+  text-decoration: none;
+}
 
-
-
+.btn-info:hover {
+  color : lightblue;
+  background-color : white;
+  text-decoration: underline;
+ } 

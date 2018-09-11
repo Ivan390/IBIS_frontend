@@ -1,11 +1,12 @@
 #REGallContainer {
   position : relative;
   width : 98%;
-  height : 90%;
+  height : 80%;
   padding : 20px;
   border : 1px lightblue solid;
   border-radius: 22px;
   margin : 10px;
+  overflow : auto;
 }
 #Acheck {
   position : relative;
@@ -62,10 +63,10 @@
   color: green;
   width: 30%;
 }
-.heading {
+#headingText {
   position : relative;
-  font-size : xx-large;
-  top : -10px;
+  font-size : 50px;
+  top : -60px;
   left : 30%;
   text-decoration: underline;
   
@@ -74,14 +75,17 @@
   position : relative;
   border : none;
   background : none;
-  font-size: large;
-  text-decoration : underline;
+  font-size: xx-large;
+  text-decoration : none;
+  color : black;
   cursor : pointer;
   }
 .linkC:hover {
   color : blue;
+  text-decoration : underline;
   
 }
+
 #allContainer #logo{
   position : relative;
    top : -0px;
@@ -103,6 +107,13 @@
 	position : relative;
   border-radius : 15px;
   left: 80px;
+  top : -40px;
+  
+}
+#allcontainer {
+  position : relative;
+  top : -45px;
+  height : 90%;
 }
 .inputClass {
 	position : relative;
@@ -127,7 +138,7 @@
 	border: orange 1px dashed;
 	padding : 1px;
 	text-align : center;
-  
+  z-index : 3
 }
 #inputDiv {
 	position : relative;
@@ -188,12 +199,36 @@
 }
 #detail_fs{
   position : relative;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   border-radius : 20px;
-  height : 70%;
+  height : 500px;
   border-style: outset;
   padding : 20px;
   width : 96%;
   overflow : auto;
   white-space : nowrap;
+}
+.dm-uploader {
+  position : relative;
+  top : 0px;
+  height : 100px;
+}
+.dm-uploader .btn {
+  position : relative;
+  top : -20px;
+  
+}
+.card {
+  position : relative;
+  top : 0px;
+}
+#ajaxBox {
+  height : 350px;
+}
+#messSpan  {
+  position : relative;
+  border-color : white;
+  left : -0px;
+  top : 0px;
+  
 }

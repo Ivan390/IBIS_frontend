@@ -18,7 +18,7 @@ body {
   border-radius : 15px;
   left : 1%;
   margin-top : 2%;
-  overflow: hidden;
+  overflow-y: scroll;
   top: -20px;
 }
 	.linkC {
@@ -198,6 +198,11 @@ position : relative;
   width : auto;
   float: right;
 }
+#sumDetails {
+  position : relative;
+  margin :10px;
+
+}
 #subContain {
   position : relative;
   width : 85vw;
@@ -207,6 +212,7 @@ position : relative;
   border: 1px lightblue solid; 
   left: 1%;
   border-radius: 15px;
+  overflow : auto;
 }
 #SFallContainer #catPicsList {
   position : relative;
