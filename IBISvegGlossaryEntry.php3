@@ -6,15 +6,17 @@
   <title>
    I B I S - Glossary Input Page
   </title>
-  <script type="text/javascript" src="jquery-1.11.3.js"></script>
+  <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
    <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
   <script type="text/javascript" src="Gmain.js"></script>
   <script type="text/javascript" src="dateshorts.js"></script>
-   <link href="http://192.168.43.132/ibis/css/bootstrap.min.css" rel="stylesheet"/>
+  <script type="text/javascript" src="fileselect.js"></script>
+   <link href="css/bootstrap.min.css" rel="stylesheet"/>
+   <link href="jquery.dm-uploader.min.css" rel="stylesheet">
 <script type="text/javascript">
 	$(document).ready(function(){
 	     if (sessionStorage.userRef){
-    		$('.clickme').change(handleFileSelecting);
+    		 $('#mediaPic').change(handleFileSelect);	
      	 	sessVar = sessionStorage.userRef;
 	    	sesA = sessVar.split(":");
 	    	conID = sesA[0];
@@ -48,53 +50,92 @@
   <div id="glHeading"><?php $title = $_GET['name1']; print "$title ";?>Glossary Input</div>
   <div id=pgButtons>
   	<ul  class="list-unstyled">
-  		<li class="listItem"><a href="IBISutilities.html" class="button btn-large btn-info"><img src="" alt="">Utilities</a></li>
-  		<li class="listItem"><a id="backButton" href="/ibis/IBISmain.html" class="button btn-large btn-info">Main </a></li>
-  		<li class="listItem"><input type="button" class="button btn-large btn-info" value="Submit" onclick="submitForm()"/></li>
+  		<li class="listItem"><a href="IBISutilities.html" class="linkC"><img src="" alt="">Utilities</a></li>
+  		<li class="listItem"><a id="backButton" href="/ibis/IBISmain.html" class="linkC">Main </a></li>
+  		<li class="listItem"><input type="button" class="linkC" value="Submit" onclick="submitForm()"/></li>
   	</ul>
   </div>
   <div id=subContainer class="container">
-    <input type="button" class="button btn-large btn-info" value="Add an item" onclick="addAnotherItem()"/>
-    <form name="glossentry" id="glossEntry" method="POST" enctype="multipart/form-data" action="../cgi-bin/IBISglossary.php3">
-		<input type="text" id="ICval" name="ICVal" value="" class="hiddentext"/>
-		<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" >
+    <div name="glossentry" id="glossEntry" >
+			<input type="text" name="contributer_ID" id="contrib_ID" class="hiddentext" >
 			<?php 
-				$catV = $_GET['name1']; 
-				print '<input type="text" name="category" class="hiddentext" id="catVal" value="'.$catV.'" />'; 
+				print '<input type="text" name="category" class="hiddentext" id="catVal" value="'.$title.'" />'; 
 			?>
-    </form>
-   <div id=mesText> </div>
+			<div id="vegGlosItem" class="itemC">
+				<span id="textstuff">
+					<label class="labelText">Term</label>
+					<input type="text" name="item" class="inputText shortText" id="Item"/>
+					<label class="labelText">Definition</label>
+					<textarea name="definition" class="inputText longText" id="Def"></textarea>
+				</span>
+	
+	<div id="imageDiv">
+		<label class="labelC">Add a Diagram</label>
+		</br>
+		<div class="row">
+        <div class="col-md-6 col-sm-12">
+					<div id="drag-and-drop-zone" class="dm-uploader p-5">
+             <div class="btn btn-primary btn-block mb-5">
+                <span>Open the file Browser</span>
+                <input id="mediaPic" type="file" title='Click to add Files' />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="card h-100">
+            <div class="card-header">
+              File List
+            </div>
+            <ul class="list-unstyled p-2 d-flex flex-column col" id="files">
+              <li class="text-muted text-center empty">No files uploaded.</li>
+            </ul>
+          </div>
+        </div>
+      </div></br>
+  	<div id="diagram0" class="hidden"> 
+  		<label class="labelText" onclick="addCaption(this)">Caption</label></br>
+			<input type="text" name="diagramCap" id="Dcap" />
+			
+		</div>
+		<input type="text" id="picRef" name="imgtag" value="" class="hiddentext" class="picRef">
   </div>
- </div> 
+</div>
+    </div>
+   <div id=imgDisplay> </div>
+  </div>
+ </div>
+ <div id="ajaxBox"></div>
+    	<script src="jquery.dm-uploader.min.js"></script>
+    	 <script type="text/javascript" src="glossAsyncUpload.js"></script>
+    	 <script src="demo-ui.js"></script>
+    	  <script type="text/html" id="files-template">
+      <li class="media">
+        <div class="media-body mb-1">
+          <p class="mb-2">
+            <strong>%%filename%%</strong> - Status: <span class="text-muted">Waiting</span>
+          </p>
+          <div class="progress mb-2">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-primary" 
+              role="progressbar"
+              style="width: 0%" 
+              aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+            </div>
+          </div>
+          <hr class="mt-1 mb-1" />
+        </div>
+      </li>
+    </script> 
  </body>
   <script type="text/javascript">
-  function addAnotherItem(){
-    IC = $('#ICval').val() ;
-    IC++;
-    $('#ICval').val(IC);
-    var addItem ='\
-        	<div id="vegGlosItem'+ IC +'" class="itemC">\
-			  	<label class="labelText">Term</label>\
-			  	<input type="text" name="item'+ IC +'" class="inputText shortText" />\
-			  	<label class="labelText">Definition</label>\
-			  	<textarea name="definition'+ IC +'" class="inputText longText"></textarea>\
-			  	<div id="imageDiv'+ IC +'">\
-					<label class="labelC">Add a Diagram</label>\
-					</br>\
-					<input id="pictures" type ="file" name="pictures'+ IC +'" class="clickme" onchange="handleFileSelecting(this)"/></br>\
-        			<div id="diagram0" class="hidden"> \
-        				<label class="labelText" onclick="addCaption(this)">Caption</label></br>\
-	  					<input type="text" name="diagramCap'+ IC +'"  />\
-	  					<div id="glosspic'+ IC +'" class="glossP"></div>\
-					</div>\
-					<input type="text" id="picRef'+IC+'" name="picref'+IC+'" value="" class="hiddentext">\
-      			</div>\
-    		</div>';
-    $('#glossEntry').append(addItem);
-    //	alert("and it finishes the function");
+  function resetThis(){
+  $("#ajaxBox").fadeOut();
+  var thisstring = $("#catVal").val();
+  docloc = "IBISvegGlossaryEntry.php3?name1="+thisstring;
+  document.location = docloc;
+    
   }
   function submitForm(){
-    document.glossentry.submit();
+    sendit();
   }
  </script> 
 </html>

@@ -1,52 +1,77 @@
 .container{
  position : relative;
   width : 90%;
-   height : 100%;
+   height : 95vh;
   padding : 20px;
   border : 1px lightblue solid;
   border-radius : 15px;
   top : 10px;
+  overflow : auto;
+}
+#subContainer {
+  position : relative;
+  top : -80px;
+  height : auto;
+  
 }
 
 #GlBody #dateTime {
   position : relative;
   top : 10px;
   left : 10px;
-  color : green
+  color : green;
+    font-size : large;
   
 }
 #GlBody #logo_image{
   position : relative;
    width : 30%; 
-  left : 65%;
+  left :70%;
   top : -40px;
 }
 #glossEntry .itemC {
   position : relative;
-  width : 65%;
+  width : 98%;
   height : auto;
   min-height: 200px;
+  border : 1px black solid;
+  margin : 5px;
+  padding : 10px;
+}
+#glossEntry span .labelText {
+  position : relative;
+  left : -50px;
 }
 .glossP{
   position : relative;
   width : 120px;
   height : 120px;
   float : right;
-  top : -40px;
+  top : -140px;
+  left: -20px;
+}
+.thumbpic {
+    position : relative;
+  width : 220px;
+  height : 220px;
+  float : right;
+  top : -440px;
   left: -20px;
 }
 #GlBody #glHeading {
   position : relative; 
-text-align: center;
-  font-size : xx-large;
+left : 20%;
+  font-size : 38px;
   text-decoration : underline;
-  top : -20px;
+  top : -80px;
+  width : 500px;
   
 }
 #GlBody #pgButtons {
   position : relative;
-  left : 5%;
-  top : -38px;
+  left : 10%;
+  top : -78px;
+  width : 400px;
   
 }
 #GlBody #pgButtons li {
@@ -60,7 +85,7 @@ text-align: center;
 #GlBody #pgButtons input {
   position : relative;
   font-size : x-large;
-  border-radius : 5px;
+  /*! border-radius : 5px; */
   left : -0%;
   
 }
@@ -73,4 +98,48 @@ text-align: center;
 .hiddentext{
   display : none;
   
+}
+.linkC {
+  background-color : white;
+  border : none;
+  color : black;
+}
+.linkC:hover {
+  color : lightblue;
+  text-decoration : underline;
+  
+}
+.dm-uploader {
+  position : relative;
+  top : 0px;
+  height : 100px;
+}
+.card {
+  position : relative;
+  top : 0px;
+}
+#textstuff {
+  position : relative;
+  border : 1px black solid;
+  display :-moz-groupbox;
+  width : 50%;
+  left : -0%;
+}
+
+#textstuff .labelText {
+  position : relative;
+  
+}
+.labelText {
+  font-size : large;
+  margin-left : 10px;
+}
+.inputText {
+  margin : 10px;
+}
+.dm-uploader .btn {
+position : relative;
+  top : -20px;
+  border : none;
+  padding : 12px
 }

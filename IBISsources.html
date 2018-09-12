@@ -6,13 +6,14 @@
 		<title>
 			IBIS Sources Entry Page
 		</title>
-		<script type="text/javascript" src="jquery-2.1.1.min.js"> </script>		<script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
+		<script type="text/javascript" src="jquery-2.1.1.min.js"> </script>
+			<script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
     	<script type="text/javascript" src="dataInputFunctions.js"></script>
     	<script type="text/javascript" src="fileselect.js"></script>
     	<script type="text/javascript" src="dateshorts.js"> </script>
     	<script type="text/javascript">
 	$(document).ready(function(){
-          $('#mediaPic').change(handleFileSelect);	
+          	
 	  if (sessionStorage.userRef){
              sessVar = sessionStorage.userRef;
 	     sesA = sessVar.split(":");
@@ -65,14 +66,14 @@ srcSubmit();
 	    <div id="pgHead">Add or Edit Sources</div>
 			<div id="pgButtons" class="">
 				<ul class="list-unstyled">
-					<li class="listItem button btn-large btn-info"><a href="IBISutilities.html" class=""><img src="" alt="">Utilities</a></li>
-  				<li class="listItem button btn-large btn-info"><a id="backButton" href="/ibis/IBISmain.html" class="">Main </a></li>
+					<li class="linkC"><a href="IBISutilities.html" class=""><img src="" alt="">Utilities</a></li>
+  				<li class="linkC"><a id="backButton" href="/ibis/IBISmain.html" class="">Main </a></li>
 				</ul>
 				</div>
-	    	<div id="src_fs_main" class="">
+	    	<div id="src_fs_main" class="container">
 	    		<div id="pgOptions">
-	    			<input type="button" value="New Source" onclick="showForm()" class="button btn-large btn-info"/>
-	    			<input type="button" value="Edit Existing" onclick="updateForm()" class="button btn-large btn-info" />
+	    			<input type="button" value="New Source" onclick="showForm()" class="linkC"/>
+	    			<input type="button" value="Edit Existing" onclick="updateForm()" class="linkC" />
 	    		</div>
 	    		<div id="Ocontainer" class="hiddentext">
 	    			<div id="refContainer"></div>

@@ -26,12 +26,13 @@ body {
   border : none;
   background : none;
   font-size: x-large;
-  text-decoration : underline;
+  text-decoration : none;
+    color : black;
   cursor : pointer;
   }
 .linkC:hover {
-  color : blue;
-  
+  color : lightblue;
+  text-decoration : underline;
 }
 #option3btn {
   position : relative;

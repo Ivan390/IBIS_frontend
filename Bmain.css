@@ -189,9 +189,13 @@ top : 10px;
   border-bottom: 1px blue dashed;
   font-size : large;
   text-decoration : none;
+  cursor : pointer;
   
 }
-
+#LinkList li:hover {
+  color : lightblue;
+  text-decoration : underline;
+}
 
 
 #DidYouKnow {

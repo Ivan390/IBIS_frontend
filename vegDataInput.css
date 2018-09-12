@@ -471,12 +471,15 @@ fieldset {
   font-size: x-large;
   text-decoration : underline;
   cursor : pointer;
-   margin-right : 10px;
-  color: blue;
+  margin-right : 10px;
+  color: black;
+  cursor : pointer;
+        text-decoration : none;
+
   }
 .linkC:hover {
-  color : green;
-  cursor : pointer;
+  color : lightblue;
+  text-decoration : underline;
   
 }
 .dm-uploader {

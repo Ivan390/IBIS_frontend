@@ -27,8 +27,8 @@
 }
 #logo_image_holder {
 	position: relative;
-	left: -3%;
-	top: 0px;
+	left: %;
+	top: -6px;
 	width: 30%;
 }
 
@@ -107,9 +107,9 @@
 }
 #headingText {
   position : relative;
-  font-size: 32px;
+  font-size: 38px;
   left : 30%;
-  top : -40px;
+  top : -90px;
   text-decoration: underline;
   
 }
@@ -218,13 +218,14 @@
   position : relative;
   border : none;
   background : none;
+  color : black;
   font-size: x-large;
-  text-decoration : underline;
+  text-decoration : none;
   cursor : pointer;
   margin-right : 10px;
   }
 .linkC:hover {
-  color : blue;
-  
+  color : lightblue;
+  text-decoration : underline;
 }
 

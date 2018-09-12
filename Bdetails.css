@@ -14,11 +14,14 @@
   border : none;
   background : none;
   font-size: x-large;
-  text-decoration : underline;
+  text-decoration : none;
   cursor : pointer;
+  color : black;
   }
 .linkC:hover {
-  color : blue;
+  color : lightblue;
+  text-decoration : underline;
+  
   
 }
 #pgHeading {
@@ -224,6 +227,9 @@ position : relative;
   /*! top : -3px; */
   margin-right : 10px;
   
+}
+.button:hover {
+  background-color : white;
 }
 #commentBlock {
   	position : relative;

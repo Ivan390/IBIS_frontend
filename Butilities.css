@@ -22,7 +22,15 @@
   left : 2%;
   width : 200px;
 }
-
+.linkC {
+  color : black;
+  
+}
+.linkC:hover {
+  color : lightblue;
+  text-decoration : underline;
+  
+}
 #logo_image_holder {
     position: relative;
     left: 23%;
@@ -88,9 +96,9 @@ li:focus, li:hover {
 
 #utilHeading {
   position : relative;
-  top : 5%;
+  top : -5%;
   left : 40%;
-  font-size : xx-large;
+  font-size : 48px;
   text-decoration : underline;
   width : 200px;
 }

@@ -17,19 +17,20 @@
 .buttonclass {
   position : relative;
    border-radius: 25px; 
-  border : green solid 1px;
+ color : black;
   height : auto;
   width : auto;
-  font-size : 16px;
+  font-size : x-large;
   padding : 4px;
   margin : 5px;
   left : 0%;
+
   
 }
 #logo_image_holder {
 	position: relative;
-	left: -3%;
-	top: 0px;
+	left: %;
+	top: -6px;
 	width: 30%;
 }
 
@@ -94,9 +95,9 @@
 }
 #headingText {
   position : relative;
-  font-size: xx-large;
+  font-size: 38px;
   left : 30%;
-  top : -80px;
+  top : -100px;
   width : 400px;
   text-decoration : underline;
   
@@ -199,13 +200,16 @@
   position : relative;
   border : none;
   background : none;
+  color : black;
+  left : 40px;
   font-size: x-large;
-  text-decoration : underline;
+  text-decoration : none;
   cursor : pointer;
   margin-right : 10px;
   }
 .linkC:hover {
-  color : blue;
+  color : lightblue;
+  text-decoration : underline;
   
 }
 
