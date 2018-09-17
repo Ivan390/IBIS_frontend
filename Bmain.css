@@ -6,7 +6,7 @@ It describes the main page*/
   width : 93vw;
   height : 580px; 
   /*! padding : 20px; */
-  border-style: inset;
+  border : 1px lightblue solid;
   border-radius : 15px;
   top : 10px;
 }
@@ -30,9 +30,9 @@ top : 10px;
     left :-0% ;
     margin-left: auto;
     margin-right: auto;
-    /*! width : 150%; */
-    /*! height : 155%; */
-    /*! top : -42px; */
+     width : 50%; 
+     height : 60%; 
+     top : -35px; 
 }
 #MainallContainer #errorDiv {
   position : absolute;;
@@ -40,8 +40,8 @@ top : 10px;
   border-radius : 15px;
   padding : 10px;
   background-color : yellow;
-  top : 60px;
-  left : 10%;
+  top : 160px;
+  left : 30%;
   font-size : large;
   z-index : 7;
 }
@@ -58,11 +58,12 @@ top : 10px;
 }
 #MainallContainer #logo_image {
   position : relative;
-  height : 93%;
-  width : 70%;
+  height : 60%;
+  width : 100%;
   z-index : 6;
   left : 20%;
   top : -50px;
+  margin-top : 10px;
 }
 #MainallContainer #logo_image img{
   position : relative;
@@ -89,8 +90,8 @@ top : 10px;
 
 #MainallContainer #detail_fs_main {
   position : relative;
-  border-style: outset;
-  top : -70px;
+  border : 1px lightblue solid;
+  top : -90px;
   width : 95%;
   padding : 5px;
   height : auto;
@@ -299,7 +300,7 @@ top : 10px;
 }
 #loginLink {
     position : absolute;
-    top : 120px;
+    top : 110px;
     left : 8%;
     text-align : left;
     font-size : x-large;

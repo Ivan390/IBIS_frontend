@@ -5,7 +5,7 @@
   padding : 20px;
   border : 1px lightblue solid;
   border-radius: 22px;
-  margin-left : 5px;
+  margin : 5px;
  
 }
 #oldImageContainer {
@@ -40,7 +40,7 @@
 #logo_image {
   position : relative;
   width : 100%;
-  left : 10%;
+  left : 0%;
   top : -10px;
 }
 .hiddentext {
@@ -59,6 +59,7 @@
   margin-left : 10px;
   overflow : auto;
   border-radius : 15px;
+  left : -10px
    
 }
 

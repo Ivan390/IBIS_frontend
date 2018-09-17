@@ -98,7 +98,7 @@
 	position : relative;
 	max-width : 100%;
 	border : dashed 1px green;
-	height : 100px;
+	height : 150px;
 	overflow : auto;
     border-radius : 10px;
 }
@@ -186,7 +186,7 @@
 #pgButtons {
     position: relative;
 	top : -50px;
-    width : auto;
+    width : 250px;
     left : 20px;
     z-index: 3;
 }
@@ -305,12 +305,11 @@ position : relative;
 }
 .dialogC {
      position : absolute;
-    border : 3px black solid;
-    top : 50%;
-    left : 30%;
-    width : auto;
-    max-width : 50vw;
-    height : 250px;
+    border : 1px black solid;
+    top : 5%;
+    left : 5%;
+    width : 90%;
+    height : 290px;
     border-radius : 20px;
     border-style : outset;
     background-color :gainsboro;
@@ -319,7 +318,15 @@ position : relative;
     padding : 10px;
     
 }
-    
+.dialogC input {
+    position : relative;
+    width : 80%;
+    font-size : small;
+}
+.dialogC p {
+    position : relative;
+    height : auto;
+}
 #shortSrcBlock {
      position : relative;
     border : 1px black solid;
@@ -485,13 +492,18 @@ fieldset {
   border : none;
   background : none;
   font-size: large;
-  text-decoration : underline;
+  text-decoration : none;
   cursor : pointer;
    margin-right : 10px;
-  color: blue;
+  color: black;
+    cursor : pointer;
+
   }
 .linkC:hover {
-  color : green;
-  cursor : pointer;
-  
+  color : lightblue;
+  text-decoration : underline;
+}
+#ajaxBox {
+    left : 10px;
+    width : 80%
 }

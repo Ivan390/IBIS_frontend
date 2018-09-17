@@ -76,8 +76,37 @@
 #showguests {
   position : relative;
   font-size : 26px;
-  width : 100%;
-  
+  width : 90%;
+  cursor : pointer;
+}
+#hideguests {
+	position : relative;
+	top : 0px;
+	right : 0px;
+	width : auto;
+	font-size : 26px;
+	cursor : pointer;
+}
+#hideguests:hover {
+	color : lightblue;
+	text-decoration : underline;
+}
+#showguests:hover {
+	color : lightblue;
+	text-decoration : underline;
+}
+#Gtable{
+	position : relative;
+	width : 100%; 
+	padding : 10px;
+}
+#Gtable td {
+	padding : 10px;
+} 
+#Gtable tr{
+	position : relative;
+	max-height : 100px;
+	overflow : auto;
 }
 #guestImages {
   position : absolute;
@@ -89,6 +118,7 @@
   overflow : auto; 
   border : 1px lightblue solid;
   font-size : 15px;
+
 }
 .thumbpic {
   position : relative;
@@ -208,6 +238,7 @@ position : relative;
   top : -495px;
   left : 45%;
   width : 600px;
+  padding : 15px;
 }
 .dm-uploader {
 top : 0px;

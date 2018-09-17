@@ -23,6 +23,11 @@ top : 10px;
   z-index : 10;
   
 }
+#securityInfo {
+  position : relative;
+  width : 45%;
+  
+}
 .bigDD {
 	border-radius:25px;
 }
@@ -38,7 +43,7 @@ top : 10px;
 }
 #MainallContainer #errorDiv {
   position : absolute;;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   border-radius : 15px;
   padding : 10px;
   background-color : yellow;
@@ -128,10 +133,11 @@ top : 10px;
 #regPic {
   position : relative;
    max-width: 44%; 
-  font-size: 16px;
+  font-size: large;
   border-radius: 20px;
   top: 10px;
   width: 320px;
+  left : -400px;
 }
 
 #LinkList {
@@ -149,65 +155,7 @@ top : 10px;
     padding: 10px;
 }
 
-#DidYouKnow {
-    position: relative;
-    top: -250px;
-    height: auto;
-    width : 97%;
-    border: green 1px dashed;
-    text-align : center;
-    padding: 10px;
-   border-radius : 15px;
-    
-}
-#dykText{
-    text-align: center;
-    text-decoration: none;
-}
 
-#FindInfo {
-    position: relative;
-    width:70%;
-    height:470px;
-    text-align: center;
-    text-decoration: underline;
-    padding:2px;
-    padding-bottom : 5px;
-    padding-left : 5px;
-    top : -30%;
-}
-
-.findOption {
-    float: left;
-    margin-right: 5%;
-    position: relative;
-    }
-
-.findOption .contextHelp {
-    position: relative;
-    z-index: 6;
-    font-size: 20px;
-    color: darkgreen;
-    display: none;
-    height: 30px;
-  	text-align : center;    
-}
-
-.findOption:hover .contextHelp {
-    display: block;
-    position : relative;
-    width: 200px;
-}
- .findHeading {
-   position : relative;
-   width : 100px;  
-   left : 25%;
-   font-size : 200%;
-}
-.findOption:hover{
-	cursor: pointer; 
-}
-/*end main*/
 /*start utilities*/
 #UtilallContainer {
   position : absolute;
@@ -500,10 +448,10 @@ position : relative;
 /*this is details.css*/
 #DETallContainer {
   position : relative;
-  width : 94vw;
-  height : auto;
+  width : 98vw;
+  height : 90vh;
   padding : 20px;
-  border-style: inset;
+  border : 1px lightblue solid;
   border-radius: 22px;
   top: 3vh;
 }
@@ -517,6 +465,7 @@ position : relative;
   padding-left:10px;
   color: green;
   width: 30%;
+  height : 100px;
 }
 #DETallContainer .buttonclass {
   position: relative;
@@ -559,10 +508,14 @@ position : relative;
   overflow: auto;
   margin-top :  10px;
 }
-#DETallContainer .labelClass {
- text-align : left;
+#DETallContainer #imgDisplay2 .labelClass {
+ position : relative;
+  text-align : left;
  text-decoration: underline;
  font-size : 20px ;
+  top : -0px;
+  left : -400px;
+  width : 400px;
 } 
 .itemC {
   position : relative;
@@ -638,6 +591,17 @@ position : relative;
   width : 100%;
   max-height : 150px;
 }
+#edUser {
+  position :absolute;
+  top : 150px;
+  background-color: whitesmoke;
+  border : 1px lightblue solid;
+  border-radius : 20px;
+  padding : 20px;
+  width : 98%;
+  left : 10px;
+  display : none;
+}
 .OutputAnim {
   top : -70px;
 }
@@ -649,10 +613,25 @@ position : relative;
 }
 #DETallContainer #pgButtons {
 position : relative;
-  	top : 0px;
+  	top : 55px;
 	left: 2%;
   font-size: xx-large;
   cursor : pointer;
+  width : 200px;
+}
+a {
+  color : black;
+  font-size : xx-large;
+}
+a:hover {
+  color : lightblue ;
+  text-decoration : underline;
+  
+}
+.linkC:hover {
+  color : lightblue ;
+  text-decoration : underline;
+  
 }
 /*this is register.css*/
 
@@ -690,27 +669,42 @@ position : relative;
 }
 .inputClass {
 	position : relative;
-	float : right;
-	width : 50%;
+	/*! float : right; */
+	width : 90%;
 	font-size : 18px;
 	left : 0%;
 	margin : 2px;
-	top : -30px;
+	top : -0px;
 	padding : 3px;
 }
+#Heading {
+  font-size : xx-large;
+}
 #personalDetails {
-	 width : 60%;
-	 border: green 1px dashed;
+  position : relative;
+  top : -0px;
+	 width : 40%;
 	padding : 10px;
 }
-#imgDisplay{
+#imgDisplay1{
 	position : absolute;
 	top : 15px;
-	left : 65%;
-	width : 30%;
+	left : 80%;
+	width : 15%;
+  height : 170px;
 	border: orange 1px dashed;
 	padding : 1px;
 	text-align : center;
+}
+#imgDisplay1 .labelClass {
+  position : relative;
+  left : -400px;
+  font-size : large;
+  width : 300px;
+}
+#imgDisplay1 img {
+  position : relative;
+  top : -60px;
 }
 #inputDiv {
 	position : relative;
@@ -722,8 +716,8 @@ position : relative;
 }
 .thumbpic {
 	border-radius : 12px;
-  	width : 120px;
-  	height : 120px;
+  	width : 150px;
+  	height : 150px;
 }
 #REGallContainer .labelClass {
 	height : 32px;
@@ -869,7 +863,7 @@ position : relative;
 }
 #welcBlock {
   position : relative;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   border-radius : 20px;
   width : 24%;
   left : 65%;
@@ -889,6 +883,7 @@ position : relative;
   height : auto;
   border-style : outset;
   padding : 15px;
+  top : 50px;
 }
 #nameSpan {
   position : relative;
@@ -962,13 +957,14 @@ position : relative;
 #imgDisplay2 {
   position : relative;
   float : right;
-  width : 300px;
-  top : -200px;
+  width : 200px;
+  top : -100px;
+  border : 1px lightblue solid;
 }
 /*lostnFounf*/
 #LostBlock {
   position : relative;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   width : 45%;
   height : 60vh;
   padding : 10px;
@@ -978,7 +974,7 @@ position : relative;
   position  : relative;
   float : right;
   width : 51%;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   top : -63vh;
   left: -10px;
 }
@@ -1056,7 +1052,7 @@ position : relative;
 }
 #retBlock {
   position : absolute;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   width : 28%;
   display : block;
   top : -35%;
@@ -1086,7 +1082,7 @@ position : relative;
 }
 #defBlock {
   position : absolute;
-  border : 1px black solid;
+  border : 1px lightblue solid;
   display : block;
   max-width : 40%;
   max-height : 80%;
@@ -1221,4 +1217,55 @@ position : relative;
   text-decoration : underline;
   
   
+}
+#allContainer {
+  position : relative;
+  border : 1px lightblue solid;
+  border-radius : 20px;
+  padding : 20px;
+  top : 20px;
+}
+#logo_image_holder {
+  position : relative;
+  width : 50%;
+  left : 40%;
+  top : -20px;
+}
+#logo_image_holder #logo_image {
+  position : relative;
+  width : 100%;
+}
+#respons {
+  position : relative;
+  border : 1px lightblue solid;
+  border-radius : 12px;
+  padding : 20px;
+}
+#respons img {
+  position : relative;
+  margin : 12px;
+}
+#respons #messSpan {
+  position : relative;
+  font-size:  xx-large;
+}
+#dateTime {
+  position : relative;
+  height : 100px;
+  color : green;
+}
+.dm-uploader {
+  top : 0px;
+  left : -400px;
+  height : 100px;
+  width : 300px;
+}
+.dm-uploader .btn {
+  top : -20px;
+  
+}
+.card {
+  top : 100px;
+  left : -500px;
+  width : 300px;
 }

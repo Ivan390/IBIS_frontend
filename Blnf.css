@@ -11,10 +11,11 @@
 }
 #logo_image_holder{
      position: relative;
-    left: 35%;
+    left: 25%;
     margin-left: auto;
     margin-right: auto;
-    width: 30%;
+    width: 40%;
+    height: 25%;
     top: -60px;
 }
  #logo_image {
@@ -30,24 +31,21 @@
 }
 #LostBlock {
   position : relative;
-  border : 1px blue dashed;
-  width : 98%;
-  height : 230px;
+  border : none;
+  width : 100%;
+  height : 280px;
   padding : 5px;
   margin : 5px;
-  overflow : auto;
+  overflow : hidden;
 }
 #LostBlock .messSpan {
   position :relative;
-   
-
-  
 }
 #FoundBlock {
   position  : fixed;
   width : 37%;
   border : 1px green dashed;
-  top : 250px;
+  top : 340px;
   left: 57%;
   height : 230px;
   padding : 5px;
@@ -69,44 +67,37 @@
 }
 #pgButtonslnf {
   position: absolute;
-  top : 30%;
-  font-size : x-large;
+  top : 42%;
+  font-size : 38px;
   left : 8%;
   width : 300px;
 }
-#pgButtonslnf {
- 
-  
+a {
+  color : black;
+}
+a:hover {
+  color : lightblue;
+  text-decoration : underline;
 }
 #pgButtonslnf li {
   position : relative;
   float : left;
   margin : 5px;
-  top : -0px;
-  width : 90px;
+  top : -50px;
+  width : 120px;
   border-radius  : 10px;
   text-align : center;
   padding : 3px;
-  font-size : xx-large;
-  margin-right : 10px;
   
 }
 .hiddentext {
   display : none;
   
 }
-a  {
-  color : black;
-   
-}
-a:hover {
-  color : lightblue;
-  text-decoration : underline;
-}
 #detail_fs_main {
   position : relative;
   border : 1px lightblue solid;
-  top : -35px;
+  top : -35%;
   width : 95%;
   padding : 15px;
   height : 65%;
@@ -138,15 +129,16 @@ a:hover {
 }
 .headC {
   position : relative;
-  font-size : x-large;
+  font-size : 38px;
   text-decoration: underline;
   left : 40%;
+  top : -20px;
 }
 #pgHeading {
   position : relative;
-  top : -70px;
+  top : -50px;
   left : 35%;
-  font-size : 38px;
+  font-size : xx-large;
   text-decoration : underline;
   width : 400px;
   

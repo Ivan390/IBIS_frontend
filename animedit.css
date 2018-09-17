@@ -7,6 +7,14 @@
   border-radius: 22px;
  
 }
+.buttonclass{
+  border : none;
+  cursor: pointer;
+}
+.buttonclass:hover {
+  color : lightblue;
+  text-decoration: underline;
+}
 #pgButtons {
     position : relative;
   
@@ -157,9 +165,9 @@
   height : 200px;
   border : 1px black solid;
   overflow : auto;
-  top : -30px;
-  left : 3px;
-  width : 97%;
+  top : -80px;
+  left : 5px;
+  width : 99%;
   overflow-x:  hidden;
   
   border-radius: 15px;

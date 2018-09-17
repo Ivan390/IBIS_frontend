@@ -3,23 +3,25 @@
 #SrcallContainer {
   position : relative;
   width : 95%;
-  height : 100%; 
+  height : 95vh; 
   padding : 20px;
   border : 1px lightblue solid;
   border-radius : 15px;
   left : 5px;
   top : 20px;
+  overflow : auto;
 }
 #src_fs_main {
   position : relative;
   border : 1px lightblue solid;
-  top : -35px;
+  top : -55px;
   width : 95%;
   padding : 15px;
   min-height: 120px;
   border-radius : 10px;
-  height : auto;
+  height : 70%;
   overflow : auto;
+  padding-bottom : 20px;
 }
 #SrcallContainer #dateTime {
   position: relative;
@@ -35,18 +37,16 @@
 
 #SrcallContainer #logo_image_holder{
     position: relative;
-    left :29% ;
+    left :24% ;
     margin-left: auto;
     margin-right: auto;
     width : 60%;
-    height : 45%;
     top : -40px;
 }
 
 #SrcallContainer #logo_image {
-  height : 60%;
-  width : 70%;
-  z-index : 6;
+  width : 100%;
+  
 }
 #pgHead {
   position : relative;
@@ -54,7 +54,7 @@
   left : 20%;
   font-size : x-large;
   text-decoration: underline;
-  width : auto;
+  width : 250px;
 
   
 }
@@ -128,7 +128,7 @@
   margin : 10px;
 }
 .linkC:hover {
-  color : blue;
+  color : lightblue;
   
 }
 #retHeading {
@@ -162,15 +162,16 @@
 
 #pgOptions {
     position : relative;
-    left : -78%;
+  
     
-}#pgOptions .button {
+}#pgOptions input {
     position : relative;
-    width : 120px;
+    width : 100%;
     font-size : large;
-    margin : 4px;
+    margin : 2px;
     z-index : 7;
-    top : -18px;
+    top : -10px;
+  
 
 }
 #refContainer #refSelect {
@@ -215,8 +216,8 @@
 }
 #dataF .button {
 	position : relative;
-	left : -20px;
-	margin : 3px;
+	left : -10px;
+	margin-bottom : 3px;
 	top : 10px;
 }
 .hiddentext {

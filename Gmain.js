@@ -5,6 +5,13 @@ function initForm() {
   $('#rateIsSent').val('no');
   $('#rtecmnt').css('display', 'none');
   $('#rateIsSent').css('display', 'none');
+  	$("#alphList").hide();
+  	 var bWidth = $("html").width();
+ 
+if (bWidth < 400){
+ $("#shwG").removeClass("hiddentext");
+ $("#guestImages").addClass("hiddentext");
+ }
   var emptyStuffList = $('.FQNname');
   for (count = 0; count < emptyStuffList.length; count++) {
     if ($(emptyStuffList[count]).html() == '') {
@@ -63,6 +70,8 @@ function cancelVote() {
   $('#ratingsBlock').slideUp();
   $('#ratebut').fadeIn();
   $('#commentBlock').fadeOut();
+  $('#rating').fadeOut();
+  
 }
 
 function submitVote() {
@@ -115,7 +124,10 @@ function dismissNote() {
 
 function loadRegWin() {
   theUser = $('#userRef').val();
-  var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');}
+ // var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');}
+ $("#edUser").load('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser );
+ $("#edUser").fadeIn();
+ }
 function closeRegWin() {
   regWin.close;
   $('#closewin').hide();
@@ -235,13 +247,16 @@ function readGloss(that) {
       $('#retBlock').html(Ilist);
       $('#retBlock').slideDown();
       $('.Gbutton').show();
-      
+      $("#defBlock").focus();
     }
   })
 } 
 
 function showAlpha(){
-	$("#alphList").toggle("slow");
+	$("#alphList").toggle("fast");
+	$("#retBlock").hide();
+	$(".Gbutton").hide();
+		$("#defBlock").hide();
 	//$("#GBlock .Gselect").toggle("slow");
-	closeGl();
+//	closeGl();
 }		

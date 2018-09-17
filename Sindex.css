@@ -4,12 +4,13 @@
 	height : 95%;
 	margin : 2px;
 	border : 1px lightblue solid;
+	top : 20px;
 }
 
 #SFallContainer #logo_image_holder {
 	position : relative;
 	left : 30%;
-	width : 80%;
+	width : 70%;
 	height : 16%;
 	top : -50px;
 }
@@ -36,7 +37,7 @@
 .Gselect {
 	padding-right : px;
 	font-size : xx-large;
-	display : none;
+	cursor : pointer;
 }
 .Gbutton{
 position: relative;
@@ -57,7 +58,6 @@ top: -25px;
 #tablecont  {
 	position : relative;
 	width : 80%;
-
 	top : -0px;
 	margin-top : 10px;
 }
@@ -66,46 +66,49 @@ position: relative;
 border: 1px black solid;
 width: 68%;
 display: block;
-top: -90px;
+top: -340px;
 z-index: 6;
-max-height: 10vh;
+max-height: 15vh;
 background-color: rgba(52,34,14,80);
 color: aliceblue;
 overflow: auto;
-left: 8%;
+left: 0%;
+	cursor : pointer;
 	
 }
 #defBlock {
-position: relative;
+position: absolute;
 border: 1px black solid;
-max-width: 68%;
-max-height: 80%;
-top: -85px;
+max-width: 98%;
+max-height: 100px;
+top: -325px;
 background-color: rgba(152,34,14,80);
 color: aliceblue;
 font-size: x-large;
 z-index: 6;
 padding: 5px;
 overflow: auto;
-left: 8%;
+left: 1%;
 	
 }
 #findOptions {
 	position :relative;
 	left : -10px;
 	padding : 10px;
+	top : -20px;
 	
 }
 #SFallContainer #subContain {
 	position : relative;
-	height : 60%;
+	height : 240px;
 	width : 99%;
 	left : -10px;
-	top : -40px;	
+	top : -40px;
+	padding: 15px;
 }
 #hitCnt {
   position : relative;
-  top : -30px;
+  top : 0px;
   left : 75%;
   z-index: 1;
   font-size : x-large;
@@ -120,13 +123,16 @@ left: 8%;
 	top : -40px;
 }
 #infoSet {
-	position : relative;
-	width : 98%;
-	max-height : 140px;
+	position : absolute;
+	width : 100%;
+	max-height : 300%;
 	overflow : auto;
-	margin-bottom : 15px;
-	top : 0px;
-	left : -10px;
+	top : 00px;
+	background-color : rgba(255, 255, 255, 1);
+	z-index : 4;
+	left : 0px;
+	display : none;
+	
 }
 #SFallContainer .selectList  {
     position: relative;
@@ -173,14 +179,20 @@ left: 8%;
 	
 }
 #alphList {
-	position : relative;
-	height : 60px;
+	position : absolute;
+	height : 150px;
 	overflow: auto;
-	width : auto;
-	left : 20px;
-display : none;
+	width : 95%;
+	left : 10px;
+  display : none;
+	z-index : 5;
+	border : 1px lightblue solid;
+	top : -130px;
+	background-color : rgba(0,0,0,0.8);
+	border-radius : 12px;
+	overflow : auto;
 }
-#option2btn {
+#option2btn { 
 	position : relative;
 
 		font-size : small;
@@ -193,8 +205,9 @@ display : none;
 #option3btn {
 	position : relative;
 	font-size : small;
-
-	
+left : -160px;
+	top : 50px;
+	width : 106px;
 }
 #SFallContainer #catPicsList {
     position: relative;

@@ -1,0 +1,205 @@
+#DETallContainer {
+  position : relative;
+  width : 90%;
+  height : auto;
+  padding : 20px;
+  border-radius: 22px;
+  border : 1px lightblue solid;
+  top: 3vh;
+}
+#DETallContainer #dateTime {
+  position: relative;
+  top: -10px;
+  left: -50%;
+  z-index:3;
+  font-size: medium;
+  margin-left:auto;
+  color: green;
+  width: 50%;
+}
+a {
+  color : black;
+}
+a:hover {
+  color : lightblue;
+  text-decoration : underline;
+}
+#DETallContainer .buttonclass {
+  position: relative;
+  border : 1px solid green;
+  font-size: 16px;
+  border-radius: 12px;
+  padding : 5px;
+}
+
+#DETallContainer #logo_image_holder{
+  position : relative;
+   left : 110%;
+  top : -50px;
+  width : 100%;
+ }
+#DETallContainer #logo_image {
+  height : 100%;
+  width : 100%;
+}
+#DETallContainer #pgButtons {
+position : relative;
+  	top : -45px;
+	left: 8%;
+  font-size: xx-large;
+  cursor : pointer;
+  z-index : 3;
+}
+
+
+
+/*profile section*/
+#informDiv {
+  position : relative;
+  border : 2px lightblue solid;
+  border-radius : 20px;
+  height : auto;
+  padding : 5px;
+  top : -50px;
+}
+#nameSpan {
+  position : relative;
+  font-size : large;
+}
+.hiddentext {
+display : none;
+}
+#imageSpan img {
+  position : relative;
+  width : 50%;
+  float : right;
+  top : -30px;
+}
+#scoreSpan {
+  position : relative;
+  font-size : 500%;
+  display : inline-block;
+}
+#infoDiv p {
+  font-size : 200%;
+}
+#edUser {
+	position: absolute;
+	top:70px;
+	background-color: whitesmoke;
+	border: none;
+	border-radius: 12px;
+	padding: 5px;
+	width: 95%;
+	left: 5px;
+	display: none;
+  height : 350px;
+  max-height : 400px;
+  z-index : 4;
+}
+#subContain {
+	position: relative;
+	width: 100%;
+	height: 280px;
+	padding: 20px;
+  border : 1px lightblue solid;
+	border-radius: 12px;
+	left: -0%;
+  top : -10px;
+  overflow : auto;
+}
+#Heading {
+  position : absolute;
+	font-size: large;
+  top : -30px;
+}
+.inputClass {
+	position: relative;
+	/* float: right; */
+	width: 90%;
+	font-size: small;
+	left: 0%;
+	margin: 2px;
+	top: -0px;
+	padding: 3px;
+}
+#allContainer {
+	position: relative;
+	border: 1px lightblue solid;
+	border-radius: 20px;
+	padding: 20px;
+	top: 20px;
+  height : 300px;
+  width : 95%;
+  left : 10px;
+  
+}
+#personalDetails {
+	position: relative;
+	top: -20px;
+	width: 90%;
+	padding: 5px;
+  left : -20px;
+}
+#personalDetails input {
+  position : relative;
+  width : 70%;
+}
+#securityInfo {
+	position: relative;
+	width: 80%;
+  left : -15px;
+  top : -60px;
+}
+#securityInfo label {
+  position : relative;
+  font-size : small;
+  top : 20px;
+}
+#secA {
+  position : relative;
+  width : 90%;
+  font-size : small;
+}
+#secQ {
+  position : relative;
+  width : 220px;
+  font-size : x-small;
+}
+#imgDisplay1 .labelClass {
+	position: relative;
+	left: -145px;
+	font-size: small;
+	width: 170px;
+  top : 80px;
+}
+#imgDisplay1 {
+  position : relative;
+  height : 80px;
+  width : 80px;
+  left : 130px;
+  top : -100px;
+}
+#imgDisplay1 img {
+  position : relative;
+  width : 80px;
+  height : 80px;
+}
+#regPic {
+	position: relative;
+	max-width: 44%;
+	font-size: small;
+	top: 70px;
+	width: 320px;
+	left: -160px;
+}
+#updBut {
+  position : relative;
+  top : -70px;
+  left : -10px;
+}
+#regSubmit {
+  position : relative;
+  top : -95px;
+  left : 80px;
+}

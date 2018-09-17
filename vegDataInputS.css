@@ -14,7 +14,7 @@
   width : 90%;
   z-index : 1;
   top : -50px;
-   left : 90%;
+   left : 85%;
     
 }
 #refSelect {
@@ -98,7 +98,7 @@
 	position : relative;
 	max-width : 100%;
 	border : dashed 1px green;
-	height : 100px;
+	height : 150px;
 	overflow : auto;
     border-radius : 10px;
 }
@@ -137,7 +137,7 @@
     max-width : 90%;
     height : 150px; 
     margin : 10px;
-    top : -00px;
+    top : 0px;
     left :0%;
     border-radius:  25px;
     font-size:  medium;
@@ -186,7 +186,7 @@
 #pgButtons {
     position: relative;
 	top : -50px;
-    width : auto;
+    width : 250px;
     left : 20px;
     z-index: 3;
 }
@@ -195,14 +195,17 @@
 	border : 1px black dashed;
   	background-color : rgba(205,135, 12, 0.7);
     padding-top: 3px;
-    top : -0px; 
+    top : -170px; 
     margin : 10px;
-    width : 110px;
+    width : 112px;
+    left : 0px;
 }
 .thumbpic {
 	position : relative;
 	width : 100px;
 	height : 100px;
+    left : -5px;
+    top : 5px;
 }
 #images {
 position : relative;
@@ -305,11 +308,10 @@ position : relative;
 }
 .dialogC {
      position : absolute;
-    border : 3px black solid;
-    top : 50%;
-    left : 30%;
-    width : auto;
-    max-width : 50vw;
+    border : 1px black solid;
+    top : 30%;
+    left : 10%;
+    width : 250px;
     height : 250px;
     border-radius : 20px;
     border-style : outset;
@@ -317,9 +319,14 @@ position : relative;
     font-size : 120%;
     overflow: auto;
     padding : 10px;
-    
 }
+.dialogC input {
+    position : relative;
+    width : 90%;
+    font-size : small;
+    top : -20px
     
+}    
 #shortSrcBlock {
      position : relative;
     border : 1px black solid;
@@ -433,6 +440,10 @@ fieldset {
     margin-bottom : 10px;
     
 }
+#ajaxBox {
+    left : 20px;
+    width : 80%;
+}
 /* Sources style*/
 
 #Ocontainer {
@@ -485,13 +496,30 @@ fieldset {
   border : none;
   background : none;
   font-size: large;
-  text-decoration : underline;
+  text-decoration : none;
   cursor : pointer;
    margin-right : 10px;
-  color: blue;
+  color: black;
+    cursor : pointer;
   }
 .linkC:hover {
-  color : green;
-  cursor : pointer;
-  
+  color : lightblue;
+    text-decoration : underline;
+
 }
+.dm-uploader {
+position : relative;
+    top : -170px;
+    height : 100px;
+}
+.dm-uploader h3 {
+    display : none;
+}
+
+.card {
+    top : -170px;
+    width : 100%;
+    font-size : x-small;
+    
+}
+

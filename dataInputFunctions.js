@@ -182,14 +182,200 @@ function closeDiag(){
 function reallySubmit(){
 var catvalue = $('#thecatid').val();
 	if (catvalue == "Vegetables"){
-		document.VegForm.submit(); 
+		var Akingdom = 'Plantae';
+   var phylum = $("#Phylum").val();
+		var Vclass = $("#Class").val();
+		var subClass = $("#subClass").val();
+		var order = $("#Order").val();
+		var subOrder = $("#subOrder").val();
+		var family = $("#Family").val();
+		var subFamily = $("#subFamily").val();
+		var genus = $("#Genus").val();
+		var subGenus = $("#subGenus").val();
+		var species = $("#Species").val();
+		var subSpecies = $("#subSpecies").val();
+		var common_Names = $("#Common_Names").val();
+		var reftit = $("#refTit").val();
+		var pgNumber = $("#pgnum").val();
+		var name_Notes = $("#Name_Notes").val();
+		var status = $("#Status").val();
+		var description = $("#Description").val();
+		var ecology = $("#Ecology").val();
+		var habits = $("#Habits").val();
+		var distrib_Notes = $("#Distrib_Notes").val();
+		var img_Tags = $("#Image_Tags").val();
+		var contributer_ID = $("#contrib_ID").val();
+		var thecat = $("#thecatid").val();
+		var uses = $("#Uses").val();
+		var category = $("#Category").val();
+		var growing = $("#Growing").val();
+		var acclvl = $("#acclevel").val();
+		$("#messD").hide();
+	$.ajax({
+		url : "../../cgi-bin/IBISnewVegetables.php3",
+		method : "POST",
+		data : {
+		 		Akingdom: Akingdom,
+        phylum: phylum,
+        class : Vclass,
+        subClass : subClass,
+        order : order,
+        subOrder: subOrder,
+        family : family,
+        subFamily : subFamily,
+        genus : genus,
+        subGenus : subGenus,
+        species : species,
+        subSpecies : subSpecies,
+        common_Names : common_Names,
+        reftit : reftit,
+        pgNumber : pgNumber,
+        name_Notes : name_Notes,
+        status : status,
+        description : description,
+        ecology : ecology,
+        habits : habits,
+        distrib_Notes : distrib_Notes,
+        imgtag : img_Tags,
+        contributer_ID : contributer_ID,
+        thecat :thecat,
+        uses : uses,
+        category : category,
+        growing : growing,
+        acclvl : acclvl 
+		},
+		success : function(data){
+			$("#ajaxBox").html(data);
+			$("#ajaxBox").show();
+		}
+	});
 		}
     else if (catvalue == "Animals"){
-    	sendit();
+    var Akingdom = 'Animalia';
+   var Aphylum = $("#Phylum").val();
+		var Aclass = $("#Class").val();
+		var AsubClass = $("#subClass").val();
+		var Aorder = $("#Order").val();
+		var subOrder = $("#subOrder").val();
+		var Afamily = $("#Family").val();
+		var subFamily = $("#subFamily").val();
+		var Agenus = $("#Genus").val();
+		var subGenus = $("#subGenus").val();
+		var Aspecies = $("#Species").val();
+		var subSpecies = $("#subSpecies").val();
+		var Acommon_Names = $("#Common_Names").val();
+		var reftit = $("#refTit").val();
+		var pgNumber = $("#pgnum").val();
+		var Aname_Notes = $("#Name_Notes").val();
+		var status = $("#Status").val();
+		var Adescription = $("#Description").val();
+		var Aecology = $("#Ecology").val();
+		var Ahabits = $("#Habits").val();
+		var Adistrib_Notes = $("#Distrib_Notes").val();
+		var Aimg_Tags = $("#Image_Tags").val();
+		var contributer_ID = $("#contrib_ID").val();
+		var thecat = $("#thecatid").val();
+$("#messD").hide();
+		
+	$.ajax({
+		url : "../../cgi-bin/IBISnewAnimals.php3",
+		method : "POST",
+		data : {
+		 	Akingdom: Akingdom,
+        Aphylum: Aphylum,
+        Aclass : Aclass,
+        AsubClass : AsubClass,
+        Aorder : Aorder,
+        subOrder: subOrder,
+        Afamily : Afamily,
+        subFamily : subFamily,
+        Agenus : Agenus,
+        subGenus : subGenus,
+        Aspecies : Aspecies,
+        subSpecies : subSpecies,
+        Acommon_Names : Acommon_Names,
+        reftit : reftit,
+        pgNumber : pgNumber,
+        Aname_Notes : Aname_Notes,
+        status : status,
+        Adescription : Adescription,
+        Aecology : Aecology,
+        Ahabits : Ahabits,
+        Adistrib_Notes : Adistrib_Notes,
+        imgtag : Aimg_Tags,
+        contributer_ID : contributer_ID,
+        thecat :thecat 
+		},
+		success : function(data){
+			$("#ajaxBox").html(data);
+			$("#ajaxBox").show();
+		}
+	});
+		
     }
     else if (catvalue == "Minerals"){
-    	document.MinForm.submit();
-    }
+    	var Akingdom = 'Minerals';
+   var Mname = $("#Name").val();
+   var Mgroup = $("#Group").val();
+		var crystSys = $("#Crystal_System").val();
+		var Mhabit = $("#Habit").val();
+		var Mchemical_Formula = $("#Chemical_Formula").val();
+		var Mhardness = $("#Hardness").val();
+		var Mdensity = $("#Density").val();
+		var Mcleavage = $("#Cleavage").val();
+		var Mfracture = $("#Fracture").val();
+		var Mstreak = $("#Streak").val();
+		var Mlustre = $("#Lustre").val();
+		var Mfluorescence = $("#Fluorescence").val();
+		var Mnotes = $("#Notes").val();
+		var reftit = $("#refTit").val();
+		var pgNumber = $("#pgnum").val();
+		var Morigin = $("#Origin").val();
+		var Mcharacteristics = $("#Characteristics").val();
+		var Muses = $("#Uses").val();
+		var Mdistrib = $("#Distribution").val();
+		var distrib_Notes = $("#Distrib_Notes").val();
+		var Mimg_Tags = $("#Image_Tags").val();
+		var contributer_ID = $("#contrib_ID").val();
+		var thecat = $("#thecatid").val();
+		var Macclvl = $("#acclevel").val();
+				$("#messD").hide();
+	$.ajax({
+		url : "../../cgi-bin/IBISnewMinerals.php3",
+		method : "POST",
+		data : {
+		 	 Akingdom: Akingdom,
+ 				Mname : Mname,
+        Mgroup: Mgroup,
+        crystSys : crystSys,
+        Mhabit : Mhabit,
+        Mchemical_Formula : Mchemical_Formula,
+        Mhardness: Mhardness,
+        Mdensity : Mdensity,
+        Mcleavage : Mcleavage,
+        Mfracture : Mfracture,
+        Mstreak : Mstreak,
+        Mlustre : Mlustre,
+        Mfluorescence : Mfluorescence,
+        Mnotes : Mnotes,
+        reftit : reftit,
+        pgNumber : pgNumber,
+        Morigin : Morigin,
+        Mcharacteristics : Mcharacteristics,
+        Muses : Muses,
+        Mdistrib : Mdistrib,
+        distrib_Notes : distrib_Notes,
+        Mimg_Tags : Mimg_Tags,
+        contributer_ID : contributer_ID,
+        thecat :thecat,
+        Macclvl : Macclvl 
+		},
+		success : function(data){
+			$("#ajaxBox").html(data);
+			$("#ajaxBox").show();
+		}
+	});
+ }
 }
         
 function hidethis(){
@@ -199,7 +385,7 @@ function hidethis(){
 function doSubmit(){
 	var apicValue = checkPics();
 	if (apicValue == ""){
-	var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
+	var messgDiv = "<div id=\"messD\" class=\"dialogC\"><p>Entries without an attached image are saved to the Lost And Found</br>and will not be available through the Data Index.</p><input type=\"button\" class=\"buttonclass\" value=\"Don't worry about it.\" onclick=\"reallySubmit()\"/><br /><input type=\"button\" class=\"buttonclass\" value=\"Oops.\" onclick=\"hidethis()\"/></div>";
 		$('#messageDiv').html(messgDiv);
 	  }else{
 	   	sendit();

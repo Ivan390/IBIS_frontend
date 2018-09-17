@@ -3,7 +3,7 @@
     width: 97vw;
     height: 95vh;
     padding: 20px;
-    border-style: inset;
+    border : 1px lightblue solid;
     border-radius: 22px;
     margin : 8px;
     overflow : auto;
@@ -173,8 +173,9 @@
 }
 #detail_fs_min {
   position : relative;
-  border-style: inset;
    top : -145px; 
+   border : 1px lightblue solid;
+    border-radius : 12px;
   width : 98%;
   height : 85%;
   margin : 1px;
@@ -184,7 +185,7 @@
 }
 #pgButtons {
     position: relative;
-	top : -150px;
+	top : -135px;
     width : auto;
     left : 20px;
     z-index: 3;
@@ -193,16 +194,20 @@
 	position : relative;
 	border : 1px black dashed;
   	background-color : rgba(205,135, 12, 0.7);
-    padding-top: 3px;
-    top : -360px; 
-    width : 170px;
-    padding : 10px;
-    left : 52%;
+    padding: 3px;
+    border-radius : 5px;
+    top : -170px; 
+    margin : 2px;
+    width : 112px;
+    left : 0px;
+    height  : auto;
 }
 .thumbpic {
 	position : relative;
-	width : 150px;
-	height : 150px;
+	width : 100px;
+	height : 100px;
+    left : 0px;
+    top : 0px;
 }
 #images {
 position : relative;
@@ -306,7 +311,6 @@ position : relative;
     top : 50%;
     left : 30%;
     width : auto;
-    max-width : 50vw;
     height : 250px;
     border-radius : 20px;
     border-style : outset;
@@ -484,4 +488,18 @@ fieldset {
   color : lightblue;
   text-decoration : underline;
   
+}
+.dm-uploader {
+    top : -170px;
+    height : 100px;
+}
+.dm-uploader h3 {
+    display : none;
+}
+
+.card {
+    top : -170px;
+    width : 100%;
+    font-size : x-small;
+    
 }

@@ -3,11 +3,11 @@
 #DETallContainer {
   position : relative;
   width : 95%;
-  height : 89%;
+  height : 95vh;
   padding : 20px;
   border : 1px lightblue solid;
   border-radius: 20px;
-  top: 1%;
+  top: 20px;
 }
 .linkC {
   position : relative;
@@ -26,8 +26,8 @@
 }
 #pgHeading {
   position : relative;
-  top : -65px;
-  left : 35%;
+  top : -95px;
+  left : 40%;
   font-size : 300%;
   text-decoration : underline;
   width: auto;
@@ -50,15 +50,16 @@
 }
 #DETallContainer #detail_fs {
   position : relative;
-  border-style: outset;
   top : -65px;
+  border : 1px lightblue solid;
   width : 95%;
   padding : 5px;
   height :auto;
   padding-left : 10px;
   margin-left : 10px;
   border-radius: 12px;
-  max-height: 650px;
+  max-height: 500px;
+  overflow : auto;
 }
 #DETallContainer #logo_image_holder{
   position : relative;
@@ -116,7 +117,7 @@
 #DETallContainer #catHeading {
   position : relative;
   left : 0%;
-  font-size : 330%;
+  font-size : 250%;
   width: auto;
 }
 .italC {
@@ -132,6 +133,7 @@
   overflow : auto;
   left : 29%;
   padding-top : 10px;
+  top : -100px;
 }
 .oDHClass {
   cursor: pointer;
@@ -176,14 +178,22 @@ position : relative;
 	left: 3%;
 }
 #viewsBlock {
-    position: relative;
+    position: absolute;
     border: black 1px solid;
     border-radius: 20px;
     padding: 15px;
     width: 15vw;
     font-size: 120%;
-    top: -60px;
-    left: 8px;
+    top: 100px;
+    left: 30px;
+  height : 50px;
+  overflow : hidden;
+  z-index : 4;
+  background-color : yellow;
+  cursor : pointer;
+}
+#viewsBlock:hover {
+  height : 200px;
 }
 #ratingsBlock{
     position: relative;
@@ -191,29 +201,29 @@ position : relative;
     border-radius: 20px;
     width: 30vw;
   	min-width:300px;
-    height: 240px;
+    height: 340px;
   background-color: yellow;
- 	top : -290px;
-  	left :18%;
+ 	top : -590px;
+  	left :5%;
   	display :none;
-  	overflow: auto;
   	padding: 30px;
   	padding-right : 0px;
 }
 #ratehead {
-  padding : 20%;
+  position : relative;
   font-size : 130%;
   text-decoration: underline;
+  display : none;
 }
 #ratebut{
-  	position : relative;
+  	position : absolute;
   	border: black 1px solid;
     border-radius: 20px;
     width: 16vw;
   	min-width:250px;
     height: auto;
-  	top : -290px;
-  	left :18%;
+  	top : 100px;
+  	left :240px;
   	font-size : 190%;
   	text-decoration: underline;
  	 background-color: yellow;
@@ -248,4 +258,9 @@ position : relative;
 
 #currScore {
   font-size : 300%;
+}
+#rtecmnt{
+  position : absolute;
+  top : 70px;
+  left : 20%;
 }

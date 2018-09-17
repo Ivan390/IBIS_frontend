@@ -1,0 +1,292 @@
+#MainallContainer {
+	position : absolute;
+	width : 90vw;
+	height : 90%;
+	background-color : beige;
+	margin : 2px;
+	left : 0px;
+}
+
+#logo_image_holder {
+	position : relative;
+	/*! width : auto; */
+	width : 60%;
+	height :auto;
+	left : 0px;
+}
+#compContainer #logo_image {
+	position : relative;
+	left : 85%;
+	width : 100%;
+	height :auto;
+	top : -5px;
+	height: auto;
+}
+.linkC {
+  position : relative;
+  border : none;
+  background : none;
+  font-size: large;
+  cursor : pointer;
+  }
+.linkC:hover {
+  color : lightblue;
+  text-decoration : underline;
+}
+.hiddentext {
+display : none;
+}
+#welcBlock {
+	position : relative;
+	width : 93%;
+	left : 0px;
+	height : 10vh;
+	padding : 5px;
+}
+#greetingDiv{
+	position : relative;
+	top : -20px;
+	margin : 5px;
+}
+#welcBlock a{
+	position : relative;
+	top : -30px;
+}
+.Gselect {
+	padding : 2px;
+	font-size : x-large;
+}
+#GBlock {
+	position : relative;
+	left : -35px;
+	width : 100%;
+	top : -35px;
+	
+	
+}
+
+
+p {
+	position : relative;
+	margin-top: 0;
+	margin-bottom: 0px;
+	color : blue;
+	top : -0px;
+	font-size : large;
+}
+
+/*start guestbook*/
+
+#allContainer {
+	position : relative;
+	/*! width : 100vw; */
+	height : 99vh;
+	/*! background-color : beige; */
+	margin : 2px;
+	left : 5px;
+}
+#allContainer #dateTime {
+	position : relative;
+	top : -15px;
+	width : 50%;
+	font-size : small;
+}
+
+#allContainer #logo_image_holder {
+	position : relative;
+	left : 45%;
+	width : 70%;
+	top : -60px;
+}
+#gTitle {
+    position: relative;
+    top: -85px;
+    font-size: x-large;
+    left: 25%;
+    z-index: 4;
+    color: black;
+    width: 200px;
+}
+#pgButtons {
+	position : relative;
+	top : -35px;
+	
+}
+#pgButtons input {
+	border-radius : 10px;
+	margin : 1px;
+	background-color: none;
+	font-size: x-large;
+}
+#DETallContainer .linkC {
+	text-decoration : none;	
+}
+#DETallContainer .linkC:hover {
+	color : lightblue;
+	text-decoration : underline;
+}
+#pgButtons a {
+	border-radius : 10px;
+	font-size: x-large;
+}
+#allContainer #detail_fs {
+  position: relative;
+  width: 95%;
+  color: black;
+	border : 1px lightblue solid;
+	height : 90%;
+	overflow : auto;
+  margin: 5px;
+	top : 0px;
+	left : 5px;
+}
+#mediaPic input {
+	position : relative;
+	width : 140px;
+	font-size : large;
+	left : -110px;
+	
+}
+
+#allContainer #detail_fs textarea {
+	position : relative;
+	width :100%;
+	
+}
+#guestImages {
+    position: relative;
+    top: -250px;
+    height: auto;
+	max-height : 290px;
+    width: 92%;
+    padding-bottom: 2px;
+    overflow: auto;
+   border : none;
+    font-size: small;
+    z-index : 5;
+		background-color : yellow;
+		border-radius : 12px;
+		left : 10px;
+		margin : 5px;
+}
+#Gtable {
+position : relative;
+width : 100%;
+}
+#Gtable td {
+	position : relative;
+	padding : 15px;
+}
+#GuestPic {
+    position: absolute;
+    left: 40%;
+    top: 80%;
+	width : 30%;
+	height : 30%;
+}
+#GuestPic .thumbpic {
+	position: relative;
+	left: 75%;
+	width: 100%;
+	height: 100%;
+	border-bottom: 3px grey solid;
+	border-left: 3px grey solid;
+}
+/*start Registration*/
+
+#REGallContainer {
+	position : relative;
+	width : 95%;
+	height : 80%;
+	
+	margin : 2px;
+	margin-top : 10px;
+	left : 5px;
+	
+}
+
+#imgDisplay {
+    position: absolute;
+    top: -25px;
+    left: 56%;
+    width: 23%;
+    border: orange 1px dashed;
+    padding: 1px;
+    text-align: center;
+}
+
+#detailcont {
+	border : 1px black solid;
+	padding : 2px;
+	height : 65%;
+}
+#shwG{
+	position : relative;
+	top : -11%;
+}
+#showguests {
+	position : relative;
+	position: relative;
+	font-size: medium;
+	width: 70%;
+}
+#hideguests {
+	position : relative;
+	width : auto;
+	font-size : medium;
+}
+
+#guestArea {
+	position: absolute;
+	top: 375px;
+	left: -2%;
+	width: 100%;
+
+	
+}
+
+
+
+.Gtext {
+	font-size : small;
+}
+.dm-uploader {
+  position : relative;
+  top : -10px;
+  height : 30px;
+	padding : 0px;
+	max-height : 300px;
+	width : 60%;
+	min-height : 20px;
+	border : none;
+}
+.dm-uploader .btn {
+  position : relative;
+  top : -35px;
+  z-index : 4;
+	font-size : medium;
+	width : 120px;
+	text-align : center;
+	left : -45px;
+}
+.card {
+  position : relative;
+  top : -10px;
+	font-size : small;
+}
+.card p {
+	font-size : small;
+}
+}
+#headingText {
+	position: relative;
+	font-size: xx-large;
+	top: -70px;
+	left: 30%;
+	text-decoration: underline;
+}
+#Gname {
+	position : relative;
+	left : 0px;
+	width : 100%;
+}

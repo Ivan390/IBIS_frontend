@@ -216,7 +216,7 @@
 .dm-uploader .btn {
   position : relative;
   top : -20px;
-  
+  z-index : 4;
 }
 .card {
   position : relative;

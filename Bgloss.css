@@ -1,4 +1,4 @@
-.container{
+#mainContainer{
  position : relative;
   width : 90%;
    height : 95vh;
@@ -6,11 +6,10 @@
   border : 1px lightblue solid;
   border-radius : 15px;
   top : 10px;
-  overflow : auto;
 }
 #subContainer {
   position : relative;
-  top : -80px;
+  top : -50px;
   height : auto;
   
 }
@@ -34,7 +33,6 @@
   width : 98%;
   height : auto;
   min-height: 200px;
-  border : 1px black solid;
   margin : 5px;
   padding : 10px;
 }
@@ -52,11 +50,11 @@
 }
 .thumbpic {
     position : relative;
-  width : 220px;
-  height : 220px;
+  width : 90%;
+  height : 90%;
   float : right;
-  top : -440px;
-  left: -20px;
+  left : -7px;
+  top : 5px;
 }
 #GlBody #glHeading {
   position : relative; 
@@ -69,7 +67,7 @@ left : 20%;
 }
 #GlBody #pgButtons {
   position : relative;
-  left : 10%;
+  left : 2%;
   top : -78px;
   width : 400px;
   
@@ -122,10 +120,30 @@ left : 20%;
   position : relative;
   border : 1px black solid;
   display :-moz-groupbox;
-  width : 50%;
-  left : -0%;
+  width : 70%;
+  left : -244px;
 }
-
+#imgDisplay {
+  position : absolute;
+  border : 1px black solid;
+  width : 150px;
+  height : 150px;
+  top : 2%;
+  left : 70%;
+}
+#diagram0 .labelText {
+  position : absolute;
+  top : 0px;
+  left : 70%;
+  top : 155px;
+}
+#diagram0 input {
+  position : absolute;
+   top : 0px;
+  left : 70%;
+  top : 185px;
+  width : 29%;
+}
 #textstuff .labelText {
   position : relative;
   
