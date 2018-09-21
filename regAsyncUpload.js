@@ -26,7 +26,7 @@
       	 "name" : name,
       	 "lastname" : lastname,
       	 "email" : email,
-      	 "secQ" : secQ,
+      	 "secQ" : seqQ,
       	 "secA" : secA        
       };
    },

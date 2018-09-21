@@ -109,10 +109,10 @@ left: 1%;
 #hitCnt {
   position : relative;
   top : 0px;
-  left : 75%;
+  left : 65%;
   z-index: 1;
   font-size : x-large;
-	width : 65px;
+	width : 95px;
   
 }
 #SFallContainer #pgButtons {
@@ -194,26 +194,27 @@ left: 1%;
 }
 #option2btn { 
 	position : relative;
-
-		font-size : small;
+	width : 110px;
+	font-size : small;
 }
 #opt3btSpan {
 	width: 20px;
-		top : 55px;
+	top : 55px;
 	left : 120px;
 }
 #option3btn {
 	position : relative;
 	font-size : small;
-left : -160px;
-	top : 50px;
-	width : 106px;
+left : -0px;
+	top : 0px;
+	width : 110px;
 }
 #SFallContainer #catPicsList {
     position: relative;
     width: auto;
     top: -0%;
-    max-height: 160px;
+    max-height: 300px;
+	margin-bottom : 0px;
 }
 #DDL1Min {
 	position : relative;
@@ -224,11 +225,13 @@ left : -160px;
     position: relative;
     padding: 1px;
     width : auto;
-    max-height: 200px; 
+    max-height: 350px; 
     margin-right: 1px;
     overflow-y: scroll;
-    top: -40px;
+    top: -60px;
      left: -3%; 
+		margin-bottom : 0px;
+
 }
 #catPicsList img {
 	width : 60%;
@@ -236,14 +239,16 @@ left : -160px;
 	z-index : 7;
 	top: -80px;
 }
-#catPicsList p {
-	position : relative;
-	width : 70px;
-	top : 10px;
-	left : 152px;
-	z-index : 1;
+#mess {
+	position : absolute;
+	width : 180px;
+	top : 400px;
+	padding : 10px;
+	height : 50px;
+	left : 22px;
+	z-index : 4;
 	background-color: yellowgreen;
-	
+	display : none;
 }
 #speciePic {
 	position : relative;

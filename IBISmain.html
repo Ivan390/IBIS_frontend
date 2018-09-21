@@ -32,24 +32,26 @@
 					  <div id="timeBlock">The Time</div>       
 			  	</div>
       		<div id="logo_image_holder">
-					  <img id="logo_image" src="./images/Logo1_smaller.png"/>
+					  <img id="logo_image" src="images/Logo1_smaller.png"/>
 					</div>
       </div>
       
-	    <form name="categoryForm" action="../../cgi-bin/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />	    </form>
+	    <form name="categoryForm" action="cgi-bin/IBISnewIndexCreator.php3" method="POST" enctype="multipart/form-data" >	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />	    </form>
 	    <div id="errorDiv" style="display:none;"></div>
 	    <div id="loginLink" class="littleDD linksclass" style="">
 	      <label id="loginhead" class="littleDD linksclass label-info" onclick="showLogin()">Login</label>
 	      <label id="logouthead" class="littleDD linksclass logoutCstart label-info" style="display:none;" onclick="do_logout()">Logout</label>
-	      <form name="loginForm" action="../../cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data" >	        <div id="login" class="littleDD login" style="display : none;">	          <label class="labelClass">Your user name</label><br>
+	      <form name="loginForm" action="cgi-bin/IBISlogin.php3" method="POST" enctype="multipart/form-data" >	        <div id="login" class="littleDD login" style="display : none;">
+	          <label class="labelClass">Your user name</label><br>
 	          <input type="text" name="uName" id="uname" class="" /><br>
 	          <label class="labelClass">Your email</label><br>
 	          <input type="text" name="uEmail" id="uemail" class="" /><br>
+	          <label class="linkC" id="forgotTag" onclick="getName()">I forgot my username</label>
 	          <input type="button" value="OKay" onclick="input_checker()" />
 	          <input type="button" value="Cancel" onclick="cancelLogin()" /><br>
 	        </div>
 	      </form>
-	      <form name=proForm action="../../cgi-bin/IBISprofile.php3" method="POST" enctype="multipart/form-data">	      	<input type="text" value="" id="usrRef" name="userN" style="display:none;">	      </form>
+	      <form name=proForm action="cgi-bin/IBISprofile.php3" method="POST" enctype="multipart/form-data">	      	<input type="text" value="" id="usrRef" name="userN" style="display:none;">	      </form>
 	    </div>
 	    <div id="cgiResult" ></div>
 	    <div id="detail_fs_main" class="container">
@@ -76,6 +78,8 @@
 					<p class="">Eco Links</p>
 					<ul class="list-unstyled">
 						<li onclick="checkReg()"><span id="utilLink" class="linksclass" onclick="checkReg()">Utilities</span></li>
+						<li onclick="authVerify()" class="inputclass" ><span id="authDiv" class="linksclass" onclick="authVerify()" >Administration</span></li>
+						<li ><span id="Amessg" onclick="showMssgDialog()" class="linksclass">Message to the author</span></li>
 					</ul>
 				</span>
 	    </div>

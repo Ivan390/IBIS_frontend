@@ -45,6 +45,49 @@ top : 10px;
   font-size : large;
   z-index : 7;
 }
+#errorDiv #response .labelclass {
+  position : relative;
+  left : -0px;
+  top : 0px;
+}
+#errorDiv #Uresponse .labelclass {
+  position : relative;
+  left : -40px;
+  top : 20px;
+}
+#Uresponse {
+  position : relative;
+  display : block;
+  max-width : 100%;
+}
+#Uresponse .linkC {
+  position : relative;
+  left : 95%;
+}
+#Uresponse .labelclass  {
+  position : relative;
+  left : -20px;
+  font-size : medium;
+}
+
+#errorDiv #UPresponse .labelclass {
+  position : relative;
+  left : -40px;
+  top : 20px;
+}
+#UPresponse {
+  position : relative;
+  display : block;
+  max-width : 100%;
+}
+#UPresponse .labelclass{
+  position : relative;
+}
+#errorDiv #UPresponse .linkC {
+  position : relative;
+  top : -50%;
+  left : 86%;
+}
 #clsbox {
   position : relative;
   border : 1px lightblue solid;
@@ -75,16 +118,16 @@ top : 10px;
 
 #MainallContainer #errorDiv img {
   position : relative;
-  top : -vh;
-  left : -74%;
+  top : -20px;
+  left : -70%;
   
 }
 #MainallContainer #errorDiv #messSpan {
   position : relative;
-  top : 50%;
+  top : 40%;
   font-size :x-large;
   float : left;
-  left : 20%;
+  left : 28%;
   
 }
 
@@ -166,6 +209,46 @@ top : 10px;
 }
 #regpic img {
   position : relative;
+}
+.linkC {
+  position : relative;
+  background : none;
+  font-size: x-large;
+  text-decoration : none;
+    color : black;
+  cursor : pointer;
+  margin : 10px;
+  border-radius : 12px;
+  top : -20px;
+  padding : 2px;
+  left : 20px;
+ 
+  }
+.linkC:hover {
+  color : lightblue;
+  text-decoration : underline;
+}
+#forgotTag {
+  position : relative;
+  font-size : medium;
+  top : -5px;
+  left : 0px;
+  text-decoration: underline;
+}
+#remindDlg .linkC {
+  position : relative;
+  left : 95%;
+  
+}
+#response .linkC {
+  position : relative;
+  left : 88%;
+  top : -30px;
+}
+#mssgDlg .linkC {
+  position : relative;
+  left : 90%;
+  
 }
 #LinkList {
     position: relative;

@@ -507,3 +507,18 @@ fieldset {
     left : 10px;
     width : 80%
 }
+.dm-uploader {
+position : relative;
+    top : -0px;
+    height : 100px;
+}
+.dm-uploader h3 {
+    display : none;
+}
+
+.card {
+    top : -0px;
+    width : 100%;
+    font-size : x-small;
+    
+}

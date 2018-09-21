@@ -1,0 +1,143 @@
+commit 37c44553a92638b1e540e47eabffb8cd140a56f5
+Author: Ivan <ivanadams95@gmail.com>
+Date:   Mon Sep 17 23:00:39 2018 +0200
+
+    it is a process of refinement, I guess
+
+commit bc4a4cdba55b1fb57116752ed8804db8b5d38e84
+Author: Ivan <ivanadams95@gmail.com>
+Date:   Wed Sep 12 23:23:41 2018 +0200
+
+    upload functions seem to be working, i will do some more testing soon
+
+commit f278ee3961a2d86c3ee8e6656901c9a2413ee804
+Author: Ivan <ivanadams95@gmail.com>
+Date:   Tue Sep 11 23:58:39 2018 +0200
+
+    added ajax apload utility on frontend and edited php to suit
+
+commit d6d22dc98f40ba019ee52ead24545126e848809c
+Author: Ivan <ivanadams95@gmail.com>
+Date:   Tue Sep 4 22:02:56 2018 +0200
+
+    some adjustments
+
+commit 363a2b34199e3448b7f23cbb5c1635f39d2759c4
+Author: Ivan <ivanadams95@gmail.com>
+Date:   Tue Sep 4 17:51:28 2018 +0200
+
+    replaced ImageMagick with gd image functions
+
+commit 40a2fe3a3cbf630c1b691d2910a4231cb48d3b43
+Author: Ivan <ivanadams95@gmail.com>
+Date:   Mon Aug 27 21:19:45 2018 +0200
+
+    Done...
+    
+    All that remains here is to do some cleaning up and input checking.
+    Good job buddy.
+
+commit ac68c8a570f39ee9531f0bc643cd19e7f34375b6
+Author: ivan <ivy3595@gmail.com>
+Date:   Mon Jul 16 20:11:05 2018 +0200
+
+    still working on bootstrap integration
+
+commit 40fe769375741cfc1cce7c0eee285362a5e766ce
+Author: ivan <ivy3595@gmail.com>
+Date:   Thu Jun 28 02:05:58 2018 +0200
+
+    edited some of these also
+    
+    still integrating the bootstrap framework
+    
+    Besides bootstrap, I have worked on some issues in connection with the newIndecCreator page.
+
+commit ec642cf38107b93da7895985b9143bc7533a7859
+Author: ivan <ivy3595@gmail.com>
+Date:   Thu Jun 21 19:02:22 2018 +0200
+
+    integrating bootstrap into the interfaces
+
+commit caec9f02d40e703557a49a1622f2a89e070c0f0f
+Author: ivan <ivy3595@gmail.com>
+Date:   Thu May 10 21:57:38 2018 +0200
+
+    added one dump of IBIS database
+
+commit 6107c2f9f5cfde390ce33ad1805f50c9619ddd7a
+Author: ivan <ivy3595@gmail.com>
+Date:   Thu May 10 21:55:06 2018 +0200
+
+    added one file and cleaned out the directory
+
+commit 76847eefca73c1f535e1e8a4e15b2ef88b83252f
+Author: ivan <ivy3595@gmail.com>
+Date:   Wed May 2 20:58:44 2018 +0200
+
+    ??????
+
+commit 78a920df12f011a69abfb7ac5d62caba86d1e87f
+Author: ivan <ivy3595@gmail.com>
+Date:   Mon Feb 5 11:22:48 2018 +0200
+
+    upadted from Kali
+
+commit 400e82a3239984ecad07bb597e512acda82807fb
+Author: Ivan <ivy3595@gmail.com>
+Date:   Fri Feb 2 00:03:59 2018 +0200
+
+    too many changes to list all I can say is Yeh baby
+
+commit fc0e2e0c6e235905e6720c8a8804698302e4e404
+Author: Ivan <ivy3595@gmail.com>
+Date:   Fri Feb 2 00:03:15 2018 +0200
+
+    too many changes to list all I can say is Yeh baby
+
+commit bba5c383e5fe8871303f5e547ef37edd7fa9a0c4
+Author: Ivan <ivy3595@gmail.com>
+Date:   Wed Jan 17 22:45:43 2018 +0200
+
+    bunch of changes
+    
+    added picture lookup facility, i was sceptic about the metric but after
+    testing it a little it turned out to be remarkably accurate,
+    although I still need to setup a thumbnail store,
+    which I think might speed up that function alot.
+    Added login tracking facility, logins are now recorded to a login table
+    in the IBIS database.
+     Contributers now have access to a profile page where they can
+    edit some of their login details, also track their score(this is also new) and ultimately
+    view their history.
+    this is a tough little task.
+
+commit a6b2efdd3916f6f80e36e48d5f3a7b4521a731f7
+Author: Ivan <ivy3595@gmail.com>
+Date:   Tue Jan 16 08:50:37 2018 +0200
+
+    prelim update
+
+commit 55301eb79ec90ee47318327349a3bbc085776786
+Author: Ivan <ivy3595@gmail.com>
+Date:   Wed Dec 27 22:05:06 2017 +0200
+
+    added voting abilites to getDetails and Votes to deal with voting submissions
+
+commit ad6309055508a2df64d3a1d0a7d5ab0a302ed537
+Author: Ivan <ivy3595@gmail.com>
+Date:   Wed Dec 27 11:39:17 2017 +0200
+
+    added new functionality
+
+commit b147e624c37978822a4e57abdebf61c91c52056a
+Author: Ivan <ivy3595@gmail.com>
+Date:   Sat Dec 26 20:03:31 2020 +0200
+
+    synced from bodhi
+
+commit 2df74650ce9a9f936686ea2af473c0183d1c3e2b
+Author: root <root@bti.bti>
+Date:   Sat Dec 26 19:51:20 2020 +0200
+
+    first commit on Kali cgi

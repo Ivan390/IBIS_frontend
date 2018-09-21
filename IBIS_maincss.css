@@ -296,9 +296,7 @@ top : 10px;
   color: green;
   width: 30%;
 }
-.hiddentext{
-  display: none;
-}
+
 #SFallContainer #logo_image{
 	height : 60%;
   	width : 50%;
@@ -426,12 +424,13 @@ position : relative;
 #subContain {
   position : relative;
   width : 85vw;
-  height : auto;
+  height : 350px;
   max-height: 100vh;
   padding : 20px;
-  border-style: inset;
+  border : 1px lightblue solid;
   border-radius: 22px; 
   left: 1%;
+  
 }
 #SFallContainer #catPicsList {
   position : relative;
@@ -449,7 +448,7 @@ position : relative;
 #DETallContainer {
   position : relative;
   width : 98vw;
-  height : 90vh;
+  height : 97vh;
   padding : 20px;
   border : 1px lightblue solid;
   border-radius: 22px;
@@ -540,9 +539,7 @@ position : relative;
 .oDD{
   display : none;
 }
-.hiddentext{
-  display : none;
-}
+
 #DETallContainer #catHeading {
   position : relative;
   left : 10%;
@@ -593,14 +590,30 @@ position : relative;
 }
 #edUser {
   position :absolute;
-  top : 150px;
-  background-color: whitesmoke;
-  border : 1px lightblue solid;
+  top : -100px;
+  background-color: white;
   border-radius : 20px;
   padding : 20px;
-  width : 98%;
-  left : 10px;
-  display : none;
+  width : 102%;
+  left : -5px;
+display : none;
+  height : 450px;
+}
+#closewin {
+position : relative;
+display : none;
+z-index : 5;
+  top : -345px;
+  left : 85%;
+    font-size : x-large;
+
+}
+#updBut {
+  position : relative;
+  top : -345px;
+  left : 85%;
+  font-size : x-large;
+  
 }
 .OutputAnim {
   top : -70px;
@@ -674,7 +687,7 @@ a:hover {
 	font-size : 18px;
 	left : 0%;
 	margin : 2px;
-	top : -0px;
+	top : 0px;
 	padding : 3px;
 }
 #Heading {
@@ -698,13 +711,15 @@ a:hover {
 }
 #imgDisplay1 .labelClass {
   position : relative;
-  left : -400px;
+  left : -420px;
   font-size : large;
   width : 300px;
+  top : -0px;
 }
 #imgDisplay1 img {
-  position : relative;
-  top : -60px;
+  position : absolute;
+  top : 10px;
+  left : 5px;
 }
 #inputDiv {
 	position : relative;
@@ -1224,7 +1239,9 @@ a:hover {
   border-radius : 20px;
   padding : 20px;
   top : 20px;
+  height : 450px;
 }
+
 #logo_image_holder {
   position : relative;
   width : 50%;
@@ -1255,7 +1272,8 @@ a:hover {
   color : green;
 }
 .dm-uploader {
-  top : 0px;
+  position : absolute;
+  top : -0px;
   left : -400px;
   height : 100px;
   width : 300px;
@@ -1265,6 +1283,7 @@ a:hover {
   
 }
 .card {
+position : absolute;
   top : 100px;
   left : -500px;
   width : 300px;

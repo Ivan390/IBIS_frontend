@@ -6,6 +6,7 @@ function initForm() {
   $("#dateBlock").html(new Date().shortFormat());
   starttime();
   $('.inputC').val("");
+ 
 }
 // vegInput
 var imgname = "";

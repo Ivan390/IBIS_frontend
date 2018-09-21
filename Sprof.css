@@ -1,7 +1,7 @@
 #DETallContainer {
   position : relative;
   width : 90%;
-  height : auto;
+  height : 95vh;
   padding : 20px;
   border-radius: 22px;
   border : 1px lightblue solid;
@@ -71,7 +71,7 @@ display : none;
 }
 #imageSpan img {
   position : relative;
-  width : 50%;
+  width : 30%;
   float : right;
   top : -30px;
 }
@@ -85,13 +85,13 @@ display : none;
 }
 #edUser {
 	position: absolute;
-	top:70px;
-	background-color: whitesmoke;
+	top:-10px;
+	background-color: white;
 	border: none;
 	border-radius: 12px;
 	padding: 5px;
-	width: 95%;
-	left: 5px;
+	width: 105%;
+	left: px;
 	display: none;
   height : 350px;
   max-height : 400px;
@@ -99,10 +99,10 @@ display : none;
 }
 #subContain {
 	position: relative;
-	width: 100%;
+	width: 105%;
 	height: 280px;
-	padding: 20px;
-  border : 1px lightblue solid;
+	padding: 10px;
+  border : none;
 	border-radius: 12px;
 	left: -0%;
   top : -10px;
@@ -111,7 +111,7 @@ display : none;
 #Heading {
   position : absolute;
 	font-size: large;
-  top : -30px;
+  top : -25px;
 }
 .inputClass {
 	position: relative;
@@ -125,65 +125,87 @@ display : none;
 }
 #allContainer {
 	position: relative;
-	border: 1px lightblue solid;
 	border-radius: 20px;
-	padding: 20px;
-	top: 20px;
-  height : 300px;
+	padding-top: 10px;
+	top: 30px;
+  height : 95%;
   width : 95%;
   left : 10px;
   
 }
+#closewin {
+position : relative;
+display : none;
+z-index : 5;
+  top : 0px;
+  left : 0%;
+    font-size : large;
+
+}
+#regbuttons {
+  position : absolute;
+  top : 10px;
+  left : 25px;
+}
+#updBut {
+  position : relative;
+  top : 0px;
+  left : 0px;
+  font-size: large
+}
 #personalDetails {
 	position: relative;
-	top: -20px;
-	width: 90%;
+	top: 30px;
+	width: 95%;
 	padding: 5px;
-  left : -20px;
+  left : -10px;
 }
 #personalDetails input {
   position : relative;
-  width : 70%;
+  width : 90%;
 }
 #securityInfo {
 	position: relative;
-	width: 80%;
-  left : -15px;
-  top : -60px;
+	width: 95%;
+  left : -5px;
+  top : 0px;
 }
 #securityInfo label {
   position : relative;
   font-size : small;
   top : 20px;
+  display : none
 }
 #secA {
   position : relative;
-  width : 90%;
   font-size : small;
 }
 #secQ {
   position : relative;
-  width : 220px;
   font-size : x-small;
+  
 }
 #imgDisplay1 .labelClass {
 	position: relative;
-	left: -145px;
+	left: -105px;
 	font-size: small;
-	width: 170px;
-  top : 80px;
+	width: 110px;
+  top : 0px;
 }
 #imgDisplay1 {
-  position : relative;
+  position : absolute;
   height : 80px;
   width : 80px;
-  left : 130px;
-  top : -100px;
+  left : 100px;
+  top : 200px;
+  border : none;
 }
 #imgDisplay1 img {
-  position : relative;
+  position : absolute;
   width : 80px;
   height : 80px;
+  top : -2px;
+  left : 12px;
 }
 #regPic {
 	position: relative;
@@ -193,13 +215,31 @@ display : none;
 	width: 320px;
 	left: -160px;
 }
-#updBut {
-  position : relative;
-  top : -70px;
-  left : -10px;
-}
+
 #regSubmit {
   position : relative;
   top : -95px;
-  left : 80px;
+  left : 120px;
+}
+.dm-uploader {
+  position : relative;
+  top : -30px;
+  left : -105px;
+  height : 100px;
+  width : 65%;
+  border : none;
+}
+.dm-uploader .btn {
+  position : relative;
+  font-size : small;
+  width : 90px;
+  left : -40px;
+  padding : 0px;
+   top : -20px;
+}
+.card {
+position : relative;;
+  top : -60px;
+  left : -110px;
+  width : 210px;
 }

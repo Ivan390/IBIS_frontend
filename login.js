@@ -17,6 +17,7 @@ function do_logout(){
   $("#logouthead").css("display", "none");
   $("#regPic").css("display","none");
 	$("#adminBlock").hide();
+	$("#authDiv").hide();
  	var loCount = 0;
  	$.ajax({
 		url : "../../cgi-bin/IBISLogout.php3",		type : "POST",		data : {name1 : logID},
@@ -52,7 +53,7 @@ function submitDetails(){
 	    success : function(data) {
 	      var testregexp = /no match/;
 	      if (testregexp.test(data)) {
-	        $("#errorDiv").html("<img id=\"sucCheck\" src=\"http://192.168.43.132/ibis/images/notokeydoke.png\"><span id=\"messSpan\">Your details were not found on the server</br>Check your spelling</span>");
+	        $("#errorDiv").html("<label onclick=\"closethis()\" class=\"linkC\">X</label><br /><img id=\"sucCheck\" src=\"http://192.168.43.132/ibis/images/notokeydoke.png\" /><span id=\"messSpan\">Your details were not found on the server</br>Check your spelling</span>");
 	        $('#errorDiv').show();
 	        showLogin();
 	      }
@@ -67,6 +68,9 @@ function submitDetails(){
 	          $("#adminBlock").html("<div id=\"regholder\"><div id=\"regpic\"></div><div id=\"greetingDiv\"></div><div id=\"greetA\" ><label id=\"proLab\" class=\"label-info\" onclick=\"goPro("+thedata[0]+")\" >Your profile page</label></div></div>");
 	   				$("#regpic").html(imgsrc);
 	          $("#greetingDiv").text(thedata[1]);
+	          if (thedata[1] == "Author"){
+	          	$("#authDiv").show();
+	          }
 	          $("#adminBlock").fadeIn();
 	          writeCookie("IBIS_session=", sessref, 1);
 	       		if(readCookie("IBIS_session")){
@@ -142,5 +146,69 @@ function newSes(){
 $('#errorDiv').hide();
 	cancelLogin();
 	do_logout();
+}
+function authVerify(){
+	var authDialog = '<span id="authverify">\
+	<label class="labelclass">Enter verification code</label>\
+	<input id="verInput" type="text" />\
+	<input type="button" id="verifyI" value="Send" class="inputClass buttonclass " onclick="sendCode()">\
+	</span>';
+	$("#errorDiv").html(authDialog);
+	$("#errorDiv").show();
+	$("#verInput").focus();
+}
+function sendCode(){
+	var verCode = $("#verInput").val();
+	$.ajax({
+		url : "../../cgi-bin/verify.php3",
+		method : "POST",
+		data : {name1:verCode},
+		success : function(data){
+		 $("#errorDiv").html(data);
+		}
+	});
+	
+}
+function closethis() {
+	$("#errorDiv").hide();
+}
+
+function getName(){
+	var nameDlg = '<span id=remindDlg><label onclick="closethis()" class="linkC">X</label><br />\
+	<input type="text" id="email" placeholder="Enter your email address here" width="100%"/>\
+	<input type="button" value="Send It" id="sendBbut" class="buttonclass" onclick="getSecQ()">\
+	</span>';
+	$("#errorDiv").html(nameDlg);
+	$("#errorDiv").show();
+	$("#email").focus();
+}
+
+function getSecQ(){
+	var Uemail = $("#email").val();
+	//$("#response").html("");
+	$.ajax({
+		url : "/cgi-bin/getsecQ.php3",
+		method : "POST",
+		data : {name1 : Uemail},
+		success : function(data){
+		
+		$("#errorDiv").append(data);
+		$("#secInput").focus();
+		}
+	});
+}
+function sendA(){
+var respAnswer = $("#secInput").val();
+var Uemail = $("#email").val();
+//$("#response").html("");
+$.ajax({
+	url : "/cgi-bin/getuName.php3",
+	method : "POST",
+		data : {name1 : respAnswer, name2 : Uemail},
+		success : function(data){
+		
+		$("#errorDiv").html(data);
+		}
+});
 }
 

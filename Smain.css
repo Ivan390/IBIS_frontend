@@ -5,13 +5,9 @@
 	padding : 5px;
 	width : 95%;
 	left : 0px;
-	height : 520px;
+	height : 99vh;
 }
-.findOption img:hover{
-	position : relative;
-	max-width : 300%;
-	width : 120%;
-}
+
 h1 {
 position : relative;
 font-size : large;
@@ -20,31 +16,29 @@ font-size : large;
 	position : relative;
 	width : auto;
 	height : 10%;
-	margin-left : 6%;
 	padding : 5px;
 	font-size : small;
 	top : -30px;
 }
 
-#logo_image_holder {
+#MainallContainer #logo_image_holder {
 position : relative;
-	width : 70%;
-	height :20%;
-float : right;
+	width : 60%;
+  float : right;
 	padding : 5px;
-	top : -15px;
+	top : -20px;
+	left : -40px
 }
 #MainallContainer #logo_image {
  position : relative;
-	height: 53%;
-	width: 70%;
+	height: 100%;
+	width: 100%;
 	z-index: 6;
 	left : 50%;
 }
 #loginLink {
-	left : 3%;
 	z-index: 6;
-	top : 34px;
+	top : 44px;
 	font-size : large;
 	left : 10%
 	
@@ -74,26 +68,17 @@ float : right;
 	font-size : large;
 	text-decoration : underline;
 }
-#detail_fs_main {
-	position : relative;
-	border : 1px lightblue solid;
-	border-radius : 10px;
-	padding : 5px;
-	width : 95%;
-	top : 60px;
-	height : 340px;
-	
-}
+
 .findOption .contextHelp{
 	display : none;
 }
 #MainallContainer #detail_fs_main {
   position : relative;
   border-style: outset;
-  top : -40px;
+  top : -55px;
   width : 95%;
   padding : 5px;
-  height : 430px;
+  height : 83%;
   border-radius : 25px;
   left: 2%;
 	overflow : auto;
@@ -150,8 +135,7 @@ float : right;
 
 #register {
 	float : left;
-	border : 1px blue solid;
-		font-size : large;
+	font-size : large;
 	text-decoration : underline;
 	cursor : pointer;
 
@@ -159,8 +143,7 @@ float : right;
 }
 #guestbook {
 	float : right;
-	border : 1px blue solid;
-		font-size : large;
+	font-size : large;
 	text-decoration : underline;
 	cursor : pointer;
 	width : auto;
@@ -188,9 +171,10 @@ float : right;
 }
 #FindInfo h2 {
 	position : relative;
-	font-size : small;
+	font-size : medium;
 	text-decoration : underline;
 	text-align: left;
+	margin-bottom : 0px
 }
 .findHeading {
 	position : relative;
@@ -203,7 +187,7 @@ float : right;
 	position : relative;
 	top : -10px;
 	font-size : medium;
-	left : -70px;
+	left : -60px;
 }
 #LinkList {
 	position : relative;
@@ -224,7 +208,7 @@ float : right;
 
 #DidYouKnow {
 	position : relative;
-	width : 99%;
+	width : 95%;
 	border : 1px lightblue solid;
 	margin : 2px;
 	border-radius : 10px;
@@ -242,16 +226,55 @@ float : right;
 	position : relative;	
 top : -30px;
 	width : auto;
-	left : -10px; 
+	left : 0px; 
   text-decoration: none;
 
 }
 #MainallContainer #errorDiv img {
 	position: relative;
-	top: -vh;
-	left: -4%;
+	left: 2%;
+}
+#MainallContainer #errorDiv #messSpan {
+  position : relative;
+  top : 40%;
+  font-size : large;
+  float : left;
+  left : 1%;
+  
 }
 #welcBlock  {
 	position : relative;
 	width : 80vw;
 }
+#MainallContainer #errorDiv {
+	position: absolute;
+	border: 1px black solid;
+	border-radius: 15px;
+	padding: 10px;
+	background-color: yellow;
+	top: 160px;
+	left: 0%;
+	font-size: large;
+	z-index: 7;
+}
+#forgotTag {
+  position : relative;
+  font-size : small;
+  top : -5px;
+  left : 0px;
+  text-decoration: underline;
+  
+  
+}
+#response .linkC {
+  left : 88%;
+}
+#errorDiv #Uresponse .labelclass  {
+  position : relative;
+  left : 0px;
+  font-size : medium;
+	margin-bottom : 10px;
+}
+#errorDiv #Uresponse .linkC{
+	left : 90%;
+} 

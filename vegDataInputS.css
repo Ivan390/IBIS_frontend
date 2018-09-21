@@ -195,7 +195,7 @@
 	border : 1px black dashed;
   	background-color : rgba(205,135, 12, 0.7);
     padding-top: 3px;
-    top : -170px; 
+    top : -0px; 
     margin : 10px;
     width : 112px;
     left : 0px;
@@ -269,7 +269,7 @@ height : 20%;
 }
 #imgDisplay1 {
     position : absolute;
-    top : 25vh;
+    top : 250px;
     left : 75%;
 }
 #imgDisplay1 img{
@@ -509,7 +509,7 @@ fieldset {
 }
 .dm-uploader {
 position : relative;
-    top : -170px;
+    top : -0px;
     height : 100px;
 }
 .dm-uploader h3 {
@@ -517,7 +517,7 @@ position : relative;
 }
 
 .card {
-    top : -170px;
+    top : -0px;
     width : 100%;
     font-size : x-small;
     

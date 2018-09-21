@@ -195,8 +195,8 @@
 	    				
 	    			</fieldset>
 	    			</form>
-	    			<input type="button" value="Submit" class="buttonC" onclick="srcSubmit()"/>
-	    			<input type="button" value="Dismiss" class="buttonC" onclick="closeThis()" />
+	    			<input type="button" id="srcSbmt" value="Submit" class="buttonC" onclick="srcSubmit()"/>
+	    			<input type="button" id="srcCls" value="X" class="buttonC" onclick="closeThis()" />
 			 	</div>
 	 			<form  name="VegDupEditForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">						<input type="text" name="thecat" value="Vegetables" id="thecatid" class="hiddentext" />						<input type="text" name="specref" value="" id="specid" class="hiddentext" />
 				</form>
@@ -208,7 +208,7 @@
 				<label>Enter page number</label></br>
 				<input type="text" id="pgNum" /></br>
 				<input type="button" value="Add it to the form" onclick="addtToForm()" id="addButt"/>
-				<input type="button" id="clButton" value="Dismiss" onclick="closePgDialog()" />
+				<input type="button" id="clButton" value="X" onclick="closePgDialog()" />
 				<input type="text" id="tit" value=""  class="hiddentext"/>
 			</div>
 	 		

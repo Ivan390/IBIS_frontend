@@ -163,10 +163,11 @@
 
 /* Glossary styles*/
 #mainContainer {
-
-
+position : relative;
+top : 20px;
   width : 100%;
-  max-height : 90vh;
+  max-height : 99vh;
+  height : 95vh;
   margin-bottom : 0px;
 
 
@@ -190,7 +191,7 @@
   position : relative; 
   width : 100%;
   margin : 0px;
-  height : 80%;
+  height : 70%;
   overflow : auto;
   border : 1px lightblue solid;
   border-radius : 12px;
@@ -226,10 +227,17 @@ height : 90%;
 
   }
 
-#glossEntry label {
+#diagram0 .labelText {
   position : relative;
-  align : left;
   font-size : large;
+  top : 10px;
+  left : 0%;
+}
+#diagram0 input {
+	position: relative;
+	left: 0%;
+	top: 0px;
+	width: 89%;
 }
 .glossP {
   position : relative;
@@ -258,7 +266,7 @@ height : 90%;
   position : relative;
   left : 0%;
   width : 250px;
-  top : -65px;
+  top : -35px;
 }
 #GlBody #pgButtons input {
   position : relative;
@@ -281,28 +289,36 @@ height : 90%;
 }
 .dm-uploader {
 padding : 5px;
+   border : none;
+  width : 50%;
 }
 .dm-uploader .btn {
 position : relative;
   top : -20px;
-  border : none;
+ 
   padding : 5px;
-  width : 170px;
+  width : 100px;
   left : -30px;
   
 }
+.card{
+  position : relative;
+  top : 10px;
+}
 #imgDisplay {
 position : relative;
-border : 1px black solid;
-top : 450px;
-left : -140px;
+border : none;
+top : -270px;
+left : 60%;
+  height : 100px;
+  width : 100px;
 }
 .thumbpic {
  position : relative;
- width : 120px;
- height : 120px;
+ width : 100px;
+ height : 100px;
 }
 #ajaxBox {
   left : 40px;
-  width : 80%
+  width : 80%;
 }

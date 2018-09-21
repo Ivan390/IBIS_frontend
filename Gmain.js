@@ -7,6 +7,8 @@ function initForm() {
   $('#rateIsSent').css('display', 'none');
   	$("#alphList").hide();
   	 var bWidth = $("html").width();
+  	 //$(":text").val("");
+  	// $("textarea").val("");
  
 if (bWidth < 400){
  $("#shwG").removeClass("hiddentext");
@@ -123,14 +125,12 @@ function dismissNote() {
 }
 
 function loadRegWin() {
-  theUser = $('#userRef').val();
- // var regWin = open('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser + '', 'RegWin', 'height=550, width=600, left=100, top=50');}
- $("#edUser").load('../../cgi-bin/IBISregDetails.php3/?userN=' + theUser );
- $("#edUser").fadeIn();
+ $("#edUser").show();
+ $("#closewin").show();
  }
 function closeRegWin() {
-  regWin.close;
-  $('#closewin').hide();
+	$("#edUser").hide();
+  $("#closewin").hide();
 }
 
 function submitNote() {
@@ -251,7 +251,9 @@ function readGloss(that) {
     }
   })
 } 
-
+function clearInputs(){
+$(".inputClass").val("");
+}
 function showAlpha(){
 	$("#alphList").toggle("fast");
 	$("#retBlock").hide();

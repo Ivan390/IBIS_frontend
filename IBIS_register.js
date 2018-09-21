@@ -35,10 +35,6 @@ function submitRegistration(){
     sendit();
   }
 }
-////-> submit registration to server and receive results into floating dialog
-function handleSubmition(){
-
-} 
 
 
 function checkWords(that){
@@ -47,14 +43,14 @@ function checkWords(that){
     var wordexp = "";
     var messg = "";
     var empty = "";
-    var swearList = new Array("fuck", "shit", "ass", "bitch", "cunt", "bullshit", "damnit", "poes", "naai" );
+    var swearList = new Array(" fuck ", " shit ", " ass ", " bitch ", " cunt ", " bullshit ", " damnit ", " poes ", " naai " );
     var comment = content;
     //alert(comment);
     for (i = 0; i < swearList.length; i++){
 	 		swearWrd = swearList[i];
 	 		wordexp = new RegExp(swearWrd);
    		if (wordexp.test(comment)){
-		    messg = "words like " + comment + " are not allowed in this database!\nPlease clean up your fucking language.\nNo entry was recorded for this heading";
+		    messg = "words like " + comment + " are not allowed in this database!\nPlease clean up your language.\nNo entry was recorded for this heading";
 		   	alert(messg);
 		   $(that).val(empty); 
 			}

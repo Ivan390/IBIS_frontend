@@ -33,7 +33,7 @@ function ui_multi_add_file(id, file)
   template.data('file-id', id);
 
   $('#files').find('li.empty').fadeOut(); // remove the 'no files yet'
-  $('#files').prepend(template);
+  $('#files').html(template);
 }
 
 // Changes the status messages on our list
