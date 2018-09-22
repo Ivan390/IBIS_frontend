@@ -41,7 +41,7 @@ function updateDetails(){
 <>
 
       <?php
-      	include ("../../cgi-bin/IBISvars.inc");				if (!$guest_acc){					print("some thing went wrong. IBISvars missing");
+      	include ("cgi-bin/IBISvars.inc");				if (!$guest_acc){					print("some thing went wrong. IBISvars missing");
 				}
 				$mysqli = new mysqli('localhost', "$contrib_acc", "$contrib_pass", 'IBIS' );
 				if ($mysqli->connect_error){
@@ -63,7 +63,7 @@ function updateDetails(){
             <p id="regheadingText">Edit Login Details</p>
         </div>
 <div id="subContain">
-<form name="udateContrib" action="../../cgi-bin/IBISupdContrib.php3" method="POST" enctype="multipart/form-data">	<fieldset id="edDetails" class="littleDD">		<div id="personalDetails" class="littleDD">
+<form name="udateContrib" action="cgi-bin/IBISupdContrib.php" method="POST" enctype="multipart/form-data">	<fieldset id="edDetails" class="littleDD">		<div id="personalDetails" class="littleDD">
 			<p><label class="heading labelClass">Edit your Details</label></br></br>
 				<label class="labelClass" class="requiredf" >Your first name/s </label>
 				<input type="text" name="name" id="fName" class="inputClass littleDD requiredf" maxlength="10" value="First name" />

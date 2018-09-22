@@ -6,7 +6,7 @@
    * UI functions ui_* can be located in: demo-ui.js
    */
   $('#drag-and-drop-zone').dmUploader({ //
-    url: '../../cgi-bin/IBIScollectGuestData.php3',
+    url: 'cgi-bin/IBIScollectGuestData.php',
     maxFileSize: 10000000, // 10 Megs 
     onDragEnter: function(){
       // Happens when dragging something over the DnD area

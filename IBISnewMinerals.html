@@ -87,7 +87,7 @@
             <textarea id="outputBox" class=" outputbox" placeholder="Enter your input here and click send"></textarea><br />
             <a id="sendeditButton" class="buttonclass " onclick="sendedit()">Send</a>
          	</div>   
-         	<form  name="MinForm" action="../../cgi-bin/IBISnewMinerals.php3" method="POST" enctype="multipart/form-data" class="">	  				<fieldset id="dataForm" class="">							<input type="text" id = "Kingdom" name="Akingdom" value="Minerals" class="hiddentext">
+         	<form  name="MinForm" action="cgi-bin/IBISnewMinerals.php" method="POST" enctype="multipart/form-data" class="">	  				<fieldset id="dataForm" class="">							<input type="text" id = "Kingdom" name="Akingdom" value="Minerals" class="hiddentext">
 							<input type="text" id="Name" name="Mname" class="hiddentext">
 							<input type="text" id="Group" name="Mgroup" class="hiddentext">
 							<input type="text" id="Crystal_System" name="crystSys" class="hiddentext">
@@ -153,7 +153,7 @@
            </div>
           
 	 			<div id="SrcBlock" class="hiddentext">
-			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">	    			<fieldset>	    				<span><label>Type</label>
+			 	<form name="SourceF" action="cgi-bin/IBISsrc.php" method="POST" enctype="mulipart/form-data">	    			<fieldset>	    				<span><label>Type</label>
 	    				<select name="type" id="type">
 	    					<option>Book</option>
 	    					<option>Web Page</option>

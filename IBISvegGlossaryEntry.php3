@@ -7,7 +7,7 @@
    I B I S - Glossary Input Page
   </title>
   <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-   <script src="http://192.168.43.132/ibis/js/bootstrap.js"></script>
+   <script src="js/bootstrap.js"></script>
   <script type="text/javascript" src="Gmain.js"></script>
   <script type="text/javascript" src="dateshorts.js"></script>
   <script type="text/javascript" src="fileselect.js"></script>
@@ -64,7 +64,7 @@
 					print '<input type="text" name="category" class="hiddentext" id="catVal" value="'.$title.'" />'; 
 				?>
 				<div id="vegGlosItem" class="itemC">
-				<form name="glForm" action="../../cgi-bin/IBISglossary.php3" method="POST" enctype="multipart/form-data">
+				<form name="glForm" action="cgi-bin/IBISglossary.php" method="POST" enctype="multipart/form-data">
 				<span id="textstuff">
 						<label class="labelText">Term</label>
 						<input type="text" name="item" class="inputText shortText" id="Item" placeholder="add term here"/>
@@ -129,7 +129,7 @@
   function resetThis(){
   $("#ajaxBox").fadeOut();
   var thisstring = $("#catVal").val();
-  docloc = "IBISvegGlossaryEntry.php3?name1="+thisstring;
+  docloc = "IBISvegGlossaryEntry.php?name1="+thisstring;
   document.location = docloc;
     
   }
@@ -145,7 +145,7 @@
    var def = $("#Def").val();
    var cat = $("#catVal").val();
    $.ajax({
-   	url : "../../cgi-bin/IBISglossary.php3",
+   	url : "cgi-bin/IBISglossary.php",
    	method : "POST",
    	data : {
    		category : cat,

@@ -95,7 +95,7 @@
             <a id="sendeditButton" class="buttonclass littleDD" onclick="sendedit()">Send</a>
         	</div>  
         	
-        <form  name="VegForm" action="../../cgi-bin/IBISnewVegetables.php3" method="POST" enctype="multipart/form-data" class="">	  			<fieldset id="dataForm" class="hiddentext">				    <input type="text" id = "Kingdom" name="Akingdom" value="Plantae" class="hiddentext">
+        <form  name="VegForm" action="cgi-bin/IBISnewVegetables.php" method="POST" enctype="multipart/form-data" class="">	  			<fieldset id="dataForm" class="hiddentext">				    <input type="text" id = "Kingdom" name="Akingdom" value="Plantae" class="hiddentext">
 				    <input type="text" id="Phylum" name="phylum" class="hiddentext">
 				    <input type="text" id="subPhylum" name="subPhylum" class="hiddentext">
 				    <input type="text" id="Class" name="Vclass" class="hiddentext">
@@ -167,7 +167,7 @@
 	 			
 	 			</form>
 	 			<div id="SrcBlock" class="hiddentext">
-			 	<form name="SourceF" action="../../cgi-bin/IBISsrc.php3" method="POST" enctype="mulipart/form-data">	    			<fieldset>	    				<span><label>Type</label>
+			 	<form name="SourceF" action="cgi-bin/IBISsrc.php" method="POST" enctype="mulipart/form-data">	    			<fieldset>	    				<span><label>Type</label>
 	    				<select name="type" id="type">
 	    					<option>Book</option>
 	    					<option>Web Page</option>
@@ -198,7 +198,7 @@
 	    			<input type="button" id="srcSbmt" value="Submit" class="buttonC" onclick="srcSubmit()"/>
 	    			<input type="button" id="srcCls" value="X" class="buttonC" onclick="closeThis()" />
 			 	</div>
-	 			<form  name="VegDupEditForm" action="../../cgi-bin/IBISeditStuff.php3" method="POST" enctype="multipart/form-data" class="hiddentext">						<input type="text" name="thecat" value="Vegetables" id="thecatid" class="hiddentext" />						<input type="text" name="specref" value="" id="specid" class="hiddentext" />
+	 			<form  name="VegDupEditForm" action="cgi-bin/IBISeditStuff.php" method="POST" enctype="multipart/form-data" class="hiddentext">						<input type="text" name="thecat" value="Vegetables" id="thecatid" class="hiddentext" />						<input type="text" name="specref" value="" id="specid" class="hiddentext" />
 				</form>
 	 			<div id="messageDiv">
 	 				<div id="infoDiv"></div>

@@ -109,7 +109,7 @@ function checkDuplicate(){
     }
     
     $.ajax({
-			url : '../../cgi-bin/IBIScheckdup.php3',			type : "get",			async : "false",
+			url : 'cgi-bin/IBIScheckdup.php',			type : "get",			async : "false",
 			data :{species : speciesval, catval : catvalue, group : category},
 			success : function(data){
 			  var testregexp = /nomatch/;
@@ -128,7 +128,7 @@ function checkDuplicate(){
 				  	recID = dupItemsL[0];
 				  	conRef = dupItemsL[4];
 				  	localN = dupItemsL[3];
-				matchList += "<li><a href=\"../../cgi-bin/IBISeditStuff.php3?thecat="+thecat+"&specref="+genref+"&genref="+specref+"\">"+specref +" "+ genref +"</a><span id=\"lcN\">  "+localN+"</span> </li>";				  }					$('#specid').val(dupItemsL[1]);
+				matchList += "<li><a href=\"cgi-bin/IBISeditStuff.php?thecat="+thecat+"&specref="+genref+"&genref="+specref+"\">"+specref +" "+ genref +"</a><span id=\"lcN\">  "+localN+"</span> </li>";				  }					$('#specid').val(dupItemsL[1]);
 			    matchedDiv = "<div id=\"matDiv\">Possible duplicate entry.</br>Maybe you want to edit the existing record instead</br><ul id=\"matlist\">"+matchList+"</ul><input type=\"button\" class=\"buttonclass\" value=\"Enter anyway \" onclick=\"closeDiag()\"></div>";
 				  $('#messageDiv').html(matchedDiv);
 			 }
@@ -213,7 +213,7 @@ var catvalue = $('#thecatid').val();
 		var acclvl = $("#acclevel").val();
 		$("#messD").hide();
 	$.ajax({
-		url : "../../cgi-bin/IBISnewVegetables.php3",
+		url : "cgi-bin/IBISnewVegetables.php",
 		method : "POST",
 		data : {
 		 		Akingdom: Akingdom,
@@ -279,7 +279,7 @@ var catvalue = $('#thecatid').val();
 $("#messD").hide();
 		
 	$.ajax({
-		url : "../../cgi-bin/IBISnewAnimals.php3",
+		url : "cgi-bin/IBISnewAnimals.php",
 		method : "POST",
 		data : {
 		 	Akingdom: Akingdom,
@@ -342,7 +342,7 @@ $("#messD").hide();
 		var Macclvl = $("#acclevel").val();
 				$("#messD").hide();
 	$.ajax({
-		url : "../../cgi-bin/IBISnewMinerals.php3",
+		url : "cgi-bin/IBISnewMinerals.php",
 		method : "POST",
 		data : {
 		 	 Akingdom: Akingdom,
@@ -401,7 +401,7 @@ function shortRefCode() {
 var contrib = $('#contrib_ID').val();
 var titList = "";
         	$.ajax({
-        		url : "../../cgi-bin/getRefs.php3",        		type : "POST",        		data : {name1 : contrib},
+        		url : "cgi-bin/getRefs.php",        		type : "POST",        		data : {name1 : contrib},
         		success : function(response){
         			var Rlist = response.split(":@");
         			for (j = 0; j < Rlist.length; j++){
@@ -436,7 +436,7 @@ function srcSubmit(){
 	var srcID = $('#refid').val();
 
 	$.ajax({
-		url : "../../cgi-bin/IBISsrc.php3",		type : "POST",		data : {type:Type, title : Title, publshr :Publisher, publDate : pubD, publAddr : pubAddrs, ISBN : isbn, author : auth, editor : ed, url: urlA, contributer: contrib, Meth:meth, SrcID : srcID },
+		url : "cgi-bin/IBISsrc.php",		type : "POST",		data : {type:Type, title : Title, publshr :Publisher, publDate : pubD, publAddr : pubAddrs, ISBN : isbn, author : auth, editor : ed, url: urlA, contributer: contrib, Meth:meth, SrcID : srcID },
 		success : function(data){
 			alert(data);
 		}
@@ -453,7 +453,7 @@ function updateForm(){
 function updF(){
 	var recID = $('#refSelect').val();
 	$.ajax({
-		url : "../../cgi-bin/IBISupdSrc.php3",		type : "POST",		data : {name1:recID},
+		url : "cgi-bin/IBISupdSrc.php",		type : "POST",		data : {name1:recID},
 		success : function(data){
 		var SrcList = data.split(":@");
 		$('#type').val(SrcList[0]);

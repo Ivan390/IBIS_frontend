@@ -20,7 +20,7 @@ function do_logout(){
 	$("#authDiv").hide();
  	var loCount = 0;
  	$.ajax({
-		url : "../../cgi-bin/IBISLogout.php3",		type : "POST",		data : {name1 : logID},
+		url : "cgi-bin/IBISLogout.php",		type : "POST",		data : {name1 : logID},
 		success : function(data){
 		if (data !== ""){
 			loCount = readCookie("loCount");
@@ -37,7 +37,7 @@ function do_logout(){
 			    <a href=\"IBISregistration.html\" class=\" linksclass\">Register</a>\
 			  </span>\
 			  <span id=\"guestbook\" class=\"col-xs-12 col-sm-12\">\
-			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\" linksclass\">GuestBook</a>\			  </span>");	$("#adminBlock").fadeIn();
+			    <a href=\"cgi-bin/IBISnewGuest.php\" class=\" linksclass\">GuestBook</a>\			  </span>");	$("#adminBlock").fadeIn();
   sessionStorage.userRef = "";
   eraseCookie("IBIS_session=");
 }
@@ -48,7 +48,7 @@ function submitDetails(){
     var value1 = $("#uname").val();
     var value2 = $("#uemail").val();
     $.ajax({
-	    url : '../../cgi-bin/IBISlogin.php3',	    type : "get",	    async : "false",
+	    url : 'cgi-bin/IBISlogin.php',	    type : "get",	    async : "false",
 	    data : {uName : value1, uEmail : value2},
 	    success : function(data) {
 	      var testregexp = /no match/;
@@ -160,7 +160,7 @@ function authVerify(){
 function sendCode(){
 	var verCode = $("#verInput").val();
 	$.ajax({
-		url : "../../cgi-bin/verify.php3",
+		url : "cgi-bin/verify.php",
 		method : "POST",
 		data : {name1:verCode},
 		success : function(data){
@@ -187,7 +187,7 @@ function getSecQ(){
 	var Uemail = $("#email").val();
 	//$("#response").html("");
 	$.ajax({
-		url : "/cgi-bin/getsecQ.php3",
+		url : "cgi-bin/getsecQ.php",
 		method : "POST",
 		data : {name1 : Uemail},
 		success : function(data){
@@ -202,7 +202,7 @@ var respAnswer = $("#secInput").val();
 var Uemail = $("#email").val();
 //$("#response").html("");
 $.ajax({
-	url : "/cgi-bin/getuName.php3",
+	url : "cgi-bin/getuName.php",
 	method : "POST",
 		data : {name1 : respAnswer, name2 : Uemail},
 		success : function(data){
