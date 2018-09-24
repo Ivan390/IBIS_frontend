@@ -68,10 +68,11 @@ function sendedit(){
     if (errmssg){
 			alert("This is a family website\n"+errmssg);
 			$('#'+theHeading).val("");
+			
 			theLabel.style.backgroundColor = "red";
 			$("#outputBox").val("Bad Word User");
     }else{
-			$('#'+theHeading).val(editval);
+		$('#'+theHeading).val(editval);
 			theLabel.style.backgroundColor = "pink";
 			$("#outputBox").val("");
     }

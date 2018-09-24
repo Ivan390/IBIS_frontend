@@ -36,7 +36,7 @@
 					</div>
       </div>
       
-	    <form name="categoryForm" action="cgi-bin/IBISnewIndexCreator.php" method="POST" enctype="multipart/form-data" >	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />	    </form>
+	    <form name="categoryForm" action="http://192.168.43.132/ibis/cgi-bin/IBISnewIndexCreator.php" method="POST" enctype="multipart/form-data" >	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />	    </form>
 	    <div id="errorDiv" style="display:none;"></div>
 	    <div id="loginLink" class="littleDD linksclass" style="">
 	      <label id="loginhead" class="littleDD linksclass label-info" onclick="showLogin()">Login</label>
@@ -76,10 +76,10 @@
 				</span>    	
 				<span id="LinkList" class="" >
 					<p class="">Eco Links</p>
-					<ul class="list-unstyled">
+					<ul class="list-unstyled" id="linkslistL">
 						<li onclick="checkReg()"><span id="utilLink" class="linksclass" onclick="checkReg()">Utilities</span></li>
-						<li onclick="authVerify()" class="inputclass" ><span id="authDiv" class="linksclass" onclick="authVerify()" >Administration</span></li>
 						<li ><span id="Amessg" onclick="showMssgDialog()" class="linksclass">Message to the author</span></li>
+						
 					</ul>
 				</span>
 	    </div>
@@ -89,8 +89,7 @@
 	  <div id="DYK" class="text-center"><h2>Did you know?</h2></div>
 	  <div id=dykText class="text-center"> that the sky is blue </div>
 	</div>
-</body>
-<script type="text/javascript">
+	<script type="text/javascript">
 		function loadIndex(catname){
 	    	$("#catValue").val(catname);
 	    	$(categoryForm).submit();
@@ -113,4 +112,6 @@
     		$("#errorDiv").hide();
     	}
     </script>
+</body>
+
 </html>

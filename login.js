@@ -53,7 +53,7 @@ function submitDetails(){
 	    success : function(data) {
 	      var testregexp = /no match/;
 	      if (testregexp.test(data)) {
-	        $("#errorDiv").html("<label onclick=\"closethis()\" class=\"linkC\">X</label><br /><img id=\"sucCheck\" src=\"http://192.168.43.132/ibis/images/notokeydoke.png\" /><span id=\"messSpan\">Your details were not found on the server</br>Check your spelling</span>");
+	        $("#errorDiv").html("<label onclick=\"closethis()\" class=\"linkC\">X</label><br /><img id=\"sucCheck\" src=\"images/notokeydoke.png\" /><span id=\"messSpan\">Your details were not found on the server</br>Check your spelling</span>");
 	        $('#errorDiv').show();
 	        showLogin();
 	      }
@@ -69,7 +69,10 @@ function submitDetails(){
 	   				$("#regpic").html(imgsrc);
 	          $("#greetingDiv").text(thedata[1]);
 	          if (thedata[1] == "Author"){
+	          	
+	          	var authlist = '<li onclick="authVerify()" class="inputclass" ><span id="authDiv" class="linksclass" onclick="authVerify()" >Administration</span></li>';
 	          	$("#authDiv").show();
+	          	$("#linkslistL").append(authlist);
 	          }
 	          $("#adminBlock").fadeIn();
 	          writeCookie("IBIS_session=", sessref, 1);

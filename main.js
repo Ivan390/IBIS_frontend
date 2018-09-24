@@ -7,6 +7,11 @@ function checkStorage(){
 	   $("#adminBlock").html("<div id=\"regholder\"><div id=\"regpic\"></div><div id=\"greetingDiv\"></div><div id=\"greetA\" ><label id=\"proLab\" class=\"label-info\" onclick=\"goPro("+sesRef[0]+")\" >Your profile page</label></div></div>");
 	  imgsrc = '<img id = "regPic" src="'+ sesRef[5] + '" width="" height="" >';
 	  $("#regpic").html(imgsrc);
+	   if (sesRef[1] == "Author"){
+	   	var authlist = '<li onclick="authVerify()" class="inputclass" ><span id="authDiv" class="linksclass" onclick="authVerify()" >Administration</span></li>';
+	   $("#linkslistL").append(authlist);
+	   $("#authDiv").show();
+	   }
 	  $("#greetingDiv").text(sesRef[1]);
 	  $("#adminBlock").show();
 	  $("#loginhead").css("display", "none");
@@ -23,7 +28,7 @@ function checkStorage(){
 			    <a href=\"IBISregistration.html\" class=\"linksclass\">Register</a>\
 			  	</span>\
 			  	<span id=\"guestbook\" class=\"col-xs-12 col-sm-12\">\
-			    <a href=\"../../cgi-bin/IBISnewGuest.php3\" class=\"littleDD linksclass\">GuestBook</a>\
+			    <a href=\"cgi-bin/IBISnewGuest.php\" class=\"littleDD linksclass\">GuestBook</a>\
 			    </span>");	  }
 }
 function goPro(refNum) {
@@ -61,7 +66,7 @@ var mssgContent = $("#mssgContent").val();
 var uemail = $("#Uemail").val();
 $("#errorDiv").hide();
 $.ajax({
-	url : "../../cgi-bin/IBIScomments.php3",
+	url : "cgi-bin/IBIScomments.php",
 	method : "POST",
 	data : {name1 : mssgContent, name2 : uemail },
 	success : function(data) {

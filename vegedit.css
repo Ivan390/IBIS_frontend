@@ -87,8 +87,15 @@
 }
 #editImageDiv {
   position : relative;
-  left : 5%;
+  left : 6%;
+  width : 30%;
+  top : -30px;
   
+}
+#editImageDiv label {
+  position : relative;
+  width : 300px;
+  max-width : 300px;
 }
 .labelclass{
   position : relative;
@@ -186,16 +193,17 @@
 
 #newImages {
   position :relative;
-  top : -155px;
+  top : -300px;
   left : 55% ;
-  width : 200px;;
+  width : 30%;;
   
   
 }
 #oldTags {
   position : relative;
-  left : 140px; 
-  top : -110px;
+  left : 18%; 
+  top : -120px;
+  width : 30%;
   
 }
 #optionsDsplay{

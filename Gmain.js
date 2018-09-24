@@ -100,7 +100,7 @@ function submitVote() {
   var newScore = eval('parseInt(curScore) + parseInt(rating)');
   var respScore = '';
   $.ajax({
-    url: 'cgi-bin/IBISvotes.php',    type: 'post',    data: {
+    url: 'IBISvotes.php',    type: 'post',    data: {
 		  name1: rating,
 		  name2: recNumber,
 		  name3: conRef,
@@ -192,7 +192,7 @@ function getNames(that) {
     	comLabel = 'Chemical Formula:';
   }
   $.ajax({
-    url: 'cgi-bin/IBISgetNames.php',    type: 'POST',    data: {
+    url: 'IBISgetNames.php',    type: 'POST',    data: {
       name1: justName,
       name2: catvalue
     },
@@ -202,7 +202,7 @@ function getNames(that) {
       var spec = responseL[1];
       var Cnames = responseL[2];
       var recID = responseL[3];
-      theDetails = '<div id="detailsBlock"><img src=' + picSrc + ' /></br><label class="labelC">' + genLabel + ' </label><label class="contentC">' + gen + '</label></br><label class="labelC">' + specLabel + ' </label><label class="contentC">' + spec + '</label></br><label class="labelC">' + comLabel + ' </label><label class="contentC">' + Cnames + '</label></br><label class="labelC">Metric: </label><label class="contentC">' + MetricD + '</label><a class="linksclass" href="cgi-bin/IBISgetDetails.php?recID='+recID+'&catVal='+catvalue+'">Go to Details</a></div>';      $('#listDiv').html(theDetails);    }
+      theDetails = '<div id="detailsBlock"><img src=' + picSrc + ' /></br><label class="labelC">' + genLabel + ' </label><label class="contentC">' + gen + '</label></br><label class="labelC">' + specLabel + ' </label><label class="contentC">' + spec + '</label></br><label class="labelC">' + comLabel + ' </label><label class="contentC">' + Cnames + '</label></br><label class="labelC">Metric: </label><label class="contentC">' + MetricD + '</label><a class="linksclass" href="IBISgetDetails.php?recID='+recID+'&catVal='+catvalue+'">Go to Details</a></div>';      $('#listDiv').html(theDetails);    }
   })
 }
 
@@ -228,7 +228,7 @@ function readGloss(that) {
   var category = $('#catVal').val();
   var Ilist = '';
   $.ajax({
-    url: 'cgi-bin/IBISgetnames.php',    type: 'POST',    data: {
+    url: 'IBISgetnames.php',    type: 'POST',    data: {
       name1: letter,
       name2: category
     },
