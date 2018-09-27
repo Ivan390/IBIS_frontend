@@ -264,3 +264,36 @@ position : relative;
   top : 70px;
   left : 20%;
 }
+#picWindow {
+  position : absolute;
+  z-index : 3;
+  border : 3px black solid;
+  padding : 0px;
+  background-color:  rgba(0, 0 ,0, .7);
+  left : 25%;
+ width: 35vw;
+  height : auto;
+  display : none;
+}
+#picWindow span {
+  position : relative;
+  top : -135px;
+  left : 95%;
+  font-size : x-large;
+}
+#picWindow img {
+  position : relative;
+  top : 15px;
+  
+}
+#picWindow #pictag {
+  position : relative;
+  z-index : 4;
+  font-size : x-large;
+  color : whitesmoke;
+  left : 2%;
+  top : 0%;
+  width : 100px;
+  padding : 5px;
+  margin : 4px;
+}

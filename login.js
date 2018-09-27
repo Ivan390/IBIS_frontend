@@ -69,10 +69,9 @@ function submitDetails(){
 	   				$("#regpic").html(imgsrc);
 	          $("#greetingDiv").text(thedata[1]);
 	          if (thedata[1] == "Author"){
-	          	
-	          	var authlist = '<li onclick="authVerify()" class="inputclass" ><span id="authDiv" class="linksclass" onclick="authVerify()" >Administration</span></li>';
+	           	var authlist = '<li onclick="authVerify()" class="inputclass" ><span id="authDiv" class="linksclass" onclick="authVerify()" >Administration</span></li>';
+	           	$("#linkslistL").append(authlist);
 	          	$("#authDiv").show();
-	          	$("#linkslistL").append(authlist);
 	          }
 	          $("#adminBlock").fadeIn();
 	          writeCookie("IBIS_session=", sessref, 1);
