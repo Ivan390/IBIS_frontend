@@ -8,10 +8,10 @@
     </title>
     <script type="text/javascript" src="jquery-2.1.1.min.js"> </script>
     <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="cookies.js"> </script>
     <script type="text/javascript" src="main.js"> </script>
     <script type="text/javascript" src="dateshorts.js"> </script>
     <script type="text/javascript" src="picswap.js"> </script>
-    <script type="text/javascript" src="cookies.js"> </script>
     <script type="text/javascript" src="login.js"></script>
     <link href="css/bootstrap.min.css" rel="stylesheet"/>
     <link rel="stylesheet"
@@ -25,6 +25,9 @@
     	/>
     </head>
     <body id="TheBody" onload="initForm()">
+    <div id="dicDiv">
+    
+    </div>
       <div id="MainallContainer" class="container">
       <div class="row">
       		<div id="dateTime">
@@ -35,8 +38,9 @@
 					  <img id="logo_image" src="images/Logo1_smaller.png"/>
 					</div>
       </div>
-      
+      <input type="text" class="hiddentext" id="disCount" value="no">
 	    <form name="categoryForm" action="http://192.168.43.132/ibis/cgi-bin/IBISnewIndexCreator.php" method="POST" enctype="multipart/form-data" >	      <input type="text" id="catValue" name="catValue" id="catHeading" class="hiddentext" />	    </form>
+	    
 	    <div id="errorDiv" style="display:none;"></div>
 	    <div id="loginLink" class="littleDD linksclass" style="">
 	      <label id="loginhead" class="littleDD linksclass label-info" onclick="showLogin()">Login</label>

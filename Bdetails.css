@@ -272,18 +272,20 @@ position : relative;
   background-color:  rgba(0, 0 ,0, .7);
   left : 25%;
  width: 35vw;
-  height : auto;
+  height : 300px;
   display : none;
 }
 #picWindow span {
   position : relative;
-  top : -135px;
+  top : -40%;
   left : 95%;
   font-size : x-large;
 }
 #picWindow img {
   position : relative;
   top : 15px;
+  width : 90%;
+  max-height : 90%;
   
 }
 #picWindow #pictag {

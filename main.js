@@ -12,6 +12,7 @@ function checkStorage(){
 	   $("#linkslistL").append(authlist);
 	   $("#authDiv").show();
 	   }
+	   $("#dicDiv").hide();
 	  $("#greetingDiv").text(sesRef[1]);
 	  $("#adminBlock").show();
 	  $("#loginhead").css("display", "none");
@@ -44,6 +45,7 @@ function initForm() {
   $("#authDiv").hide();
   checkStorage();
 	checkNav();
+	showDisc();
  
 }
 
@@ -57,6 +59,32 @@ $("#errorDiv").show();
 $("#mssgContent").focus();
 }
 
+function showDisc(){
+var disText = '<span id="cls" onclick="closeDic()" class="linkC">X</span><span class="labelclass">---Disclaimer---</span><br /><br />\
+Hi, My name is Ivan D Adams.<br />\
+I wrote the IBIS as an exercise to practice HTML, CSS, JavaScript, PHP, MySQL and git. \
+It has grown into a sort of functional kludge and I have many ideas for extending and refining it.\
+This system as it is, is meant to be a sort of pokedex for nature where you can quickly get information on natural stuff.<br />\
+I only had Firefox on a LAMP stack to work on so I have no idea what these interfaces are going to look like if you are not using a relatively recent version of Firefox or similar browser.<br />\
+Besides that, you will need to have JavaScript and Cookies enabled on your browser for everything to work right.<br />\
+I have placed it on the internet to see if it might be usefull to the world. <br />\
+To that effect I humbly request your constructive criticism and ideas for improvement.<br />\
+You may leave a note in the Guest Book facility, which will be visible to anyone accessing that utility, or you may leave a private message to the author from the Eco Links list.<br />\
+You may also register as a Contributer, which will allow you to add and edit entries in the database.<br />\
+We don\'t have strict security protocols, heck you don\'t even have to submit a legitimate email address when you register. However submiting a fake address will sort of cramp effective communication.<br />\
+There are some checks for inappropriate language and conduct however, so if you register and submit nonsense your account will summarily be deactivated. \
+';
+
+	if(!readCookie("discCookie") ){
+		$("#dicDiv").html(disText);
+		$("#dicDiv").fadeIn();
+		writeCookie("discCookie=", "yes", 1);
+		$("#loginLink").hide();
+	} 
+	else {
+		$("#dicDiv").hide();
+	}
+}
 function sendMssg(){
 var mssgContent = $("#mssgContent").val();
 	if (mssgContent == ""){

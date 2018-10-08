@@ -173,6 +173,11 @@ function sendCode(){
 }
 function closethis() {
 	$("#errorDiv").hide();
+
+}
+function closeDic(){
+	$("#dicDiv").hide();
+			$("#loginLink").show();
 }
 
 function getName(){

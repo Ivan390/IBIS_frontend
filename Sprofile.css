@@ -1,0 +1,81 @@
+#DETallContainer {
+  position : relative;
+  width : 90%;
+  height : auto;
+  padding : 20px;
+  border-radius: 22px;
+  border : 1px lightblue solid;
+  top: 3vh;
+}
+#DETallContainer #dateTime {
+  position: relative;
+  top: -10px;
+  left: -50%;
+  z-index:3;
+  font-size: medium;
+  margin-left:auto;
+  color: green;
+  width: 50%;
+}
+a {
+  color : black;
+}
+a:hover {
+  color : lightblue;
+  text-decoration : underline;
+}
+#DETallContainer .buttonclass {
+  position: relative;
+  border : 1px solid green;
+  font-size: 16px;
+  border-radius: 12px;
+  padding : 5px;
+}
+
+#DETallContainer #logo_image_holder{
+  position : relative;
+   left : 110%;
+  top : -50px;
+  width : 100%;
+ }
+#DETallContainer #logo_image {
+  height : 100%;
+  width : 100%;
+}
+#DETallContainer #pgButtons {
+position : relative;
+  	top : -40px;
+	left: 8%;
+  font-size: xx-large;
+  cursor : pointer;
+}
+
+
+
+/*profile section*/
+#informDiv {
+  position : relative;
+  border : 2px lightblue solid;
+  border-radius : 20px;
+  height : auto;
+  padding : 5px;
+  top : -50px;
+}
+#nameSpan {
+  position : relative;
+  font-size : large;
+}
+#imageSpan img {
+  position : relative;
+  width : 50%;
+  float : right;
+  top : -30px;
+}
+#scoreSpan {
+  position : relative;
+  font-size : 500%;
+  display : inline-block;
+}
+#infoDiv p {
+  font-size : 200%;
+}

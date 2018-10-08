@@ -2,6 +2,7 @@
 function initForm() {
   $('#dateBlock').html(new Date().shortFormat());
   starttime();
+  stripslash();
   $('#rateIsSent').val('no');
   $('#rtecmnt').css('display', 'none');
   $('#rateIsSent').css('display', 'none');
@@ -192,7 +193,7 @@ function getNames(that) {
     	comLabel = 'Chemical Formula:';
   }
   $.ajax({
-    url: 'IBISgetNames.php',    type: 'POST',    data: {
+    url: 'IBISgetOtherNames.php',    type: 'POST',    data: {
       name1: justName,
       name2: catvalue
     },
@@ -262,3 +263,9 @@ function showAlpha(){
 	//$("#GBlock .Gselect").toggle("slow");
 //	closeGl();
 }		
+
+function stripslash(){
+	var slashregexp = /\\/g;
+	$("input .nothiddentext" ).val().replace(slashregexp, "");
+	$("textarea  .nothiddentext" ).val().replace(slashregexp, "");
+}

@@ -1325,3 +1325,39 @@ left : 30px;
 	left: 30%;
 	text-decoration: underline;
 }
+#picWindow {
+  position : absolute;
+  z-index : 3;
+  border : 3px black solid;
+  padding : 0px;
+  background-color:  rgba(0, 0 ,0, .7);
+  left : 15%;
+ width: 65vw;
+  height : auto;
+  display : none;
+}
+#picWindow span {
+  position : relative;
+  top : -57px;
+  left : 93%;
+  font-size : large;
+	color : lightgray;
+}
+#picWindow img {
+  position : relative;
+  top : 15px;
+	width : 90%;
+	left : -5px;
+  
+}
+#picWindow #pictag {
+  position : relative;
+  z-index : 4;
+  font-size : large;
+  color : whitesmoke;
+  left : 2%;
+  top : 0%;
+  width : 80px;
+  padding : 2px;
+  margin : 4px;
+}

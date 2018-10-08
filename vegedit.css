@@ -192,8 +192,8 @@
 }
 
 #newImages {
-  position :relative;
-  top : -300px;
+  position :absolute;
+  top : 20px;
   left : 55% ;
   width : 30%;;
   

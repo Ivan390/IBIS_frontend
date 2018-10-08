@@ -1,5 +1,6 @@
 
 #SFallContainer {
+	position : relative;
 	width : 98%;
 	height : 95%;
 	margin : 2px;
@@ -9,10 +10,15 @@
 
 #SFallContainer #logo_image_holder {
 	position : relative;
-	left : 30%;
+	left : 70%;
 	width : 70%;
 	height : 16%;
-	top : -50px;
+	top : -60px;
+}
+.row {
+	position : relative;
+	width : 80%;
+	
 }
 #SFallContainer #dateTime {
 	top : -10px;

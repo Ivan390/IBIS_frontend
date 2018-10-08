@@ -257,6 +257,31 @@ top : -30px;
 	font-size: large;
 	z-index: 7;
 }
+#dicDiv {
+  position : absolute;;
+  border : 1px black solid;
+  border-radius : 10px;
+  padding : 10px;
+  background-color : yellow;
+  top : 80px;
+  left : 2%;
+  z-index : 10;
+  width:  90%;
+  display : none;
+  height : 60%;
+  overflow : auto;
+}
+#dicDiv #cls {
+  position : relative;
+  left : 90%;
+  top : -10px;
+  font-size : x-large;
+}
+#dicDiv .labelclass {
+  position : relative;
+  left : 0%;
+  font-size : x-large;
+}  
 #forgotTag {
   position : relative;
   font-size : small;
