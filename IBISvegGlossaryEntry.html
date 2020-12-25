@@ -8,10 +8,30 @@
 <script type="text/javascript" src="jquery-1.11.3.js"> </script>
 <script type="text/javascript" src="Gmain.js"> </script>
 <script type="text/javascript" src="dateshorts.js"> </script>
-<script type="text/javascript" src="fileselecter.js"></script>	
+
+<script type="text/javascript">
+	var IC = 0;
+	$(document).ready(function(){
+          $('.pictures').change(handleFileSelect);	
+	  if (sessionStorage.userRef){
+             sessVar = sessionStorage.userRef;
+	     sesA = sessVar.split(":");
+	      conID = sesA[1];
+	      $('#contrib_ID').val(conID);
+	  }else {
+	    alert("You should really not be on this page!")
+	    document.location = "IBISmain.html";
+	  }
+        }) 
+	 
+       </script>
 <link rel="stylesheet"
   type="text/css"
-  href="./vegGloss.css"
+  href="IBIS_maincss.css"
+/>
+<link rel="stylesheet"
+  type="text/css"
+  href="vegGloss.css "
 />
 </head>
 <body id="TheBody" onload="initForm()">
@@ -22,10 +42,11 @@
   <div id="logo_image_holder">
     <img id="logo_image" src="./images/Logo1_fullsizetransp.png"/>
   </div>
+  <input type="button" class="buttClass" value="Send Entry To IBIS" onclick="submitForm()"/>
   <div id=allContainer class="ac">
     <input type="button" class="buttClass" value="Add another Item" onclick="addAnotherItem()"/>
-    <input type="button" class="buttClass" value="Send Entry To IBIS" onclick="submitForm()"/>
-    <form name="glossentry" id="glossEntry" method="POST" enctype="multipart/form-data" action="../../cgi-bin/vegGlEntry.php3">
+    
+    <form name="glossentry" id="glossEntry" method="POST" enctype="multipart/form-data" action="../cgi-bin/vegGlEntry.php3">
      <div id="vegGlosItem0" class="itemC">
        <label class="labelText">Term</label>
        <input type="text" name="item0" class="inputText shortText" />
@@ -33,9 +54,9 @@
        <textarea name="definition0" class="inputText longText"></textarea>
      <div id="imageDiv0" >
        <label class="labelC">Add a Diagram</label></br>
-       <input id="pictures0" type ="file" name="pictures0" class="clickme" onchange="showImage(this)" />
-       <img src="#" height="" width="" onclick="addCaption(this)" class="hidden" />
-       <label class="labelText">Add a Caption</label>
+       <input id="pictures0" class="pictures" type ="file" name="pictures0" value="clickme" onchange="" /></br>
+       <label class="labelText" onclick="addCaption(this)">Caption</label></br>
+       <div id="glosspic" class="glossP"></div>
        <input type="text" name="diagramCap0"  />
      <div id="newtagslist0" class="nothiddentext"></div>
    </div>
@@ -45,9 +66,9 @@
   </div>
  </body>
   <script type="text/javascript">
-  var IC = 0;
+ 
   function showImage(that){
-    var imgdiv = that.nextSibling.nextSibling.src;
+    var imgdiv = that.nextSibling.src;
     alert(imgdiv);
   //	imgdiv.innerHTML = '<img src="" alt="this is where the image will go" />';
     if (that.files && that.files[0]){
@@ -65,23 +86,24 @@
   function addAnotherItem(){
     IC++;
   //alert("at least its running the functionand IC is " + IC);
-    var addItem ='<div id="vegGlosItem'+ IC +'" class="itemC">\
-      <label class="labelText">Term</label>\
-      <input type="text" name="item'+ IC +'" class="inputText shortText" />\
-      <label class="labelText">Definition</label>\
-      <textarea name="definition'+ IC +'" class="inputText longText"></textarea>\
-      <div id="imageDiv'+ IC +'">\
-	<label class="labelC">Add a Diagram</label>\
-	</br>\
-	<input id="pictures'+ IC +'" type ="file" name="pictures'+ IC +'" class="clickme" onchange="showImage(this)" />\
-        <div id="diagram0" class="hidden">\
-	  <img src="#" height="" width="" onclick="addCaption(this)"/><p></p>\
-	  <label class="labelText">Add a Caption</label>\
-	  <input type="text" name="diagramCap0"  />\
-	</div>\
-	<div id="newtagslist'+ IC +'" class="nothiddentext"></div>\
+    var addItem ='\
+    <form name="glossentry'+ IC +'" id="glossEntry" method="POST" enctype="multipart/form-data" action="../cgi-bin/vegGlEntry.php3"> \
+    	<div id="vegGlosItem'+ IC +'" class="itemC">\
+      	<label class="labelText">Term</label>\
+      	<input type="text" name="item'+ IC +'" class="inputText shortText" />\
+      	<label class="labelText">Definition</label>\
+      	<textarea name="definition'+ IC +'" class="inputText longText"></textarea>\
+      	<div id="imageDiv'+ IC +'">\
+					<label class="labelC">Add a Diagram</label>\
+					</br>\
+					<input id="pictures'+ IC +'" type ="file" name="pictures'+ IC +'" class="clickme" onchange="showImage(this)" /></br>\
+        	<div id="diagram0" class="hidden"> <div id="glosspic'+ IC +'"" class="glossP"></div>\
+	  				<label class="labelText" onclick="addCaption(this)">Caption</label></br>\
+	  				<input type="text" name="diagramCap0"  />\
+					</div>\
+					<div id="newtagslist'+ IC +'" class="nothiddentext"></div>\
       </div>\
-    </div>';
+    </div></form>';
     $('#glossEntry').append(addItem);
     //	alert("and it finishes the function");
   }
@@ -89,5 +111,20 @@
   function submitForm(){
     document.glossentry.submit();
   }
+  function handleFileSelect(evt) {
+		var files = evt.target.files; 
+		for (var i = 0, f; f = files[i]; i++) {
+	  	if (!f.type.match('image.*')) {
+	 	 	continue;
+	 	}
+	 	var reader = new FileReader();
+		reader.onload = (function(theFile) {
+	  return function(e) {
+		$('#glosspic'+ IC ).html('<img class="thumbpic" src="'+ e.target.result + '" title="'+ escape(theFile.name)+ '" onclick="showOps(this)" /\>');	
+	  };
+	})(f);
+	reader.readAsDataURL(f);
+  }
+}
  </script> 
 </html>

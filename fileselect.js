@@ -53,9 +53,9 @@ function markDel(){
 		 	}
 		}
 	 }else {
-	 var thisTag = $('#editTag').val();
-	 tagList += thisSrc + ":" + thisTag + "::";
-	 $('#editedtagslist').val(tagList);
+	 var thisTag = $('#editTag').val(); // get the text inside the editTag input
+	 tagList += thisSrc + ":" + thisTag + "::"; // construct the list entry
+	 $('#editedtagslist').val(tagList); // add the entry to the editedtagslist
 		var imgList = document.images;
 		var imgCount = imgList.length;
 		for (i = 0; i < imgCount; i++){
